@@ -1,0 +1,98 @@
+header {
+    height: 15vh;
+    width: 100vw;
+    .header_container {
+      display: flex;
+      width: 100%;
+      height: 50%;
+      align-items: center;
+      justify-content: flex-end;
+      box-sizing: border-box;
+      padding: 15px;
+      .brand {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        margin-right: 32vw;
+        gap: 12px;
+        img {
+          height: 55px;
+          width: 55px;
+        }
+        strong{
+     color: var(--color-secondary);
+        }
+      }
+      .signInUp b{
+          cursor: pointer;
+          &:hover{
+              color: var(--color-secondary);
+          }
+      }
+    }
+    .search_conatiner{
+      width: 100%;
+      height: 50%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding:0px 40px;
+      .plan{
+          width: 180px;
+          height: 60%;
+          border: 2px solid var(--color-secondary);
+          border-radius: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span{
+  color: var(--color-secondary);
+  font-weight: 500;
+          }
+      }
+      .search{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+          width: 500px;
+          height: 100%;
+          margin-left: 90px;
+         
+          input{
+              width: 100%;
+              height:70%;
+              border-radius: 25px;
+              border: none;
+              background-color: var(--color-primary-light);
+              padding: 20px;
+              outline: none;
+          }
+          button{
+              margin-left: -100px;
+              height: 70%;
+              width: 100px;
+              border-radius: 25px;
+              border: none;
+              background-color: var(--color-primary);
+              color: var(--color-secondary);
+              font-size: 17px;
+          }
+        
+      }
+      .shop{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          svg{
+              height: 38px;
+              width: 38px;
+          }
+          p{
+              width: 90px;
+          }
+      }
+    }
+  }
+  
