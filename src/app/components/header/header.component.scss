@@ -1,14 +1,16 @@
 header {
-    height: 15vh;
-    width: 100vw;
+    height: 20vh;
+    width: 98.9vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
     .header_container {
       display: flex;
       width: 100%;
-      height: 50%;
+      height: 35%;
       align-items: center;
       justify-content: flex-end;
       box-sizing: border-box;
-      padding: 15px;
+      padding: 0px 15px;
       .brand {
         display: flex;
         align-items: center;
@@ -32,12 +34,13 @@ header {
     }
     .search_conatiner{
       width: 100%;
-      height: 50%;
+      height: 35%;
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding:0px 40px;
+      overflow: hidden;
       .plan{
           width: 180px;
           height: 60%;
@@ -77,6 +80,9 @@ header {
               background-color: var(--color-primary);
               color: var(--color-secondary);
               font-size: 17px;
+              &:hover{
+                transform: scale(1.01);
+              }
           }
         
       }
@@ -93,6 +99,41 @@ header {
               width: 90px;
           }
       }
+     
+    }
+    .recomendation{
+      width: 100%;
+      height: 30%;
+      background-color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin: 0px;
+        li{
+     
+          text-decoration: none;
+          list-style-type: none;
+          display: flex;
+          gap: 5px;
+          color: var(--color-tertiary);
+          p{
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            
+          }
+          svg{
+            height: 25px;
+            width: 25px;
+          }
+        }
+      }
+      
     }
   }
   
