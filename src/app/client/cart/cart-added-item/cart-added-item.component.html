@@ -1,0 +1,21 @@
+<div class="item-card {{stock}}">
+    <img src="{{imgsrc}}" alt="item-photo">
+    <div class="item-details">
+        <h3>{{item_name}}</h3>
+        <div class="stock-div">
+            <p>₹{{item_price}}</p>&nbsp;|&nbsp;<p class="{{stock}}">{{stock}}</p>
+        </div>
+        <div class="count">
+            <button class="count-btn sub">&nbsp;- </button>
+            <p>{{item_count}}</p>
+            <button class="count-btn add"> +&nbsp;</button>
+        </div>           
+    </div>
+    <div class="item-total">
+        <p>₹{{total_price}}</p>
+        ❤️ Wish List | <i class="fa-solid fa-trash-can"></i> Delete
+    </div>
+</div>
+
+
+<!-- item_name="" item_price stock item_count total_price -->

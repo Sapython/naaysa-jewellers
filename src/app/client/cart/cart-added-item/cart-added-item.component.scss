@@ -1,0 +1,83 @@
+.item-card{
+    margin: 25px;
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    height: 110px;
+    padding: 15px;
+}
+
+img{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.item-details{
+    padding: 10px;
+    margin-left: 50px;
+    width: 480px;
+}
+
+.item-details h3{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.stock-div{
+    margin-top: 5px;
+    display: flex;
+    font-size: larger;
+}
+
+.stock-div .stock{
+    font-size: small;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.in .stock-div .stock{
+    color: green;
+}
+
+.out .stock-div .stock{
+    color: red;
+    
+}
+
+.out{
+    opacity: .50;
+    background-color: rgb(228, 228, 228);
+}
+
+.item-total p{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-left: 100px;
+    margin-bottom: 25px;
+}
+
+.count{
+    margin-top: 6px;
+    padding: 2px;
+    width: 60px;
+    height: 15px;
+    align-items: center;
+    display: flex;
+    border: 2px solid rgb(225, 225, 225);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.count-btn{
+    background-color: inherit;
+    border: none;
+    margin: 0 7px;
+}
+
+.count-btn:hover{
+    cursor: pointer;
+}
+
