@@ -30,7 +30,7 @@ hr{
     margin-top: 30px;
     margin-left: 50px;
     width: 27%;
-    height: 580px;
+    height: 620px;
     border-radius: 16px;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -143,7 +143,7 @@ hr.new2 {
     font-weight: 450;
 }
 
-.proceed-btn:hover{
+.proceed-btn:hover, .promo button:hover{
     cursor: pointer;
 }
 

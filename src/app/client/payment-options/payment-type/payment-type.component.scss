@@ -1,0 +1,39 @@
+.payment-mode{
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 90%;
+    align-items: center;
+    height: 70px;
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+.payment-mode p{
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 15px;
+    font-size: x-large;
+    font-weight: 600;
+    width: 85%;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.7em;
+    height: 1.7em;
+    border: 0.1em solid currentColor;
+    border-radius: 50%;
+  }
+
+  input:checked{
+    background-color: var(--color-secondary);
+    outline: max(2px, 0.18em) solid currentColor;
+    outline-offset: max(1px, 0.15em);
+
+  }

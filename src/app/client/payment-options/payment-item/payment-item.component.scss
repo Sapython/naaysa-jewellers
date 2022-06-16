@@ -1,0 +1,22 @@
+.payment-item{
+    display: flex;
+    margin: auto;
+    margin-bottom: 12px;
+    width: 90%;
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 0 0 10px var(--color-secondary);
+}
+
+img{
+    margin:4px;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+p{
+    font-weight: 600;
+    margin:auto;
+    text-align: center;
+}
