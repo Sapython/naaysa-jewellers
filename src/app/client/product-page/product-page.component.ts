@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-page',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-page.component.scss']
 })
 export class ProductPageComponent implements OnInit {
-
+  @Input() jewel_name:string = 'Royal Pink Diamond Ring'
+  @Input() price:number = 1432564
+  @Input() discription:string = 'ME57_18 Stainless Steel Titanium,Graceful Oxidised Rings Combo for Women Alloy Rhodium Plated Ring'
   constructor() { }
 
   ngOnInit(): void {

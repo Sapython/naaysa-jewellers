@@ -1,18 +1,28 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-:root{
- --color-primary:#F4C7CF;
- --color-secondary:#EE93A3;
- --color-tertiary:#BB6878;
---color-dark:#000000;
---color-light:#ffffff; 
---color-light-text:#00000081; 
---color-primary-light:#f4c7cf6c;
---color-gold:#F9DCC7;
---color-gold-light:#FAF2ED  ;
+:root {
+    --color-primary: #F4C7CF;
+    --color-secondary: #EE93A3;
+    --color-tertiary: #BB6878;
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --color-light-text: #00000081;
+    --color-primary-light: #f4c7cf6c;
+    --color-gold: #F9DCC7;
+    --color-gold-light: #FAF2ED;
+    --color-dark-primary: #E88F9F;
+    --color-light-primary: #FFF5FB;
 
---font:'poppins';
---font2:'Great Vibes'
+    --font: 'poppins', sans-serif;
+    --font2: 'Great Vibes'
+
+    --xxlarge: 36px;
+    --xlarge: 32px;
+    --large: 28px;
+    --medium: 24px;
+    --small: 20px;
+    --msmall: 18px;
+    --xsmall: 16px;
+    --xxsmall: 14px;
 }

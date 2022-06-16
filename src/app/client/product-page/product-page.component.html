@@ -1,1 +1,42 @@
-<p>product-page works!</p>
+<app-header></app-header>
+<div class="container">
+    <div class="box">
+        <img src="assets/jewellery/ring.png" alt="">
+        <div class="inner-box">
+            <div class="cell">
+                <p>{{jewel_name}}</p>
+                <p>₹ {{price}}</p>
+            </div>
+            <div class="cell-one">
+                <div class="info">
+                    <p>Discription</p>
+                    <p>{{discription}}</p>
+                </div>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <input type="number" id="quantity" name="quantity" min="1">
+                </div>
+            </div>
+            <div class="buttons">
+                <button>Add to Cart <span uk-icon="cart"></span></button>
+                <button>Try On Me</button>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <p>SIMILAR PRODUCTS</p>
+        <div class="widgets">
+            <app-product-widget></app-product-widget>
+            <app-product-widget></app-product-widget>
+            <app-product-widget></app-product-widget>
+            <app-product-widget></app-product-widget>
+        </div>
+        <p>NEWLY ARRIVED</p>
+        <div class="widgets">
+            <app-product-widget></app-product-widget>
+            <app-product-widget></app-product-widget>
+            <app-product-widget></app-product-widget>
+            <app-product-widget></app-product-widget>
+        </div>
+    </div>
+</div>

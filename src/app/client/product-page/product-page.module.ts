@@ -1,3 +1,5 @@
+import { WidgetsModule } from './../../widgets/widgets.module';
+import { ComponentsModule } from './../../components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +13,9 @@ import { ProductPageComponent } from './product-page.component';
   ],
   imports: [
     CommonModule,
-    ProductPageRoutingModule
+    ProductPageRoutingModule,
+    ComponentsModule,
+    WidgetsModule
   ]
 })
 export class ProductPageModule { }
