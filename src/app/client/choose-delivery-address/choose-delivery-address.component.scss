@@ -1,0 +1,63 @@
+.addresses-holder{
+    border-radius: 16px;
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin: auto;
+    margin-top: 25px;
+    height: auto;
+    margin-bottom: 10px;
+    width: 90%;
+    overflow: hidden;
+}
+
+.header{
+    height: 100px;
+    align-items: center;
+    display: flex;
+    background-color: var(--color-primary);
+}
+
+.header h3{
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 80px;
+    font-size: 40px;
+}
+
+.add-new{
+    overflow: hidden;
+    border-radius: 8px;
+    width: 94%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #ffffff;
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px rgba(246, 174, 220, 0.608);
+    transition: 0.5s;
+}
+
+.add-new:hover{
+    border: 2px solid var(--color-primary);
+    transform: scale(1.02);
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(246, 174, 220, 0.608);
+}
+
+.add-new h1{
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 30px;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+}
+
+button:hover{
+    cursor: pointer;
+}

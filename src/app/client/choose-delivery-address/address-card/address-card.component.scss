@@ -1,0 +1,126 @@
+.address-area{
+    overflow: hidden;
+    border-radius: 8px;
+    width: 94%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #ffffff;
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px rgba(246, 174, 220, 0.608);
+    transition: 0.5s;
+}
+
+.address-area:hover{
+    border: 2px solid var(--color-primary);
+    transform: scale(1.02);
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(246, 174, 220, 0.608);
+}
+
+.radio-check{
+    margin: 30px;
+    margin-top: 20px;
+    margin-right: 60px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.7em;
+    height: 1.7em;
+    border: 0.1em solid currentColor;
+    border-radius: 50%;
+  }
+
+  input:checked{
+    background-color: var(--color-secondary);
+    outline: max(2px, 0.18em) solid currentColor;
+    outline-offset: max(1px, 0.15em);
+
+  }
+
+  .details{
+    width: 80%;
+  }
+
+  .name-number{
+    margin-top: 20px;
+    margin-bottom: -5px;
+    height: 50px;
+    width: auto;
+    align-items: center;
+    display: flex;
+  }
+
+  .name-number h1{
+    margin-right: 10px;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: x-large;
+  }
+
+  .name-number h2{
+    margin-top: 0px;
+    margin-left: 10px;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: large;
+  }
+
+  .name-number button{
+    border: 1px solid var(--color-primary);
+    background-color: #f9e2e7;
+    border-radius: 6px;
+    width: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 2px;
+    font-size: x-small;
+    margin-top: -20px;
+  }
+
+  .address-main{
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .deliver-button{
+    margin-bottom: 10px;
+  }
+
+  .deliver-button button:hover{
+    cursor: pointer;
+  }
+
+  .deliver-button button{
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: larger;
+    border-radius: 6px;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+  }
+
+  .edit-button{
+    
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  .edit-button button{
+    padding: 3px 20px;
+    font-weight: 400;
+    font-size: larger;
+    border-radius: 6px;
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-secondary);
+  }
+
+  .edit-button button:hover{
+    cursor: pointer;
+  }
