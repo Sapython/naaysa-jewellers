@@ -1,139 +1,71 @@
-header {
-    height: 20vh;
-    width: 98.9vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    .header_container {
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0px 4px 50px rgba(232, 143, 159, 0.46);
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 10px;
+  .box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
       display: flex;
-      width: 100%;
-      height: 35%;
-      align-items: center;
-      justify-content: flex-end;
-      box-sizing: border-box;
-      padding: 0px 15px;
-      .brand {
-        display: flex;
-        align-items: center;
-        font-size: 25px;
-        margin-right: 32vw;
-        gap: 12px;
-        img {
-          height: 55px;
-          width: 55px;
-        }
-        strong{
-     color: var(--color-secondary);
-        }
+      img{
+        object-fit: cover;
+        width: 75px;
       }
-      .signInUp b{
-          cursor: pointer;
-          &:hover{
-              color: var(--color-secondary);
-          }
+      p{
+        font-size: var(--msmall);
+        font-weight: 600;
+        margin-left: 10px;
+        color: #000;
+        span{
+          color: var(--color-dark-primary);
+        }
       }
     }
-    .search_conatiner{
-      width: 100%;
-      height: 35%;
-      box-sizing: border-box;
+    button{
+      color: var(--color-dark-primary);
+      font-size: var(--xsmall);
+      background-color: #fff;
+      border: none;
+
+    }
+    .list{
+      margin-top: -.5%;
+      width: 65%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding:0px 40px;
-      overflow: hidden;
-      .plan{
-          width: 180px;
-          height: 60%;
-          border: 2px solid var(--color-secondary);
-          border-radius: 25px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          span{
-  color: var(--color-secondary);
-  font-weight: 500;
-          }
+      span{
+        color: var(--color-dark-primary);
+        margin-left: 3px;
+        cursor: pointer;
       }
-      .search{
-         display: flex;
-         align-items: center;
-         justify-content: center;
-          width: 500px;
-          height: 100%;
-          margin-left: 90px;
-         
-          input{
-              width: 100%;
-              height:70%;
-              border-radius: 25px;
-              border: none;
-              background-color: var(--color-primary-light);
-              padding: 20px;
-              outline: none;
-          }
-          button{
-              margin-left: -100px;
-              height: 70%;
-              width: 100px;
-              border-radius: 25px;
-              border: none;
-              background-color: var(--color-primary);
-              color: var(--color-secondary);
-              font-size: 17px;
-              &:hover{
-                transform: scale(1.01);
-              }
-          }
-        
-      }
-      .shop{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 20px;
-          svg{
-              height: 38px;
-              width: 38px;
-          }
-          p{
-              width: 90px;
-          }
-      }
-     
     }
-    .recomendation{
-      width: 100%;
-      height: 30%;
-      background-color: var(--color-primary);
+    .buttons{
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      ul{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        margin: 0px;
-        li{
-     
-          text-decoration: none;
-          list-style-type: none;
-          display: flex;
-          gap: 5px;
-          color: var(--color-tertiary);
-          p{
-            font-size: 16px;
-            font-weight: 500;
-            margin: 0;
-            
-          }
-          svg{
-            height: 25px;
-            width: 25px;
-          }
-        }
+      width: 09%;
+      margin-right: 15px;
+      button{
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: var(--color-dark-primary);
+        color: #fff;
+        border: none;
+        padding: 15px;
+        clip-path: circle(60%);
+        cursor: pointer;
       }
-      
+      button:nth-child(1){
+        background-color: #fff;
+        color: var(--color-dark-primary);
+        box-shadow: 0px 4px 05px rgba(0, 0, 0, 0.25);
+      }
     }
   }
-  
+}
