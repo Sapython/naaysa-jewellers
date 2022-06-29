@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'add-delivery-address', loadChildren: () => import('./add-delivery-address/add-delivery-address.module').then(m => m.AddDeliveryAddressModule) },
   { path: 'vr-product-try', loadChildren: () => import('./vr-product-try/vr-product-try.module').then(m => m.VrProductTryModule) },
   { path: 'ten-plus-one-monthly-plan', loadChildren: () => import('./ten-plus-one/ten-plus-one.module').then(m => m.TenPlusOneModule) },
+  { path: 'shop-by-metal', loadChildren: () => import('./shop-by-metal/shop-by-metal.module').then(m => m.ShopByMetalModule) },
 ];
 
 @NgModule({
