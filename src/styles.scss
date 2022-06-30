@@ -13,6 +13,7 @@
     --color-gold-light: #FAF2ED;
     --color-dark-primary: #E88F9F;
     --color-light-primary: #FFF5FB;
+    --color-success:#309E7D;
 
     --font: 'poppins', sans-serif;
     --font2: 'Great Vibes'
@@ -25,4 +26,15 @@
     --msmall: 18px;
     --xsmall: 16px;
     --xxsmall: 14px;
+}
+.primary-button{
+    padding: 5px 40px;
+    background-color: var(--color-dark-primary);
+    color: #fff;
+    border: none;
+    font-size: var(--small);
+    border-radius: 10px;
+    span{
+        font-weight: bold;
+    }
 }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShopByMetalComponent } from './shop-by-metal.component';
+import { TenPlusOneSchemaComponent } from './ten-plus-one-schema.component';
 
-describe('ShopByMetalComponent', () => {
-  let component: ShopByMetalComponent;
-  let fixture: ComponentFixture<ShopByMetalComponent>;
+describe('TenPlusOneSchemaComponent', () => {
+  let component: TenPlusOneSchemaComponent;
+  let fixture: ComponentFixture<TenPlusOneSchemaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShopByMetalComponent ]
+      declarations: [ TenPlusOneSchemaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShopByMetalComponent);
+    fixture = TestBed.createComponent(TenPlusOneSchemaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
