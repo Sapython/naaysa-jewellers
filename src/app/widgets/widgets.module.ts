@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductWidgetComponent } from './product-widget/product-widget.component';
@@ -14,7 +15,8 @@ const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWi
   ],
   exports: [components],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class WidgetsModule { }

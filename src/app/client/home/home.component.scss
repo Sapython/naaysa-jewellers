@@ -30,11 +30,10 @@
   }
 
   .widgets1,.widgets2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:#F9DCC7;
-    padding: 15px 100px;
+    display: grid;
+    grid-template: auto / auto auto;
+    grid-gap: 15px;
+    background-color: #F9DCC7;
   }
 
   .heading {

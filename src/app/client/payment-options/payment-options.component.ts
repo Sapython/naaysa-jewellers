@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentOptionsComponent implements OnInit {
 
-  constructor() { }
+  onclick(){
+    alert('Your Order has been Placed')
+  }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
