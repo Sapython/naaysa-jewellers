@@ -7,9 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MetalWidgetComponent implements OnInit {
 
-  @Input() metal:string = 'Diamond'
-  @Input() info:string = 'Rings, 4.58gm, 22 KT-Bound To You Diamond Rings-...'
-  @Input() price:Number = 580825
+  @Input() name:string = 'Gold jewellery'
+  @Input() src:string = 'assets/jewel1.png'
 
   constructor() { }
 
