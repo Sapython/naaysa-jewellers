@@ -1,8 +1,8 @@
-.cart-main{
+.cart-main {
     display: flex;
 }
 
-.cart-items{
+.cart-items {
     margin-top: 30px;
     margin-left: 70px;
     width: 60%;
@@ -10,9 +10,16 @@
     border-radius: 16px;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        border: 2px solid var(--color-primary);
+        transform: scale(1.02);
+        transition: 0.5s;
+        box-shadow: 0 0 20px rgba(246, 174, 220, 0.608);
+    }
 }
 
-.cart-items h1{
+.cart-items h1 {
     margin-left: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -20,13 +27,13 @@
     font-weight: 500;
 }
 
-hr{
+hr {
     border-top: 2px solid var(--color-secondary);
     margin-left: 25px;
     width: 93%;
 }
 
-.cart-price{
+.cart-price {
     margin-top: 30px;
     margin-left: 50px;
     width: 27%;
@@ -34,16 +41,23 @@ hr{
     border-radius: 16px;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        border: 2px solid var(--color-primary);
+        transform: scale(1.02);
+        transition: 0.5s;
+        box-shadow: 0 0 20px rgba(246, 174, 220, 0.608);
+    }
 }
 
-.cart-price h1{
+.cart-price h1 {
     margin-left: 25px;
     margin-top: 20px;
     font-size: 25px;
     font-weight: 500;
 }
 
-.cart-price p{
+.cart-price p {
     margin-left: 25px;
     margin-top: 4px;
     margin-bottom: 20px;
@@ -55,9 +69,9 @@ hr{
 hr.new2 {
     border-top: 1px dashed grey;
     width: 87%;
-  }
+}
 
-.promo{
+.promo {
     margin-top: 20px;
     margin-left: 40px;
     height: auto;
@@ -68,14 +82,15 @@ hr.new2 {
     overflow: hidden;
 }
 
-.promo input{
+.promo input {
     padding-left: 5px;
     border: none;
     background-color: rgb(213, 213, 213);
     height: 40px;
     font-size: large;
 }
-.promo button{
+
+.promo button {
     border: none;
     background-color: inherit;
     align-items: center;
@@ -84,51 +99,51 @@ hr.new2 {
     font-size: large;
 }
 
-#disc{
+#disc {
     font-size: large;
     margin-left: 40px;
 }
 
-.price-detail{
+.price-detail {
     display: flex;
 }
 
-.price-detail h1{
+.price-detail h1 {
     font-size: 20px;
 }
 
-.price-detail p{
+.price-detail p {
     font-size: medium;
     margin-top: 10px;
     margin-bottom: -5px;
     font-weight: 500;
 }
 
-.price-detail-data{
+.price-detail-data {
     margin-left: 44%;
     text-align: right;
 }
 
-.pd{
+.pd {
     color: grey;
 }
 
-.total-price{
+.total-price {
     display: flex;
 }
 
-.total-price p{
+.total-price p {
     font-size: 25px;
     color: black;
     font-weight: 600;
 }
 
-#price-final{
+#price-final {
     margin-left: 51%;
     text-align: right;
 }
 
-.proceed-btn{
+.proceed-btn {
     background-color: var(--color-secondary);
     color: #ffffff;
     border: none;
@@ -139,15 +154,16 @@ hr.new2 {
     margin-top: 15px;
     margin-bottom: 8px;
     padding: 5px;
-    font-size:large;
+    font-size: large;
     font-weight: 450;
 }
 
-.proceed-btn:hover, .promo button:hover{
+.proceed-btn:hover,
+.promo button:hover {
     cursor: pointer;
 }
 
-a{
+a {
     color: var(--color-secondary);
     margin-left: 17px;
     margin-top: 8px;

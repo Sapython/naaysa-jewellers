@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Swiper, { Navigation, Pagination } from 'swiper';
+
 
 
 Swiper.use([Navigation, Pagination]);
