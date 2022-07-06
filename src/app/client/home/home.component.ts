@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swiper, { Navigation, Pagination } from 'swiper';
+import * as AOS from 'aos'
 
 
 
@@ -35,5 +36,7 @@ export class HomeComponent implements OnInit {
   });
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    AOS.init();
+  }
 }

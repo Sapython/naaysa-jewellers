@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-product-page',
@@ -14,6 +15,7 @@ export class ProductPageComponent implements OnInit {
     alert('Successfully added to cart')
   }
   ngOnInit(): void {
+    AOS.init();
   }
 
 }
