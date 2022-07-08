@@ -1,0 +1,56 @@
+.container{
+    margin: 15px;
+    padding: 15px;
+    p{
+        font-weight: 500;
+        font-size:var(--small);
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+        margin: auto;
+        border: 5px solid var(--color-dark-primary);
+    }
+    .box{
+        margin-top: 5%;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .box-1{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .details{
+        margin-top: 15px;
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        input{
+            border: none;
+            border: 1px solid #969696;
+            background-color: #fff;
+            padding: 10px 15px;
+            padding-right: 25px;
+            border-radius: 5px;
+        }
+    }
+    #full{
+        width: 76%;
+    }
+    .primary-button{
+        font-size: var(--xsmall);
+        padding: 5px 30px;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+    }
+}

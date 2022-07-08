@@ -1,0 +1,53 @@
+<div id="wrapper" (window:resize)="onWindowResize()">
+    <div id="sidebar-container">
+      <div
+        [style]="largeScreen || showSidebar ? '' : 'display: none'"
+        id="sidebar-container"
+      >
+        <aside id="sidebar">
+          <div id="headings">
+            <div class="name">
+              <img src="assets/logo.svg" alt="">
+              <h2 id="name">Naaysa <br> Jewellers</h2>
+            </div>
+            <h3 id="user">Sweet Singh</h3>
+            <p id="email">sweetsingh@gmail.com</p>
+          </div>
+          <ul id="sidebar-ul">
+            <li class="sidebar-li">
+              <a
+                routerLink="/profile/edit"
+                routerLinkActive="active"
+                (click)="toggleSidebar()"
+                class="sidebar-li-a"
+                ><i class="fa-solid fa-user"></i>
+                <span class="sidebar-text">Profile</span></a>
+            </li>
+            <li class="sidebar-li">
+              <a
+                routerLink="/profile/notifications"
+                routerLinkActive="active"
+                (click)="toggleSidebar()"
+                class="sidebar-li-a"
+                ><i class="fa-solid fa-bell"></i>
+                <span class="sidebar-text">Notifications</span></a>
+            </li>
+            <li class="sidebar-li">
+              <a
+                routerLink="/profile/choose-plan"
+                routerLinkActive="active"
+                (click)="toggleSidebar()"
+                class="sidebar-li-a"
+                ><i class="fa-solid fa-globe"></i>
+                <span class="sidebar-text">Choose Plan</span></a>
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <main>
+      <button *ngIf="!largeScreen" class="uk-navbar-toggle" uk-navbar-toggle-icon id="toggle-button"
+        (click)="toggleSidebar()"></button>
+      <router-outlet></router-outlet>
+      <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
+    </main>
+  </div>

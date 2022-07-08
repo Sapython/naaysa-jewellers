@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'ten-plus-schema', loadChildren: () => import('./ten-plus-one-schema/ten-plus-one-schema.module').then(m => m.TenPlusOneSchemaModule) },
   {path: 'order-details', loadChildren:() => import('./order-details/order-details.module').then(m => m.OrderDetailsModule)},
   {path: 'order-history', loadChildren:() => import('./order-history/order-history.module').then(m => m.OrderHistoryModule)},
+  { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
 ];
 
 @NgModule({

@@ -11,6 +11,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
   declarations: [
     TenPlusOneComponent
   ],
+  exports:[TenPlusOneComponent],
   imports: [
     CommonModule,
     TenPlusOneRoutingModule,

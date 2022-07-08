@@ -2,6 +2,7 @@
     background: linear-gradient(180deg, #FFFFFF 0%, #F4C7CF 100%);
     margin: 10px;
     padding: 20px;
+    min-height: 100vh;
     .box{
         display: flex;
         align-items: center;
@@ -73,6 +74,39 @@
                 font-size: var(--xsmall);
             }
             }
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        margin: 0;
+    }
+    .box{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        text-align: center;
+        img{
+            margin: 0;
+            display: block;
+            margin: auto;
+        }
+    }
+    .parent-container{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .plan-info{
+        display: block;
+        margin: auto;
+        align-items: center;
+        text-align: center; 
+        p{
+            text-align: center;
+        }
+        .section-one{
+            margin-bottom: 25px;
         }
     }
 }
