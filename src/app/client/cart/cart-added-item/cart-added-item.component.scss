@@ -87,3 +87,21 @@ img {
 .count-btn:hover {
     cursor: pointer;
 }
+@media only screen and (max-width: 600px){
+    .item-card{
+        margin: 5px;
+        flex-direction: column;
+    }
+    img{
+        height: 45px;
+        width: 45px;
+        object-fit: cover;
+    }
+    .item-details{
+        margin: 0 10px;
+        font-size: var(--msmall);
+    }
+    .item-details h3{
+        font-size: var(--msmall);
+    }
+}

@@ -21,9 +21,14 @@
     font-weight: 400;
     margin-top: 10px;
     margin-left: 80px;
-    font-size: 40px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
+.fa-solid{
+    margin-right: 15px;
+}
 .add-new{
     overflow: hidden;
     border-radius: 8px;
@@ -36,6 +41,7 @@
     margin-bottom: 20px;
     box-shadow: 0 0 4px rgba(246, 174, 220, 0.608);
     transition: 0.5s;
+    padding: 10px;
 }
 
 .add-new:hover{
@@ -46,11 +52,11 @@
 }
 
 .add-new h1{
+    margin: 0;
     color: var(--color-secondary);
     font-weight: 600;
-    margin-top: 10px;
     margin-left: 25px;
-    font-size: 30px;
+    font-size: var(--small);
 }
 
 button{
@@ -69,4 +75,17 @@ button:hover{
     margin: 15px 55px;
     font-size: var(--small);
     cursor: pointer;
+}
+@media only screen and (max-width: 600px){
+   .addresses-holder{
+    margin: 0;
+    width: auto;
+   }
+   .container{
+    padding: 10px;
+   }
+   .header h3{
+    display: block;
+    margin: auto;
+   }
 }

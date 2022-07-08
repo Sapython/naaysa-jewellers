@@ -41,3 +41,10 @@
         font-weight: bold;
     }
 }
+.widgets {
+    display: grid;
+    grid-template: auto
+        / auto auto auto auto;
+    grid-gap: 05%;
+
+}

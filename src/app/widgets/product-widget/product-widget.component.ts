@@ -8,8 +8,10 @@ import * as AOS from 'aos'
 })
 export class ProductWidgetComponent implements OnInit {
   @Input() product_name:string = 'Diamond Ring'
+  @Input() src:string = 'jewellery/jewel1.svg'
   @Input () price:number = 125632
   @Input() info:string = 'New collection from naaysa'
+  @Input() liked:boolean = false
   constructor() { }
 
   ngOnInit(): void {

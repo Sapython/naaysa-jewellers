@@ -170,3 +170,9 @@ a {
     text-decoration: none;
     font-size: 15px;
 }
+@media only screen and (max-width: 600px){
+    .cart-items{
+        margin: 0;
+        width: auto;
+    }
+}

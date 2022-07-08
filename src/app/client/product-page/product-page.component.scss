@@ -17,8 +17,8 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
-            margin-left: 50px;
             max-height: 535px;
+            margin-left: 50px;
             img{
                 max-height: 535px;
             }
@@ -95,6 +95,7 @@
                     background-color: var(--color-dark-primary);
                     color: #fff;
                     border: none;
+                    font-family: var(--font);
                     font-size: var(--small);
                     border-radius: 10px;
                     cursor: pointer;
@@ -127,26 +128,64 @@
     }
 }
 
-@media screen and (max-width: 480px) {
-    .box {
-        flex-direction: column;
-        width: 100%;
-
-        img {
+@media only screen and (max-width: 600px) {
+    .container{
+        margin: 0;
+        padding: 10px;
+        .box{
+            flex-direction: column;
             width: 100%;
-        }
-
-        .inner-box {
-            width: 100%;
-            font-size: 15px;
-
-            .cell {
-                font-size: var(--msmall);
+            margin: 0px;
+    
+            img {
+                width: 100%;
+            }
+            .inner-box{
+                padding: 10px;
+                width: auto;
+                font-size: 15px;
+                margin: 10px;
+                .cell {
+                    font-size: var(--msmall);
+                    align-items: center;
+                    p:nth-child(2){
+                        margin-top: 0px;
+                        width: 30%;
+                    }
+                }
+                .cell-one{
+                    flex-direction: column;
+                    text-align: left;
+                    padding: 0;
+                    p{
+                        margin-left: -44%;
+                        font-size: var(--xsmall);
+                    }
+                    p:nth-child(1){
+                        font-weight: 400;
+                    }
+                    .quantity{
+                        margin-left: -12%;
+                        margin-top: 20px;
+                    }
+                }
+                .buttons{
+                    margin-top: 15px;
+                    margin-left: 3%;
+                    button{
+                        font-family: var(--font);
+                        padding: 5px 20px;
+                        font-size: var(--xsmall);
+                        margin-left: 5px;
+                    }
+                }
             }
         }
-    }
-
-    .widgets {
-        flex-direction: column;
+        .section{
+            .widgets{
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 }
