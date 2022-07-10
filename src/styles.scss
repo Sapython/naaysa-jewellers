@@ -1,50 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 :root {
-    --color-primary: #F4C7CF;
-    --color-secondary: #EE93A3;
-    --color-tertiary: #BB6878;
-    --color-dark: #000000;
-    --color-light: #ffffff;
-    --color-light-text: #00000081;
-    --color-primary-light: #f4c7cf6c;
-    --color-gold: #F9DCC7;
-    --color-gold-light: #FAF2ED;
-    --color-dark-primary: #E88F9F;
-    --coloryr-light-primary: #FFF5FB;
-    --color-success:#309E7D;
+  --color-primary: #f4c7cf;
+  --color-secondary: #ee93a3;
+  --color-secondary-light: #fcd4db;
+  --color-secondary-lighter: #fde7eb;
+  --color-tertiary: #bb6878;
+  --color-four: #949494;
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-light-text: #00000081;
+  --color-primary-light: #f4c7cf6c;
+  --color-gold: #f9dcc7;
+  --color-gold-light: #faf2ed;
+  --color-dark-primary: #e88f9f;
+  --color-light-primary: #fff5fb;
+  --color-success: #309e7d;
 
-    --font: 'poppins', sans-serif;
-    --font2: 'Great Vibes';
-    --font3:'Philosopher', sans-serif;
-    --font4:'Questrial', sans-serif;
+  --font-one: "Poppins", sans-serif;
+  --font-two: "Great Vibes";
+  --font-three: "Philosopher", sans-serif;
+  --font-four: "Questrial", sans-serif;
+  --font-five: "Noto Sans", sans-serif;
 
-    --xxlarge: 36px;
-    --xlarge: 32px;
-    --large: 28px;
-    --medium: 24px;
-    --small: 20px;
-    --msmall: 18px;
-    --xsmall: 16px;
-    --xxsmall: 14px;
+  --xxlarge: 36px;
+  --xlarge: 32px;
+  --large: 28px;
+  --medium: 24px;
+  --small: 20px;
+  --msmall: 18px;
+  --xsmall: 16px;
+  --xxsmall: 14px;
 }
-.primary-button{
-    padding: 5px 40px;
-    background-color: var(--color-dark-primary);
-    color: #fff;
-    border: none;
-    font-size: var(--small);
-    border-radius: 10px;
-    cursor: pointer;
-    span{
-        font-weight: bold;
-    }
+
+.primary-button {
+  padding: 0.25em 0.5em;
+  background-color: var(--color-secondary);
+  color: #fff;
+  border: none;
+  font-size: var(--msmall);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  outline: none;
+
+  span {
+    font-weight: bold;
+  }
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
 }
+
 .widgets {
-    display: grid;
-    grid-template: auto
-        / auto auto auto auto;
-    grid-gap: 05%;
-
+  display: grid;
+  grid-template:
+    auto
+    / auto auto auto auto;
+  grid-gap: 05%;
 }

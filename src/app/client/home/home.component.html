@@ -1,50 +1,82 @@
 <app-header></app-header>
-<div class="container uk-animation-toggle">
-  <swiper data-aos="fade-right" data-aos-delay="300" [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{
-      clickable: true
-    }" [navigation]="true" class="mySwiper">
-    <ng-template swiperSlide><img src="assets/carasole.png
-      " alt=""></ng-template>
-    <ng-template swiperSlide ><img src="assets/carasole.png" alt=""></ng-template>
-    <ng-template swiperSlide ><img src="assets/carasole.png" alt=""></ng-template>
-    <ng-template swiperSlide ><img src="assets/carasole.png" alt=""></ng-template>
-    <ng-template swiperSlide ><img src="assets/carasole.png" alt=""></ng-template>
-    <ng-template swiperSlide ><img src="assets/carasole.png" alt=""></ng-template>
-
-
-  </swiper>
-  <div class="box">
-    <div class="info" data-aos="fade-right" data-aos-delay="50">
-      <p>FLAT 25% OFF ON MAKING CHARGES*</p>
-    </div>
-    <p data-aos="fade-right" data-aos-delay="50">*Terms & Condition applied</p>
+<section id="first-section" class="uk-animation-toggle">
+  <div id="first-text">
+    <h2>We Make Jewellery to Fit Every Budget, Occasion, and Taste.</h2>
+    <p>Find your sparkle in every moment, today.</p>
+    <button class="primary-button">Explore Collection</button>
   </div>
+</section>
+<section id="discount-section" class="uk-animation-toggle">
+  <p>FLAT 25% OFF ON MAKING CHARGES*</p>
+  <p>*Terms & Condition applied</p>
+</section>
+<section>
   <div class="carsole2" data-aos="fade-right" data-aos-delay="500">
-    <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{
-      clickable: true
-    }" [navigation]="true" class="mySwiper">
-      <ng-template swiperSlide><img src="assets/carsole2.png
-      " alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carsole2.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carsole2.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carsole2.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carsole2.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carsole2.png" alt=""></ng-template>
-
-
+    <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [loop]="true"
+      [pagination]="{
+        clickable: true
+      }"
+      [navigation]="true"
+      class="mySwiper"
+    >
+      <ng-template swiperSlide
+        ><img
+          src="assets/carsole2.png
+      "
+          alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carsole2.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carsole2.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carsole2.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carsole2.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carsole2.png" alt=""
+      /></ng-template>
     </swiper>
   </div>
   <div class="carsole3" data-aos="fade-left" data-aos-delay="700">
-    <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{
-      clickable: true
-    }" [navigation]="true" class="mySwiper">
-      <ng-template swiperSlide><img src="assets/carasole3.png
-      " alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole3.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole3.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole3.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole3.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole3.png" alt=""></ng-template>
+    <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [loop]="true"
+      [pagination]="{
+        clickable: true
+      }"
+      [navigation]="true"
+      class="mySwiper"
+    >
+      <ng-template swiperSlide
+        ><img
+          src="assets/carasole3.png
+      "
+          alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole3.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole3.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole3.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole3.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole3.png" alt=""
+      /></ng-template>
     </swiper>
   </div>
   <div class="shop-by-metal">
@@ -53,53 +85,100 @@
     </div>
     <div class="widgets">
       <div class="widgets1">
-        <app-metal-widget src="assets/jewel1.png" name="Gold Jewellery" data-aos="fade-left" data-aos-delay="300"></app-metal-widget>
-        <app-metal-widget src="assets/jewel2.png" name="Silver Jewellery" data-aos="fade-right" data-aos-delay="500" ></app-metal-widget>
+        <app-metal-widget
+          src="assets/jewel1.png"
+          name="Gold Jewellery"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        ></app-metal-widget>
+        <app-metal-widget
+          src="assets/jewel2.png"
+          name="Silver Jewellery"
+          data-aos="fade-right"
+          data-aos-delay="500"
+        ></app-metal-widget>
       </div>
       <div class="widgets2">
-        <app-metal-widget src="assets/jewel3.png" name="Platinum Jewellery" data-aos="fade-left" data-aos-delay="700"></app-metal-widget>
-        <app-metal-widget src="assets/jewel4.png" name="Diamond Jewellery" data-aos="fade-right" data-aos-delay="900"></app-metal-widget>
+        <app-metal-widget
+          src="assets/jewel3.png"
+          name="Platinum Jewellery"
+          data-aos="fade-left"
+          data-aos-delay="700"
+        ></app-metal-widget>
+        <app-metal-widget
+          src="assets/jewel4.png"
+          name="Diamond Jewellery"
+          data-aos="fade-right"
+          data-aos-delay="900"
+        ></app-metal-widget>
       </div>
     </div>
-
   </div>
   <div class="engagement-rings" data-aos="zoom-in-up" data-aos-delay="500">
     <div class="rings uk-animation-slide-left-medium">
       <p>Engagement Rings</p>
     </div>
-    <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{
-      clickable: true
-    }" [navigation]="true" class="mySwiper">
-      <ng-template swiperSlide><img src="assets/carasole4.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole4.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole4.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole4.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole4.png" alt=""></ng-template>
-      <ng-template swiperSlide><img src="assets/carasole4.png" alt=""></ng-template>
-
-
+    <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [loop]="true"
+      [pagination]="{
+        clickable: true
+      }"
+      [navigation]="true"
+      class="mySwiper"
+    >
+      <ng-template swiperSlide
+        ><img src="assets/carasole4.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole4.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole4.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole4.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole4.png" alt=""
+      /></ng-template>
+      <ng-template swiperSlide
+        ><img src="assets/carasole4.png" alt=""
+      /></ng-template>
     </swiper>
   </div>
   <div class="blog">
-      <div class=" blog-card" data-aos="fade-left" data-aos-delay="300">
-        <img src="assets/blog1.png" alt="">
-        <p class="bold">Capture Charm Bracelet</p>
-        <p>Bracelet of ancient style infused with stories across frpm the land of Bharat. Style mixed with the thrilling
-          tales of this great land.</p>
-      </div>
-      <div class="blog-card" data-aos="fade-down" data-aos-delay="700">
-        <p id="blog">The Blog</p>
-        <img src="assets/blog2.png" alt="">
-        <p class="bold">Capture Charm Bracelet</p>
-        <p>Bracelet of ancient style infused with stories across frpm the land of Bharat. Style mixed with the thrilling
-          tales of this great land.</p>
-      </div>
-      <div class="blog-card">
-        <img src="assets/blog3.png" data-aos="fade-right" data-aos-delay="500" alt="">
-        <p class="bold">Capture Charm Bracelet</p>
-        <p>Bracelet of ancient style infused with stories across frpm the land of Bharat. Style mixed with the thrilling
-          tales of this great land.</p>
-      </div>
+    <div class="blog-card" data-aos="fade-left" data-aos-delay="300">
+      <img src="assets/blog1.png" alt="" />
+      <p class="bold">Capture Charm Bracelet</p>
+      <p>
+        Bracelet of ancient style infused with stories across frpm the land of
+        Bharat. Style mixed with the thrilling tales of this great land.
+      </p>
+    </div>
+    <div class="blog-card" data-aos="fade-down" data-aos-delay="700">
+      <p id="blog">The Blog</p>
+      <img src="assets/blog2.png" alt="" />
+      <p class="bold">Capture Charm Bracelet</p>
+      <p>
+        Bracelet of ancient style infused with stories across frpm the land of
+        Bharat. Style mixed with the thrilling tales of this great land.
+      </p>
+    </div>
+    <div class="blog-card">
+      <img
+        src="assets/blog3.png"
+        data-aos="fade-right"
+        data-aos-delay="500"
+        alt=""
+      />
+      <p class="bold">Capture Charm Bracelet</p>
+      <p>
+        Bracelet of ancient style infused with stories across frpm the land of
+        Bharat. Style mixed with the thrilling tales of this great land.
+      </p>
+    </div>
   </div>
   <app-footer data-aos="fade-up" data-aos-delay="100"></app-footer>
-</div>
+</section>

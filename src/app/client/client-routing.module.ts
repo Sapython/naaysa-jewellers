@@ -17,18 +17,86 @@ const routes: Routes = [
     loadChildren: () =>
       import('./signup/signup.module').then((m) => m.SignupModule),
   },
-  { path: 'product', loadChildren: () => import('./product-page/product-page.module').then(m => m.ProductPageModule) },
-  { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) },
-  { path: 'choose-delivery-address', loadChildren: () => import('./choose-delivery-address/choose-delivery-address.module').then(m => m.ChooseDeliveryAddressModule) },
-  { path: 'payment-options', loadChildren: () => import('./payment-options/payment-options.module').then(m => m.PaymentOptionsModule) },
-  { path: 'add-delivery-address', loadChildren: () => import('./add-delivery-address/add-delivery-address.module').then(m => m.AddDeliveryAddressModule) },
-  { path: 'vr-product-try', loadChildren: () => import('./vr-product-try/vr-product-try.module').then(m => m.VrProductTryModule) },
-  { path: 'ten-plus', loadChildren: () => import('./ten-plus-one/ten-plus-one.module').then(m => m.TenPlusOneModule) },
-  { path: 'ten-plus-schema', loadChildren: () => import('./ten-plus-one-schema/ten-plus-one-schema.module').then(m => m.TenPlusOneSchemaModule) },
-  {path: 'order-details', loadChildren:() => import('./order-details/order-details.module').then(m => m.OrderDetailsModule)},
-  {path: 'order-history', loadChildren:() => import('./order-history/order-history.module').then(m => m.OrderHistoryModule)},
-  { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
-  { path: 'all-product', loadChildren: () => import('./all-products/all-products.module').then(m => m.AllProductsModule) },
+  {
+    path: 'product',
+    loadChildren: () =>
+      import('./product-page/product-page.module').then(
+        (m) => m.ProductPageModule
+      ),
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
+  },
+  {
+    path: 'choose-delivery-address',
+    loadChildren: () =>
+      import('./choose-delivery-address/choose-delivery-address.module').then(
+        (m) => m.ChooseDeliveryAddressModule
+      ),
+  },
+  {
+    path: 'payment-options',
+    loadChildren: () =>
+      import('./payment-options/payment-options.module').then(
+        (m) => m.PaymentOptionsModule
+      ),
+  },
+  {
+    path: 'add-delivery-address',
+    loadChildren: () =>
+      import('./add-delivery-address/add-delivery-address.module').then(
+        (m) => m.AddDeliveryAddressModule
+      ),
+  },
+  {
+    path: 'vr-product-try',
+    loadChildren: () =>
+      import('./vr-product-try/vr-product-try.module').then(
+        (m) => m.VrProductTryModule
+      ),
+  },
+  {
+    path: 'ten-plus-one-scheme',
+    loadChildren: () =>
+      import('./ten-plus-one/ten-plus-one.module').then(
+        (m) => m.TenPlusOneModule
+      ),
+  },
+  {
+    path: 'ten-plus-schema',
+    loadChildren: () =>
+      import('./ten-plus-one-schema/ten-plus-one-schema.module').then(
+        (m) => m.TenPlusOneSchemaModule
+      ),
+  },
+  {
+    path: 'order-details',
+    loadChildren: () =>
+      import('./order-details/order-details.module').then(
+        (m) => m.OrderDetailsModule
+      ),
+  },
+  {
+    path: 'order-history',
+    loadChildren: () =>
+      import('./order-history/order-history.module').then(
+        (m) => m.OrderHistoryModule
+      ),
+  },
+  
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./profile/profile.module').then((m) => m.ProfileModule),
+  },
+  {
+    path: 'all-product',
+    loadChildren: () =>
+      import('./all-products/all-products.module').then(
+        (m) => m.AllProductsModule
+      ),
+  },
 ];
 
 @NgModule({

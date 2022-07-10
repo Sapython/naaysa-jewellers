@@ -41,7 +41,6 @@ input:checked {
   background-color: var(--color-secondary);
   outline: max(2px, 0.18em) solid currentColor;
   outline-offset: max(1px, 0.15em);
-
 }
 
 .details {
@@ -58,7 +57,7 @@ input:checked {
 
 .name-number h1 {
   margin-right: 10px;
-  font-family: var(--font);
+  font-family: var(--font-one);
   font-weight: 600;
   font-size: var(--small);
 }
@@ -66,7 +65,7 @@ input:checked {
 .name-number h2 {
   margin-top: 0px;
   margin-left: 10px;
-  font-family: var(--font);
+  font-family: var(--font-one);
   font-weight: 600;
   font-size: var(--msmall);
 }
@@ -106,7 +105,6 @@ input:checked {
 }
 
 .edit-button {
-
   text-align: right;
   margin-top: 20px;
 }
@@ -126,16 +124,16 @@ input:checked {
 }
 
 @media only screen and (max-width: 600px) {
-  .name-number{
+  .name-number {
     margin-left: -15px;
     flex-direction: column;
     align-items: center;
     text-align: left;
   }
-  .radio-check{
+  .radio-check {
     margin-right: 15px;
   }
-  .name-number h2{
+  .name-number h2 {
     margin: 0;
     margin-top: -10px;
     margin-bottom: 20px;
@@ -143,18 +141,18 @@ input:checked {
   .name-number button {
     display: none;
   }
-  .name-number h1{
+  .name-number h1 {
     font-weight: 500;
     margin-left: 18px;
   }
-  .edit-button button{
+  .edit-button button {
     display: flex;
     font-size: var(--xxsmall);
-    i{
+    i {
       margin-right: 2px;
     }
   }
-  .address-area{
+  .address-area {
     width: auto;
   }
 }

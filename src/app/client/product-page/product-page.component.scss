@@ -1,5 +1,5 @@
 .container {
-    font-family: var(--font);
+    font-family: var(--font-one);
     margin: 15px;
 
     .box {
@@ -95,7 +95,7 @@
                     background-color: var(--color-dark-primary);
                     color: #fff;
                     border: none;
-                    font-family: var(--font);
+                    font-family: var(--font-one);
                     font-size: var(--small);
                     border-radius: 10px;
                     cursor: pointer;
@@ -173,7 +173,7 @@
                     margin-top: 15px;
                     margin-left: 3%;
                     button{
-                        font-family: var(--font);
+                        font-family: var(--font-one);
                         padding: 5px 20px;
                         font-size: var(--xsmall);
                         margin-left: 5px;
