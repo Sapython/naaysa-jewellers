@@ -11,7 +11,7 @@
         }
         width: 60%;
         .plan-info{
-            font-family: var(--font);
+            font-family: var(--font-one);
             p:nth-child(1){
                 font-size: 45px;
                 font-weight: bold;
@@ -39,7 +39,7 @@
             padding: 25px;
             border-radius: 15px;
             #heading{
-                font-family: var(--font);
+                font-family: var(--font-one);
                 font-size: var(--msmall);
                 font-weight: 600;
                 margin-top: 10px;
@@ -48,7 +48,7 @@
                 font-weight: 500;
             }
             input{
-                font-family: var(--font);
+                font-family: var(--font-one);
                 font-size: var(--msmall);
                 display: block;
                 margin: 10px 0px;
@@ -67,7 +67,7 @@
                 border: none;
                 margin-left: 15px;
                 padding: 5px 10px;
-                font-family: var(--font);
+                font-family: var(--font-one);
                 border-radius: 5px;
                 font-weight: 500;
                 font-size: var(--xsmall);
