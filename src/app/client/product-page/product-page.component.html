@@ -1,7 +1,9 @@
 <app-header></app-header>
 <div class="container">
     <div class="box">
-        <img src="assets/jewellery/ring.png" alt="" data-aos="fade-left" data-aos-delay="300" data-aos-easing="ease-in-out">
+        <div class="image">
+            <img src="assets/jewellery/ring.png" alt="" data-aos="fade-left" data-aos-delay="300" data-aos-easing="ease-in-out">
+        </div>
         <div class="inner-box" data-aos="fade-right" data-aos-delay="500">
             <div class="cell">
                 <p>{{jewel_name}}</p>
@@ -18,8 +20,8 @@
                 </div>
             </div>
             <div class="buttons">
-                <button (click)="onclick()">Add to Cart<span uk-icon="cart"></span></button>
-                <button routerLink="/vr-product-try">Try On Me</button>
+                <button (click)="onclick()" id="cart">Add to Cart<span uk-icon="cart"></span></button>
+                <button routerLink="/vr-product-try" id="try">Try On Me</button>
             </div>
         </div>
     </div>

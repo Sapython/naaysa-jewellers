@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 :root {
@@ -23,7 +23,7 @@
   --font-two: "Great Vibes";
   --font-three: "Philosopher", sans-serif;
   --font-four: "Questrial", sans-serif;
-  --font-five: 'Noto Sans', sans-serif;;
+  --font-five: "Noto Sans", sans-serif;
 
   --xxlarge: 36px;
   --xlarge: 32px;
@@ -36,14 +36,14 @@
 }
 
 .primary-button {
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   background-color: var(--color-secondary);
   color: #fff;
   border: none;
   font-size: var(--msmall);
   border-radius: 10px;
   cursor: pointer;
-  transition: all .4s;
+  transition: all 0.4s;
   outline: none;
 
   span {
@@ -53,4 +53,12 @@
   &:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
+}
+
+.widgets {
+  display: grid;
+  grid-template:
+    auto
+    / auto auto auto auto;
+  grid-gap: 05%;
 }

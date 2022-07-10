@@ -1,0 +1,15 @@
+.container{
+    padding: 15px;
+    p{
+        margin-left: 15px;
+        font-weight: 500;
+        font-family: var(--font-three);
+        font-size: var(--large);
+    }
+}
+@media only screen and (max-width: 600px){
+    .widgets{
+        display: flex;
+        flex-direction: column;
+    }
+}

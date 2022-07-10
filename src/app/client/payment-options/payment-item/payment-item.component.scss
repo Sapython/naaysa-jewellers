@@ -1,8 +1,8 @@
 .payment-item{
     display: flex;
     margin: auto;
-    margin-bottom: 12px;
     width: 90%;
+    margin-bottom: 12px;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px var(--color-secondary);
 }
@@ -19,4 +19,9 @@ p{
     font-weight: 600;
     margin:auto;
     text-align: center;
+}
+@media only screen and (max-width: 600px){
+    .payment-item{
+        width:100%;
+    } 
 }

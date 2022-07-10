@@ -93,6 +93,8 @@ hr.new2 {
     font-size: 25px;
     color: black;
     font-weight: 600;
+    margin-top: 20px;
+    font-size: 20px;
 }
 
 #price-final{
@@ -124,4 +126,38 @@ a{
     margin-top: 8px;
     text-decoration: none;
     font-size: 15px;
+}
+@media only screen and (max-width: 600px){
+    .cart-main{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .cart-items{
+        margin: 0px;
+        width: 100%;
+    }
+    .cart-price{
+        margin: 0px;
+        width: auto;
+        margin-top: 20px;
+    }
+    .total-price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cart-price{
+        margin-left: 0px;
+        padding: 30px 38px;
+    }
+    .cart-price p{
+        margin-left: 0;
+    }
+    .cart-price h1{
+        margin-left: 0;
+    }
+    #price-final{
+        margin: 0;
+    }   
 }

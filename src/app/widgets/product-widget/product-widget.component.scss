@@ -5,14 +5,24 @@
     padding: 10px 30px;
     font-family: var(--font-one);
     border-radius: 10px;
-    box-shadow: 0px 4px 14px var(--color-dark-primary);
+    box-shadow: var(--color-primary) 0px 4px 14px 0px;
     .box{
         display: block;
         margin: auto;
         text-align: center;
+        img{
+            max-height: 150px;
+            min-height: 150px;
+            max-width: 200px;
+            object-fit: cover;
+        }
     }
     .heart{
         text-align: right;
+        i{
+            color: var(--color-dark-primary);
+            font-size: 20px;
+        }
 
         span{
             transition: 0.5s;
@@ -22,8 +32,8 @@
         }
     }
     #name{
-        font-weight: 600;
-        font-size: var(--medium);
+        font-weight: 500;
+        font-size: var(--small);
         color: #000;
         text-align: left;
     }

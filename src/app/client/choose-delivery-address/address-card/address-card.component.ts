@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AddressCardComponent implements OnInit {
 
   @Input() name:String="";
+  @Input() last_name:String="";
   @Input() address_type:String="";
   @Input() number:String="";
   @Input() address:String="";

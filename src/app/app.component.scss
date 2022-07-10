@@ -1,6 +1,5 @@
-::ng-deep * {
+::ng-deep *:not(i) {
   margin: 0;
   padding: 0;
   font-family: var(--font-one);
-  // overflow-x: hidden;
 }
