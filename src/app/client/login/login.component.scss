@@ -19,9 +19,9 @@ section {
         display: flex;
         justify-content: space-between;
         width: 200px;
-        text-align: left;
         align-items: center;
         margin-left: -35%;
+
         img{
             width: 40%;
         }
@@ -167,15 +167,41 @@ section {
     }
   }
 @media only screen and (max-width: 600px) {
-    section{
-        flex-direction: column;
-        .signup_details{
-            flex-direction: column;
-            width: 100%;
+   section{
+    .signup_details{
+        form{padding-left: 15px;}
+        .container{
+            display: none;
         }
-        img{
-            display: block;
+        width: auto;
+        padding: 15px;
+        .input_conatiner{
+            input{
+                width: 100%;
+            }
+        }
+        span {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--color-dark-primary);
+            font-weight: 500;
+            p {
+              color: var(--primary);
+              font-size: 20px;
+              padding: 0px 4px;
+              cursor: pointer;
+            }
+          }
+        .authentication{
+            button{
+                width: 100%;
+            }
         }
     }
+    img{
+        display: none;
+    }
+   }
 }
