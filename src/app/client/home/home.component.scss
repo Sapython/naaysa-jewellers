@@ -50,8 +50,8 @@
 #discount-section {
   background-color: var(--color-gold);
   color: var(--color-dark);
-  padding: 2em;
-  text-align: center;
+  padding: 1em;
+  text-align: left;
   font-size: var(--small);
 
   button {
@@ -65,7 +65,8 @@
 
   #t-and-c {
     font-size: var(--xxsmall);
-    text-align: right;
+    text-align: left;
+    margin-top: 10px;
   }
 }
 
