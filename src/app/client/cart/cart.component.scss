@@ -171,8 +171,17 @@ a {
     font-size: 15px;
 }
 @media only screen and (max-width: 600px){
+    .cart-main{
+        flex-direction: column;
+        width: auto;
+    }
     .cart-items{
         margin: 0;
         width: auto;
+    }
+    .cart-price{
+        width: auto;
+        margin-left: 0;
+        margin: 10px;
     }
 }

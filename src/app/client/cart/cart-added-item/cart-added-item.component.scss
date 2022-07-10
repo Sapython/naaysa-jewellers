@@ -4,7 +4,6 @@
     border-radius: 8px;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    height: 120px;
     padding: 15px;
 
     &:hover {
@@ -66,16 +65,19 @@ img {
     margin-bottom: 35px;
 }
 
-.count {
-    margin-top: -15px;
-    padding: 2px;
-    width: 60px;
-    height: 15px;
-    align-items: center;
-    display: flex;
-    border: 2px solid rgb(225, 225, 225);
+.count{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    padding: 5px;
+    margin: 5px;
+    width: 25%;
+    border-radius: 10px;
+    input{
+        border: none;
+        font-weight: 500;
+        font-size: var(--xxsmall);
+
+    }
+    
 }
 
 .count-btn {
@@ -91,17 +93,50 @@ img {
     .item-card{
         margin: 5px;
         flex-direction: column;
+        height: auto;
+        width: auto;
+        text-align: center;
+    }
+    .stock-div{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width: 45%;
+        margin-top: -25px;
+        p{
+            font-size: var(--xsmall);
+        }
+        p:nth-child(1){
+            margin-top: 20px;
+        }
+        p:nth-child(2){
+            margin-top: 20px;
+        }
+    }
+    .count{
+        display: block;
+        margin: auto;
     }
     img{
         height: 45px;
         width: 45px;
         object-fit: cover;
+        display: block;
+        margin: auto;
     }
     .item-details{
         margin: 0 10px;
         font-size: var(--msmall);
+        h3{
+            font-size: var(--msmall);
+        }
     }
-    .item-details h3{
+    .item-details{
         font-size: var(--msmall);
+        width: auto;
+        margin-left: 0;
+    }
+    .item-total p{
+        margin-left: 0;
     }
 }
