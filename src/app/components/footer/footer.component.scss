@@ -56,6 +56,8 @@
   }
   .nayasa_info {
     width: 100%;
+    box-sizing: border-box;
+   
     display: flex;
     height: fit-content;
     align-items: center;
@@ -63,12 +65,12 @@
     flex-wrap: wrap;
     color: var(--color-light);
     gap: 30px;
-    padding: 50px 0px;
+    padding: 50px 10px;
 
     .sosial {
       display: flex;
       flex-direction: column;
-      width: 20rem;
+      width: 25rem;
       gap: 40px;
       .logo{
         img{
@@ -82,23 +84,16 @@
 
       .apps {
         display: flex;
-        gap: 20px;
-        i {
-          height: 40px;
-          width: 40px;
-        }
+        gap: 40px;
+        font-size: 1.7rem;
       }
     }
     .contact_information {
-      width: 20rem;
+      width: 25rem;
     }
     @media (max-width: 600px) {
       
-      .sosial {
-        font-size: 0.8rem;
-        .logo {
-        }
-      }
+      padding:  50px 20px;
       .contact_information {
         font-size: 0.3rem;
       }
