@@ -4,7 +4,7 @@
 
 .cart-items {
     margin-top: 30px;
-    margin-left: 70px;
+    margin-left: 40px;
     width: 60%;
     height: auto;
     border-radius: 16px;
@@ -23,21 +23,19 @@
     margin-left: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: var(--medium);
     font-weight: 500;
 }
 
 hr {
     border-top: 2px solid var(--color-secondary);
-    margin-left: 25px;
-    width: 93%;
 }
 
 .cart-price {
     margin-top: 30px;
     margin-left: 50px;
+    padding: 25px;
     width: 27%;
-    height: 620px;
     border-radius: 16px;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -51,14 +49,12 @@ hr {
 }
 
 .cart-price h1 {
-    margin-left: 25px;
     margin-top: 20px;
-    font-size: 25px;
+    font-size: var(--small);
     font-weight: 500;
 }
 
 .cart-price p {
-    margin-left: 25px;
     margin-top: 4px;
     margin-bottom: 20px;
     color: grey;
@@ -73,7 +69,6 @@ hr.new2 {
 
 .promo {
     margin-top: 20px;
-    margin-left: 40px;
     height: auto;
     background-color: white;
     border-radius: 8px;
@@ -86,22 +81,27 @@ hr.new2 {
     padding-left: 5px;
     border: none;
     background-color: rgb(213, 213, 213);
-    height: 40px;
+    padding: 10px;
+    width: 100%;
     font-size: large;
 }
 
 .promo button {
-    border: none;
-    background-color: inherit;
-    align-items: center;
-    margin-left: 15px;
-    height: auto;
-    font-size: large;
+        border: 1px solid #969696;
+        margin: 3px;
+        padding: 2px 15px;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: 0.5s;
+        outline: none !important;
+        &:active{
+            background-color: #000;
+            color: #ffffff;
+        }
 }
 
-#disc {
-    font-size: large;
-    margin-left: 40px;
+#disc{
+    font-size: var(--xsmall);
 }
 
 .price-detail {
@@ -109,11 +109,11 @@ hr.new2 {
 }
 
 .price-detail h1 {
-    font-size: 20px;
+    font-size: var(--xsmall);
 }
 
 .price-detail p {
-    font-size: medium;
+    font-size: var(--xsmall);
     margin-top: 10px;
     margin-bottom: -5px;
     font-weight: 500;
@@ -133,7 +133,7 @@ hr.new2 {
 }
 
 .total-price p {
-    font-size: 25px;
+    font-size: var(--small);
     color: black;
     font-weight: 600;
 }
@@ -148,9 +148,7 @@ hr.new2 {
     color: #ffffff;
     border: none;
     width: 80%;
-    height: 40px;
     border-radius: 8px;
-    margin-left: 40px;
     margin-top: 15px;
     margin-bottom: 8px;
     padding: 5px;
@@ -183,5 +181,23 @@ a {
         width: auto;
         margin-left: 0;
         margin: 10px;
+        align-items: center;
+        .parent-container{
+            display: block;
+            margin: auto;
+        }
+    }
+    .promo{
+        input{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        button{
+            border: 1px solid #969696;
+            margin: 3px;
+            padding: 2px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
     }
 }

@@ -27,7 +27,7 @@ img {
 }
 
 .item-details h3 {
-    font-size: 24px;
+    font-size: var(--msmall);
     font-weight: 600;
 }
 
@@ -42,6 +42,13 @@ img {
     font-weight: bold;
     margin-top: 5px;
 }
+#normal{
+    font-weight: 400;
+    font-size: var(--xmsmall);
+    width:240px;
+    margin-left: 0;
+}
+
 
 .in .stock-div .stock {
     color: green;
@@ -59,10 +66,10 @@ img {
 
 .item-total p {
     font-weight: bold;
-    font-size: 24px;
+    font-size: var(--msmall);
     margin-top: 15px;
-    margin-left: 100px;
     margin-bottom: 35px;
+    margin-left: 100px;
 }
 
 .count{
@@ -102,16 +109,16 @@ img {
         align-items: center;
         margin: auto;
         width: 45%;
-        margin-top: -25px;
+        margin: 10px auto;
         p{
             font-size: var(--xsmall);
         }
-        p:nth-child(1){
-            margin-top: 20px;
-        }
-        p:nth-child(2){
-            margin-top: 20px;
-        }
+        // p:nth-child(1){
+        //     margin-top: 20px;
+        // }
+        // p:nth-child(2){
+        //     margin-top: 20px;
+        // }
     }
     .count{
         display: block;
@@ -138,5 +145,12 @@ img {
     }
     .item-total p{
         margin-left: 0;
+    }
+    #normal{
+        font-weight: 400;
+        font-size: var(--xmsmall);
+        display: inline-block;
+        width:240px;
+        margin: auto;
     }
 }

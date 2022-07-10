@@ -1,135 +1,169 @@
-.main-section{
-    font-family: var(--font-one);
-}
-
-.signup-page{
-    background-color: #fff5fb;
-    width: 40%;
+section {
+    background-color: #FFF5FB;
     height: 100vh;
-}
-
-.brand{
-    padding: 30px 60px;
+    width: 100vw;
+    box-sizing: border-box;
     display: flex;
-}
-
-.brand b{
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.welcome{
-    padding: 0 60px;
-    margin-top: -10px;
-}
-
-.welcome h1{
-    font-weight: 500;
-    font-size: 50px;
-    color: var(--color-secondary);
-}
-
-.welcome p{
-    margin-left: 5px;
-    font-size: 15px;
-    color: grey;
-    margin-top: -8px;
-}
-
-.signup-section{
-    width: 430px;
-    margin: 25px 70px;
-    position: relative;
-}
-
-.user-id{
-    margin: 20px 0;
-}
-
-.password{
-    margin: 20px 0;
-}
-
-form input{
-    margin-top: 10px;
-    width: 95%;
-    height: 30px;
-    padding: 10px;
-    background-color: #fbe2ea;
-    border-radius: 8px;
-    border-style: hidden;
-    font-size: var(--xxsmall);
     font-family: var(--font-one);
-}
-
-.signup-section p{
-    margin-left: 140px;
-    margin-top: -10px;
-    color: #bd4f63;
-}
-
-.signup-section .signup{
-    margin-left: 0px;
-    margin-top: 20px;
-    color: #bd4f63;
-}
-
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
-}
-
-button:hover{
-    cursor: pointer;
-}
-
-.signup-btn{
-    background-color: var(--color-secondary);
-    color: #ffffff;
+    .signup_details {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      .container{
+        display: block;
+        font-size: var(--large);
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        text-align: left;
+        align-items: center;
+        margin-left: -35%;
+        img{
+            width: 40%;
+        }
+        #head{
+          font-family: var(--font-three);
+          font-size: var(--xlarge); 
+        }
+      }
+      b {
+        font-size: 40px;
+        color: var(--color-dark-primary);
+        display: block;
+        font-weight: 500;
+        margin-bottom: 30px;
+        font-family: var(--font-three);
+      }
+      .input_conatiner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        label {
+          font-size: 18px;
+          font-weight: 500;
+        }
+        input {
+          width: 450px;
+          height: 50px;
+          border-radius: 10px;
+          padding: 10px;
+          box-sizing: border-box;
+          font-size: 18px;
+          background-color: var(--color-primary);
+          border: none;
+          outline: none;
+        }
+      }
+      span {
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--color-dark-primary);
+        font-weight: 500;
+        p {
+          color: var(--primary);
+          font-size: 20px;
+          padding: 0px 4px;
+          cursor: pointer;
+        }
+      }
+      .authentication {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        .google {
+          width: 450px;
+          height: 50px;
+          border-radius: 10px;
+          padding: 10px;
+          box-sizing: border-box;
+          font-size: 18px;
+          background-color: var(  --primary-contrast);
+          border: 2px solid var(--primary);
+          outline: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          img {
+            height: 30px;
+            width: 30px;
+          }
+          p {
+            margin: 0px;
+            color: var(--text-color-light);
+            font-weight: 600;
+            font-size: 18px;
+          }
+        }
+        button {
+          width: 450px;
+          height: 50px;
+          border-radius: 10px;
+          padding: 10px;
+          margin-top: 20px;
+          box-sizing: border-box;
+          font-size: 18px;
+          background-color: var(--color-dark-primary);
+          border: none;
+          outline: none;
+          color: #fff; 
+        }
+      }
+      span{
+        margin-top: 10px;
+      }
+      .loader{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        button {
+          width: 450px;
+          height: 50px;
+          border-radius: 10px;
+          padding: 10px;
+          box-sizing: border-box;
+          font-size: 18px;
+          background-color: var(--primary);
+          border: none;
+          outline: none;
+          color: var(--primary-contrast);
+        }
+      }
+      .loader ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+        stroke: #009970;
+      }
+    }
+    img {
+      width: 60%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  #normal{
+    padding: 10px 40px;
     border: none;
-    width: 430px;
-    height: 40px;
-    border-radius: 8px;
-    margin-left: -0px;
-    margin-top: 20px;
-    padding: 5px;
-    font-size:large;
-    font-weight: 450;
-}
-
-.google-login-btn{
-    background-color: #ffffff;
-    color: var(--color-secondary);
-    border: 2px solid var(--color-secondary);
-    width: 430px;
-    height: 50px;
-    align-items: center;
-    border-radius: 8px;
-    margin-left: -0px;
-    margin-top: 15px;
-    padding: 5px;
-    font-size:large;
-    font-weight: 450;
-    display: flex;
-}
-
-.google-login-btn img{
-    margin-left: 115px;
-    width: 25px;
-    margin-right: 10px;
-    margin-top: 5px;
-}
-
-.main-section{
-    display: flex;
-}
-
-.side-img{
-    width: 60%;
-}
-
-.side-img img{
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-}
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: block;
+    font-size: var(--xsmall);
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--color-dark-primary);
+    i{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+  }
+  

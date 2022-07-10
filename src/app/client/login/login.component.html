@@ -1,35 +1,32 @@
-<div class="main-section">
-    <div class="login-page">
-        <div class="brand">
-            <img src="../../../assets/logo.svg" />
-            <b>Naaysa </b>
+<section>
+    <div class="signup_details">
+        <div class="container">
+            <img src="assets/logo.svg" alt="">
+            <p id="head">Naaysa</p>
         </div>
-        <div class="welcome">
-            <h1>Welcome Back</h1>
-            <p>Welcome back ! Please enter your details</p>
+      <form>
+        <b>Login</b>
+        <div class="input_conatiner">
+          <label>Email</label>
+          <input type="email" formControlName="email" placeholder="username@host.com" />
         </div>
-        <div class="login-section">
-            <form>
-                <div class="user-id">
-                    Email <br>
-                    <input type="text" placeholder="Username/Email address">
-                </div>
-                <div class="password">
-                    Password <br>
-                    <input id="pswrd" type="password" placeholder="******************">
-                </div>
-                <a href="#"><p>forgot password?</p></a>
-                <button class="login-btn">Login</button> 
-                <button class="google-login-btn">
-                    <img alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
-                    Login with Google
-                </button>
-            </form>
-            <a href="#" routerLink="/signup"><p class="signup">New to Naaysa? Signup</p></a>
-                 
-         </div>
+        <div class="input_conatiner">
+          <label>Password</label>
+          <input type="password" formControlName="password" placeholder="Password" />
+        </div>
+        <div class="authentication">
+          <button type="submit">Login</button>
+        </div>
+        <span>Forgot Password?</span>
+        <button id="normal">
+            <i class="fa-brands fa-google"></i>
+            Continue With Google
+        </button>
+        <span>
+          Don't have an account?
+          <p routerLink="../signup">Signup</p>
+        </span>
+      </form>
     </div>
-    <div class="side-img">
-        <img src="https://images.unsplash.com/photo-1596944924591-1e64760c2be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt="" >
-    </div>    
-</div>
+    <img src="../../../assets/blog3.png" />
+</section>
