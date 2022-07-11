@@ -110,5 +110,8 @@
       }
     }
   },
-  "defaultProject": "naaysa-jewellers"
+  "defaultProject": "naaysa-jewellers",
+  "cli": {
+    "analytics": false
+  }
 }
