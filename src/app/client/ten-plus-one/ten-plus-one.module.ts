@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -16,7 +17,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     CommonModule,
     TenPlusOneRoutingModule,
     WidgetsModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule
   ]
 })
 export class TenPlusOneModule { }

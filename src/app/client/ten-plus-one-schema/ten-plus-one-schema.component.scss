@@ -1,5 +1,6 @@
 .container{
     display: flex;
+    margin-top: 105px;
     justify-content: space-between;
     color: #000;
     .section1{
@@ -45,7 +46,6 @@
             }
         }
         .box:nth-child(3){
-            margin-top: -35px;
             p{
                 font-size: var(--small);
                 font-weight: 500;
@@ -55,6 +55,11 @@
                 color: tomato;
             }
         }
+    }
+}
+.widgets{
+    app-payment-option-widget{
+        width: 100%;
     }
 }
 .section2{
