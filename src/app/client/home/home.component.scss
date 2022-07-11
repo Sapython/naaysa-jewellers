@@ -87,7 +87,6 @@
     }
   }
 }
-
 section {
   // .box {
   //   color: black;
@@ -212,6 +211,15 @@ height: fit-content;
       }
     }
   }
+
+  .rings{
+    background: linear-gradient(89.59deg, #DDB199 30.25%, rgba(117, 91, 77, 0) 95.85%);
+    color: #fff;
+    font-weight: 600;
+    font-size: var(--medium);
+    width: 25%;
+    padding: 15px;
+  }  
   @media (max-width: 600px) {
     .blog_text {
       font-size: 1.9rem;
