@@ -5,7 +5,7 @@
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     padding: 15px;
-
+    background-color: #fff0ee;
     &:hover {
         border: 2px solid var(--color-primary);
         transform: scale(1.02);
@@ -45,7 +45,7 @@ img {
 #normal{
     font-weight: 400;
     font-size: var(--xmsmall);
-    width:240px;
+    // width:240px;
     margin-left: 0;
     cursor: pointer;
 }
@@ -78,11 +78,17 @@ img {
     margin: 5px;
     width: 25%;
     border-radius: 10px;
+    padding-left: 10px;
     input{
         border: none;
         font-weight: 500;
         font-size: var(--xxsmall);
-
+        width:100%;
+        font-size: 16px;
+        background-color: transparent;
+        &:hover,&:focus{
+            outline:none;
+        }
     }
     
 }
@@ -152,5 +158,19 @@ img {
         display: inline-block;
         width:240px;
         margin: auto;
+    }
+}
+button{
+    border:none;
+    outline: none;
+    background-color: white;
+    padding:10px;
+    height:50px;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+        background: var(--color-secondary);
+        color:white;
     }
 }

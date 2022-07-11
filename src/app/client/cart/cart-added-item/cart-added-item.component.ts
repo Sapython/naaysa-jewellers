@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cart-added-item',
@@ -13,10 +13,16 @@ export class CartAddedItemComponent implements OnInit {
   @Input() stock: String="";
   @Input() item_count: String="";
   @Input() total_price: String="";
-  
+  @Output() deleted:EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  delete(){
+    alert('Removed')
+    this.deleted.emit(true);
+  }
+  alert(){
+    alert('Added to wishlist');
+  }
 }

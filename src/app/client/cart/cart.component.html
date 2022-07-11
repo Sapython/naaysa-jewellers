@@ -3,11 +3,11 @@
     <div class="cart-items uk-animation-slide-left-medium">
         <h1>Cart</h1>
         <hr class="aa">
-        <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="in stock" item_count="3" total_price="6000"></app-cart-added-item>
-        <app-cart-added-item imgsrc="https://w7.pngwing.com/pngs/626/880/png-transparent-wedding-ring-carat-diamond-gold-jewelry-love-gemstone-ring.png" item_name="Platinum-diamond Ring" item_price="4000" stock="in stock" item_count="3" total_price="12000"></app-cart-added-item>
-        <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="out of stock" item_count="3" total_price="6000"></app-cart-added-item>
-        <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="in stock" item_count="3" total_price="6000"></app-cart-added-item>
-        <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="in stock" item_count="3" total_price="6000"></app-cart-added-item>
+        <app-cart-added-item *ngFor="let item of products" [imgsrc]="item.imgsrc" [item_name]="item.item_name" [item_price]="item.item_price" [stock]="item.stock" [item_count]="item.item_count" [total_price]="item.total_price"></app-cart-added-item>
+        <!-- <app-cart-added-item imgsrc="https://w7.pngwing.com/pngs/626/880/png-transparent-wedding-ring-carat-diamond-gold-jewelry-love-gemstone-ring.png" item_name="Platinum-diamond Ring" item_price="4000" stock="in stock" item_count="3" total_price="12000"></app-cart-added-item> -->
+        <!-- <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="out of stock" item_count="3" total_price="6000"></app-cart-added-item> -->
+        <!-- <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="in stock" item_count="3" total_price="6000"></app-cart-added-item> -->
+        <!-- <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="in stock" item_count="3" total_price="6000"></app-cart-added-item> -->
     </div>
     <div class="cart-price uk-animation-slide-right-medium">
         <div class="parent-container">

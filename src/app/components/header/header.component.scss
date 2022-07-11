@@ -50,23 +50,73 @@ header{
     .uk-dropdown{
       border-radius: 10px;
       padding:20px;
-      display: flex;
+      width:300px;
       input{
         border:none;
+        color:darkgray;
         font-size: 20px;
         border-bottom: 4px solid var(--color-secondary);
         &:focus{
           outline: none !important;
         }
+        width:70%;
       }
       button{
         border:none;
         outline: none;
         background: transparent;
+        width: 30%;
+        max-width: 50px;
+        box-shadow: none;
       }
+      
     }
   }
   
+}
+#products {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 70vh;
+  width: 300px;
+  .product-type {
+    margin: 0.5em;
+
+    h3 {
+      color: var(--color-secondary);
+      font-size: var(--small);
+      font-family: var(--font-one);
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.25em;
+
+      &.view-all {
+        button {
+          color: var(--color-secondary);
+
+          i {
+            margin-left: 0.3em;
+          }
+        }
+      }
+
+      button {
+        border:none;
+        background-color: transparent;
+        color:var(--color-tertiary);
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s;
+
+        &:hover,
+        &:focus {
+          color: var(--color-secondary);
+        }
+      }
+    }
+  }
 }
 // .container{
 //   display: flex;
