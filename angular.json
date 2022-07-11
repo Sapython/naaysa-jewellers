@@ -106,6 +106,16 @@
               "node_modules/aos/dist/aos.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "naaysa-jewellers:build:production",
+            "firebaseProject": "nayasa-jewel",
+            "firebaseHostingSite": "nayasa-jewel"
+          }
         }
       }
     }
