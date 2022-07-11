@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { WidgetsModule } from './../../widgets/widgets.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,7 +18,8 @@ import { SwiperModule } from 'swiper/angular';
     HomeRoutingModule,
     ComponentsModule,
     SwiperModule,
-    WidgetsModule
+    WidgetsModule,
+    RouterModule
   ]
 })
 export class HomeModule { }
