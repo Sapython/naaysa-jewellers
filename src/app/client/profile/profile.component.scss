@@ -1,7 +1,9 @@
 :root {
     --overlay-width: 0%;
 }
-
+#main{
+    background-color: #fff;   
+}
 #wrapper {
     display: flex;
     min-height: 100vh;
@@ -23,7 +25,7 @@
 }
 
 #sidebar {
-    background-color: var(--coloryr-light-primary);
+    background-color: var(--color-light-primary);
     box-shadow: var(--normal-shadow);
     min-width: max(20vw, 210px);
     height: 100%;

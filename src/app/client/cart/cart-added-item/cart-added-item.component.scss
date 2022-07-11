@@ -1,11 +1,11 @@
 .item-card {
     margin: 25px;
     display: flex;
+    justify-content: space-between;
     border-radius: 8px;
     border: 1px solid rgb(225, 225, 225);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     padding: 15px;
-    background-color: #fff0ee;
     &:hover {
         border: 2px solid var(--color-primary);
         transform: scale(1.02);
@@ -164,13 +164,23 @@ button{
     border:none;
     outline: none;
     background-color: white;
-    padding:10px;
-    height:50px;
+    padding:05px 20px;
+    font-size: var(--xxsmall);
+    font-family: var(--font);
+    display: block;
     margin-right: 20px;
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
+    min-width: fit-content;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     &:hover{
         background: var(--color-secondary);
         color:white;
     }
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: -25%;
 }

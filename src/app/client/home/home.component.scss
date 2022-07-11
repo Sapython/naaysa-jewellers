@@ -1,4 +1,6 @@
-
+html,body{
+  background-color: var(--color-primary);
+}
 
 #first-section {
   height: 100vh;
@@ -47,6 +49,7 @@
   z-index: 1;
   opacity: 0.7;
 }
+
 #discount-section {
   background-color: var(--color-gold);
   color: var(--color-dark);
@@ -73,6 +76,7 @@
 
 #shop-by-metals {
   padding: 1em;
+  background-color: var(--color-primary);
 
   h3 {
     font-size: var(--medium);
@@ -88,6 +92,7 @@
     }
   }
 }
+
 section {
   // .box {
   //   color: black;
@@ -129,12 +134,14 @@ section {
   .blog {
     display: flex;
     justify-content: space-between;
-   
+    margin: 0 auto;
     margin-top: -90px;
+
     .blog-card {
       margin-top: 100px;
       width: 30%;
       padding: 15px;
+
       #blog {
         font-size: var(--xlarge);
         font-weight: 600;
@@ -150,22 +157,23 @@ section {
       }
     }
   }
+
   .engagement-rings {
     background-color: #f9dcc7;
     padding: 15px 0px;
     padding-bottom: 0px;
+
     .rings {
-      background: linear-gradient(
-        89.59deg,
-        #ddb199 30.25%,
-        rgba(117, 91, 77, 0) 95.85%
-      );
+      background: linear-gradient(89.59deg,
+          #ddb199 30.25%,
+          rgba(117, 91, 77, 0) 95.85%);
       padding: 10px 30px;
       display: inline-block;
       font-size: var(--large);
       font-family: var(--font-four);
       color: white;
       margin-bottom: 15px;
+
       p {
         margin: 0;
       }
@@ -173,123 +181,145 @@ section {
   }
 }
 
- 
-  .blog {
-height: fit-content;
-    width: 90%;
-    margin: 50px auto;
- display: flex;
- align-items: center;
- justify-content: space-around;
- flex-wrap: wrap;
- gap: 25PX  ;
-    .blog-card {
+
+.blog {
+  background-color: var(--color-primary);
+  height: fit-content;
+  width: 96%;
+  margin: auto;
+  padding: 50px 25px;
+  padding-bottom: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 25PX;
+
+  .blog-card {
+    width: 18rem;
+    height: 40rem;
+    gap: 10px;
+
+    img {
+      height: 77%;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    b {
+      color: var(--color-dark);
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .blog_text {
+      font-size: 3rem;
+      color: var(--color-tertiary);
+      text-align: center;
+      font-weight: 600;
+      margin: 10px;
+    }
+  }
+}
+
+.rings {
+  background: linear-gradient(89.59deg, #DDB199 30.25%, rgba(117, 91, 77, 0) 95.85%);
+  color: #fff;
+  font-weight: 600;
+  font-size: var(--medium);
+  width: 25%;
+  padding: 15px;
+}
+
+@media (max-width: 600px) {
+  .blog_text {
+    font-size: 1.9rem;
+  }
+
+  .cards {
+
+    .card {
       width: 18rem;
-      height: 40rem;
+      height: 30rem;
       gap: 10px;
+
       img {
-        height: 77%;
+        height: 75%;
         width: 100%;
-        border-radius: 12px;
+        border-radius: 10px;
       }
+
       b {
         color: var(--color-dark);
         font-size: 20px;
         font-weight: 600;
         margin: 0;
+        padding: 10px 0px;
       }
+
       p {
         margin: 0;
         font-size: 13px;
         font-weight: 500;
       }
-      .blog_text {
-        font-size: 3rem;
-        color: var(--color-tertiary);
-        text-align: center;
-        font-weight: 600;
-        margin: 10px;
-      }
     }
   }
 
-  .rings{
-    background: linear-gradient(89.59deg, #DDB199 30.25%, rgba(117, 91, 77, 0) 95.85%);
-    color: #fff;
-    font-weight: 600;
-    font-size: var(--medium);
-    width: 25%;
-    padding: 15px;
-  }  
-  @media (max-width: 600px) {
-    .blog_text {
-      font-size: 1.9rem;
-    }
-    .cards {
-     
-      .card {
-        width: 18rem;
-        height: 30rem;
-        gap: 10px;
-        img {
-          height: 75%;
-          width: 100%;
-          border-radius: 10px;
-        }
-        b {
-          color: var(--color-dark);
-          font-size: 20px;
-          font-weight: 600;
-          margin: 0;
-          padding: 10px 0px;
-        }
-        p {
-          margin: 0;
-          font-size: 13px;
-          font-weight: 500;
-        }
-      }
-    }
-  
 }
+
 @media only screen and (max-width: 600px) {
-  #first-section{
-    #first-text{
+  #first-section {
+    #first-text {
       min-height: 100vh;
       margin-top: 25%;
-      h2{
+
+      h2 {
         font-size: var(--small);
         width: 250px;
       }
-      p{
+
+      p {
         width: 200px;
       }
-      button{
+
+      button {
         font-size: var(--xsmall);
         width: 250px;
       }
     }
   }
-  #discount-section{
+
+  #discount-section {
     display: none;
   }
-  #shop-by-metals{
+
+  #shop-by-metals {
     padding: 0px;
     margin: 0;
     padding: 0;
-    #metals{
+
+    #metals {
       margin: auto;
       margin: 0;
       margin-left: 7px;
       width: 100%;
-      flex-wrap: wrap;  
-      app-metal-widget{
+      flex-wrap: wrap;
+
+      app-metal-widget {
         width: 45%;
         margin-left: -15px;
       }
     }
   }
-  .rings{
+
+  .rings {
     width: 100%;
   }
 }
