@@ -53,6 +53,7 @@
   padding: 1em;
   text-align: left;
   font-size: var(--small);
+  border: 1px solid grey;
 
   button {
     background: transparent;
@@ -287,5 +288,8 @@ height: fit-content;
         margin-left: -15px;
       }
     }
+  }
+  .rings{
+    width: 100%;
   }
 }
