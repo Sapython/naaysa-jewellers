@@ -57,11 +57,6 @@
         }
     }
 }
-.widgets{
-    app-payment-option-widget{
-        width: 100%;
-    }
-}
 .section2{
     width: 65%;
     margin: 10px;
@@ -97,7 +92,7 @@
                 width: 100%;
             }
             .section2{
-                width: 100%;
+                width: fit-content;
             }
         }
 }
