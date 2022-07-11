@@ -59,13 +59,13 @@ header{
         &:focus{
           outline: none !important;
         }
-        width:70%;
+        width:90%;
       }
       button{
         border:none;
         outline: none;
         background: transparent;
-        width: 30%;
+        width: 10%;
         max-width: 50px;
         box-shadow: none;
       }
@@ -79,7 +79,7 @@ header{
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 70vh;
-  width: 300px;
+  width: 500px;
   .product-type {
     margin: 0.5em;
 
@@ -117,6 +117,10 @@ header{
       }
     }
   }
+}
+
+button:hover{
+  cursor: pointer;
 }
 // .container{
 //   display: flex;
