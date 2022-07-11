@@ -6,6 +6,7 @@
     font-family: var(--font-one);
     border-radius: 10px;
     box-shadow: var(--color-primary) 0px 4px 14px 0px;
+    cursor: pointer;
     .box{
         display: block;
         margin: auto;
@@ -34,7 +35,7 @@
     #name{
         font-weight: 500;
         font-size: var(--small);
-        color: #000;
+        color: grey;
         text-align: left;
     }
     #price{

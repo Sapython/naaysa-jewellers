@@ -1,25 +1,194 @@
-<header class="navbar navbar-expand-md sticky-top" [scrollTop]="onWindowScroll()">
+<header>
+  <nav>
+    <li routerLink="" [class]="path==='/' || path==='home' ? 'active' : 'none'">Home</li>
+    <div>
+      <li [class]="path==='' || path==='home' ? 'active' : 'none'">Products</li>
+      <div uk-dropdown>
+        <div id="products">
+          <div class="product-type">
+            <h3>Trending</h3>
+            <ul>
+              <li><button routerLink="../all-product">Jhumkas</button></li>
+              <li>
+                <button routerLink="../all-product">Couple Bands</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Bracelets</button>
+              </li>
+              <li><button routerLink="../all-product">Necklace</button></li>
+              <li><button routerLink="../all-product">Pendants</button></li>
+              <li class="view-all">
+                <button>
+                  All Trends<i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="product-type">
+            <h3>Rings</h3>
+            <ul>
+              <li>
+                <button routerLink="../all-product">
+                  Engagement Rings
+                </button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Couple Rings</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Gold Rings</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Silver Rings</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Diamond Rings</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Men's Rings</button>
+              </li>
+              <li class="view-all">
+                <button>
+                  All Rings<i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="product-type">
+            <h3>Solitaires</h3>
+            <ul>
+              <li><button routerLink="../all-product">Diamond</button></li>
+              <li><button routerLink="../all-product">Gold</button></li>
+              <li><button routerLink="../all-product">Silver</button></li>
+              <li><button routerLink="../all-product">Platinum</button></li>
+              <li class="view-all">
+                <button>
+                  All Solitaires<i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="product-type">
+            <h3>Earrings</h3>
+            <ul>
+              <li><button routerLink="../all-product">Diamond</button></li>
+              <li><button routerLink="../all-product">Gold</button></li>
+              <li><button routerLink="../all-product">Silver</button></li>
+              <li><button routerLink="../all-product">Platinum</button></li>
+              <li class="view-all">
+                <button>
+                  All Earrings<i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="product-type">
+            <h3>Pendants</h3>
+            <ul>
+              <li><button routerLink="../all-product">Alphabet</button></li>
+              <li>
+                <button routerLink="../all-product">Religious</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Heart Shaped</button>
+              </li>
+              <li><button routerLink="../all-product">Lockets</button></li>
+              <li>
+                <button routerLink="../all-product">Office Wear</button>
+              </li>
+              <li class="view-all">
+                <button>
+                  All Pendants<i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="product-type">
+            <h3>Coins</h3>
+            <ul>
+              <li>
+                <button routerLink="../all-product">Gold Coins</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">Silver Coins</button>
+              </li>
+              <li>
+                <button routerLink="../all-product">
+                  Embroidery Coins
+                </button>
+              </li>
+              <li class="view-all">
+                <button>
+                  All Coins<i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <li routerLink="ten-plus-one-scheme" [class]="path==='/ten-plus-one-scheme' || path==='home' ? 'active' : 'none'">10
+      + 1 Scheme</li>
+  </nav>
+  <div class="logo">
+    <span>NAAYSA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span class="secondary-color">JEWELLERS</span>
+  </div>
+  <div class="actions">
+    <div>
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div uk-dropdown><input placeholder="Search Anything" type="search"> <button routerLink="../all-product"><i
+            class="fa-solid fa-arrow-right-long"></i></button></div>
+    </div>
+    <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+    <button routerLink="login"><i class="fa-solid fa-user"></i></button>
+  </div>
+</header>
+<!-- <header class="navbar navbar-expand-md sticky-top" [scrollTop]="onWindowScroll()">
   <div class="naayasa">
-    <span>NYAASA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span
-      class="secondary-color"
-      >JEWELLERS</span
-    >
+    <span>NYAASA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span class="secondary-color">JEWELLERS</span>
   </div>
   <div id="top">
     <nav>
-      <ul id="nav-list">
+      <ul>
         <li class="nav-li">
-          <button
-            type="button"
-            class="nav-button"
-            routerLink="/"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
+          <button type="button" class="nav-button" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
             Home
           </button>
         </li>
         <li class="nav-li">
+          <button type="button" class="nav-button">Products</button>
+          <div uk-dropdown="pos: bottom-center">
+            
+          </div>
+        </li>
+
+        <li class="nav-li">
+          <button type="button" class="nav-button" routerLink="/ten-plus-one-scheme" routerLinkActive="active">
+            10+1 Scheme
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+
+    <div id="buttons">
+      <div class="search active" id="search-bar">
+        <input *ngIf="toggleSearch" class="search-txt" type="text" placeholder="Search..." />
+        <button class="submit" (click)="toggleSearch = !toggleSearch">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <button type="button" id="cart" routerLink="../cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <button type="button" id="cart" routerLink="../login">
+        <i class="fa-solid fa-user"></i>
+      </button>
+    </div>
+  </div>
+</header> -->
+<!-- <li class="nav-li">
           <button type="button" class="nav-button">Products</button>
           <div uk-dropdown="pos: bottom-center">
             <div id="products">
@@ -144,40 +313,4 @@
               </div>
             </div>
           </div>
-        </li>
-       
-        <li class="nav-li">
-          <button
-            type="button"
-            class="nav-button"
-            routerLink="/ten-plus-one-scheme"
-            routerLinkActive="active"
-          >
-            10+1 Scheme
-          </button>
-        </li>
-      </ul>
-    </nav>
-   
-
-    <div id="buttons">
-      <div class="search active" id="search-bar">
-        <input
-          *ngIf="toggleSearch"
-          class="search-txt"
-          type="text"
-          placeholder="Search..."
-        />
-        <button class="submit" (click)="toggleSearch = !toggleSearch">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-      <button type="button" id="cart" routerLink="../cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </button>
-      <button type="button" id="cart" routerLink="../login">
-        <i class="fa-solid fa-user"></i>
-      </button>
-    </div>
-  </div>
-</header>
+        </li> -->

@@ -3,7 +3,7 @@
 #first-section {
   height: 100vh;
   background-color: var(--color-secondary);
-  position: relative;
+  // position: relative;
 
   #first-text {
     position: absolute;
@@ -53,6 +53,7 @@
   padding: 1em;
   text-align: left;
   font-size: var(--small);
+  border: 1px solid grey;
 
   button {
     background: transparent;
@@ -98,7 +99,7 @@ section {
   //   }
 
   //   .info {
-  //     border: 1px solid #000;
+  //     border: 1px solid grey;
   //     display: inline-block;
   //     padding: 10px;
   //     margin-bottom: -10px;
@@ -287,5 +288,8 @@ height: fit-content;
         margin-left: -15px;
       }
     }
+  }
+  .rings{
+    width: 100%;
   }
 }

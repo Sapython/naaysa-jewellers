@@ -8,14 +8,15 @@ import { HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  toggleSearch: boolean = false; 
+  toggleSearch: boolean = false;
+  path:string = window.location.pathname;
   constructor() { }
   ngOnInit(): void {
     var element = document.getElementById('hover');
     console.log(element);
     console.log(UIkit.dropdown(element))
     UIkit.dropdown(element).delayHide = 0;
-    
+    console.log("Paths",this.path)
     
   }
   

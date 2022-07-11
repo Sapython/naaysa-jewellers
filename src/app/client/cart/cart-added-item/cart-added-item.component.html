@@ -13,7 +13,8 @@
     </div>
     <div class="item-total">
         <p id="price">₹{{total_price}}</p>
-        <p id="normal">❤️ Wish List | <i class="fa-solid fa-trash-can"></i> Delete</p>
+        <button (click)="alert()">❤️ Wish List</button>
+        <button id="normal" (click)="delete()"><i class="fa-solid fa-trash-can"></i> Delete</button>
     </div>
 </div>
 

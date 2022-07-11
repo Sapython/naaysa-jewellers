@@ -3,15 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 :root {
-  --color-primary: #f4c7cf;
+  --ref-color:#FFE4E1;
+  --color-primary: #FFE4E1;
   --color-secondary: #ee93a3;
   --color-secondary-light: #fcd4db;
   --color-secondary-lighter: #fde7eb;
   --color-tertiary: #bb6878;
   --color-four: #949494;
-  --color-dark: #000000;
+  --color-dark: grey;
   --color-light: #ffffff;
-  --color-light-text: #00000081;
+  --color-light-text: grey00081;
   --color-primary-light: #f4c7cf6c;
   --color-gold: #f9dcc7;
   --color-gold-light: #faf2ed;
@@ -61,4 +62,7 @@
     auto
     / auto auto auto auto;
   grid-gap: 05%;
+}
+html,body{
+  background: var(--color-primary);
 }
