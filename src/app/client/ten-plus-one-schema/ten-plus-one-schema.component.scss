@@ -2,7 +2,7 @@
     display: flex;
     margin-top: 105px;
     justify-content: space-between;
-    color: #000;
+    color: grey;
     .section1{
         width: 30%;
         border: 1px solid #969696;
@@ -31,7 +31,7 @@
                 font-size: var(--medium);
                 font-weight: 600;
                 font-family: var(--font-one);
-                color: #000;
+                color: grey;
             }
         }
         .box:nth-child(2){

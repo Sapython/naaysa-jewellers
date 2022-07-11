@@ -30,7 +30,7 @@
                 font-size: var(--medium);
                 align-items: center;
                 padding: 15px;
-                color: #000;
+                color: grey;
                 margin-top: 20px;
                 font-weight: 500;
 
@@ -46,7 +46,7 @@
                 padding: 15px;
 
                 .info {
-                    color: #000;
+                    color: grey;
                     width: 48%;
                     font-size: var(--small);
 
@@ -56,7 +56,7 @@
                 }
 
                 .quantity {
-                    color: #000;
+                    color: grey;
                     font-weight: 600;
                     display: flex;
                     justify-content: space-between;
@@ -115,7 +115,7 @@
 
         p {
             font-weight: 600;
-            color: #000;
+            color: grey;
             font-size: var(--medium);
         }
 
