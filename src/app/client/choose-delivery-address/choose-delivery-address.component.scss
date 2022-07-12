@@ -21,14 +21,14 @@
 .header h3{
     font-weight: 400;
     margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 30px;
     font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .fa-solid{
-    margin-right: 15px;
+    margin-right: 20px;
 }
 .add-new{
     overflow: hidden;
@@ -58,7 +58,7 @@
     color: var(--color-secondary);
     font-weight: 600;
     margin-left: 25px;
-    font-size: var(--small);
+    font-size: var(--xxsmall);
 }
 
 button{
@@ -72,10 +72,10 @@ button:hover{
 .button{
     background-color: var(--color-dark-primary);
     color: #ffffff;
-    padding: 5px 15px;
+    padding: 5px 25px;
     border-radius: 10px;
     margin: 15px 55px;
-    font-size: var(--small);
+    font-size: var(--Xsmall);
     cursor: pointer;
 }
 @media only screen and (max-width: 600px){

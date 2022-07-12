@@ -18,7 +18,7 @@
 
 .new-address h1 {
   font-family: var(--font-one);
-  font-size: xx-large;
+  font-size: var(--medium);
   font-weight: 500;
   margin: 30px 40px;
   margin-bottom: 15px;
@@ -32,7 +32,7 @@ hr {
 
 .new-address p {
   font-family: var(--font-one);
-  font-size: medium;
+  font-size: var(--medium);
   font-weight: 500;
   margin: 10px 40px;
   margin-bottom: 30px;
@@ -62,7 +62,7 @@ input[type="number"] {
 }
 
 form {
-  font-size: larger;
+  font-size: var(--medium);
 }
 
 .details {
@@ -75,7 +75,7 @@ form {
   height: 45px;
   border-radius: 6px;
   border: 2px solid var(--color-primary);
-  font-size: large;
+  font-size: var(--medium);
   padding: 5px;
 }
 
@@ -84,7 +84,7 @@ form {
   margin-top: 10px;
   margin-bottom: 15px;
   input {
-    font-size: large;
+    font-size: var(--small);
     padding: 5px;
     height: 45px;
     border-radius: 6px;
@@ -98,7 +98,7 @@ form {
   display: flex;
   margin-bottom: 15px;
   select {
-    font-size: large;
+    font-size: var(--medium);
     padding: 5px;
     height: 50px;
     border-radius: 6px;
@@ -139,7 +139,7 @@ select:focus {
   color: white;
   padding: 3px 20px;
   font-weight: 400;
-  font-size: larger;
+  font-size: var(--small);
   border-radius: 6px;
   border: 1px solid var(--color-secondary);
   background-color: var(--color-secondary);
@@ -160,7 +160,7 @@ select:focus {
   color: white;
   padding: 3px 20px;
   font-weight: 400;
-  font-size: larger;
+  font-size: var(--small);
   border-radius: 6px;
   border: 1px solid var(--color-secondary);
   background-color: var(--color-secondary);

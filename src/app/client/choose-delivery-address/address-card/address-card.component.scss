@@ -87,7 +87,7 @@ input:checked {
 }
 
 .address-main {
-  font-size: x-large;
+  font-size: var(--xsmall);
   margin-top: 20px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -105,7 +105,8 @@ input:checked {
 .deliver-button button {
   padding: 3px 20px;
   font-weight: 400;
-  font-size: var(--xsmall);
+  font-size: var(--xxsmall);
+  font-weight: 500;
   border-radius: 6px;
   border: 1px solid var(--color-secondary);
   background-color: var(--color-secondary);
@@ -119,7 +120,7 @@ input:checked {
 .edit-button button {
   padding: 3px 20px;
   font-weight: 400;
-  font-size: var(--xsmall);
+  font-size: var(--xxsmall);
   border-radius: 6px;
   border: 1px solid var(--color-secondary);
   background-color: var(--color-secondary);

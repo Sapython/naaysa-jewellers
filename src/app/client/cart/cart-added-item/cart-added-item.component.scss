@@ -159,6 +159,12 @@ img {
         width:240px;
         margin: auto;
     }
+    .buttons{
+        margin-left: 0 !important;
+        button{
+            padding: 5px 10px !important;
+        }
+    }
 }
 button{
     border:none;
