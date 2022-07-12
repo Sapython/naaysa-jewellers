@@ -88,10 +88,12 @@ hr.new2 {
     font-size: large;
 }
 
-.promo button {
+.promo button{
         border: 1px solid #969696;
         margin: 3px;
-        padding: 2px 15px;
+        padding: 0px;
+        font-size: var(--xxsmall);
+        padding: 0px 15px;
         cursor: pointer;
         border-radius: 3px;
         transition: 0.5s;
@@ -101,7 +103,11 @@ hr.new2 {
             color: #ffffff;
         }
 }
-
+#back{
+    i{
+        margin-right: 10px;
+    }
+}
 #disc{
     font-size: var(--xsmall);
 }
