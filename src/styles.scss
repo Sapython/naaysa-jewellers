@@ -75,6 +75,16 @@
   }
 }
 
+.navigation{
+  li{
+    a{
+
+      color: red !important;
+    }
+  }
+}
+
+
 .widgets {
   display: grid;
   grid-template:

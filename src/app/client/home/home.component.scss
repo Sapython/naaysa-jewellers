@@ -18,6 +18,10 @@ html,body{
         height: 100%;
         width: 100%;
      position: relative;
+     img{
+      height: 100%;
+      width: 100%;
+    }
         h1{
           font-size: var(--msmall);
           font-weight: 300;
@@ -54,6 +58,32 @@ html,body{
     }
   }
 }
+#product-section{
+  height: 80vh;
+  .uk-slider{
+    height: 50%;
+    width:100%;
+.uk-slider-items{
+  width: 100%;
+  height: 100%;
+  li{
+    height: 100%;
+    width: 100%;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+}
+.navigation{
+  transform: translateY(-450%);
+  color: white;
+
+  
+}
+
+  }
 
 // #first-section::before {
 //   content: "";
@@ -156,7 +186,7 @@ section {
     justify-content: space-between;
     margin: 0 auto;
     margin-top: -90px;
-
+box-sizing: border-box;
     .blog-card {
       margin-top: 100px;
       width: 30%;
