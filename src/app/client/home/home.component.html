@@ -1,27 +1,48 @@
 <app-header></app-header>
 <section id="first-section">
   <div uk-slider="finite: false; autoplay:true; autoplay-interval: 3000">
-    <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@" >
-        <li>
-            <img src="https://images.pexels.com/photos/8295326/pexels-photo-8295326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="" height="" alt="">
-        </li>
-        <li>
-          <img src="https://images.pexels.com/photos/8295326/pexels-photo-8295326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="" height="" alt="">
+    <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@">
+      <li>
+        <img
+          src="https://images.pexels.com/photos/8295326/pexels-photo-8295326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          width=""
+          height=""
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          src="https://images.pexels.com/photos/8295326/pexels-photo-8295326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          width=""
+          height=""
+          alt=""
+        />
       </li>
     </ul>
-</div>
-  <div id="first-text"  uk-scrollspy="cls:uk-animation-fade">
-    <h2  >We Make Jewellery to Fit Every Budget, Occasion, and Taste.</h2>
-    <p >Find your sparkle in every moment, today.</p>
-    <button class="primary-button"  routerLink="../all-product">Explore
-      Collection</button>
+  </div>
+  <div id="first-text">
+    <h2>We Make Jewellery to Fit Every Budget, Occasion, and Taste.</h2>
+    <p>Find your sparkle in every moment, today.</p>
+    <button class="primary-button" routerLink="../all-product">
+      Explore Collection
+    </button>
   </div>
 </section>
 
-<section id="discount-section" >
-  <p uk-scrollspy="cls:uk-animation-slide-left">FLAT 25% OFF ON MAKING CHARGES*</p>
-  <button routerLink="../all-product" uk-scrollspy="cls:uk-animation-slide-left">Explore Now</button>
-  <p id="t-and-c"data-aos-delay="800" uk-scrollspy="cls:uk-animation-slide-left">* Terms & Conditions Applied</p>
+<section id="discount-section">
+  <p data-aos="fade-right" data-aos-delay="500">
+    FLAT 25% OFF ON MAKING CHARGES*
+  </p>
+  <button
+    data-aos="fade-right"
+    data-aos-delay="700"
+    routerLink="../all-product"
+  >
+    Explore Now
+  </button>
+  <p id="t-and-c" data-aos="fade-right" data-aos-delay="800">
+    * Terms & Conditions Applied
+  </p>
 </section>
 <section id="product-section">
   <div uk-slider="finite: false; autoplay:true; autoplay-interval: 3000" uk-scrollspy="cls:uk-animation-scale-up"> 
@@ -74,36 +95,73 @@
   <div id="metals">
     <app-metal-widget  uk-scrollspy="cls:uk-animation-slide-left"
       src="https://images.pexels.com/photos/1670723/pexels-photo-1670723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-      name="Platinum Jewellery" ></app-metal-widget>
-    <app-metal-widget src="https://cdn.pixabay.com/photo/2014/11/05/19/25/necklace-518268_1280.jpg" uk-scrollspy="cls:uk-animation-slide-left"
-      name="Silver Jewellery"></app-metal-widget>
+      name="Platinum Jewellery"
+      data-aos="fade-left"
+      data-aos-delay="300"
+    ></app-metal-widget>
+    <app-metal-widget
+      src="https://cdn.pixabay.com/photo/2014/11/05/19/25/necklace-518268_1280.jpg"
+      name="Silver Jewellery"
+      data-aos="fade-right"
+      data-aos-delay="500"
+    ></app-metal-widget>
     <app-metal-widget
       src="https://images.pexels.com/photos/12680630/pexels-photo-12680630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-      name="Platinum Jewellery" uk-scrollspy="cls:uk-animation-slide-right" ></app-metal-widget>
+      name="Platinum Jewellery"
+      data-aos="fade-left"
+      data-aos-delay="700"
+    ></app-metal-widget>
     <app-metal-widget
       src="https://images.pexels.com/photos/1232931/pexels-photo-1232931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-      name="Diamond Jewellery" uk-scrollspy="cls:uk-animation-slide-right"></app-metal-widget>
+      name="Diamond Jewellery"
+      data-aos="fade-right"
+      data-aos-delay="900"
+    ></app-metal-widget>
   </div>
 </section>
 <div class="engagement-rings"  uk-scrollspy="cls:uk-animation-slide-left">
   <div class="rings uk-animation-slide-left-medium">
     <p>Engagement Rings</p>
   </div>
-  <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="30"
+    [loop]="true"
+    [pagination]="{
       clickable: true
-    }" [navigation]="true" class="mySwiper">
-    <ng-template swiperSlide><img src="assets/carasole4.png" alt="" /></ng-template>
-    <ng-template swiperSlide><img src="assets/carasole4.png" alt="" /></ng-template>
-    <ng-template swiperSlide><img src="assets/carasole4.png" alt="" /></ng-template>
-    <ng-template swiperSlide><img src="assets/carasole4.png" alt="" /></ng-template>
-    <ng-template swiperSlide><img src="assets/carasole4.png" alt="" /></ng-template>
-    <ng-template swiperSlide><img src="assets/carasole4.png" alt="" /></ng-template>
+    }"
+    [navigation]="true"
+    class="mySwiper"
+  >
+    <ng-template swiperSlide
+      ><img src="assets/carasole4.png" alt=""
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img src="assets/carasole4.png" alt=""
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img src="assets/carasole4.png" alt=""
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img src="assets/carasole4.png" alt=""
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img src="assets/carasole4.png" alt=""
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img src="assets/carasole4.png" alt=""
+    /></ng-template>
   </swiper>
 </div>
 <div class="blog">
   <div class="blog-card" data-aos-delay="300" uk-scrollspy="cls:uk-animation-slide-bottom">
     <img src="assets/blog1.png" alt="" />
-    <p class="bold" style="margin-top:10px;font-size: 20px;margin-bottom: 10px;">Capture Charm Bracelet</p>
+    <p
+      class="bold"
+      style="margin-top: 10px; font-size: 20px; margin-bottom: 10px"
+    >
+      Capture Charm Bracelet
+    </p>
     <p>
       Bracelet of ancient style infused with stories across frpm the land of
       Bharat. Style mixed with the thrilling tales of this great land.
@@ -112,19 +170,34 @@
   <div class="blog-card" data-aos="fade-down"  uk-scrollspy="cls:uk-animation-slide-top">
     <p class="blog_text">The Blog</p>
     <img src="assets/blog2.png" alt="" />
-    <p class="bold" style="margin-top:10px;font-size: 20px;margin-bottom: 10px;">Capture Charm Bracelet</p>
-    <p style="margin-bottom: 15px;">
+    <p
+      class="bold"
+      style="margin-top: 10px; font-size: 20px; margin-bottom: 10px"
+    >
+      Capture Charm Bracelet
+    </p>
+    <p style="margin-bottom: 15px">
       Bracelet of ancient style infused with stories across frpm the land of
       Bharat. Style mixed with the thrilling tales of this great land.
     </p>
   </div>
-  <div class="blog-card" uk-scrollspy="cls:uk-animation-slide-bottom">
-    <img src="assets/blog3.png" alt="" />
-    <p class="bold" style="margin-top:10px;font-size: 20px;margin-bottom: 10px;">Capture Charm Bracelet</p>
+  <div class="blog-card">
+    <img
+      src="assets/blog3.png"
+      data-aos="fade-right"
+      data-aos-delay="500"
+      alt=""
+    />
+    <p
+      class="bold"
+      style="margin-top: 10px; font-size: 20px; margin-bottom: 10px"
+    >
+      Capture Charm Bracelet
+    </p>
     <p>
       Bracelet of ancient style infused with stories across frpm the land of
       Bharat. Style mixed with the thrilling tales of this great land.
     </p>
   </div>
 </div>
-<app-footer data-aos="fade-up" data-aos-delay="100" uk-scrollspy="uk-animation-scale-up"></app-footer>
+<app-footer data-aos="fade-up" data-aos-delay="100"></app-footer>
