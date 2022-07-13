@@ -3,30 +3,50 @@ html,body{
 }
 
 #first-section {
-  height: 100vh;
+  height: 90vh;
   background-color: var(--color-secondary);
-  // position: relative;
+  position: relative;
 
+  .uk-slider{
+    height: 100%;
+    width:100%;
+    ul{
+      height: 100%;
+      width: 100%;
+      
+      li{
+        height: 100%;
+        width: 100%;
+     position: relative;
+        h1{
+          font-size: var(--msmall);
+          font-weight: 300;
+          font-family: var(--font);
+          color: var(--color-dark-primary);
+        }
+      }
+    }
+  }
   #first-text {
     position: absolute;
-    top: 100;
+    top:0px;
     left: 0;
-    padding: 15em 7em;
+    padding:  10em 7rem;
     z-index: 2;
-    width: 35%;
-
+    width: 42%;
     h2 {
       color: var(--color-light);
       margin: 0;
-      font-family: var(--font-five);
-      font-weight: 600;
+      font-family: var(--font-two);
       font-size: var(--xlarge);
+      font-size: 3rem;
+      letter-spacing: 0.1rem;
     }
 
     p {
       color: var(--color-light);
-      font-size: var(--small);
-      margin: 1em 0;
+      font-size: var(--medium);
+      margin: 1.5em 0;
     }
 
     button {
@@ -35,20 +55,20 @@ html,body{
   }
 }
 
-#first-section::before {
-  content: "";
-  background-image: url("https://images.pexels.com/photos/8295326/pexels-photo-8295326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0.7;
-}
+// #first-section::before {
+//   content: "";
+//   background-image: url("https://images.pexels.com/photos/8295326/pexels-photo-8295326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+//   background-repeat: no-repeat;
+//   background-position: top center;
+//   background-size: cover;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   opacity: 0.7;
+// }
 
 #discount-section {
   background-color: var(--color-gold);
