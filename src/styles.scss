@@ -39,6 +39,22 @@
   --normal-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-three);
+  font-size: var(--medium);
+
+  img {
+    width: 50px;
+    margin: 0 0.25em;
+  }
+
+  span:nth-child(1) {
+    color: var(--color-tertiary);
+  }
+}
+
 .primary-button {
   padding: 0.25em 0.5em;
   background-color: var(--color-secondary);

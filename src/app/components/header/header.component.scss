@@ -118,22 +118,6 @@ header {
     }
   }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    font-family: var(--font-three);
-    font-size: var(--medium);
-
-    img {
-      width: 50px;
-      margin: 0 0.25em;
-    }
-
-    span:nth-child(1) {
-      color: var(--color-tertiary);
-    }
-  }
-
   .actions {
     display: flex;
     column-gap: 10px;
