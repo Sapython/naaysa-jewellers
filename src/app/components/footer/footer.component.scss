@@ -4,8 +4,9 @@ footer {
 
   h4 {
     font-family: var(--font-one);
-    font-size: var(--small);
-    color: var(--color-tertiary);
+    font-size: var(--xsmall);
+    color: var(--color-primary-contrast);
+    font-weight: 600;
     margin: 0;
     font-weight: 500;
   }
@@ -40,7 +41,7 @@ footer {
         margin-left: 2em;
 
         a {
-          font-size: var(--small);
+          font-size: var(--xsmall);
           color: var(--color-tertiary);
           transition: all 0.5s;
 
@@ -61,6 +62,7 @@ footer {
     #company-details {
       width: 67%;
       margin-right: 1em;
+      font-size: var(--xxsmall);
     }
 
     #useful-links {
@@ -69,11 +71,51 @@ footer {
       li {
         margin-bottom: 0.25em;
         a {
-          font-size: var(--msmall);
+          font-size: var(--xxsmall);
           color: var(--color-tertiary);
           transition: all 0.5s;
         }
       }
+    }
+  }
+
+  h5 {
+    font-size: var(--msmall);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  h6 {
+    font-size: var(--xsmall);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 2em 2em 2em;
+
+    .links {
+      width: 100%;
+
+      a {
+        font-family: var(--font-one);
+        font-size: var(--xxsmall);
+        color: var(--color-tertiary);
+      }
+    }
+  }
+
+  #offices,
+  #services {
+    display: flex;
+
+    .office,
+    .service {
+      width: 100%;
+      font-size: var(--xxsmall);
+      color: var(--color-tertiary);
     }
   }
 
