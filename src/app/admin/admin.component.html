@@ -1,123 +1,114 @@
 <div id="wrapper" (window:resize)="onWindowResize()">
-    <div id="sidebar-container">
-      <div
-        [style]="largeScreen || showSidebar ? '' : 'display: none'"
-        id="sidebar-container"
-      >
-        <aside id="sidebar">
-          <div id="headings">
-            <h2 id="hotel-name">Triveni Sangam</h2>
-            <h3 id="manager-name">Sweet Singh</h3>
-            <p id="manager-email">sweetsingh@gmail.com</p>
+  <div id="sidebar-container">
+    <div
+      [style]="largeScreen || showSidebar ? '' : 'display: none'"
+      id="sidebar-container"
+    >
+      <aside id="sidebar">
+        <div id="headings">
+          <h1 class="logo">
+            <span>NAAYSA</span
+            ><img src="assets/logo.svg" alt="Logo" id="logo" /><span
+              class="secondary-color"
+              >JEWELLERS</span
+            >
+          </h1>
+          <div id="profile-info">
+            <img
+              src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="Profile Photo"
+            />
+            <div>
+              <p id="admin-name">Sweet Singh</p>
+              <p id="admin-email">sweetsingh@gmail.com</p>
+            </div>
           </div>
-          <ul id="sidebar-ul">
-            <li class="sidebar-li">
-              <a
-                routerLink="/admin/dashboard"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-house sidebar-icon"></i
-                ><span class="sidebar-text">Dashboard</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/admin/orders"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-calendar-check sidebar-icon"></i
-                ><span class="sidebar-text">Bookings</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/manager/guests"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-user-group sidebar-icon"></i
-                ><span class="sidebar-text">Guests</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/manager/rooms"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-door-open sidebar-icon"></i
-                ><span class="sidebar-text">Rooms</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/manager/housekeeping"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-broom sidebar-icon"></i
-                ><span class="sidebar-text">Housekeeping</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/manager/orders"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-clipboard-list sidebar-icon"></i
-                ><span class="sidebar-text">Orders</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/manager/inventory"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-boxes-stacked sidebar-icon"></i
-                ><span class="sidebar-text">Inventory</span></a
-              >
-            </li>
-            <li class="sidebar-li">
-              <a
-                routerLink="/manager/dishes"
-                routerLinkActive="active"
-                (click)="toggleSidebar()"
-                class="sidebar-li-a"
-                ><i class="fa-solid fa-bowl-food sidebar-icon"></i
-                ><span class="sidebar-text">Dishes</span></a
-              >
-            </li>
-            <!-- <li class="sidebar-li">
+        </div>
+        <ul id="sidebar-ul">
+          <li class="sidebar-li">
             <a
-              routerLink="/manager/sales"
+              routerLink="/admin/dashboard"
               routerLinkActive="active"
+              (click)="toggleSidebar()"
               class="sidebar-li-a"
-              ><i class="fa-solid fa-chart-column sidebar-icon"></i
-              ><span class="sidebar-text">Sales</span></a
+              ><i class="fa-solid fa-house sidebar-icon"></i
+              ><span class="sidebar-text">Dashboard</span></a
             >
           </li>
           <li class="sidebar-li">
             <a
-              routerLink="/manager/settings"
+              routerLink="/admin/orders"
               routerLinkActive="active"
+              (click)="toggleSidebar()"
               class="sidebar-li-a"
-              ><i class="fa-solid fa-gear sidebar-icon"></i
-              ><span class="sidebar-text">Settings</span></a
+              ><i class="fa-solid fa-clipboard-list sidebar-icon"></i
+              ><span class="sidebar-text">Orders</span></a
             >
-          </li> -->
-          </ul>
-        </aside>
-      </div>
+          </li>
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/products"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-box sidebar-icon"></i
+              ><span class="sidebar-text">Products</span></a
+            >
+          </li>
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/customers"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-user-group sidebar-icon"></i
+              ><span class="sidebar-text">Customers</span></a
+            >
+          </li>
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/pricing"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-tags sidebar-icon"></i
+              ><span class="sidebar-text">Pricing</span></a
+            >
+          </li>
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/shipment"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-truck sidebar-icon"></i
+              ><span class="sidebar-text">Shipment</span></a
+            >
+          </li>
+
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/ten-plus-one"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-star sidebar-icon"></i
+              ><span class="sidebar-text">10 + 1</span></a
+            >
+          </li>
+        </ul>
+      </aside>
     </div>
-    <main>
-      <button *ngIf="!largeScreen" class="uk-navbar-toggle" uk-navbar-toggle-icon id="toggle-button"
-        (click)="toggleSidebar()"></button>
-      <router-outlet></router-outlet>
-      <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
-    </main>
   </div>
-  
+  <main>
+    <button
+      *ngIf="!largeScreen"
+      class="uk-navbar-toggle"
+      uk-navbar-toggle-icon
+      id="toggle-button"
+      (click)="toggleSidebar()"
+    ></button>
+    <router-outlet></router-outlet>
+    <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
+  </main>
+</div>
