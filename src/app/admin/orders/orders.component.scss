@@ -1,0 +1,22 @@
+section{
+    height: 100%;
+    width: 100%;
+   
+    margin:0;
+    padding:0;
+    .container
+    {
+     width: 95%;
+     height: fit-content;
+     margin: auto;
+     .header_bar{
+        width: 95%;
+        height:3.5rem;
+        background-color: var(--color-dark-primary);
+        margin: 1.5rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+     }
+    }
+}
