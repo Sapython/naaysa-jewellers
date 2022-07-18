@@ -21,6 +21,7 @@ html,body{
      img{
       height: 100%;
       width: 100%;
+      object-fit: cover;
     }
         h1{
           font-size: var(--msmall);
