@@ -1,0 +1,49 @@
+.main-heading h1 {
+    color: #e88f9f;
+    margin-bottom: 0.5em;
+  }
+  .heading {
+    display: inline;
+  
+    span {
+      color: #5c5c5c;
+      margin-left: 1em;
+      padding: 0.5em;
+    }
+  }
+
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table th {
+    border-bottom: 1px solid #ec9caa;
+    padding: 0.5em;
+    text-align: left;
+  }
+  table td {
+    padding: 0.7em;
+    border-bottom: 1px solid #ec9caa;
+    
+  }
+
+
+  .purchase{
+    border: 1px solid#FF9292;
+    background-color: 
+    #FFE0E0;
+    color: #FF9292;
+    width: 15%;
+    border-radius: 10px;
+    padding: 3px 2px;
+  }
+
+  .member-since{
+    border: 1px solid #3C96BC;
+    background-color: #C3DBFF;
+    color: #3C95BC;
+    width: 60%;
+    border-radius: 10px;
+    padding: 3px 2px;
+  }
