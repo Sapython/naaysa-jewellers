@@ -49,8 +49,12 @@ const routes: Routes = [
             (m) => m.TenPlusOneModule
           ),
       },
+      { path: 'notification',
+        loadChildren: () => 
+        import('./notifications/notifications.module').then(m => m.NotificationsModule) },
     ],
   },
+  { path: 'notification', loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsModule) },
 ];
 
 @NgModule({
