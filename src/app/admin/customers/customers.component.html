@@ -1,1 +1,45 @@
-<p>customers works!</p>
+<div class="main-heading">
+    <h1>Users</h1>
+  </div>
+  
+  <div class="heading">
+    <span>All Order</span>
+    <span>Completed</span>
+    <span>Cancelled</span>
+  </div>
+
+<table>
+    <thead>
+  <tr>
+    <th *ngFor="let header of headers">
+      {{ header }}
+    </th>
+</tr>
+</thead>
+
+  <tr *ngFor="let user of users">
+    <td>
+      {{ user.sr }}
+    </td>
+    <td>
+      {{ user.userName }}
+    </td>
+    <td>
+      {{ user.emailId}}
+    </td>
+    <td><div class="purchase">
+      {{ user.noOfPurchase }}
+    </div>
+    </td>
+    <td><div class="member-since">
+      {{ user.memberSince }}
+    </div>
+    </td>
+   <td><div class="phone"><i class="fa-solid fa-phone"></i>
+      {{ user.mobileNo }}
+    </div>
+    </td>
+   
+  </tr>
+</table>
+
