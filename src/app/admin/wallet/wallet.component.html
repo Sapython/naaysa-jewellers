@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="header">
+        <div class="para">
+            <p id="heading">Wallet</p>
+        </div>
+        <div class="uk-margin">
+            <form class="uk-search uk-search-default">
+                <span class="uk-search-icon-flip" uk-search-icon></span>
+                <input class="uk-search-input" type="search" placeholder="Search">
+            </form>
+            <i class="fa-solid fa-bell" id="bell"></i>
+        </div>
+    </div>
+    <div class="boxes">
+        <div class="scores">
+            <div class="points">
+                <p class="numbers">{{balance}}</p>
+                <p>Total Wallet Balance</p>
+            </div>
+        </div>
+        <div class="scores">
+            <div class="points">
+                <p class="numbers">{{user}}<br></p>
+                <p>Total User</p>
+            </div>
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <tr>
+              <th width = "20%">Name</th>
+              <th width = "20%">Email ID</th>
+              <th width = "15%">Wallet <br> Balance</th>
+              <th width = "15%">Member<br>Since</th>
+              <th width = "15%">Mobile No.</th>
+              <th width = "10%">Action</th>
+            </tr>
+            <tr *ngFor="let item of items">
+              <td>
+                <div class="product">
+                    <img src="assets/11.jpg" alt="">
+                    <div class="info">
+                        <p class="product-heading">{{name}}</p>
+                    </div>
+                </div>
+              </td>
+              <td>
+                <p class="email">{{email}}</p>
+              </td>
+              <td>
+                <div class="material">
+                    <p>{{wallet_Balance}}</p>
+                </div>
+              </td>
+              <td>
+                <div class="material quanity">
+                    <p>{{member_Since}}</p>
+                </div>
+              </td>
+              <td class="price">{{contact}}</td>
+              <td>button</td>
+            </tr>
+          </table>    
+    </div>
+</div>
