@@ -51,10 +51,22 @@ const routes: Routes = [
       },
       { path: 'notification',
         loadChildren: () => 
-        import('./notifications/notifications.module').then(m => m.NotificationsModule) },
+        import('./notifications/notifications.module').then(m => m.NotificationsModule) 
+      },
+      { path: 'vendors',
+       loadChildren: () =>
+        import('./vendors/vendors.module').then(m => m.VendorsModule) 
+      },
+      { path: 'wallet', 
+      loadChildren: () => 
+      import('./wallet/wallet.module').then(m => m.WalletModule) 
+      },
+
     ],
   },
   { path: 'notification', loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsModule) },
+  { path: 'vendors', loadChildren: () => import('./vendors/vendors.module').then(m => m.VendorsModule) },
+  { path: 'wallet', loadChildren: () => import('./wallet/wallet.module').then(m => m.WalletModule) },
 ];
 
 @NgModule({
