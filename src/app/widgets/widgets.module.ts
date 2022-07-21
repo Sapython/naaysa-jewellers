@@ -7,6 +7,7 @@ import { PaymentOptionWidgetComponent } from './payment-option-widget/payment-op
 import { ReviewWidgetComponent } from './review-widget/review-widget.component';
 import { NotificationWidgetComponent } from './notification-widget/notification-widget.component';
 import { VendorWidgetComponent } from './vendor-widget/vendor-widget.component';
+import { WishlistWidgetComponent } from './wishlist-widget/wishlist-widget.component';
 
 
 const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent]
@@ -17,7 +18,8 @@ const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWi
     PaymentOptionWidgetComponent,
     ReviewWidgetComponent,
     NotificationWidgetComponent,
-    VendorWidgetComponent
+    VendorWidgetComponent,
+    WishlistWidgetComponent
   ],
   exports: [components],
   imports: [

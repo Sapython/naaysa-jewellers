@@ -97,6 +97,13 @@ const routes: Routes = [
         (m) => m.AllProductsModule
       ),
   },
+  {
+    path: 'wishlist',
+    loadChildren: () =>
+      import('./wishlist/wishlist.module').then(
+        (m) => m.WishlistModule
+      ),
+  },
 ];
 
 @NgModule({

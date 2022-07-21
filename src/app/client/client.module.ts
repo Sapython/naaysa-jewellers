@@ -7,6 +7,7 @@ import { ClientRoutingModule } from './client-routing.module';
 const components = [TenPlusOneComponent]
 @NgModule({
   declarations: [
+  
   ],
   imports: [
     CommonModule,

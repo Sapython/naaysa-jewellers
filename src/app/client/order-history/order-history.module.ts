@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OrderHistoryRoutingModule } from './order-history-routing.module';
 import { OrderHistoryComponent } from './order-history.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { OrderHistoryComponent } from './order-history.component';
   ],
   imports: [
     CommonModule,
-    OrderHistoryRoutingModule
+    OrderHistoryRoutingModule,
+    ComponentsModule
   ]
 })
 export class OrderHistoryModule { }
