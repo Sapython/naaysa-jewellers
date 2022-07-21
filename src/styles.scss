@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@500;600&display=swap');
 
 :root {
   --ref-color: #ffe4e1;
@@ -8,8 +9,8 @@
   --color-secondary: #ee93a3;
   --color-secondary-light: #fcd4db;
   --color-secondary-lighter: #fde7eb;
-  --color-secondary-dark:#FFA8A8;
-  --color-secondary-darker:#FF9292;
+  --color-secondary-dark: #ffa8a8;
+  --color-secondary-darker: #ff9292;
   --color-tertiary: #bb6878;
   --color-four: #949494;
   --color-dark: grey;
@@ -17,12 +18,13 @@
   --color-light-text: grey00081;
   --color-primary-light: #f4c7cf6c;
   --color-gold: #f9dcc7;
-  --color-gold-light: #faf2ed;
+  --color-gold-light: #f9dcc769;
   --color-dark-primary: #e88f9f;
   --color-light-primary: #fff5fb;
   --color-success: #309e7d;
   --color-primary-contrast: #000;
-
+  
+  --font-six: "Andada Pro", sans-serif;
   --font-one: "Poppins", sans-serif;
   --font-two: "Great Vibes";
   --font-three: "Philosopher", sans-serif;
@@ -77,15 +79,13 @@
   }
 }
 
-.navigation{
-  li{
-    a{
-
+.navigation {
+  li {
+    a {
       color: red !important;
     }
   }
 }
-
 
 .widgets {
   display: grid;

@@ -1,4 +1,5 @@
-html,body{
+html,
+body {
   background-color: var(--color-primary);
 }
 
@@ -7,23 +8,23 @@ html,body{
   background-color: var(--color-secondary);
   position: relative;
 
-  .uk-slider{
+  .uk-slider {
     height: 100%;
-    width:100%;
-    ul{
+    width: 100%;
+    ul {
       height: 100%;
       width: 100%;
-      
-      li{
+
+      li {
         height: 100%;
         width: 100%;
-     position: relative;
-     img{
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-        h1{
+        position: relative;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        h1 {
           font-size: var(--msmall);
           font-weight: 300;
           font-family: var(--font);
@@ -34,9 +35,9 @@ html,body{
   }
   #first-text {
     position: absolute;
-    top:0px;
+    top: 0px;
     left: 0;
-    padding:  10em 7rem;
+    padding: 10em 7rem;
     z-index: 2;
     width: 42%;
     h2 {
@@ -59,47 +60,29 @@ html,body{
     }
   }
 }
-#product-section{
+#product-section {
   height: 80vh;
-  .uk-slider{
+  .uk-slider {
     height: 50%;
-    width:100%;
-.uk-slider-items{
-  width: 100%;
-  height: 100%;
-  li{
-    height: 100%;
     width: 100%;
-    img{
-      height: 100%;
+    .uk-slider-items {
       width: 100%;
+      height: 100%;
+      li {
+        height: 100%;
+        width: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
   }
-}
-}
-.navigation{
-  transform: translateY(-450%);
-  color: white;
-
-  
-}
-
+  .navigation {
+    transform: translateY(-450%);
+    color: white;
   }
-
-// #first-section::before {
-//   content: "";
-//   background-image: url("https://images.pexels.com/photos/8295326/pexels-photo-8295326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-//   background-repeat: no-repeat;
-//   background-position: top center;
-//   background-size: cover;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 1;
-//   opacity: 0.7;
-// }
+}
 
 #discount-section {
   background-color: var(--color-gold);
@@ -127,166 +110,153 @@ html,body{
 
 #shop-by-metals {
   padding: 1em;
-  background-color: var(--color-primary);
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80vh;
+  height: fit-content;
 
   h3 {
     font-size: var(--medium);
     text-align: center;
+    font-size: var(--xlarge);
+    font-family: var(--font-one);
+    color: var(--color-tertiary);
+    margin: 3rem auto;
+    font-weight: 500;
   }
 
   #metals {
     display: flex;
     justify-content: center;
-
-    app-metal-widget {
-      width: 25%;
-    }
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: fit-content;
   }
 }
 
-section {
-  // .box {
-  //   color: black;
-  //   padding: 15px;
-
-  //   p {
-  //     margin: 0;
-  //     margin-top: 20px;
-  //   }
-
-  //   .info {
-  //     border: 1px solid grey;
-  //     display: inline-block;
-  //     padding: 10px;
-  //     margin-bottom: -10px;
-
-  //     p {
-  //       margin: 0;
-  //       font-weight: 500;
-  //     }
-  //   }
-  // }
-
-  .heading {
-    padding: 10px;
-    text-align: center;
-    display: block;
-    background-color: #fff;
-    color: #834854;
-    font-weight: 600;
+#trendings {
+  h3 {
     font-size: var(--medium);
-
-    p {
-      margin: 0;
-      margin-top: 00px;
-    }
+    text-align: center;
+    font-size: var(--xlarge);
+    font-family: var(--font-one);
+    color: var(--color-tertiary);
+    margin: 3rem auto;
+    font-weight: 500;
   }
-
-  .blog {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: -90px;
-box-sizing: border-box;
-    .blog-card {
-      margin-top: 100px;
-      width: 30%;
-      padding: 15px;
-
-      #blog {
-        font-size: var(--xlarge);
-        font-weight: 600;
-        display: block;
-        margin: auto;
-        text-align: center;
-        margin-bottom: 25px;
-      }
-
-      .bold {
-        font-size: var(--small);
-        font-weight: 600;
-      }
-    }
-  }
-
-  .engagement-rings {
-    background-color: #f9dcc7;
-    padding: 15px 0px;
-    padding-bottom: 0px;
-
-    .rings {
-      background: linear-gradient(89.59deg,
-          #ddb199 30.25%,
-          rgba(117, 91, 77, 0) 95.85%);
-      padding: 10px 30px;
-      display: inline-block;
-      font-size: var(--large);
-      font-family: var(--font-four);
-      color: white;
-      margin-bottom: 15px;
-
-      p {
-        margin: 0;
-      }
-    }
-  }
-}
-
-
-.blog {
-  background-color: var(--color-primary);
+  width: 95%;
+  // height: 80vh;
+  margin: 2rem auto;
   height: fit-content;
-  width: 96%;
-  margin: auto;
-  padding: 50px 25px;
-  padding-bottom: 85px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 25PX;
-
-  .blog-card {
-    width: 18rem;
-    height: 40rem;
-    gap: 10px;
-
+  flex-direction: column;
+  gap: 1.5rem;
+  .images {
+    display: flex;
+    height: 28rem;
+    width: 100%;
+    gap: 1rem;
+    div {
+      position: relative;
+    }
     img {
-      height: 77%;
+      height: 100%;
       width: 100%;
-      border-radius: 12px;
+      object-fit: cover;
     }
-
-    b {
-      color: var(--color-dark);
-      font-size: 20px;
-      font-weight: 600;
-      margin: 0;
-    }
-
     p {
-      margin: 0;
-      font-size: 13px;
-      font-weight: 500;
+      position: absolute;
+      left: 4rem;
+      bottom: 6rem;
+      font-size: var(--large);
+      color: var(--color-light);
+      font-family: var(--font-three);
     }
-
-    .blog_text {
-      font-size: 3rem;
-      color: var(--color-tertiary);
-      text-align: center;
-      font-weight: 600;
-      margin: 10px;
-    }
+  }
+  img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
-.rings {
-  background: linear-gradient(89.59deg, #DDB199 30.25%, rgba(117, 91, 77, 0) 95.85%);
-  color: #fff;
-  font-weight: 600;
-  font-size: var(--medium);
-  width: 25%;
-  padding: 15px;
+#blog {
+  width: 100%;
+  max-height: fit-content;
+  height: 100vh;
+  .customer_review {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+    div {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      text-align: start;
+      font-family: var(--font-three);
+      font-weight: var(--large);
+      padding: 5rem;
+      background-color: var(--color-gold-light);
+    }
+    .customer {
+      font-size:2.4rem;
+      font-family: var(--font-six);
+      color: black;
+    }
+    .review{
+      padding: 7rem;
+      font-family: var(--font-six);
+      color: black;
+      p{
+        padding: 3rem 0;
+      }
+    }
+  }
+  .about{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    div{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+      width: 25rem;
+      height: 25rem;
+      transform: translateY(-50px);
+      
+    }
+    .explore_us{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   
+      h5{
+        font-size: var(--xxlarge);
+        font-family: var(--font-three);
+      }
+      p{
+        font-size: var(--xlarge);
+        font-family: var(--font-two);
+      }
+      button{
+        margin-top: 8rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--color-secondary-darker);
+        border: none;
+        color: var(--color-light);
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -295,7 +265,6 @@ box-sizing: border-box;
   }
 
   .cards {
-
     .card {
       width: 18rem;
       height: 30rem;
@@ -322,7 +291,6 @@ box-sizing: border-box;
       }
     }
   }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -355,19 +323,6 @@ box-sizing: border-box;
     padding: 0px;
     margin: 0;
     padding: 0;
-
-    #metals {
-      margin: auto;
-      margin: 0;
-      margin-left: 7px;
-      width: 100%;
-      flex-wrap: wrap;
-
-      app-metal-widget {
-        width: 45%;
-        margin-left: -15px;
-      }
-    }
   }
 
   .rings {
