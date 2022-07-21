@@ -30,7 +30,5 @@ export class ProfileComponent implements OnInit {
     this.addProfileForm 
   }
 
-//   profileeditmode(){
-//     console.log(this.addProfileForm.value);
-//   }
+
  }

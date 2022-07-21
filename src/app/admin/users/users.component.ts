@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  editmode:boolean =false
+  // editmode:boolean =false
 
   @Input() totalUsers:number = 1069
    @Input() newUsers:number = 2069
