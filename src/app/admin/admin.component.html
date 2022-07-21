@@ -96,6 +96,39 @@
               ><span class="sidebar-text">10 + 1</span></a
             >
           </li>
+
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/profile"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-id-badge sidebar-icon"></i
+              ><span class="sidebar-text">profile</span></a
+            >
+          </li>
+
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/users"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-user-group sidebar-icon"></i
+              ><span class="sidebar-text">Users</span></a
+            >
+          </li>
+
+          <li class="sidebar-li">
+            <a
+              routerLink="/admin/adminlogin"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-user-group sidebar-icon"></i
+              ><span class="sidebar-text">Admin Login</span></a
+            >
+          </li>
         </ul>
       </aside>
     </div>

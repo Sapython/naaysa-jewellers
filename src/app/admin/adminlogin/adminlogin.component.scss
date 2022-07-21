@@ -1,0 +1,37 @@
+.main-container{
+     width: 100%;
+     height: 100vh;
+    background-image: url(/src/assets/carasole4.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+.container{
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    // display: flex;
+    // justify-content: center;
+    
+    // align-items: center;
+    background-color: #FFD5DC;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+    font-size: var(--medium);
+    font-weight:500 ;
+}
+input{
+    
+    width: 50%;
+    height: 30%;
+    border: none;
+    margin-left: 3px;
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+}
