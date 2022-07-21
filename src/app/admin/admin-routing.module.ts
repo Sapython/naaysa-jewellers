@@ -61,12 +61,16 @@ const routes: Routes = [
       loadChildren: () => 
       import('./wallet/wallet.module').then(m => m.WalletModule) 
       },
-
+      { path: 'feedback',
+      loadChildren: () =>
+      import('./feedback/feedback.module').then(m => m.FeedbackModule)
+    }
     ],
   },
   { path: 'notification', loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsModule) },
   { path: 'vendors', loadChildren: () => import('./vendors/vendors.module').then(m => m.VendorsModule) },
   { path: 'wallet', loadChildren: () => import('./wallet/wallet.module').then(m => m.WalletModule) },
+  { path: 'feedback', loadChildren: () => import('./feedback/feedback.module').then(m => m.FeedbackModule) },
 ];
 
 @NgModule({
