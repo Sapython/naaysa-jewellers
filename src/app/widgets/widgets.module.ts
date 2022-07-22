@@ -1,3 +1,4 @@
+import { WishlistWidgetComponent } from './wishlist-widget/wishlist-widget.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,7 +11,9 @@ import { VendorWidgetComponent } from './vendor-widget/vendor-widget.component';
 import { FeatureWidgetComponent } from './feature-widget/feature-widget.component';
 
 
-const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent,FeatureWidgetComponent]
+const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent,FeatureWidgetComponent,WishlistWidgetComponent
+
+]
 @NgModule({
   declarations: [
     components,

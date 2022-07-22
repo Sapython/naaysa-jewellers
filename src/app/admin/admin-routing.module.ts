@@ -49,6 +49,7 @@ const routes: Routes = [
             (m) => m.TenPlusOneModule
           ),
       },
+
       { path: 'notification',
         loadChildren: () => 
         import('./notifications/notifications.module').then(m => m.NotificationsModule) 
@@ -63,8 +64,12 @@ const routes: Routes = [
       },
       { path: 'feedback',
       loadChildren: () =>
-      import('./feedback/feedback.module').then(m => m.FeedbackModule)
-    }
+      import('./feedback/feedback.module').then(m => m.FeedbackModule)},
+
+      { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
+      { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
+      { path: 'adminlogin', loadChildren: () => import('./adminlogin/adminlogin.module').then(m => m.AdminloginModule) },
+
     ],
   },
   { path: 'notification', loadChildren: () => import('./notifications/notifications.module').then(m => m.NotificationsModule) },

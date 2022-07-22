@@ -1,0 +1,104 @@
+<h2 class="heading">Users</h2>
+
+<div class="search-bar">
+  <input type="text" class="input" />
+  <div class="search-btn">
+    <button>Search</button>
+  </div>
+</div>
+
+<mat-tab-group>
+  <mat-tab label="users"> Customers </mat-tab>
+  <mat-tab label="10+1 Users"> 10+1 Users </mat-tab>
+</mat-tab-group>
+
+<div class="section">
+  <label>View By:</label>
+  <select class="opt">
+    <option>Year</option>
+    <option>2022</option>
+    <option>2021</option>
+    <option>2020</option>
+    <option>2019</option>
+  </select>
+</div>
+
+<div class="section1">
+  <div class="left">
+    <div class="chart"></div>
+  </div>
+
+  <div class="right">
+    <div class="box">
+      <span class="num">{{ totalUsers }}</span>
+      <span class="text"> See More</span>
+      <p>Total</p>
+      <p>User</p>
+    </div>
+    <div class="box">
+      <span class="num">{{ newUsers }}</span>
+      <span class="text"> See More</span>
+      <p>New</p>
+      <p>User</p>
+    </div>
+  </div>
+</div>
+
+<div class="section2">
+  <div class="head">
+    <h4>All Users</h4>
+  </div>
+
+  <table>
+    <tr *ngFor="let user of users">
+      <td>
+        {{ user.id }}
+      </td>
+      <td>
+        <div class="img">
+          <img src="/assets/profile 142.jpg" alt="" />
+          {{ user.pic }}
+        </div>
+      </td>
+      <td>
+        {{ user.emailId }}
+      </td>
+      <td>
+        <div class="amnt">
+          {{ user.amount }}
+        </div>
+      </td>
+      <td>
+        {{ user.dateJoin }}
+      </td>
+      <td>
+        {{ user.dateExp }}
+      </td>
+      <td>
+        {{ user.payment }}
+      </td>
+      <td>
+        {{ user.amnt }}
+      </td>
+      <td>
+        <div class="icons">
+          <i class="fa-solid fa-phone icon"></i>
+          <i class="fa-solid fa-user-pen icon"></i>
+          <i class="fa-solid fa-user-lock icon"></i>
+          <i class="fa-solid fa-user-slash icon"></i>
+          <i class="fa-solid fa-user-slash icon"></i>
+          {{ user.icon }}
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="section3">
+  <button>View All</button>
+</div>
+
+<!-- <input type="text" *ngIf="editmode">
+<p *ngIf="!editmode">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, modi!</p>
+
+<button (click)="editmode=!editmode">{{editmode ? "Update": "Edit"}}</button> -->
