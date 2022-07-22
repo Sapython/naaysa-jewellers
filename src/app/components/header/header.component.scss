@@ -36,12 +36,23 @@
 
 header {
   display: flex;
+  gap: 1rem;
   padding: 5px 20px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   z-index: 9999;
   background-color: var(--color-primary);
+
+.logo{
+  @media (max-width: 600px) {
+   
+      font-size: var(--small);
+    
+    margin: auto;
+  }
+}
 
   nav {
     &[shown] {
@@ -61,6 +72,10 @@ header {
       color: #584544;
       list-style: none;
       cursor: pointer;
+      @media (max-width: 600px) {
+        font-size: var(--xxxsmall);
+        margin: auto;
+      }
     }
 
     li.active {
@@ -71,7 +86,11 @@ header {
 
   #search-box {
     display: none;
+    @media (max-width: 600px) {
+      margin: auto;
 
+      width: 320px;
+    }
     &[shown] {
       opacity: 0;
       display: flex;
@@ -101,7 +120,7 @@ header {
       padding: 0.25em 0.5em;
       display: flex;
       width: 300px;
-
+    
       input {
         width: 100%;
       }
@@ -121,6 +140,9 @@ header {
     display: flex;
     column-gap: 10px;
 
+    @media (max-width: 600px) {
+      margin: auto;
+    }
     #search-button {
       &[shown] {
         opacity: 0;
