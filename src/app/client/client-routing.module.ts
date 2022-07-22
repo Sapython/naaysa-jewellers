@@ -97,6 +97,8 @@ const routes: Routes = [
         (m) => m.AllProductsModule
       ),
   },
+  { path: 'order-detail', loadChildren: () => import('./order-detail/order-detail.module').then(m => m.OrderDetailModule) },
+  { path: 'locate-store', loadChildren: () => import('./locate-store/locate-store.module').then(m => m.LocateStoreModule) },
 ];
 
 @NgModule({

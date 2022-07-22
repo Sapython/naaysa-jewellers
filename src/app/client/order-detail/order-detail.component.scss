@@ -1,0 +1,101 @@
+.container{
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .first-section{
+        width: 58%;
+        .order{
+            display: flex;
+            align-items: center;
+            p:nth-child(1){
+                font-weight: 500;
+                font-size: var(--small);
+                margin-right: 50px;
+            }
+        }
+        #status{
+            color: #62AA88;
+            font-weight: 500;
+            font-size: var(--small);
+
+        }
+        .product{
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            .image{
+                margin-right: 50px;
+                display: inline-block;
+                text-align: center;
+                padding: 15px;
+                border: 1px solid var(--color-dark-primary);
+                background-color: var(--color-primary);
+                border-radius: 10px;
+                width: 20%;
+                img{
+                    width: 45%;
+                    object-fit: cover;
+                }
+
+            }
+            .details{
+                p:nth-child(1){
+                    font-weight: 500;
+                }
+                p:nth-child(2){
+                    font-weight: 500;
+                }
+            }
+        }
+        .bill{
+            margin-top: 25px;
+            #heading{
+                font-size: var(--small);
+                margin-bottom: 20px;
+            }
+            p:nth-child(1){
+                font-size: var(--msmall);
+                font-weight: 500;
+            }
+            .flex{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 65%;
+                margin-bottom: 10px;
+            }
+            .total{
+                margin-top: 10px;
+                p:nth-child(1){
+                    font-size: var(--small);
+                }
+            }
+        }
+    }
+    .second-section{
+        width: 38%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        margin: 10px;
+        padding: 15px;
+        flex-direction: column;
+        .first-section{
+            width: auto;
+            display: block;
+            margin: auto;
+        }
+        .second-section{
+            margin-top: 20px;
+            width: auto;
+            mat-vertical-stepper{
+                margin-left: -150px;
+            }
+        }
+    }
+}

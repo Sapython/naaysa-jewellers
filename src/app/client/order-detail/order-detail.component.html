@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="first-section">
+        <div class="order">
+            <p>Order Id: </p>
+            <p>{{order_Id}}</p>
+        </div>
+        <p id="status">{{status}}</p>
+        <div class="product">
+            <div class="image">
+                <img src="assets/image9.png" alt="">
+            </div>
+            <div class="details">
+                <p>{{price}}</p>
+                <p>{{product_Name}}</p>
+                <p>{{discription}}</p>
+            </div>
+        </div>
+        <div class="bill">
+            <p id="heading">Order Details</p>
+            <div class="flex">
+                <p>Subtotal </p>
+                <p>{{subtotal_Price}}</p>
+            </div>
+            <div class="flex">
+                <p>Discount </p>
+                <p>{{discount}}</p>
+            </div>
+            <div class="flex">
+                <p>Delivery </p>
+                <p>{{delivery}}</p>
+            </div>
+            <div class="flex">
+                <p>Tax</p>
+                <p>{{tax}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="flex total">
+                <p>Total</p>
+                <p>{{total_Price}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="second-section">
+        <mat-vertical-stepper>
+            <mat-step>
+                <ng-template matStepLabel>Odered
+                    <p>{{odered}}</p>
+                </ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Shipped
+                    <p>{{shipped}}</p>
+                </ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Out For Delivery
+                    <p>{{out_For_Delivery}}
+                    </p>
+                </ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Delivered
+                    <p>{{delivered}}</p>
+                </ng-template>
+            </mat-step>
+        </mat-vertical-stepper>
+    </div>
+</div>

@@ -1,44 +1,98 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <div class="container">
     <div class="box">
         <div class="image">
             <img src="assets/jewellery/ring.png" alt="">
         </div>
         <div class="inner-box">
-            <div class="cell">
-                <p>{{jewel_name}}</p>
-                <p>₹ {{price}}</p>
-            </div>
-            <div class="cell-one">
-                <div class="info">
-                    <p>Discription</p>
-                    <p>{{discription}}</p>
+            <div class="section-one">
+                <div class="cell">
+                    <p>{{jewel_name}}</p>
+                    <div class="price">
+                        <p>₹ {{price}}</p>
+                        <p class="opacity">MRP Incl. of all taxes</p>
+                    </div>
                 </div>
-                <div class="quantity">
-                    <p>Quantity</p>
-                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <p class="opacity off"><span uk-icon="tag"></span>20% off on making charge</p>
+                <p class="mart">Diamond Ring In 18Kt Gold (5.68 gram) with Diamonds (0.4130 Ct)</p>
+            </div>
+            <div class="pincode-and-quantity">
+                <div class="pincode">
+                    <div class="quantity">
+                        <p>Your Pincode:</p>
+                        <input type="text" placeholder="Pincode">
+                    </div>
+                    <div class="quantity">
+                        <p>Quantity:</p>
+                        <input type="number" value="1">
+                    </div>
+                </div>
+                <p class="opacity mart" style="margin-left: 0;">Available in our store at PRAYAGRAJ, and <a href="">12
+                        other store(s)</a></p>
+            </div>
+            <div class="customize">
+                <div class="flex">
+                    <div class="button">
+                        <label id="label">Customize this Product:</label>
+                        <select name="cars" class="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="button">
+                        <label for="cars" id="label">Select Ring Size:</label>
+                        <select name="cars" class="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="like"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }" (click)="liked = !liked"></i></div>
+                    <button class="primary-button">Try On Me</button>
+                    <button class="primary-button">Add To Cart</button>
                 </div>
             </div>
-            <div class="buttons">
-                <button (click)="onclick()" id="cart">Add to Cart<span uk-icon="cart"></span></button>
-                <button routerLink="/vr-product-try" id="try">Try On Me</button>
+            <div class="certify">
+                <p><i class="fa-solid fa-medal"></i>Certified Jewellery</p>
+                <p><i class="fa-solid fa-rotate-left"></i>30 -Day Money Back</p>
+                <p><i class="ri-arrow-left-right-line"></i>Lifetime Exchange & Buy-Back</p>
             </div>
         </div>
     </div>
-    <div class="section">
-        <p>SIMILAR PRODUCTS</p>
-        <div class="widgets">
-            <app-product-widget></app-product-widget>
-            <app-product-widget></app-product-widget>
-            <app-product-widget></app-product-widget>
-            <app-product-widget></app-product-widget>
+    <div class="specification">
+        <div class="pink-box">Product Details</div>
+        <div class="list-flex">
+            <p>Product Code</p>
+            <p>{{product_Code}}</p>
         </div>
-        <p>NEWLY ARRIVED</p>
-        <div class="widgets">
-            <app-product-widget></app-product-widget>
-            <app-product-widget></app-product-widget>
-            <app-product-widget></app-product-widget>
-            <app-product-widget></app-product-widget>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Height</p>
+            <p>{{height}}</p>
         </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Width</p>
+            <p>{{width}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Weight</p>
+            <p>{{weight}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Country Of Origin</p>
+            <p>{{origin}}</p>
+        </div>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="features">
+        <app-feature-widget *ngFor="let item of features"></app-feature-widget>
     </div>
 </div>

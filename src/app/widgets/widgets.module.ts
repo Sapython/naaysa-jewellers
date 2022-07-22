@@ -7,9 +7,10 @@ import { PaymentOptionWidgetComponent } from './payment-option-widget/payment-op
 import { ReviewWidgetComponent } from './review-widget/review-widget.component';
 import { NotificationWidgetComponent } from './notification-widget/notification-widget.component';
 import { VendorWidgetComponent } from './vendor-widget/vendor-widget.component';
+import { FeatureWidgetComponent } from './feature-widget/feature-widget.component';
 
 
-const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent]
+const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent,FeatureWidgetComponent]
 @NgModule({
   declarations: [
     components,
@@ -17,7 +18,8 @@ const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWi
     PaymentOptionWidgetComponent,
     ReviewWidgetComponent,
     NotificationWidgetComponent,
-    VendorWidgetComponent
+    VendorWidgetComponent,
+    FeatureWidgetComponent
   ],
   exports: [components],
   imports: [

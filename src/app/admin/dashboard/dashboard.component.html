@@ -58,232 +58,37 @@
                   <th width = "13%"></th>
                   <th width = "13%"></th>
                 </tr>
-                <tr>
+                <tr *ngFor="let item of items">
                   <td>
                     <div class="product">
-                        <img src="assets/" alt="">
+                        <img src="{{src}}" alt="">
                         <div class="info">
-                            <p class="product-heading">Product</p>
-                            <p>12345678912</p>
+                            <p class="product-heading">{{product_Name}}</p>
+                            <p>{{product_Id}}</p>
                         </div>
                     </div>
                   </td>
                   <td>
                     <div class="material">
-                        <p>Diamond</p>
+                        <p>{{material}}</p>
                     </div>
                   </td>
                   <td>
                     <div class="material quanity">
-                        <p>5.56 grams</p>
+                        <p>{{weight}}</p>
                     </div>
                   </td>
                   <td>
-                    <p class="price">₹30,000</p>
+                    <p class="price">{{price}}</p>
                   </td>
                   <td>
                     <p class="sold">
-                        Sold:14
+                        Sold: {{sold_Number}}
                     </p>
                   </td>
                   <td>
                     <p class="sold">
-                        Returned:14
-                    </p>
-                  </td>
-                  <td>
-                    <button class="more">
-                        More Info
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="product">
-                        <img src="assets/" alt="">
-                        <div class="info">
-                            <p class="product-heading">Product</p>
-                            <p>12345678912</p>
-                        </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material">
-                        <p>Diamond</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material quanity">
-                        <p>5.56 grams</p>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="price">₹30,000</p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Sold:14
-                    </p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Returned:14
-                    </p>
-                  </td>
-                  <td>
-                    <button class="more">
-                        More Info
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="product">
-                        <img src="assets/" alt="">
-                        <div class="info">
-                            <p class="product-heading">Product</p>
-                            <p>12345678912</p>
-                        </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material">
-                        <p>Diamond</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material quanity">
-                        <p>5.56 grams</p>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="price">₹30,000</p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Sold:14
-                    </p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Returned:14
-                    </p>
-                  </td>
-                  <td>
-                    <button class="more">
-                        More Info
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="product">
-                        <img src="assets/" alt="">
-                        <div class="info">
-                            <p class="product-heading">Product</p>
-                            <p>12345678912</p>
-                        </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material">
-                        <p>Diamond</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material quanity">
-                        <p>5.56 grams</p>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="price">₹30,000</p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Sold:14
-                    </p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Returned:14
-                    </p>
-                  </td>
-                  <td>
-                    <button class="more">
-                        More Info
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="product">
-                        <img src="assets/" alt="">
-                        <div class="info">
-                            <p class="product-heading">Product</p>
-                            <p>12345678912</p>
-                        </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material">
-                        <p>Diamond</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material quanity">
-                        <p>5.56 grams</p>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="price">₹30,000</p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Sold:14
-                    </p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Returned:14
-                    </p>
-                  </td>
-                  <td>
-                    <button class="more">
-                        More Info
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="product">
-                        <img src="assets/" alt="">
-                        <div class="info">
-                            <p class="product-heading">Product</p>
-                            <p>12345678912</p>
-                        </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material">
-                        <p>Diamond</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material quanity">
-                        <p>5.56 grams</p>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="price">₹30,000</p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Sold:14
-                    </p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Returned:14
+                        Returned:{{returned_Number}}
                     </p>
                   </td>
                   <td>
