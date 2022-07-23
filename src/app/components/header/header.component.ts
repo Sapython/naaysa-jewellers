@@ -16,6 +16,111 @@ export class HeaderComponent implements OnInit {
   @ViewChild('offcanvasContainer') offcanvasContainer: ElementRef;
   @ViewChild('offcanvas') offcanvas: ElementRef;
   searchVisible:boolean = false;
+
+  byCategory=[
+    {
+      image:'../../../assets/jewellery/jew1.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew2.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew.3.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew6.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew5.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew6.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew2.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew8.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew1.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew.3.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew2.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew5.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew1.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew2.svg',
+      name:'Gold coins'
+    },
+    {
+      image:'../../../assets/jewellery/jew8.svg',
+      name:'Gold coins'
+    }
+  ]
+  byMetals=[
+    {
+      image:'../../../assets/metals/metal1.svg',
+      name:'Diamond'
+    },
+    {
+      image:'../../../assets//metals/metal2.svg',
+      name:'Gold '
+    },
+    {
+      image:'../../../assets/metals/metal.svg',
+      name:'Silver'
+    },
+    {
+      image:'../../../assets/metals/gemstone.svg',
+      name:'Gemstone'
+    },
+    
+  ]
+  filters=[
+    {
+      name:'For KIDS/BABY'
+    },
+    {
+      name:'Under ₹ 10k'
+    },
+    {
+      name:'₹ 10k - ₹ 20k '
+    },
+    {
+      name:' ₹ 20k to ₹ 75K '
+    },
+    {
+      name:'₹ 75k to ₹ 1 LAKH'
+    },
+    {
+      name:'Above ₹ 1 LAKH'
+    },
+    {
+      name:'FOR WOMEN'
+    },
+  ]
   constructor() {}
 
   ngOnInit(): void {}

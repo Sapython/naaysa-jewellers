@@ -19,45 +19,31 @@
         </li>
         <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
           <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
-            <div>
-              <ul class="uk-nav uk-dropdown-nav">
-                <li class="pink">Rings</li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#">Engagement Rings</a></li>
-                <li><a href="#">Office Wear</a></li>
-                <li><a href="#">For Mens</a></li>
-                <li><a href="#">For Gifts</a></li>
+            <div class="categories">
+              <b>Shop for category</b>
+              <ul>
+                <li *ngFor="let category of byCategory">
+                  <img src={{category.image}} alt="image" />
+                  <p>{{category.name}}</p>
+                </li>
               </ul>
             </div>
-            <div>
-              <ul class="uk-nav uk-dropdown-nav">
-                <li class="pink">Ear Rings</li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#">Jhumkas</a></li>
-                <li><a href="#">Studs</a></li>
-                <li><a href="#">Droops</a></li>
-                <li><a href="#">Hoops</a></li>
-              </ul>
+            <div class="categories">
+              <b>Shop by Metal ans Stone</b>
+            <ul>
+              <li *ngFor="let metal of byMetals">
+                <img src={{metal.image}} alt="image" />
+                <p>{{metal.name}}</p>
+              </li>
+            </ul>
             </div>
-            <div>
-              <ul class="uk-nav uk-dropdown-nav">
-                <li class="pink">Pendants</li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#">Alphabets</a></li>
-                <li><a href="#">Religious</a></li>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Heart Shaped</a></li>
-                <li><a href="#">Lockets</a></li>
-              </ul>
-            </div>
-            <div>
-              <ul class="uk-nav uk-dropdown-nav">
-                <li class="pink">Others</li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="#">Bracelets</a></li>
-                <li><a href="#">Bangles</a></li>
-                <li><a href="#">Chains</a></li>
-                <li><a href="#">Kadas</a></li>
+            <div class="categories">
+              <b>Shop By</b>
+              <ul>
+                <li *ngFor="let filter of filters">
+                 
+                  <p>{{filter.name}}</p>
+                </li>
               </ul>
             </div>
           </div>
