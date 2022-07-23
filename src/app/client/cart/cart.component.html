@@ -4,43 +4,49 @@
         <h1>Cart</h1>
         <hr class="aa">
         <app-cart-added-item *ngFor="let item of products" [imgsrc]="item.imgsrc" [item_name]="item.item_name" [item_price]="item.item_price" [stock]="item.stock" [item_count]="item.item_count" [total_price]="item.total_price"></app-cart-added-item>
-        <!-- <app-cart-added-item imgsrc="https://w7.pngwing.com/pngs/626/880/png-transparent-wedding-ring-carat-diamond-gold-jewelry-love-gemstone-ring.png" item_name="Platinum-diamond Ring" item_price="4000" stock="in stock" item_count="3" total_price="12000"></app-cart-added-item> -->
-        <!-- <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="out of stock" item_count="3" total_price="6000"></app-cart-added-item> -->
-        <!-- <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="in stock" item_count="3" total_price="6000"></app-cart-added-item> -->
-        <!-- <app-cart-added-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" item_name="Golden Ring" item_price="2000" stock="in stock" item_count="3" total_price="6000"></app-cart-added-item> -->
     </div>
     <div class="cart-price uk-animation-slide-right-medium">
-        <div class="parent-container">
-            <h1>Delivery</h1>
-        <p>Delivery date : 20 April 2022</p>
-        <hr class="new2">
-        <div class="promo">
-            <input type="text" placeholder="P R O M O C O D E">
+        <p id="heading">Delivery</p>
+        <p id="date">Delivery Date : {{delivery_Date}}</p>
+        <hr id="hr">
+        <p id="discount">{{disc_percentage}} off Discount</p>
+        <div class="promo-code">
+            <input type="text" placeholder="PROMOCODE">
             <button>Apply</button>
         </div>
-        <p id="disc">30% Off Discount</p>
-        <hr class="new2">
-        <div class="price-detail">
-            <div class="price-detail-text pd">
-                <h1>Subtotal</h1>
+        <div class="bill">
+            <div class="uk-flex subtotal">
+                <p>Subtotal</p>
+                <p>{{subtotal}}</p>
+            </div>
+            <div class="uk-flex">
                 <p>Discount</p>
-                <p>Delivery</p>
+                <p>-{{discount}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>{{material}}</p>
+                <p>{{material_Price}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>GST</p>
+                <p>{{gst}}</p>
+            </div>
+            <div class="uk-flex">
                 <p>Tax</p>
+                <p>{{tax}}</p>
             </div>
-            <div class="price-detail-data pd">
-                <h1>₹ 2500</h1>
-                <p>₹ 500</p>
-                <p>₹ 200</p>
-                <p>₹ 100</p>
+            <div class="uk-flex">
+                <p>Delivery</p>
+                <p>{{delivery}}</p>
             </div>
+            <hr id="hr">
+            <div class="uk-flex subtotal">
+                <p>Total</p>
+                <p>{{total}}</p>
+            </div>
+            <button class="primary-button">
+                Continue
+            </button>
         </div>
-        <br>
-        <hr class="new2">
-        <div class="total-price">
-            <p>Total</p> <p id="price-final">₹ 2,300</p>
-        </div>
-        <button class="proceed-btn" routerLink="/choose-delivery-address">Proceed to checkout</button>
-        <p routerLink="../home" id="back"><a href=""><i class="fa-solid fa-arrow-left"></i>Back to Shopping</a></p>
     </div>
-        </div>
 </div>
