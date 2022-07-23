@@ -9,12 +9,13 @@ import { HostListener } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   path: string = window.location.pathname;
+  windowWidth: number = window.innerWidth;
   @ViewChild('nav') nav: ElementRef;
   @ViewChild('searchButton') searchButton: ElementRef;
   @ViewChild('searchBox') searchBox: ElementRef;
   @ViewChild('offcanvasContainer') offcanvasContainer: ElementRef;
   @ViewChild('offcanvas') offcanvas: ElementRef;
-
+  searchVisible:boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
