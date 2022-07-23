@@ -11,11 +11,18 @@
         display: block;
         margin: auto;
         text-align: center;
-        img{
-            max-height: 150px;
-            min-height: 150px;
-            max-width: 200px;
-            object-fit: cover;
+        .image{
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            margin-top: 15px;
+            img{
+                max-height: 150px;
+                min-height: 150px;
+                max-width: 200px;
+                object-fit: cover;
+            }
         }
     }
     .heart{
@@ -35,12 +42,12 @@
     #name{
         font-weight: 500;
         font-size: var(--small);
-        color: grey;
+        color: rgb(73, 73, 73);
         text-align: left;
     }
     #price{
         font-size: var(--small);
-        line-height: 50px;
+        line-height: 20px;
         text-align: left;
     }
     #info{
@@ -65,10 +72,11 @@
 .stars{
     display: flex;
     align-items: center;
-    color: grey;
+    color: var(--color-dark-primary);
+    font-size: var(--msmall);
     margin-bottom: 15px;
     i{
-        margin-left: 3px;
+        margin-right: 8px;
     }
     p{
         margin-left: 10px;
@@ -76,12 +84,3 @@
         font-weight: 500;
     }
 }
-.uk-progress.progress-green::-webkit-progress-value {
-    background-color: var(--color-gold) ;
-  }
-  .uk-progress.progress-green::-moz-progress-bar {
-    background-color: var(--color-gold) ;
-  }
-  .uk-progress.progress-green::-ms-fill {
-    background-color: var(--color-gold) ;
-  }

@@ -1,5 +1,6 @@
 .container{
-  margin: 15px;
+  width: 80%;
+  margin: 10px;
   padding: 15px;
   border: 1px solid var(--color-secondary);
   border-radius: 10px;
@@ -66,6 +67,7 @@
 }
 @media only screen and (max-width: 600px){
   .container{
+    width: auto;
     .section-one{
       .details{
         .uk-flex{

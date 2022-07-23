@@ -2,7 +2,10 @@
 <div class="container">
     <div class="box">
         <div class="image">
-            <img src="assets/jewellery/ring.png" alt="">
+            <img src="{{large_Image}}" alt="">
+            <div class="small-images">
+                <img [src]="image" alt="" *ngFor="let image of images;let i = index" (click) = 'large_Image = images[i]'>
+            </div>
         </div>
         <div class="inner-box">
             <div class="section-one">
@@ -29,6 +32,13 @@
                 </div>
                 <p class="opacity mart" style="margin-left: 0;">Available in our store at PRAYAGRAJ, and <a href="">12
                         other store(s)</a></p>
+            </div>
+            <div class="delivery">
+                <p>Delivery By Today Evening <span>{{date}}</span> for Pincode <span>{{pincode}}</span></p>
+                <p>(Placed Order before 4pm for same-day-delivery)</p>
+                <div class="features">
+                    <app-feature-widget *ngFor="let feature of features" [src]="feature.src" [text_Feature]="feature.feature_Text"></app-feature-widget>
+                </div>
             </div>
             <div class="customize">
                 <div class="flex">
@@ -92,7 +102,83 @@
         </div>
         <mat-divider></mat-divider>
     </div>
-    <div class="features">
-        <app-feature-widget *ngFor="let item of features"></app-feature-widget>
+    <div class="specification">
+        <div class="pink-box">Price Details</div>
+        <div class="list-flex">
+            <p>Product Code</p>
+            <p>{{product_Code}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Height</p>
+            <p>{{height}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Width</p>
+            <p>{{width}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Weight</p>
+            <p>{{weight}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Country Of Origin</p>
+            <p>{{origin}}</p>
+        </div>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="specification">
+        <div class="pink-box">Metal Details</div>
+        <div class="list-flex">
+            <p>Product Code</p>
+            <p>{{product_Code}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Height</p>
+            <p>{{height}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Width</p>
+            <p>{{width}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Weight</p>
+            <p>{{weight}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="list-flex">
+            <p>Country Of Origin</p>
+            <p>{{origin}}</p>
+        </div>
+        <mat-divider></mat-divider>
+    </div>
+    <p id="heading">Customer Reviews</p>
+    <div class="parent-reviews">
+        <div class="reviews" *ngFor="let review of reviews">
+            <div class="profile">
+                <div class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <p>{{reviewer_Name}}</p>
+            </div>
+            <p id="name">{{jewel_name}}</p>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p>{{review_Disc}}</p>
+            <div class="like-dislike">
+                <i class="fa-solid fa-thumbs-up"></i>|<i class="fa-solid fa-thumbs-down"></i>
+            </div>
+        </div>
     </div>
 </div>

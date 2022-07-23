@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FeatureWidgetComponent implements OnInit {
 
   @Input() text_Feature:string = '100% Certified Jewellery'
-  @Input() number:number = 1
+  @Input() src:string = 'assets/feature1.png'
 
   constructor() { }
 
