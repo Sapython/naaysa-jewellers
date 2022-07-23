@@ -1,93 +1,31 @@
-.addresses-holder{
-    border-radius: 16px;
-    border: 1px solid rgb(225, 225, 225);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    margin: auto;
-    margin-top: 25px;
-    height: auto;
-    margin-bottom: 10px;
-    width: 80%;
-    overflow: hidden;
-    margin-top: 100px;
-}
-
-.header{
-    height: 100px;
-    align-items: center;
-    display: flex;
-    background-color: var(--color-primary);
-}
-
-.header h3{
-    font-weight: 400;
-    margin-top: 10px;
-    margin-left: 30px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.fa-solid{
-    margin-right: 20px;
-}
-.add-new{
-    overflow: hidden;
-    border-radius: 8px;
-    width: 30%;
-    height: auto;
-    margin-left: 40px;
-    margin-top: 20px;
-    background-color: var(--color-secondary-lighter);
-    border: 1px solid #ffffff;
-    display: flex;
-    margin-bottom: 20px;
-    box-shadow: 0 0 4px rgba(246, 174, 220, 0.608);
-    transition: 0.5s;
-    padding: 10px;
-}
-
-.add-new:hover{
-    border: 2px solid var(--color-primary);
-    transform: scale(1.02);
-    transition: 0.5s;
-    box-shadow: 0 0 20px rgba(246, 174, 220, 0.608);
-}
-
-.add-new h1{
-    margin: 0;
-    color: var(--color-secondary);
-    font-weight: 600;
-    margin-left: 25px;
-    font-size: var(--xxsmall);
-}
-
-button{
-    border: none;
-    background-color: inherit;
-}
-
-button:hover{
-    cursor: pointer;
-}
-.button{
-    background-color: var(--color-dark-primary);
-    color: #ffffff;
-    padding: 5px 25px;
+.container{
+    margin: 15px;
+    border: 1px solid #969696;
     border-radius: 10px;
-    margin: 15px 55px;
-    font-size: var(--Xsmall);
-    cursor: pointer;
-}
-@media only screen and (max-width: 600px){
-   .addresses-holder{
-    margin: 0;
-    width: auto;
-   }
-   .container{
-    padding: 10px;
-   }
-   .header h3{
-    display: block;
-    margin: auto;
-   }
+    box-shadow: 1px 1px 06px -1px #969696;
+    .box{
+        padding: 15px;
+        border-radius: 10px;
+        font-size: var(--small);
+        display: flex;
+        background-color: var(--color-secondary);
+        color: #fff;
+        font-weight: 400;
+        i{
+            margin-right: 15px;
+        }
+    }
+    .add{
+        background-color: var(--color-primary);
+        color: var(--color-dark-primary);
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin: 15px;
+        margin-top: 05px;
+        border: 1px solid var(--color-dark-primary);
+        font-size: var(--xsmall);
+        cursor: pointer;
+    }
 }

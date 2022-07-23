@@ -1,21 +1,20 @@
-<div class="address-area">
-  <div class="radio-check">
-    <input type="radio" name="address" checked />
-  </div>
-  <div class="details">
-    <div class="name-number">
-      <h1>{{ name }}</h1>
-      <button>{{ address_type }}</button>
-      <h2>{{ number }}</h2>
+<div class="container">
+  <div class="section-one">
+    <div class="check-box">
     </div>
-    <div class="address-main">
-      {{ address }}
+    <div class="details">
+      <div class="uk-flex">
+        <p>{{name}} {{last_name}}</p>
+        <p>{{address_type}}</p>
+      </div>
+      <div class="address">{{address}}</div>
+      <p class="phone">{{phone}}</p>
+      <div class=""><button>Deliver Here</button></div>
     </div>
   </div>
-  <div class="edit-button">
-    <button><i class="fa-solid fa-pen-to-square"></i> Edit</button>
-  </div>
-  <div class="deliver-button">
-    <button>DELIVER HERE</button>
+  <div class="section-second">
+    <div class="">
+      <button>Edit<i class="ri-edit-circle-fill"></i></button>
+    </div>
   </div>
 </div>

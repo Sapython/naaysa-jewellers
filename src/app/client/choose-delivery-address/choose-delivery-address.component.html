@@ -1,18 +1,11 @@
 <app-header></app-header>
-<div class="addresses-holder">
-    <div class="header">
-        <h3> <i class="fa-solid fa-location-dot"></i> Deliver to</h3>
+<div class="container">
+    <div class="box">
+        <i class="ri-map-pin-fill"></i>
+        <p>Deliver To</p>
     </div>
-    <div class="container">
-        <app-address-card name="JOHN DOE" address_type="WORK" number="+31 321-254-952"
-            address="10880 Malibu Point, 90265, CA 90265, USA"></app-address-card>
-        <app-address-card name="JOHN SIMONS" address_type="OTHER" number="+31 125-324-752"
-            address="10880 Malibu Point, 90265, CA 90265, USA"></app-address-card>
-        <div class="add-new">
-            <button class="add">
-                <h1> <i class="fa-solid fa-plus"></i> ADD NEW ADDRESS</h1>
-            </button>
-        </div>
-        <button class="button" routerLink="/payment-options">Proceed To Payment</button>
-    </div>
+    <app-address-card></app-address-card>
+    <app-address-card></app-address-card>
+    <app-address-card></app-address-card>
+    <button class="add">Add New Address</button>
 </div>
