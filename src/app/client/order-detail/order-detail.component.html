@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container">
     <div class="first-section">
         <div class="order">
@@ -17,7 +18,7 @@
         </div>
         <div class="bill">
             <p id="heading">Order Details</p>
-            <div class="flex">
+            <div class="flex total">
                 <p>Subtotal </p>
                 <p>{{subtotal_Price}}</p>
             </div>
@@ -40,6 +41,7 @@
             </div>
         </div>
     </div>
+    <hr id="hr">
     <div class="second-section">
         <mat-vertical-stepper>
             <mat-step>

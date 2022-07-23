@@ -4,6 +4,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { OrderDetailRoutingModule } from './order-detail-routing.module';
 import { OrderDetailComponent } from './order-detail.component';
 import {MatStepperModule} from '@angular/material/stepper';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     CommonModule,
     OrderDetailRoutingModule,
     MatDividerModule,
-    MatStepperModule
+    MatStepperModule,
+    ComponentsModule
   ]
 })
 export class OrderDetailModule { }

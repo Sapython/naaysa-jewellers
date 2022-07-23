@@ -4,10 +4,10 @@
     margin: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     .first-section{
         width: 58%;
+        margin-left: 2%;
         .order{
             display: flex;
             align-items: center;
@@ -31,13 +31,13 @@
                 margin-right: 50px;
                 display: inline-block;
                 text-align: center;
-                padding: 15px;
+                padding: 35px 15px;
                 border: 1px solid var(--color-dark-primary);
                 background-color: var(--color-primary);
-                border-radius: 10px;
+                border-radius: 05px;
                 width: 20%;
                 img{
-                    width: 45%;
+                    width: 65%;
                     object-fit: cover;
                 }
 
@@ -45,14 +45,17 @@
             .details{
                 p:nth-child(1){
                     font-weight: 500;
+                    font-size: var(--msmall);
                 }
                 p:nth-child(2){
                     font-weight: 500;
+                    font-size: var(--msmall);
                 }
             }
         }
         .bill{
             margin-top: 25px;
+            width: 70%;
             #heading{
                 font-size: var(--small);
                 margin-bottom: 20px;
@@ -60,6 +63,14 @@
             p:nth-child(1){
                 font-size: var(--msmall);
                 font-weight: 500;
+            }
+            p:nth-child(2){
+                font-weight: 500;
+                font-size: var(--xsmall);
+                color: rgb(80, 80, 80);
+            }
+            .subtotal{
+                font-size: var(--medium);
             }
             .flex{
                 display: flex;
@@ -71,13 +82,19 @@
             .total{
                 margin-top: 10px;
                 p:nth-child(1){
-                    font-size: var(--small);
+                    font-size: var(--medium);
                 }
             }
         }
     }
+    #hr{
+        height: 550px;
+        border-left: 2px solid var(--color-dark-primary);
+        width: 20px;
+    }
     .second-section{
         width: 38%;
+        margin-left: 10%;
     }
 }
 @media only screen and (max-width: 600px) {
