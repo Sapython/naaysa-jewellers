@@ -1,96 +1,105 @@
 <header>
-  <div class="logo">
-    <span>NYAASA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span
-      class="secondary-color"
-      >JEWELLERS</span
-    >
+  <div class="topBar">
+    <div class="logo">
+      <span>NAAYSA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span
+        class="secondary-color">JEWELLERS</span>
+    </div>
   </div>
-  <nav #nav>
-    <li
-      routerLink=""
-      [class]="path === '/' || path === 'home' ? 'active' : 'none'"
-    >
-      Home
-    </li>
-    <div>
-      <li [class]="path === '' || path === 'home' ? 'active' : 'none'">
-        Products
+  <div class="bottomBar">
+    <nav #nav>
+      <button (click)="showOffcanvas()" class="mobileOnly">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <li routerLink="" [class]="path === '/' || path === 'home' ? 'active' : 'none'">
+        Home
       </li>
-      <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
-        <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
-          <div>
-            <ul class="uk-nav uk-dropdown-nav">
-              <li class="pink">Rings</li>
-              <li class="uk-nav-divider"></li>
-              <li><a href="#">Engagement Rings</a></li>
-              <li><a href="#">Office Wear</a></li>
-              <li><a href="#">For Mens</a></li>
-              <li><a href="#">For Gifts</a></li>
-            </ul>
-          </div>
-          <div>
-            <ul class="uk-nav uk-dropdown-nav">
-              <li class="pink">Ear Rings</li>
-              <li class="uk-nav-divider"></li>
-              <li><a href="#">Jhumkas</a></li>
-              <li><a href="#">Studs</a></li>
-              <li><a href="#">Droops</a></li>
-              <li><a href="#">Hoops</a></li>
-            </ul>
-          </div>
-          <div>
-            <ul class="uk-nav uk-dropdown-nav">
-              <li class="pink">Pendants</li>
-              <li class="uk-nav-divider"></li>
-              <li><a href="#">Alphabets</a></li>
-              <li><a href="#">Religious</a></li>
-              <li><a href="#">Fashion</a></li>
-              <li><a href="#">Heart Shaped</a></li>
-              <li><a href="#">Lockets</a></li>
-            </ul>
-          </div>
-          <div>
-            <ul class="uk-nav uk-dropdown-nav">
-              <li class="pink">Others</li>
-              <li class="uk-nav-divider"></li>
-              <li><a href="#">Bracelets</a></li>
-              <li><a href="#">Bangles</a></li>
-              <li><a href="#">Chains</a></li>
-              <li><a href="#">Kadas</a></li>
-            </ul>
+      <div>
+        <li [class]="path === '' || path === 'home' ? 'active' : 'none'">
+          Products
+        </li>
+        <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
+          <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
+            <div>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="pink">Rings</li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Engagement Rings</a></li>
+                <li><a href="#">Office Wear</a></li>
+                <li><a href="#">For Mens</a></li>
+                <li><a href="#">For Gifts</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="pink">Ear Rings</li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Jhumkas</a></li>
+                <li><a href="#">Studs</a></li>
+                <li><a href="#">Droops</a></li>
+                <li><a href="#">Hoops</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="pink">Pendants</li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Alphabets</a></li>
+                <li><a href="#">Religious</a></li>
+                <li><a href="#">Fashion</a></li>
+                <li><a href="#">Heart Shaped</a></li>
+                <li><a href="#">Lockets</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="pink">Others</li>
+                <li class="uk-nav-divider"></li>
+                <li><a href="#">Bracelets</a></li>
+                <li><a href="#">Bangles</a></li>
+                <li><a href="#">Chains</a></li>
+                <li><a href="#">Kadas</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <li
-      routerLink="ten-plus-one-scheme"
-      [class]="
-        path === '/ten-plus-one-scheme' || path === 'home' ? 'active' : 'none'
-      "
-    >
-      10 + 1 Scheme
-    </li>
-    <li routerLink="">Locate Store</li>
-  </nav>
-  <div id="search-box" #searchBox>
-    <form id="search">
-      <input type="text" />
-      <button type="submit">Search</button>
-    </form>
-    <button type="button" (click)="hideSearch()" id="cancel-search">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-  </div>
+      <li routerLink="" class="desktopOnly">Locate Store</li>
+      <li routerLink="ten-plus-one-scheme"
+        [class]="path === '/ten-plus-one-scheme' || path === 'home' ? 'borderedButton active' : 'borderedButton none'">
+        10 + 1 Scheme
+      </li>
 
-  <div class="actions">
-    <button (click)="showSearch()" #searchButton id="search-button">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-    <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
-    <button routerLink="login"><i class="fa-solid fa-user"></i></button>
-    <button (click)="showOffcanvas()">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    </nav>
+    <div class="actions desktopOnly">
+      <div id="search-box" class="uk-animation-scale-up" *ngIf="searchVisible">
+        <div class="field">
+          <input type="text" />
+          <button><i class="fa-solid fa-arrow-right-long"></i></button>
+          <button (click)="searchVisible = false">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <button (click)="searchVisible = true" #searchButton id="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+      <button routerLink="login"><i class="fa-solid fa-user"></i></button>
+      <button (click)="showOffcanvas()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  <div class="searchBarSep mobileOnly" *ngIf="searchVisible">
+    <div id="search-box" class="uk-animation-scale-up">
+      <div class="field">
+        <input type="text" />
+        <button><i class="fa-solid fa-arrow-right-long"></i></button>
+        <button (click)="searchVisible = false">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -98,8 +107,7 @@
   <div id="offcanvas" #offcanvas>
     <div id="profile">
       <img
-        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-      />
+        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
       <h4>Sudipta Doe</h4>
     </div>
     <ul>
@@ -119,176 +127,15 @@
         <button><i class="fa-solid fa-arrow-left"></i> Logout</button>
       </li>
     </ul>
-  </div>
-</div>
-<!-- <header class="navbar navbar-expand-md sticky-top" [scrollTop]="onWindowScroll()">
-  <div class="naayasa">
-    <span>NYAASA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span class="secondary-color">JEWELLERS</span>
-  </div>
-  <div id="top">
-    <nav>
-      <ul>
-        <li class="nav-li">
-          <button type="button" class="nav-button" routerLink="/" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }">
-            Home
-          </button>
-        </li>
-        <li class="nav-li">
-          <button type="button" class="nav-button">Products</button>
-          <div uk-dropdown="pos: bottom-center">
-            
-          </div>
-        </li>
-
-        <li class="nav-li">
-          <button type="button" class="nav-button" routerLink="/ten-plus-one-scheme" routerLinkActive="active">
-            10+1 Scheme
-          </button>
-        </li>
-      </ul>
-    </nav>
-
-
-    <div id="buttons">
-      <div class="search active" id="search-bar">
-        <input *ngIf="toggleSearch" class="search-txt" type="text" placeholder="Search..." />
-        <button class="submit" (click)="toggleSearch = !toggleSearch">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-      <button type="button" id="cart" routerLink="../cart">
-        <i class="fa-solid fa-cart-shopping"></i>
+    <div class="actions">
+      <button (click)="searchVisible = true" #searchButton id="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
       </button>
-      <button type="button" id="cart" routerLink="../login">
-        <i class="fa-solid fa-user"></i>
+      <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+      <button routerLink="login"><i class="fa-solid fa-user"></i></button>
+      <button (click)="showOffcanvas()">
+        <i class="fa-solid fa-bars"></i>
       </button>
     </div>
   </div>
-</header> -->
-<!-- <li class="nav-li">
-          <button type="button" class="nav-button">Products</button>
-          <div uk-dropdown="pos: bottom-center">
-            <div id="products">
-              <div class="product-type">
-                <h3>Trending</h3>
-                <ul>
-                  <li><button routerLink="../all-product">Jhumkas</button></li>
-                  <li>
-                    <button routerLink="../all-product">Couple Bands</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Bracelets</button>
-                  </li>
-                  <li><button routerLink="../all-product">Necklace</button></li>
-                  <li><button routerLink="../all-product">Pendants</button></li>
-                  <li class="view-all">
-                    <button>
-                      All Trends<i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-type">
-                <h3>Rings</h3>
-                <ul>
-                  <li>
-                    <button routerLink="../all-product">
-                      Engagement Rings
-                    </button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Couple Rings</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Gold Rings</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Silver Rings</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Diamond Rings</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Men's Rings</button>
-                  </li>
-                  <li class="view-all">
-                    <button>
-                      All Rings<i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-type">
-                <h3>Solitaires</h3>
-                <ul>
-                  <li><button routerLink="../all-product">Diamond</button></li>
-                  <li><button routerLink="../all-product">Gold</button></li>
-                  <li><button routerLink="../all-product">Silver</button></li>
-                  <li><button routerLink="../all-product">Platinum</button></li>
-                  <li class="view-all">
-                    <button>
-                      All Solitaires<i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-type">
-                <h3>Earrings</h3>
-                <ul>
-                  <li><button routerLink="../all-product">Diamond</button></li>
-                  <li><button routerLink="../all-product">Gold</button></li>
-                  <li><button routerLink="../all-product">Silver</button></li>
-                  <li><button routerLink="../all-product">Platinum</button></li>
-                  <li class="view-all">
-                    <button>
-                      All Earrings<i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-type">
-                <h3>Pendants</h3>
-                <ul>
-                  <li><button routerLink="../all-product">Alphabet</button></li>
-                  <li>
-                    <button routerLink="../all-product">Religious</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Heart Shaped</button>
-                  </li>
-                  <li><button routerLink="../all-product">Lockets</button></li>
-                  <li>
-                    <button routerLink="../all-product">Office Wear</button>
-                  </li>
-                  <li class="view-all">
-                    <button>
-                      All Pendants<i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <div class="product-type">
-                <h3>Coins</h3>
-                <ul>
-                  <li>
-                    <button routerLink="../all-product">Gold Coins</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">Silver Coins</button>
-                  </li>
-                  <li>
-                    <button routerLink="../all-product">
-                      Embroidery Coins
-                    </button>
-                  </li>
-                  <li class="view-all">
-                    <button>
-                      All Coins<i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li> -->
+</div>
