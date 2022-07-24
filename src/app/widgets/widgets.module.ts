@@ -9,9 +9,10 @@ import { ReviewWidgetComponent } from './review-widget/review-widget.component';
 import { NotificationWidgetComponent } from './notification-widget/notification-widget.component';
 import { VendorWidgetComponent } from './vendor-widget/vendor-widget.component';
 import { FeatureWidgetComponent } from './feature-widget/feature-widget.component';
+import { HistoryComponent } from './history/history.component';
 
 
-const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent,FeatureWidgetComponent,WishlistWidgetComponent
+const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent,FeatureWidgetComponent,WishlistWidgetComponent,HistoryComponent
 
 ]
 @NgModule({
@@ -22,7 +23,8 @@ const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWi
     ReviewWidgetComponent,
     NotificationWidgetComponent,
     VendorWidgetComponent,
-    FeatureWidgetComponent
+    FeatureWidgetComponent,
+    HistoryComponent
   ],
   exports: [components],
   imports: [

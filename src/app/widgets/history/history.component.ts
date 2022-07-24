@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-order-history',
-  templateUrl: './order-history.component.html',
-  styleUrls: ['./order-history.component.scss']
+  selector: 'app-history',
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.scss']
 })
-export class OrderHistoryComponent implements OnInit {
+export class HistoryComponent implements OnInit {
+
   active = true;
   constructor() { }
   ngOnInit(): void {
@@ -13,4 +14,5 @@ export class OrderHistoryComponent implements OnInit {
   toggleActive(){
     this.active = !this.active;
   }
+
 }

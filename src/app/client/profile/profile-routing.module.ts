@@ -6,11 +6,11 @@ const routes: Routes = [
   { path: '',
   component: ProfileComponent,
   children:[
-    {
-      path: '',
-      redirectTo:'edit',
-      pathMatch:'full',
-    },
+    // {
+    //   path: '',
+    //   redirectTo:'edit',
+    //   pathMatch:'full',
+    // },
     {
       path:'edit',
       loadChildren: () => import('./edit/edit.module').then(m => m.EditModule),
