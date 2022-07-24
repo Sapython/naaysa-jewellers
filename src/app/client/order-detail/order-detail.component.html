@@ -4,8 +4,11 @@
         <div class="order">
             <p>Order Id: </p>
             <p>{{order_Id}}</p>
+     
         </div>
         <p id="status">{{status}}</p>
+        <p> 
+            On {{delivered}}</p>
         <div class="product">
             <div class="image">
                 <img src="assets/image9.png" alt="">
@@ -14,6 +17,14 @@
                 <p>{{price}}</p>
                 <p>{{product_Name}}</p>
                 <p>{{discription}}</p>
+                <div class="stars">
+                    <div class="star active "><i class="ri-star-fill"></i></div>
+                    <div class="star active "><i class="ri-star-fill"></i></div>
+                   <div class="star "><i class="ri-star-fill"></i></div>
+                   <div class="star "><i class="ri-star-fill"></i></div>
+                   <div class="star "><i class="ri-star-fill"></i></div>
+               </div>
+               <b>Write a review</b>
             </div>
         </div>
         <div class="bill">
@@ -24,15 +35,15 @@
             </div>
             <div class="flex">
                 <p>Discount </p>
-                <p>{{discount}}</p>
+                <p style="color: black;">{{discount}}</p>
             </div>
             <div class="flex">
                 <p>Delivery </p>
-                <p>{{delivery}}</p>
+                <p  style="color: black;">{{delivery}}</p>
             </div>
             <div class="flex">
                 <p>Tax</p>
-                <p>{{tax}}</p>
+                <p  style="color: black;">{{tax}}</p>
             </div>
             <mat-divider></mat-divider>
             <div class="flex total">
@@ -41,7 +52,6 @@
             </div>
         </div>
     </div>
-    <hr id="hr">
     <div class="second-section">
         <mat-vertical-stepper>
             <mat-step>

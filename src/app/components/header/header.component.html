@@ -50,7 +50,7 @@
         </div>
       </div>
       <li routerLink="" class="desktopOnly" routerLink="../locate-store">Locate Store</li>
-      <li routerLink="ten-plus-one-scheme"
+      <li routerLink="../ten-plus-one-scheme"
         [class]="path === '/ten-plus-one-scheme' || path === 'home' ? 'borderedButton active' : 'borderedButton none'">
         10 + 1 Scheme
       </li>
@@ -98,10 +98,10 @@
     </div>
     <ul>
       <li>
-        <button><i class="fa-solid fa-cart-shopping"></i> My Cart</button>
+        <button routerLink="/cart "><i class="fa-solid fa-cart-shopping"></i> My Cart</button>
       </li>
       <li>
-        <button><i class="fa-solid fa-clipboard-list"></i> My Orders</button>
+        <button routerLink="/order-detail"><i class="fa-solid fa-clipboard-list"></i> My Orders</button>
       </li>
       <li>
         <button><i class="fa-solid fa-address-card"></i> My Address</button>

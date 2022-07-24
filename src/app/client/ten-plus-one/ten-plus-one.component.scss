@@ -15,26 +15,30 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            font-family: var(--font-one);
             gap:1rem;
+            font-family: var(--font-eight);
             hr{
-                height: 0.1rem;
-                width: 18%;
-                background-color:black;
+                height: 0.08rem;
+                width: 30%;
+                background-color:rgba(0, 0, 0, 0.616);
             }
             p:nth-child(1){
                 font-size: 50px;
                 line-height: 45px;
-                font-family: var( --font-three);
-                color: black;
+                font-family: var(--font-seven);
+                color: rgb(0, 0, 0);
+                font-weight: 500;
+                margin: 0;
                 
             }
            h5{
-                font-size: 30px;
+                font-size: 33px;
+                font-family: var(--font-eight);
             }
            h6{
-            font-size: 1rem;
+            font-size: 1.1rem;
                 font-weight: 600;
+                font-family: var(--font-eight);
             }
             .input{
                 display: flex;
@@ -46,25 +50,27 @@
                 input{
                     width: 25%;
                     height: 25px;
-                    border: 1px solid black;
                     border-radius: 5px;
                     padding:0.5rem 1rem;
                     font-size: 1rem;
-                    font-family: var(--font-three);
                     outline: none;
+                    border: none;
+                    font-family: var(--font-eight);
 
                 }
             }
             button{
-                width: 13rem;
+                width: 10rem;
                 margin: 0.4rem;
-                padding: 0.7rem;
+                padding: 0.5rem 0.3rem;
                 border:none ;
                 background-color: var(--color-button); 
                 color: var(--color-secondary);
                 font-weight: bold;
-                border-radius: 0.8rem;
+                border-radius: 0.3rem;
                 font-size: medium;
+                font-weight: 500;
+                font-family: var(--font-eight);
                 &:hover{
                     transform: scale(1.02);
                 }
@@ -111,6 +117,7 @@
 }
 .callculate{
     width: 100%;
+    min-width: 350px;
     margin:10vh  auto;
     min-height:40vh;
     height: fit-content;
@@ -120,13 +127,16 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 5rem;
+    padding: 1rem;
     .choose{
         display: flex;
         flex-direction: column;
         gap: 0.7rem;
         width: 30%;
+        min-width: 350px;
         height: 100%;
         align-items: flex-start;
+
         justify-content: center;
         p{
             font-weight: 600;
@@ -174,6 +184,7 @@
         gap: 5rem;
         border-radius: 0.2rem;
         background-color: var(--color-light);
+        padding: 1rem;
         tr{
             display: flex;
             flex-direction: column;
@@ -186,38 +197,55 @@
 
 @media only screen and (max-width: 600px) {
     .container{
-        margin: 0;
+       
         .box{
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            text-align: center;
-            img{
-                margin: 0;
-                display: block;
-                margin: auto;
-                margin-top: -30px;
-                margin-bottom: 25px;
-            }
-        }
-        .parent-container{
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-            margin: 0;
-            .inner-box{
-                width: auto;
-                margin: 10px;
-                padding: 10px;
-                width: 100%;
-                input{
-                    padding: 0;
-                    padding: 5px 20px;
-                    width: auto;
-                    width: 85%;
+            width: 50%;   
+            .plan-info{
+                  
+              
+              
+                p:nth-child(1){
+                    font-size: 30px;
+                    line-height: 6px;
+                    
+                }
+               h5{
+                    font-size: 15px;
+
+                    width: 100%;
+                    font-family: var(--font-eight);
+                }
+               h6{
+                font-size: 0.9rem;
+                   
+                }
+                .input{
+                display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    input{
+                        width: 50%;
+                        height: 20px;
+                        border-radius: 3px;
+                        padding:0.5rem ;
+                        font-size: 0.5rem;
+    
+                    }
+                }
+                button{
+                    width: 7rem;
+                    margin: 0.4rem;
+                    padding: 0.3rem;
+               
+                   
+                    font-size: var(--font-small);
+                    font-weight: 500;
+                    font-family: var(--font-eight);
+                  margin: 1rem auto;
                 }
             }
         }
+       
     }
     .working{
         .schema{
@@ -252,7 +280,7 @@
         height: fit-content;
        
         flex-direction: column;
-        gap: 5rem;
+        gap: 3rem;
         padding: 0.4rem;
         .choose{
         
@@ -262,11 +290,14 @@
            
         }
         .card{
-            width: 100%;
+            width:350px;
+            margin: auto;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 5rem;
+            justify-content: flex-start;
+            gap: 1rem;
+            box-sizing: border-box;
+            padding: 1em;
             border-radius: 0.2rem;
             background-color: var(--color-light);
             tr{
@@ -275,6 +306,13 @@
                 align-items: flex-start;
                 justify-content: flex-start;
                 gap: 1rem;
+                font-size:10px;
+                
+               
+                th{
+                    text-align: start;
+                }
+               
             }
         }
     }
