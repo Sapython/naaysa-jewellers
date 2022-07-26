@@ -112,6 +112,7 @@
     font-size: 0.7rem;
     border-radius: 5px;
     margin-top: 2rem;
+    font-size: var(--xsmall);
 }
 
 }
@@ -182,9 +183,10 @@
         align-items: center;
         justify-content: center;
         gap: 5rem;
-        border-radius: 0.2rem;
+        border-radius: 10px;
         background-color: var(--color-light);
         padding: 1rem;
+        font-size: var(--xxsmall);
         tr{
             display: flex;
             flex-direction: column;

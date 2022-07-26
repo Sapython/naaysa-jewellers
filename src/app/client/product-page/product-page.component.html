@@ -1,4 +1,4 @@
-<!-- <app-header></app-header> -->
+ <app-header></app-header> 
 <div class="container">
     <div class="box">
         <div class="image">
@@ -23,7 +23,7 @@
                 <div class="pincode">
                     <div class="quantity">
                         <p>Your Pincode:</p>
-                        <input type="text" placeholder="Pincode">
+                        <input type="text" placeholder="Pincode" ><button class="submit-btn">Submit</button>
                     </div>
                     <div class="quantity">
                         <p>Quantity:</p>
@@ -36,15 +36,16 @@
             <div class="delivery">
                 <p>Delivery By Today Evening <span>{{date}}</span> for Pincode <span>{{pincode}}</span></p>
                 <p>(Placed Order before 4pm for same-day-delivery)</p>
-                <div class="features">
+                <!-- <div class="features">
                     <app-feature-widget *ngFor="let feature of features" [src]="feature.src" [text_Feature]="feature.feature_Text"></app-feature-widget>
-                </div>
+                </div> -->
             </div>
             <div class="customize">
                 <div class="flex">
                     <div class="button">
                         <label id="label">Customize this Product:</label>
                         <select name="cars" class="cars">
+                            <option value=""></option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="opel">Opel</option>
@@ -54,6 +55,7 @@
                     <div class="button">
                         <label for="cars" id="label">Select Ring Size:</label>
                         <select name="cars" class="cars">
+                            <option value=""></option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="opel">Opel</option>
@@ -74,7 +76,10 @@
             </div>
         </div>
     </div>
+
+    <div class="section2">
     <div class="specification">
+        
         <div class="pink-box">Product Details</div>
         <div class="list-flex">
             <p>Product Code</p>
@@ -158,6 +163,13 @@
         </div>
         <mat-divider></mat-divider>
     </div>
+
+    <div class="promise">
+        <p>Nyasa Promise</p>
+    </div>
+</div>
+
+    
     <p id="heading">Customer Reviews</p>
     <div class="parent-reviews">
         <div class="reviews" *ngFor="let review of reviews">
@@ -182,3 +194,4 @@
         </div>
     </div>
 </div>
+<app-footer></app-footer>

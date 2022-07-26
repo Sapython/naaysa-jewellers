@@ -22,7 +22,8 @@ import { ProductPageComponent } from './product-page.component';
     MatSelectModule,
     MatFormFieldModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    
   ]
 })
 export class ProductPageModule { }
