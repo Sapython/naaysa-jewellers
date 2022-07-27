@@ -12,7 +12,8 @@ import { LocateStoreComponent } from './locate-store.component';
   imports: [
     CommonModule,
     LocateStoreRoutingModule,
-    MatDividerModule
+    MatDividerModule,
+    
   ]
 })
 export class LocateStoreModule { }

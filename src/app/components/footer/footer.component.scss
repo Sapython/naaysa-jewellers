@@ -22,6 +22,8 @@ footer {
           width: 35px;
         }
       }
+
+      
       .subscribe {
         width: 30rem;
         display: flex;
@@ -71,6 +73,7 @@ footer {
         flex-direction: column;
         width: 20rem;
         gap: 40px;
+        font-size: x-large;
         .logo {
           img {
             height: 50px;
@@ -96,8 +99,9 @@ footer {
       @media (max-width: 600px) {
         .sosial {
           font-size: 0.8rem;
-          .logo {
-          }
+
+          // .logo {
+          // }
         }
         .contact_information {
           font-size: 0.3rem;
