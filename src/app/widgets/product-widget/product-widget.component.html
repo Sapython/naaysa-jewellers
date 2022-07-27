@@ -1,18 +1,25 @@
 <div class="container .uk-animation-fade" routerLink="../product">
     <div class="box">
-        <div class="heart"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }" (click)="liked = !liked"></i></div>
+        <div class="upper-section">
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="heart"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }" (click)="liked = !liked"></i></div>
+        </div>
         <div class="image">
             <img src="assets/{{src}}" alt="">
         </div>
+        <div class="discount">
+            <p>Flat {{discount}}</p>
+            <p>{{purity}} Gold</p>
+        </div>
+        <hr id="hr">
         <p id="name">{{product_name}}</p>
         <p id="price">&#x20B9; {{price}}</p>
-        <p id="info">{{info}}</p>
-        <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div>
+        <p id="info"><span>{{category}} </span> | <span>{{jewellery_Name}}</span></p>
     </div>
 </div>

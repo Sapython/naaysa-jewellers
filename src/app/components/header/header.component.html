@@ -18,13 +18,22 @@
           Products
         </li>
         <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
-          <div class="uk-dropdown-grid uk-child-width-1-2@m" uk-grid>
+          <div class="uk-dropdown-grid uk-child-width-1-2@m uk-flex" uk-grid>
             <div class="categories">
               <b>Shop for category</b>
               <ul>
                 <li *ngFor="let category of byCategory">
                   <img src={{category.image}} alt="image" />
                   <p>{{category.name}}</p>
+                </li>
+              </ul>
+            </div>
+            <div class="categories">
+              <b>Shop By</b>
+              <ul>
+                <li *ngFor="let filter of filters">
+                 
+                  <p>{{filter.name}}</p>
                 </li>
               </ul>
             </div>
@@ -36,15 +45,6 @@
                 <p>{{metal.name}}</p>
               </li>
             </ul>
-            </div>
-            <div class="categories">
-              <b>Shop By</b>
-              <ul>
-                <li *ngFor="let filter of filters">
-                 
-                  <p>{{filter.name}}</p>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

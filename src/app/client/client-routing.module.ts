@@ -99,6 +99,8 @@ const routes: Routes = [
   },
   { path: 'order-detail', loadChildren: () => import('./order-detail/order-detail.module').then(m => m.OrderDetailModule) },
   { path: 'locate-store', loadChildren: () => import('./locate-store/locate-store.module').then(m => m.LocateStoreModule) },
+  { path: 'disclaimer', loadChildren: () => import('./disclaimer/disclaimer.module').then(m => m.DisclaimerModule) },
+  { path: 'privacy-policy', loadChildren: () => import('./privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule) },
 ];
 
 @NgModule({

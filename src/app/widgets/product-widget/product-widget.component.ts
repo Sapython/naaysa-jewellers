@@ -10,7 +10,10 @@ export class ProductWidgetComponent implements OnInit {
   @Input() product_name:string = 'Diamond Ring'
   @Input() src:string = 'jewellery/jewel1.svg'
   @Input () price:number = 125632
-  @Input() info:string = 'New collection from naaysa'
+  @Input() purity:string = '18k'
+  @Input() category:string = 'Women'
+  @Input() jewellery_Name:string = 'Rings'
+  @Input() discount:string = '10%'
   @Input() liked:boolean = false
   constructor() { }
 
