@@ -23,8 +23,8 @@
         margin: auto;
         text-align: center;
             img{
-                max-height: 150px;
-                min-height: 150px;
+                max-height: 90px;
+                min-height: 90px;
                 max-width: 200px;
                 object-fit: cover;
             }
@@ -101,4 +101,37 @@
     margin-bottom: 15px;
     border-bottom: 1px solid var(--color-dark-primary);
     color: var(--color-dark-primary);
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button:nth-child(1){
+      background-color: var(--color-dark-primary);
+      padding: 8px 20px;
+      border: none;
+      color: #fff;  
+      border-radius: 10px;
+    }
+    button:nth-child(2){
+        border: none;
+        background: transparent;
+        color: var(--color-dark-primary);
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        .stars{
+            font-size: var(--xxsmall);
+        }
+        padding: 15px;
+        .upper-section{
+            .heart{
+                padding: 8px;
+                i{
+                    font-size: var(--xsmall);
+                }
+            }
+        }
+    }
 }

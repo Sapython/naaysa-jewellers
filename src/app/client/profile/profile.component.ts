@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
   breakpoint: number = 1000;
   largeScreen: boolean = window.innerWidth > this.breakpoint;
   showSidebar: boolean = false;
+  @Input() name:string = 'Stupidita'
 
   constructor(private router: Router) {
     router.events.forEach((event) => {
