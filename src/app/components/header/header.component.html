@@ -1,8 +1,10 @@
-<header>
+<header class="desktop_version">
   <div class="topBar">
     <div class="logo">
       <span>NAAYSA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span
-        class="secondary-color">JEWELLERS</span>
+        class="secondary-color"
+        >JEWELLERS</span
+      >
     </div>
   </div>
   <div class="bottomBar">
@@ -10,7 +12,10 @@
       <button (click)="showOffcanvas()" class="mobileOnly">
         <i class="fa-solid fa-bars"></i>
       </button>
-      <li routerLink="" [class]="path === '/' || path === 'home' ? 'active' : 'none'">
+      <li
+        routerLink=""
+        [class]="path === '/' || path === 'home' ? 'active' : 'none'"
+      >
         Home
       </li>
       <div>
@@ -23,8 +28,8 @@
               <b>Shop for category</b>
               <ul>
                 <li *ngFor="let category of byCategory">
-                  <img src={{category.image}} alt="image" />
-                  <p>{{category.name}}</p>
+                  <img src="{{ category.image }}" alt="image" />
+                  <p>{{ category.name }}</p>
                 </li>
               </ul>
             </div>
@@ -32,29 +37,35 @@
               <b>Shop By</b>
               <ul>
                 <li *ngFor="let filter of filters">
-                 
-                  <p>{{filter.name}}</p>
+                  <p>{{ filter.name }}</p>
                 </li>
               </ul>
             </div>
             <div class="categories">
               <b>Shop by Metal ans Stone</b>
-            <ul>
-              <li *ngFor="let metal of byMetals">
-                <img src={{metal.image}} alt="image" />
-                <p>{{metal.name}}</p>
-              </li>
-            </ul>
+              <ul>
+                <li *ngFor="let metal of byMetals">
+                  <img src="{{ metal.image }}" alt="image" />
+                  <p>{{ metal.name }}</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <li routerLink="" class="desktopOnly" routerLink="../locate-store">Locate Store</li>
-      <li routerLink="../ten-plus-one-scheme"
-        [class]="path === '/ten-plus-one-scheme' || path === 'home' ? 'borderedButton active' : 'borderedButton none'">
+      <li routerLink="" class="desktopOnly" routerLink="../locate-store">
+        Locate Store
+      </li>
+      <li
+        routerLink="../ten-plus-one-scheme"
+        [class]="
+          path === '/ten-plus-one-scheme' || path === 'home'
+            ? 'borderedButton active'
+            : 'borderedButton none'
+        "
+      >
         10 + 1 Scheme
       </li>
-
     </nav>
     <div class="actions desktopOnly">
       <div id="search-box" class="uk-animation-scale-up" *ngIf="searchVisible">
@@ -69,7 +80,9 @@
       <button (click)="searchVisible = true" #searchButton id="search-button">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
-      <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+      <button routerLink="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
       <button routerLink="login"><i class="fa-solid fa-user"></i></button>
       <button (click)="showOffcanvas()">
         <i class="fa-solid fa-bars"></i>
@@ -87,41 +100,69 @@
       </div>
     </div>
   </div>
-</header>
 
-<div id="offcanvas-container" #offcanvasContainer (click)="hideOffcanvas($event)">
-  <div id="offcanvas" #offcanvas>
-    <div id="profile">
-      <img
-        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
-      <h4>Sudipta Doe</h4>
+  <div
+    id="offcanvas-container"
+    #offcanvasContainer
+    (click)="hideOffcanvas($event)"
+  >
+    <div id="offcanvas" #offcanvas>
+      <div id="profile">
+        <img
+          src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        />
+        <h4>Sudipta Doe</h4>
+      </div>
+      <ul>
+        <li>
+          <button routerLink="/cart ">
+            <i class="fa-solid fa-cart-shopping"></i> My Cart
+          </button>
+        </li>
+        <li>
+          <button routerLink="/order-detail">
+            <i class="fa-solid fa-clipboard-list"></i> My Orders
+          </button>
+        </li>
+        <li>
+          <button><i class="fa-solid fa-address-card"></i> My Address</button>
+        </li>
+        <li>
+          <button>
+            <i class="fa-solid fa-credit-card"></i> Payment Method
+          </button>
+        </li>
+        <li>
+          <button><i class="fa-solid fa-arrow-left"></i> Logout</button>
+        </li>
+      </ul>
+      <div class="actions">
+        <button (click)="searchVisible = true" #searchButton id="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button routerLink="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button routerLink="login"><i class="fa-solid fa-user"></i></button>
+        <button (click)="showOffcanvas()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
-    <ul>
-      <li>
-        <button routerLink="/cart "><i class="fa-solid fa-cart-shopping"></i> My Cart</button>
-      </li>
-      <li>
-        <button routerLink="/order-detail"><i class="fa-solid fa-clipboard-list"></i> My Orders</button>
-      </li>
-      <li>
-        <button><i class="fa-solid fa-address-card"></i> My Address</button>
-      </li>
-      <li>
-        <button><i class="fa-solid fa-credit-card"></i> Payment Method</button>
-      </li>
-      <li>
-        <button><i class="fa-solid fa-arrow-left"></i> Logout</button>
-      </li>
-    </ul>
-    <div class="actions">
-      <button (click)="searchVisible = true" #searchButton id="search-button">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-      <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
-      <button routerLink="login"><i class="fa-solid fa-user"></i></button>
-      <button (click)="showOffcanvas()">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
+  </div>
+</header>
+<div class="mobile_view">
+  <button (click)="showOffcanvas()" class="mobileOnly">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div class="logo">
+    <img src="assets/logo.svg" alt="Logo" id="logo" />
+    <span>NAAYSA</span>
+  
+  </div>
+  <div class="buttons">
+    <button><i class="fa-regular fa-heart"></i></button>
+    <button routerLink="login"><i  class="ri-store-3-line"></i></button>
+    <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
   </div>
 </div>

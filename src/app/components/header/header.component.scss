@@ -45,7 +45,7 @@ header {
   position: sticky;
   z-index: 9999;
   background-color: var(--color-primary);
-  .topBar{
+  .topBar {
     width: 100vw;
     background-color: white;
     display: flex;
@@ -54,12 +54,12 @@ header {
     .logo {
       @media (max-width: 600px) {
         font-size: var(--small);
-  
+
         margin: auto;
       }
     }
   }
-  .bottomBar{
+  .bottomBar {
     display: flex;
     width: 90vw;
     justify-content: space-between;
@@ -77,17 +77,16 @@ header {
         display: flex;
         animation: slideLeft 0.25s forwards, fadeIn 0.25s forwards;
       }
-  
+
       &[closed] {
         animation: slideRight 0.25s forwards, fadeOut 0.25s forwards;
       }
-  
-      button{
-        color:var(--color-secondary);
+
+      button {
+        color: var(--color-secondary);
         background: transparent;
         border: none;
         outline: none;
-
       }
       li {
         color: #584544;
@@ -98,7 +97,7 @@ header {
           margin: auto;
         }
       }
-  
+
       li.active {
         padding: 0px 5px;
         border-bottom: 5px solid var(--color-secondary);
@@ -114,21 +113,21 @@ header {
         .uk-grid {
           margin: 0;
           padding: 0 15px;
-          height:100%;
+          height: 100%;
           height: fit-content;
           width: 95%;
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
           gap: 0.4rem;
-          .categories:nth-child(1){
+          .categories:nth-child(1) {
             width: 30%;
           }
-          .categories:nth-child(2){
+          .categories:nth-child(2) {
             width: 20%;
             margin-left: 25px;
           }
-          .categories:nth-child(2){
+          .categories:nth-child(2) {
             width: 20%;
           }
           .categories {
@@ -163,13 +162,12 @@ header {
                 gap: 1rem;
                 margin: 0.3rem;
                 border-bottom: 3px solid transparent;
-                &:hover{
+                &:hover {
                   border-bottom: 3px solid var(--color-dark-primary);
                 }
-               p{
-                color: grey;
-                
-               }
+                p {
+                  color: grey;
+                }
                 img {
                   height: 2rem;
                   width: 2rem;
@@ -187,14 +185,14 @@ header {
         }
       }
 
-      li.borderedButton{
+      li.borderedButton {
         border: 3px solid var(--color-secondary);
         border-radius: 5px;
         padding: 5px;
         margin: 0px 5px;
-        color:var(--color-secondary);
+        color: var(--color-secondary);
         transition: background 300ms ease-in-out;
-        &:hover{
+        &:hover {
           background-color: var(--color-secondary);
           color: white;
         }
@@ -205,41 +203,42 @@ header {
         display: flex;
         flex-direction: row;
         align-items: center;
-        div.field{
+        div.field {
           display: flex;
           flex-direction: row;
-          border:none;
+          border: none;
           margin-right: 20px;
           border: 2px solid var(--color-secondary);
           border-radius: 20px;
-          input{
+          input {
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
             border: none;
             padding: 0px 10px;
             font-size: 17px;
-            color:grey;
-            &:active,&:focus{
+            color: grey;
+            &:active,
+            &:focus {
               outline: none;
             }
           }
-          button{
+          button {
             border-radius: 0px;
             border: none;
             background: white;
             cursor: pointer;
-            padding:0px;
+            padding: 0px;
             margin: 0px;
-            &:hover{
+            &:hover {
               background-color: var(--color-secondary);
               color: white;
-              i{
-                color:white;
+              i {
+                color: white;
               }
             }
           }
-          button:last-child{
-            border-radius:0px;
+          button:last-child {
+            border-radius: 0px;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
           }
@@ -247,7 +246,7 @@ header {
       }
       display: flex;
       column-gap: 10px;
-  
+
       @media (max-width: 600px) {
         margin: auto;
       }
@@ -257,12 +256,12 @@ header {
           display: block;
           animation: fadeIn 0.25s forwards;
         }
-  
+
         &[closed] {
           animation: fadeOut 0.25s forwards;
         }
       }
-  
+
       button {
         background-color: white;
         border: none;
@@ -271,17 +270,17 @@ header {
         border-radius: 50%;
         box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.1);
         transition: all 0.4s ease-in-out;
-  
+
         i {
           font-size: 16px;
           color: var(--color-secondary);
         }
-  
+
         &:hover {
           scale: 1.1;
         }
       }
-  
+
       .uk-dropdown {
         border-radius: 10px;
         padding: 20px;
@@ -312,46 +311,102 @@ header {
     flex-direction: row;
     align-items: center;
     padding-bottom: 20px;
-    div.field{
+    div.field {
       display: flex;
       flex-direction: row;
-      border:none;
+      border: none;
       margin-right: 20px;
       border: 2px solid var(--color-secondary);
       border-radius: 20px;
-      
-      input{
+
+      input {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
         border: none;
         padding: 0px 10px;
         font-size: 17px;
-        color:grey;
-        &:active,&:focus{
+        color: grey;
+        &:active,
+        &:focus {
           outline: none;
         }
       }
-      button{
+      button {
         min-width: 30px;
         border-radius: 0px;
         border: none;
         background: white;
         cursor: pointer;
-        padding:0px;
+        padding: 0px;
         margin: 0px;
-        color:grey;
-        &:hover{
+        color: grey;
+        &:hover {
           background-color: var(--color-secondary);
           color: white;
-          i{
-            color:white;
+          i {
+            color: white;
           }
         }
       }
-      button:last-child{
-        border-radius:0px;
+      button:last-child {
+        border-radius: 0px;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 1rem;
+    display: none;
+  }
+}
+.mobile_view {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: flex !important;
+    width: 100%;
+    align-items: center;
+    justify-content:flex-start;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0.7rem 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    .logo{
+      width:50%;
+      height: 1rem;
+      font-size: 1.2rem;
+      margin:0 1.7rem  0 0.7rem;
+      img {
+        height: 1.7rem;
+        width: 1.7rem;
+        color: black;
+      }
+      span{
+        font-weight: 600;
+        color: black;
+        font-family: var(--font-one);
+      }
+    }
+    .buttons{
+display: flex;
+align-items: center;
+justify-content: center;
+gap:0.2rem;
+    }
+    button{
+      background-color: transparent;
+      border: none;
+      width: 40px;
+      height: 40px;
+      transition: all 0.4s ease-in-out;
+      i {
+        font-size: 1.4rem;
+        color: var(--color-secondary);
+      }
+
+      &:hover {
+        scale: 1.1;
       }
     }
   }
@@ -434,41 +489,42 @@ button:hover {
         display: flex;
         flex-direction: row;
         align-items: center;
-        div.field{
+        div.field {
           display: flex;
           flex-direction: row;
-          border:none;
+          border: none;
           margin-right: 20px;
           border: 2px solid var(--color-secondary);
           border-radius: 20px;
-          input{
+          input {
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
             border: none;
             padding: 0px 10px;
             font-size: 17px;
-            color:grey;
-            &:active,&:focus{
+            color: grey;
+            &:active,
+            &:focus {
               outline: none;
             }
           }
-          button{
+          button {
             border-radius: 0px;
             border: none;
             background: white;
             cursor: pointer;
-            padding:0px;
+            padding: 0px;
             margin: 0px;
-            &:hover{
+            &:hover {
               background-color: var(--color-secondary);
               color: white;
-              i{
-                color:white;
+              i {
+                color: white;
               }
             }
           }
-          button:last-child{
-            border-radius:0px;
+          button:last-child {
+            border-radius: 0px;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
           }
@@ -476,7 +532,7 @@ button:hover {
       }
       display: flex;
       column-gap: 10px;
-  
+
       @media (max-width: 600px) {
         margin: auto;
       }
@@ -486,12 +542,12 @@ button:hover {
           display: block;
           animation: fadeIn 0.25s forwards;
         }
-  
+
         &[closed] {
           animation: fadeOut 0.25s forwards;
         }
       }
-  
+
       button {
         background-color: white;
         border: none;
@@ -500,17 +556,17 @@ button:hover {
         border-radius: 50%;
         box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.1);
         transition: all 0.4s ease-in-out;
-  
+
         i {
           font-size: 16px;
           color: var(--color-secondary);
         }
-  
+
         &:hover {
           scale: 1.1;
         }
       }
-  
+
       .uk-dropdown {
         border-radius: 10px;
         padding: 20px;
@@ -568,25 +624,25 @@ button:hover {
     }
   }
 }
-.desktopOnly{
+.desktopOnly {
   display: block;
 }
-.mobileOnly{
+.mobileOnly {
   display: none !important;
 }
 @media (max-width: 650px) {
-  .desktopOnly{
+  .desktopOnly {
     display: none !important;
   }
-  .mobileOnly{
+  .mobileOnly {
     display: block !important;
   }
-  .header{
-    .bottomBar{
-      nav{
-        .uk-dropdown{
-          .uk-grid{
-            .categories:nth-child(1){
+  .header {
+    .bottomBar {
+      nav {
+        .uk-dropdown {
+          .uk-grid {
+            .categories:nth-child(1) {
               width: 95%;
             }
           }

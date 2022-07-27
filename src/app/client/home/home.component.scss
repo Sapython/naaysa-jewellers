@@ -2,6 +2,95 @@ html,
 body {
   background-color: var(--color-primary);
 }
+#explore_conatiner{
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+margin-top: 1px;
+  height: 23vh;
+  width: 100%;
+  background-color: var(--color-light-primary);
+  
+.search_container{
+  width: 95%;
+  margin: auto;
+box-sizing: border-box;
+height: 27%;
+transform: translate(0, 20%);
+
+  form{
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.44) 0px 2px 8px 0px;
+    color: black;
+    a{
+      color: black;
+    margin:0 0.5rem;
+      
+    }
+    input{
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin-left: 0.5rem;
+      color: black;
+      border-radius: 0.5rem;
+    }
+  }
+}
+.explore{ 
+  width: 100%;
+  height: 70%;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap:1rem;
+  overflow-x: scroll;
+display:flex ;
+  .box{
+    background-color: var(--color-secondary-light);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    gap:0.5rem;
+    color: rgb(0, 0, 0);
+    i{
+      font-size: 1.5rem;
+     
+    }
+    b{
+      font-size: 0.7rem;
+      width: 4.5rem;
+      display: flex;
+    align-items:center;
+    flex-direction: column;
+    }
+   
+    
+  }
+}
+}
+}
+.subscription{
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+  width: 100%;
+  height: 12vh;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
+}
 
 #first-section {
   height: 90vh;
@@ -301,7 +390,7 @@ body {
 
 
   #first-section {
-    height: 90vh;
+    height: 40vh;
     background-color: var(--color-secondary);
     position: relative;
   
@@ -321,40 +410,33 @@ body {
             width: 100%;
             object-fit: cover;
           }
-          h1 {
-            font-size: var(--msmall);
-            font-weight: 300;
-            font-family: var(--font);
-            color: var(--color-dark-primary);
-          }
+          
         }
       }
     }
     #first-text {
-    
       position: absolute;
-      top: 0px;
+      top: 0;
       left: 0;
-      padding: 2rem;
-      z-index: 2;
-     
+      padding: 2em;
+   
+      width: 55%;
       h2 {
-        color: var(--color-light);
-        margin: 0;
-        font-family: var(--font-two);
-        font-size: var(--large);
-        font-size: 3rem;
-        letter-spacing: 0.1rem;
+        font-size: var(--xsmall);
+        line-height: 1.3;
+        letter-spacing: 1.3px;
       }
   
       p {
         color: var(--color-light);
-        font-size: var(--xmedium);
-        margin: 1.5em 0;
+        font-size: 12px;
+        
       }
   
       button {
-        padding: 0.15em 0.5em;
+        padding: 0.5em ;
+        border-radius: 0.3rem;
+        font-size: var(--xxxsmall);
       }
     }
   }
@@ -460,26 +542,7 @@ box-sizing: border-box;
 }
 
 @media only screen and (max-width: 600px) {
-  #first-section {
-    #first-text {
-      min-height: 100vh;
-      margin-top: 25%;
 
-      h2 {
-        font-size: var(--small);
-        width: 250px;
-      }
-
-      p {
-        width: 200px;
-      }
-
-      button {
-        font-size: var(--xsmall);
-        width: 250px;
-      }
-    }
-  }
 
   #discount-section {
     display: none;
@@ -489,6 +552,12 @@ box-sizing: border-box;
     padding: 0px;
     margin: 0;
     padding: 0;
+    h3{
+      margin-top: 6rem ;
+    }
+    #metals {
+      transform: scale(0.9);
+    }
   }
 
   .rings {
