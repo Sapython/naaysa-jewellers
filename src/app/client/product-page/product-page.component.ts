@@ -103,26 +103,26 @@ export class ProductPageComponent implements OnInit {
       reviewer_Name: 'John Doe',
       review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     },
-    {
-      jewel_name:'Royal Pink Diamond Ring',
-      reviewer_Name: 'John Doe',
-      review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
-    },
-    {
-      jewel_name:'Royal Pink Diamond Ring',
-      reviewer_Name: 'John Doe',
-      review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
-    },
-    {
-      jewel_name:'Royal Pink Diamond Ring',
-      reviewer_Name: 'John Doe',
-      review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
-    },
-    {
-      jewel_name:'Royal Pink Diamond Ring',
-      reviewer_Name: 'John Doe',
-      review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
-    },
+    // {
+    //   jewel_name:'Royal Pink Diamond Ring',
+    //   reviewer_Name: 'John Doe',
+    //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
+    // },
+    // {
+    //   jewel_name:'Royal Pink Diamond Ring',
+    //   reviewer_Name: 'John Doe',
+    //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
+    // },
+    // {
+    //   jewel_name:'Royal Pink Diamond Ring',
+    //   reviewer_Name: 'John Doe',
+    //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
+    // },
+    // {
+    //   jewel_name:'Royal Pink Diamond Ring',
+    //   reviewer_Name: 'John Doe',
+    //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
+    // },
     
   ]
   constructor() { }
