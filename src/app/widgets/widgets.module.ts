@@ -10,9 +10,23 @@ import { NotificationWidgetComponent } from './notification-widget/notification-
 import { VendorWidgetComponent } from './vendor-widget/vendor-widget.component';
 import { FeatureWidgetComponent } from './feature-widget/feature-widget.component';
 import { HistoryComponent } from './history/history.component';
+import { MobileCartWidgetComponent } from './mobile-cart-widget/mobile-cart-widget.component';
+import { MobileAddressProductWidgetComponent } from './mobile-address-product-widget/mobile-address-product-widget.component';
+import { MobileAddressWidgetComponent } from './mobile-address-widget/mobile-address-widget.component';
 
 
-const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWidgetComponent,ReviewWidgetComponent,NotificationWidgetComponent,VendorWidgetComponent,FeatureWidgetComponent,WishlistWidgetComponent,HistoryComponent
+const components = [ ProductWidgetComponent,
+  MetalWidgetComponent,
+  PaymentOptionWidgetComponent,
+  ReviewWidgetComponent,
+  NotificationWidgetComponent,
+  VendorWidgetComponent,
+  FeatureWidgetComponent,
+  WishlistWidgetComponent,
+  HistoryComponent,
+  MobileAddressProductWidgetComponent,
+  MobileCartWidgetComponent,
+  MobileAddressWidgetComponent
 
 ]
 @NgModule({
@@ -24,7 +38,10 @@ const components = [ ProductWidgetComponent,MetalWidgetComponent,PaymentOptionWi
     NotificationWidgetComponent,
     VendorWidgetComponent,
     FeatureWidgetComponent,
-    HistoryComponent
+    HistoryComponent,
+    MobileCartWidgetComponent,
+    MobileAddressProductWidgetComponent,
+    MobileAddressWidgetComponent
   ],
   exports: [components],
   imports: [

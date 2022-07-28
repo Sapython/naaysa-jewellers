@@ -134,6 +134,7 @@ a {
     .cart-main {
         flex-direction: column;
         width: auto;
+        margin: 10px;
     }
 
     .cart-items {
@@ -142,15 +143,28 @@ a {
     }
 
     .cart-price {
+        border: 2px solid var(--color-dark-primary);
         width: auto;
         display: block;
         margin: auto;
         text-align: center;
         margin-left: 0;
-        margin: 10px;
+        margin: 10px 0px;
         align-items: center;
         padding: 15px;
 
+        #heading{
+            text-align: center;
+        }
+        #date{
+            text-align: center;
+        }
+        #discount{
+            text-align: center;
+        }
+        .promo-code{
+            margin: 15px;
+        }
         .parent-container {
             display: inline-block;
             margin: auto;
