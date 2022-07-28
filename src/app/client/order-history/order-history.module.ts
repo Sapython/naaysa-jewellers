@@ -9,7 +9,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
 
 @NgModule({
   declarations: [
-    OrderHistoryComponent
+    OrderHistoryComponent,
   ],
   imports: [
     CommonModule,

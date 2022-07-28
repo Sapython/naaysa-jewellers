@@ -21,8 +21,14 @@ export class OrderDetailComponent implements OnInit {
   @Input() shipped:string = 'Fri, 16th Jul'
   @Input() delivered:string = 'Fri, 16th Jul'
   @Input() odered:string = 'Fri, 16th Jul'
+  @Input() arrived:boolean =true;
+  active = true;
   constructor() { }
   ngOnInit(): void {
   }
+  toggleActive(){
+    this.active = !this.active;
+  }
+
 
 }

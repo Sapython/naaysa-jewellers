@@ -1,8 +1,8 @@
 section {
   .conatiner {
     width: 85%;
-   min-height: 80vh;
-   height: fit-content;
+    min-height: 80vh;
+    height: fit-content;
     margin: 3rem auto;
     border-radius: 0.5rem;
     box-shadow: rgba(99, 99, 99, 0.415) 0px 2px 8px 0px;
@@ -15,25 +15,30 @@ section {
       padding: 1.5rem 2rem;
       font-weight: bold;
       border-bottom: 2px solid var();
-      h3{
+      h3 {
         font-family: var(--font-one);
         font-weight: 500;
         font-size: var(--medium);
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        justify-content: center;
       }
       .uk-inline {
         button {
-          background-color: var(--color-primary);
-          border: none;
+          background-color: transparent;
+          border: 2px solid var(--color-secondary);
+
           border-radius: 0.5rem;
           padding: 0.1rem 0.5rem;
           font-size: 1rem;
-          color: #000;
+          color: var(--color-secondary);
           cursor: pointer;
           font-weight: 500;
-font-size: var(--xxsmall);
+          font-size: var(--xxsmall);
           &:hover {
-            background-color: var(--color-primary-light);
-            color: var(--color-secondary);
+            background-color: var(--color-secondary);
+            color: white;
           }
         }
         .dropdown {
@@ -63,110 +68,58 @@ font-size: var(--xxsmall);
       background-color: var(--color-secondary);
     }
     .histories {
-      width:80%;
+      width: 80%;
       margin: 3rem auto;
       display: flex;
       flex-direction: column;
-     
-      .history {
-        
-      margin: 1em auto;
-        min-height: 10rem;
-        height: fit-content;
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.126) 0px 4px 12px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        box-sizing: border-box;
-        border-radius: 0.7rem;
-        
-        gap: 5rem;
-        padding: 1.5rem 2rem;
-        p{
-          font-size: var(--small);
-        }
-        .history_img {
-          height: 100%;
-          width: 8rem;
-          img {
-            height: 100%;
-            width: 100%;
-          }
-          background-color: var(--color-secondary-light);
-          border: 1px solid var(--color-secondary);
-          border-radius: 0.3rem;
-        }
-        .stars {
-          display: flex;
-          gap: 6px;
-          margin: 0.8rem 0;
-          .star{
-            cursor: pointer;
-            font-size: var(--xsmall);
-            color: grey;
-            
-          }
-          .active{
-            color: var(--color-rating);
-          }
-        }
-        button{
-padding: 0.2rem 0.3rem;
-border: none;
-background-color: var(--color-secondary);
-color: #fff;
-border-radius: 0.3rem;
-margin-right:  3rem;
-        }
-      }
     }
   }
 }
 @media only screen and (max-width: 600px) {
-    .histories {
-        width: 97%;
-        margin:  auto;
-        display: flex;
-        flex-direction: column;
-       
-        .history {
-          
-        margin: 1em auto;
-          height: 10rem;
-          width: 100%;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          box-sizing: border-box;
-          flex-direction: column;   
-          gap: 2rem;
-          padding: 1.5rem 2rem;
-          .history_img {
-            height: 100%;
-            width: 8rem;
-            img {
-              height: 100%;
-              width: 100%;
-            }
-            background-color: var(--color-secondary-light);
+  section {
+    background-color: var(--color-light-primary);
+    .conatiner {
+      width: 100%;
+      margin: 0;
+      height: fit-content;
+      .conatiner_header {
+        width: 100%;
+
+        padding: 0.5rem;
+        h3 {
+          font-family: var(--font-one);
+          font-weight: 500;
+          font-size: var(--small);
+          margin-top: 1rem;
+        }
+        .uk-inline {
+          button {
             border: 1px solid var(--color-secondary);
+            background-color: transparent;
             border-radius: 0.3rem;
-          }
-          .stars {
-            display: flex;
-            gap: 6px;
-            margin: 0.8rem 0;
-            button{
-  padding: 0.2rem 0.3rem;
-  border: none;
-  background-color: var(--color-secondary);
-  color: #fff;
-  border-radius: 0.3rem;
-  margin: 0 3rem;
+            color: var(--color-secondary);
+
+            font-size: var(--xxxsmall);
+            &:hover {
+              background-color: var(--color-secondary);
+              color: white;
             }
           }
         }
       }
+      hr {
+        width: 97%;
+        margin: 0 auto;
+        height: 0.1rem;
+        display: none;
+        background-color: var(--color-secondary);
+      }
+      .histories {
+        width: 95%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
+}

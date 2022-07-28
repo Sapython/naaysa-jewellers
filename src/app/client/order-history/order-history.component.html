@@ -2,7 +2,7 @@
 <section>
   <div class="conatiner">   
     <div class="conatiner_header">
-      <h3>Order History</h3>
+      <h3><i class="ri-archive-line"></i> Order History</h3>
       <div class="uk-inline">
         <button class="uk-button uk-button-default uk-float-center" type="button">
           Time period <i class="ri-arrow-down-s-line"></i>
@@ -19,8 +19,8 @@
     </div>
     <hr>
     <div class="histories">
-  <app-history></app-history>
-  <app-history></app-history>
+  <app-history [arrived]="true"></app-history>
+  <app-history [arrived]="false"> </app-history>
     </div>
    
   </div>
