@@ -4,6 +4,9 @@
     background-color: #fff;
     justify-content: space-between;
 }
+.mobile-view{
+    display: none;
+}
 
 .cart-items {
     margin-left: 4%;
@@ -131,60 +134,122 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-    .cart-main {
-        flex-direction: column;
-        width: auto;
-        margin: 10px;
-    }
-
-    .cart-items {
-        margin: 0;
-        width: auto;
-    }
-
-    .cart-price {
-        border: 2px solid var(--color-dark-primary);
-        width: auto;
+    .mobile-view{
         display: block;
-        margin: auto;
-        text-align: center;
-        margin-left: 0;
-        margin: 10px 0px;
-        align-items: center;
-        padding: 15px;
-
+        margin: 15px;
         #heading{
-            text-align: center;
+            margin: 10px;
+            margin-top: 20px;
+            font-size: var(--medium);
+            display: flex;
+            align-items: center;
+            span{
+                margin-right: 10px;
+                color: var(--color-dark-primary);
+            }
         }
-        #date{
-            text-align: center;
+        #hr-mobile{
+            border: .1px solid rgb(204, 204, 204);
         }
-        #discount{
-            text-align: center;
+        .exchange{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 5px;
+            padding-top: 10px;
+            border-top: .2px solid grey;
+            border-bottom: .2px solid grey;
+            font-size: var(--xxxsmall);
+            span{
+                margin-right: 3px;
+                i{
+                    margin-right: 3px;
+                }
+            }
         }
-        .promo-code{
-            margin: 15px;
+        .off{
+            margin-top: 25px;
+            p{
+                font-weight: 500;
+                text-align: left;
+            }
+            .code{
+                display: flex;
+                align-items: center;
+                input{
+                    border: none;
+                    background-color: #fff;
+                    color: #847D7D;
+                    box-shadow: var(--normal-shadow);
+                    padding: 5px;
+                    border-radius: 10px;
+                    &:focus{
+                        outline: none;
+                        border: 2px solid var(--color-dark-primary);
+                    }
+                }
+                button{
+                    background-color: var(--color-dark-primary);
+                    color: #fff;
+                    border: none;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    margin-left: 10px;
+                    transition: .3s;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
         }
-        .parent-container {
-            display: inline-block;
-            margin: auto;
-            text-align: center;
+        .mobile-bill{
+            background-color: #fff;
+            margin-top: 25px;
             padding: 15px;
+            box-shadow: var(--normal-shadow);
+            border: 2px solid var(--color-dark-primary);
+            border-radius: 10px;
+            .uk-flex{
+                justify-content: space-between;
+            }
+            .heading{
+                p:nth-child(1){
+                    font-size: var(--msmall);
+                    font-weight: 500;
+                }
+            }
+            .bill-info{
+                margin-top: 15px;
+                .uk-flex{
+                    p:nth-child(1){
+                        font-size: var(--xsmall);
+                        font-weight: 450;
+                    }
+                    #mart{
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        .place{
+            width: 95%;
+            background-color: var(--color-dark-primary);
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            display: block;
+            margin: auto;
+            color: #fff;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
     }
-
-    .promo {
-        input {
-            width: 100%;
-            margin-bottom: 5px;
-        }
-
-        button {
-            border: 1px solid #969696;
-            margin: 3px;
-            padding: 2px 15px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
+    .cart-main {
+        display: none;
     }
 }

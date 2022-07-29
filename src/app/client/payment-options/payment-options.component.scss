@@ -98,7 +98,9 @@ hr.new2 {
     margin-top: 20px;
     font-size: 20px;
 }
-
+.mobile-view{
+    display: none;
+}
 #price-final{
     margin-left: 44%;
     text-align: right;
@@ -148,29 +150,56 @@ a{
         font-family: var(--font-one);
     }
     .cart-price{
-        margin: 0px;
-        width: 80%;
-        margin-top: 20px;
-        background-color: #FFF5FB;
-        box-shadow: none;
-        border: 2px solid var(--color-dark-primary);
+        display: none;
     }
-    .total-price{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .mobile-view{
+        display: block;
+        width: 100%;
+        margin: 15px;
+        .mobile-bill{
+            background-color: #fff;
+            margin-top: 5px;
+            padding: 15px;
+            box-shadow: var(--normal-shadow);
+            border: 2px solid var(--color-dark-primary);
+            border-radius: 10px;
+            .uk-flex{
+                justify-content: space-between;
+            }
+            .heading{
+                p:nth-child(1){
+                    font-size: var(--msmall);
+                    font-weight: 500;
+                }
+            }
+            .bill-info{
+                margin-top: 15px;
+                .uk-flex{
+                    p:nth-child(1){
+                        font-size: var(--xsmall);
+                        font-weight: 450;
+                    }
+                    #mart{
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        .place{
+            width: 95%;
+            background-color: var(--color-dark-primary);
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            display: block;
+            margin: auto;
+            color: #fff;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
     }
-    .cart-price{
-        margin-left: 0px;
-        padding: 30px 38px;
-    }
-    .cart-price p{
-        margin-left: 0;
-    }
-    .cart-price h1{
-        margin-left: 0;
-    }
-    #price-final{
-        margin: 0;
-    }   
 }

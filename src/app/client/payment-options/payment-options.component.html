@@ -39,4 +39,52 @@
         </div>
         <p><a href=""><i class="fa-solid fa-arrow-left"></i> Back to Shopping</a></p>
     </div>
+    <div class="mobile-view">
+        <div class="mobile-bill">
+            <div class="uk-flex heading">
+                <p>Order Summary</p>
+                <p>{{delivery_Date}}</p>
+            </div>
+            <hr>
+            <div class="bill-info">
+                <div class="uk-flex">
+                    <p>Subtotal</p>
+                    <p>{{subtotal}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>You saved</p>
+                    <p>{{saved}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Discount Coupon</p>
+                    <p>{{discount}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Gold</p>
+                    <p>{{material_Price}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>GST</p>
+                    <p>{{gst}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Tax</p>
+                    <p>{{tax}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Delivery</p>
+                    <p>{{delivery}}</p>
+                </div>
+                <hr>
+                <div class="uk-flex" id="mart">
+                    <p>Amount Payable</p>
+                    <p>{{total}}</p>
+                </div>
+    
+            </div>
+        </div>
+        <button class="place">
+            Pay {{total}}
+        </button>
+    </div>
 </div>

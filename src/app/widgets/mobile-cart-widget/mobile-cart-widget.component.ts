@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mobile-cart-widget',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile-cart-widget.component.scss']
 })
 export class MobileCartWidgetComponent implements OnInit {
+
+  @Input() price:string = '₹ 6,000'
+  @Input() jewel_Name:string = 'Golden Ring'
+  @Input() status:string = 'In Stock'
 
   constructor() { }
 

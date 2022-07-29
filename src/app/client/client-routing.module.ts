@@ -103,6 +103,7 @@ const routes: Routes = [
   { path: 'disclaimer', loadChildren: () => import('./disclaimer/disclaimer.module').then(m => m.DisclaimerModule) },
   { path: 'privacy-policy', loadChildren: () => import('./privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule) },
   { path: 'wishlist', loadChildren: () => import('./wishlist/wishlist.module').then(m => m.WishlistModule) },
+  { path: 'mobile-review', loadChildren: () => import('./mobile-review/mobile-review.module').then(m => m.MobileReviewModule) },
 ];
 
 @NgModule({
