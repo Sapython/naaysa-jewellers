@@ -32,6 +32,21 @@
         cursor: pointer;
     }
 }
+button{
+    background-color: var(--color-dark-primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 55px;
+    margin-left: 55px;
+    font-size: var(--xsmall);
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
 @media only screen and (max-width: 600px){
     .container{
         margin: 10px;
@@ -41,5 +56,14 @@
         .parent-container{
             margin: 0px;
         }
+    }
+    button{
+        margin: 0;
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding: 0;
+        padding: 5px 10px;
+        margin-bottom: 15px;
     }
 }
