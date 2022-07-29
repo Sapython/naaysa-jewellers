@@ -41,7 +41,8 @@ const components = [ ProductWidgetComponent,
     HistoryComponent,
     MobileCartWidgetComponent,
     MobileAddressProductWidgetComponent,
-    MobileAddressWidgetComponent
+    MobileAddressWidgetComponent,
+    MobileCartWidgetComponent
   ],
   exports: [components],
   imports: [

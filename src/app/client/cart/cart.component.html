@@ -50,3 +50,69 @@
         </div>
     </div>
 </div>
+<div class="mobile-view">
+    <p id="heading"><span uk-icon="cart"></span>Cart</p>
+    <hr id="hr-mobile">
+    <div class="widget">
+        <app-mobile-cart-widget></app-mobile-cart-widget>
+        <app-mobile-cart-widget></app-mobile-cart-widget>
+    </div>
+    <div class="exchange">
+        <p><span><i class="fa-solid fa-arrow-right-arrow-left"></i> Lifetime Exchange & Buy-Back</span></p>
+        <p>|</p>
+        <p><span>30-Day Money Back <i class="fa-solid fa-arrow-rotate-left"></i></span></p>
+    </div>
+    <div class="off">
+        <p>30% off Discount</p>
+        <div class="code">
+            <input type="text" placeholder="PROMOCODE">
+            <button>Apply</button>
+        </div>
+    </div>
+    <div class="mobile-bill">
+        <div class="uk-flex heading">
+            <p>Order Summary</p>
+            <p>{{delivery_Date}}</p>
+        </div>
+        <hr>
+        <div class="bill-info">
+            <div class="uk-flex">
+                <p>Subtotal</p>
+                <p>{{subtotal}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>You saved</p>
+                <p>{{saved}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>Discount Coupon</p>
+                <p>{{discount}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>Gold</p>
+                <p>{{material_Price}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>GST</p>
+                <p>{{gst}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>Tax</p>
+                <p>{{tax}}</p>
+            </div>
+            <div class="uk-flex">
+                <p>Delivery</p>
+                <p>{{delivery}}</p>
+            </div>
+            <hr>
+            <div class="uk-flex" id="mart">
+                <p>Amount Payable</p>
+                <p>{{total}}</p>
+            </div>
+
+        </div>
+    </div>
+    <button class="place">
+        Place Order
+    </button>
+</div>

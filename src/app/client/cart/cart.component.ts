@@ -60,13 +60,14 @@ export class CartComponent implements OnInit {
   @Input() delivery_Date:string = '20 April 2022'
   @Input() disc_percentage:string = '30%'
   @Input() subtotal:string = '₹ 1,34,507'
-  @Input() discount:string = '₹ 1,34,507'
-  @Input() material_Price:string = '₹ 1,34,507'
+  @Input() discount:string = '₹ 900'
+  @Input() material_Price:string = '₹ 15000'
   @Input() material:string = 'Gold'
-  @Input() gst:string = '₹ 1,34,507'
-  @Input() tax:string = '₹ 1,34,507'
-  @Input() delivery:string = '₹ 1,34,507'
+  @Input() gst:string = '₹ 800'
+  @Input() tax:string = '₹ 250'
+  @Input() delivery:string = '₹ 150'
   @Input() total:string = '₹ 1,34,507'
+  @Input() saved:string = '₹ 500'
   constructor() { }
 
   ngOnInit(): void {
