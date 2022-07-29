@@ -88,6 +88,9 @@
         margin-top: 5px;
     }
 }
+.mobile-view{
+    display: none;
+}
 .city{
     font-weight: 500;
     font-size: var(--small);
@@ -97,10 +100,22 @@
 @media only screen and (max-width: 600px){
     .container{
         .uk-overlay{
-            display: none;
+            border: 2px solid var(--color-dark-primary);
+            background-color: #fff;
+            display: block;
+            width: 85vw;
+            height: 125px;
+            margin-top: 55px;
+            p:nth-child(1){
+                font-size: var(--xsmall);
+            }
+            p:nth-child(2){
+                font-size: var(--xxxsmall);
+            }
         }
         .address{
             flex-direction: column;
+            display: none;
             .list{
                 flex-direction: column;
                 width: auto;
@@ -120,6 +135,34 @@
                     border-top-left-radius: 0px;
                     border-top-right-radius: 0px;
                 }
+            }
+        }
+    }
+    .mobile-view{
+        display: block;
+        margin-top: 95px;
+        mat-tab-group{
+            display: block;
+            margin: 15px;
+            padding: 10px;
+        }
+        iframe{
+            margin: 15px;
+            box-shadow: var(--normal-shadow);
+            border-radius: 10px;
+            width: 90%;
+        }
+        .features{
+            margin: 25px;
+            #heading{
+                margin-bottom: 20px;
+                font-size: var(--msmall);
+                color: rgb(65, 65, 65);
+            }
+            .widget{
+                display: grid;
+                grid-template: auto / auto auto;
+                grid-gap: 15px;
             }
         }
     }
