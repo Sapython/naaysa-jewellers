@@ -13,6 +13,8 @@ import { HistoryComponent } from './history/history.component';
 import { MobileCartWidgetComponent } from './mobile-cart-widget/mobile-cart-widget.component';
 import { MobileAddressProductWidgetComponent } from './mobile-address-product-widget/mobile-address-product-widget.component';
 import { MobileAddressWidgetComponent } from './mobile-address-widget/mobile-address-widget.component';
+import { MobileReviewWidgetComponent } from './mobile-review-widget/mobile-review-widget.component';
+import { MobileStoreAddressWidgetComponent } from './mobile-store-address-widget/mobile-store-address-widget.component';
 
 
 const components = [ ProductWidgetComponent,
@@ -26,7 +28,9 @@ const components = [ ProductWidgetComponent,
   HistoryComponent,
   MobileAddressProductWidgetComponent,
   MobileCartWidgetComponent,
-  MobileAddressWidgetComponent
+  MobileAddressWidgetComponent,
+  MobileReviewWidgetComponent,
+  MobileStoreAddressWidgetComponent
 
 ]
 @NgModule({
@@ -42,7 +46,9 @@ const components = [ ProductWidgetComponent,
     MobileCartWidgetComponent,
     MobileAddressProductWidgetComponent,
     MobileAddressWidgetComponent,
-    MobileCartWidgetComponent
+    MobileCartWidgetComponent,
+    MobileReviewWidgetComponent,
+    MobileStoreAddressWidgetComponent
   ],
   exports: [components],
   imports: [
