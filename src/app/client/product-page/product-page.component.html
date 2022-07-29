@@ -1,10 +1,10 @@
- <app-header></app-header> 
+<app-header></app-header>
 <div class="container">
     <div class="box">
         <div class="image">
             <img src="{{large_Image}}" alt="">
             <div class="small-images">
-                <img [src]="image" alt="" *ngFor="let image of images;let i = index" (click) = 'large_Image = images[i]'>
+                <img [src]="image" alt="" *ngFor="let image of images;let i = index" (click)='large_Image = images[i]'>
             </div>
         </div>
         <div class="inner-box">
@@ -23,7 +23,7 @@
                 <div class="pincode">
                     <div class="quantity">
                         <p>Your Pincode:</p>
-                        <input type="text" placeholder="Pincode" ><button class="submit-btn">Submit</button>
+                        <input type="text" placeholder="Pincode"><button class="submit-btn">Submit</button>
                     </div>
                     <div class="quantity">
                         <p>Quantity:</p>
@@ -40,31 +40,37 @@
                     <app-feature-widget *ngFor="let feature of features" [src]="feature.src" [text_Feature]="feature.feature_Text"></app-feature-widget>
                 </div> -->
             </div>
+            <div class="mobile-view">
+                <p><i class="fa-solid fa-medal"></i> Certified Jewellery</p>
+                <p><i class="fa-solid fa-arrow-rotate-left"></i> 30-Day Money Back</p>
+                <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Lifetime Exchange & Buy-Back</p>
+            </div>
             <div class="customize">
                 <div class="flex">
                     <div class="button">
                         <label id="label">Customize this Product:</label>
                         <select name="cars" class="cars">
                             <option value=""></option>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="opel">Opel</option>
-                          <option value="audi">Audi</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
                         </select>
                     </div>
                     <div class="button">
                         <label for="cars" id="label">Select Ring Size:</label>
                         <select name="cars" class="cars">
                             <option value=""></option>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="opel">Opel</option>
-                          <option value="audi">Audi</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
                         </select>
                     </div>
                 </div>
                 <div class="flex">
-                    <div class="like"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }" (click)="liked = !liked"></i></div>
+                    <div class="like"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }"
+                            (click)="liked = !liked"></i></div>
                     <button class="primary-button">Try On Me</button>
                     <button class="primary-button">Add To Cart</button>
                 </div>
@@ -78,88 +84,67 @@
     </div>
 
     <div class="section2">
-    <div class="specification">
-        
-        <div class="pink-box">Product Details</div>
-        <div class="list-flex">
-            <p>Product Code</p>
-            <p>{{product_Code}}</p>
+        <div class="specification">
+
+            <div class="pink-box">Product Details</div>
+            <div class="list-flex">
+                <p>Product Code</p>
+                <p>{{product_Code}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Height</p>
+                <p>{{height}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Width</p>
+                <p>{{width}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Weight</p>
+                <p>{{weight}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Country Of Origin</p>
+                <p>{{origin}}</p>
+            </div>
+            <mat-divider></mat-divider>
         </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Height</p>
-            <p>{{height}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Width</p>
-            <p>{{width}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Weight</p>
-            <p>{{weight}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Country Of Origin</p>
-            <p>{{origin}}</p>
-        </div>
-        <mat-divider></mat-divider>
     </div>
 
-    <div class="promise">
-        <p class="np-text">Nyasa Promise</p>
-
-        <p class="txt"><i class="fa-solid fa-truck-fast icn"></i>Free Shipping & Insurance</p>
-        <p class="txt"><i class="fa-solid fa-hand-holding-dollar icn"></i>100% Refund</p>
-        <p class="txt"><i class="fa-solid fa-arrow-right-arrow-left icn"></i>Lifetime Exchange & Buyback</p>
-        <p class="txt"><i class="fa-solid fa-certificate icn"></i>100% Certified Jwellery</p>
-        <p class="txt"><i class="fa-solid fa-store icn"></i>Physical Store Near You</p>
+    <div class="section3">
+        <div class="specification">
+            <div class="pink-box">Price Details</div>
+            <div class="list-flex">
+                <p>Product Code</p>
+                <p>{{product_Code}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Height</p>
+                <p>{{height}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Width</p>
+                <p>{{width}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Weight</p>
+                <p>{{weight}}</p>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="list-flex">
+                <p>Country Of Origin</p>
+                <p>{{origin}}</p>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
     </div>
-</div>
-
-<div class="section3">
-    <div class="specification">
-        <div class="pink-box">Price Details</div>
-        <div class="list-flex">
-            <p>Product Code</p>
-            <p>{{product_Code}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Height</p>
-            <p>{{height}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Width</p>
-            <p>{{width}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Weight</p>
-            <p>{{weight}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Country Of Origin</p>
-            <p>{{origin}}</p>
-        </div>
-        <mat-divider></mat-divider>
-    </div>
-
-    <div class="promise1">
-        <h3 class="h-txt">Certificate of Authenticity</h3>
-<p class="p-txt">Every piece of jewellery that we
-    make is certified for
-    authenticity by
-    third-party international laboratories
-    like SGL, IGI, BIS, GIA, and HKD.
-    </p>
-        
-    </div>
-</div>
     <div class="specification">
         <div class="pink-box">Metal Details</div>
         <div class="list-flex">
@@ -188,80 +173,40 @@
         </div>
         <mat-divider></mat-divider>
     </div>
-
-   
-
-    <!-- <div class="section4">
-        <div class="part1">
-        
-        <p id="heading">Customer Reviews</p>
-
-        <p>659 ratings and 120 reviews</p>
-       
-        <div class="r1">
-            <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+    <div class="mobile-view mobile-view-second">
+        <div class="code">
+            <p>Product Code</p>
+            <p>Code:{{product_Code}}</p>
+        </div>
+        <div class="details-box" *ngFor="let specification of specificatons">
+            <div class="icon">
+                <img src="{{details_Src}}" alt="">
             </div>
-            <p>4.5 Out Of 5</p>
-
-</div>
-<div class="rating">
-    <span>5 Star <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div></span>
-</div>
-<div class="rating">
-    <span>4 Star <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div></span>
-</div>
-<div class="rating">
-    <span>3 Star <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div></span>
-</div>
-<div class="rating">
-    <span>2 Star <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div></span>
-</div>
-<div class="rating">
-    <span>1 Star <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-    </div></span>
-</div> -->
-
-     <div class="parent-reviews">
+            <div class="details">
+                <p>{{material}}</p>
+                <p>{{text}}</p>
+            </div>
+        </div>   
+    </div>
+    <p id="heading">Customer Reviews</p>
+    <div class="parent-reviews">
         <div class="reviews" *ngFor="let review of reviews">
-            <div class="profile">
-                <div class="icon">
-                    <i class="fa-solid fa-user"></i>
+            <div class="parent">
+                <div class="profile">
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p>{{reviewer_Name}}</p>
                 </div>
-                <p>{{reviewer_Name}}</p>
+                <div class="images">
+                    <img src="assets/2.jpeg" alt="">
+                    <img src="assets/2.jpeg" alt="">
+                    <img src="assets/2.jpeg" alt="">
+                    <img src="assets/2.jpeg" alt="">
+                    <img src="assets/2.jpeg" alt="">
+                    <img src="assets/2.jpeg" alt="">
+                    <img src="assets/2.jpeg" alt="">
+                </div>
             </div>
             <p id="name">{{jewel_name}}</p>
             <div class="stars">
@@ -276,44 +221,7 @@
                 <i class="fa-solid fa-thumbs-up"></i>|<i class="fa-solid fa-thumbs-down"></i>
             </div>
         </div>
-    </div> 
- </div>
-
-<!--<div class="part2">
-    <p>By feature</p>
-    <div class="rating">
-        <span>Style <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div></span>
-    </div>
-    <div class="rating">
-        <span>Ligh Weight <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div></span>
-    </div>
-    <div class="rating">
-        <span>Comfort <div class="stars">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-        </div></span>
     </div>
 </div>
 
-<div class="right">
-    <p>Review with images</p>
-</div> -->
-<!-- </div>
-
-</div> -->
 <app-footer></app-footer>

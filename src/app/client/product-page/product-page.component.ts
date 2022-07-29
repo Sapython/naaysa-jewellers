@@ -19,12 +19,15 @@ export class ProductPageComponent implements OnInit {
   @Input() product_Code: string = '1234HG'
   @Input() height: string = '27.44mm'
   @Input() width: string = '20.44mm'
+  @Input() material: string = 'Gold'
   @Input() origin: string = 'Africa'
   @Input() weight: string = '120g'
   @Input() date: string = '14th Jul'
   @Input() pincode: number = 110001
   @Input() large_Image: string = 'assets/jewellery/ring.png'
   @Input() reviewer_Name: string = 'John Doe'
+  @Input() text: string = 'Gold Weight Approx 12.4 gram'
+  @Input() details_Src: string = 'assets/gold.png'
   @Input() review_Disc: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
   foods: Food[] = [
     { value: 'steak-0', viewValue: 'Steak' },
@@ -67,25 +70,8 @@ export class ProductPageComponent implements OnInit {
     'assets/jewellery/dimondRing.svg',
     'assets/jewellery/platinum.svg',
     'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
-    // 'assets/jewellery/platinum.svg',
+    'assets/jewellery/dimondRing.svg',
+    'assets/jewellery/dimondRing.svg',
   ]
   reviews = [
     {
@@ -124,6 +110,28 @@ export class ProductPageComponent implements OnInit {
     //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     // },
     
+  ]
+  specificatons = [
+    {
+      details_Src:'assets/gold.png',
+      material:'18kt Royal Pink Gold',
+      text:'Gold weight (Approx) 2.14 Gram'
+    },
+    {
+      details_Src:'assets/diamond.png',
+      material:'11 SIIJ Diamonds',
+      text:'Diamond weight (Approx) 0.072 Ct'
+    },
+    {
+      details_Src:'assets/dimension.png',
+      material:'Product Dimension',
+      text:'20.12mm X 9.4mm (Height x width)'
+    },
+    {
+      details_Src:'assets/measure.png',
+      material:'Product Weight (Approx)',
+      text:'2.15 Gram'
+    },
   ]
   constructor() { }
   onclick() {
