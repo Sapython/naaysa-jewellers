@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TenPlusOneSchemaComponent } from './ten-plus-one-schema.component';
+import { TenPlusOneSchemaComponent } from './wallet.component';
 
 describe('TenPlusOneSchemaComponent', () => {
   let component: TenPlusOneSchemaComponent;

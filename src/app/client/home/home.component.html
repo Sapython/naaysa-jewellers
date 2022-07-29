@@ -75,18 +75,16 @@
   </div>
 </section>
 
-<section id="discount-section">
-  <p data-aos="fade-right" data-aos-delay="500">
+<section id="discount-section"  uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+  <p>
     FLAT 25% OFF ON MAKING CHARGES*
   </p>
   <button
-    data-aos="fade-right"
-    data-aos-delay="700"
     routerLink="../all-product"
   >
     Explore Now
   </button>
-  <p id="t-and-c" data-aos="fade-right" data-aos-delay="800">
+  <p id="t-and-c"  uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
     * Terms & Conditions Applied
   </p>
 </section>
@@ -138,29 +136,24 @@
   <h3>Popular Collection</h3>
   <div id="metals">
     <app-metal-widget
-      uk-scrollspy="cls:uk-animation-slide-left"
+    uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
       src="../../../assets/jewel3.png"
       name="Platinum Jewellery"
-      data-aos="fade-left"
-      data-aos-delay="300"
     ></app-metal-widget>
     <app-metal-widget
       src="../../../assets/jewel4.png"
       name="Silver Jewellery"
-      data-aos="fade-right"
-      data-aos-delay="500"
+      uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
     ></app-metal-widget>
     <app-metal-widget
       src="../../../assets/jewel1.png"
       name="Platinum Jewellery"
-      data-aos="fade-left"
-      data-aos-delay="700"
+      uk-scrollspy="cls: uk-animation-slide-right; repeat: true"
     ></app-metal-widget>
     <app-metal-widget
       src="../../../assets/jewel2.png"
       name="Diamond Jewellery"
-      data-aos="fade-right"
-      data-aos-delay="900"
+      uk-scrollspy="cls: uk-animation-slide-right; repeat: true"
     ></app-metal-widget>
   </div>
 </section>
@@ -191,35 +184,35 @@
       </p>
     </div>
   </div>
-  <div class="image2" data-aos="fade-left" data-aos-delay="300">
+  <div class="image2" >
     <img src="../../../assets/trending3.png" alt="trending-2" />
   </div>
 </section>
 
 <section id="blog">
   <div class="customer_review">
-    <div class="customer" style="width: 30%; padding-left: 10rem">
-      <span>
+    <div class="customer" style="width: 30%; padding-left: 10rem"  uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+      <span  uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
         Words <b style="font-size: var(--small)">From</b> <br />
         Customers
       </span>
     </div>
     <div class="review" style="width: 55%">
       <div class="quote"><i class="ri-double-quotes-l"></i></div>
-      <span>
+      <span  uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
         Lorem, ispansum dolor sit amet consectetur adispanisicing elit. Ab
         consectetur consequuntur eum ex minima iure officia qui aut neque, quis
         quia cum spanerferendis voluspantas, itaque, numquam voluspantatem
         temspanore magni doloribus.
-        <p>-Endless Man</p>
+        <p  uk-scrollspy="cls: uk-animation-slide-right; repeat: true">-Endless Man</p>
       </span>
     </div>
   </div>
-  <div class="about">
-    <div class="person">
+  <div class="about"  >
+    <div class="person"  uk-scrollspy="cls: uk-animation-slide-left; repeat: true" >
       <img src="../../../assets/person.png" alt="" />
     </div>
-    <div class="explore_us">
+    <div class="explore_us"  uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"> 
       <h5>EFFORTLESS</h5>
       <p>Lifestyle</p>
       <button>About US</button>
@@ -227,7 +220,7 @@
   </div>
 </section>
 
-<app-footer data-aos="fade-up" data-aos-delay="100"></app-footer>
+<app-footer   uk-scrollspy="cls:uk-animation-scale-up" ></app-footer>
 
 <!-- <div class="blog">
   <div class="blog-card" data-aos-delay="300" uk-scrollspy="cls:uk-animation-slide-bottom">

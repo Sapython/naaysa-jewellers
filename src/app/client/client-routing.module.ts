@@ -1,5 +1,5 @@
 import { WishlistModule } from './wishlist/wishlist.module';
-import { TenPlusOneSchemaModule } from './ten-plus-one-schema/ten-plus-one-schema.module';
+import { TenPlusOneSchemaModule } from './wallet/wallet.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -65,9 +65,9 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'ten-plus-schema',
+    path: 'wallet',
     loadChildren: () =>
-      import('./ten-plus-one-schema/ten-plus-one-schema.module').then(
+      import('./wallet/wallet.module').then(
         (m) => m.TenPlusOneSchemaModule
       ),
   },
