@@ -102,13 +102,14 @@
     </div>
   </div>
 
+</header>
   <div
     id="offcanvas-container"
     #offcanvasContainer
     (click)="hideOffcanvas($event)"
   >
     <div id="offcanvas" #offcanvas>
-      <div id="profile">
+      <div id="profile" routerLink="/profile">
         <img
           src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         />
@@ -116,25 +117,25 @@
       </div>
       <ul>
         <li>
-          <button routerLink="/cart ">
+          <button routerLink="/cart " routerLink="/cart">
             <i class="fa-solid fa-cart-shopping"></i> My Cart
           </button>
         </li>
         <li>
-          <button routerLink="/order-detail">
+          <button routerLink="/order-history">
             <i class="fa-solid fa-clipboard-list"></i> My Orders
           </button>
         </li>
         <li>
-          <button><i class="fa-solid fa-address-card"></i> My Address</button>
+          <button routerLink="/add-delivery-address"><i class="fa-solid fa-address-card"></i> My Address</button>
         </li>
         <li>
-          <button>
+          <button routerLink="/payment-options">
             <i class="fa-solid fa-credit-card"></i> Payment Method
           </button>
         </li>
         <li>
-          <button><i class="fa-solid fa-arrow-left"></i> Logout</button>
+          <button routerLink="/login"><i class="fa-solid fa-arrow-left"></i> Logout</button>
         </li>
       </ul>
       <div class="actions">
@@ -144,26 +145,28 @@
         <button routerLink="cart">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
-        <button routerLink="login"><i class="fa-solid fa-user"></i></button>
+        <button routerLink="login" routerLink="/login"><i class="fa-solid fa-user"></i></button>
         <button (click)="showOffcanvas()">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
   </div>
-</header>
+
 <div class="mobile_view">
   <button (click)="showOffcanvas()" class="mobileOnly">
     <i class="fa-solid fa-bars"></i>
   </button>
-  <div class="logo">
+  
+  <div class="logo" routerLink="/">
     <img src="assets/logo.svg" alt="Logo" id="logo" />
-    <span>NAAYSA</span>
+    <span >NAAYSA</span>
   
   </div>
   <div class="buttons">
-    <button><i class="fa-regular fa-heart"></i></button>
-    <button routerLink="login"><i  class="ri-store-3-line"></i></button>
+    <button routerLink="/wishlist" ><i class="fa-regular fa-heart"></i></button>
+    <button routerLink="/locate-store"><i  class="ri-store-3-line"></i></button>
     <button routerLink="cart"><i class="fa-solid fa-cart-shopping"></i></button>
   </div>
 </div>
+

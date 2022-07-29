@@ -362,7 +362,7 @@ header {
 }
 .mobile_view {
   display: none;
-
+  position: sticky;
   @media (max-width: 600px) {
     display: flex !important;
     width: 100%;
@@ -427,7 +427,7 @@ li:not(.pink) {
 button:hover {
   cursor: pointer;
 }
-
+      
 #offcanvas-container {
   position: fixed;
   top: 0;
@@ -450,7 +450,7 @@ button:hover {
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 250px;
+width: 50%;
     height: 100%;
     padding: 1.5em;
     background-color: var(--color-primary);
@@ -622,6 +622,7 @@ button:hover {
       }
     }
   }
+ 
 }
 .desktopOnly {
   display: block;

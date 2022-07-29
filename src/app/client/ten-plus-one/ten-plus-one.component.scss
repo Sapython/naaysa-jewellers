@@ -10,6 +10,27 @@
     justify-content: space-around;
     .box{
         width: 50%;   
+        hr{
+            height: 0.08rem;
+            width: 30%;
+            background-color:rgba(0, 0, 0, 0.616);
+            margin: auto;
+        }
+        text-align: center;
+                    margin: auto;
+        p:nth-child(1){
+            font-size: 50px;
+            line-height: 45px;
+            font-family: var(--font-seven);
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            
+        }
+        h5{
+             font-size: 30px;
+             font-family: var(--font-eight);
+             margin: 0.7rem 0;
+         }
         .plan-info{
                display: flex;
             align-items: center;
@@ -17,24 +38,6 @@
             flex-direction: column;
             gap:1rem;
             font-family: var(--font-eight);
-            hr{
-                height: 0.08rem;
-                width: 30%;
-                background-color:rgba(0, 0, 0, 0.616);
-            }
-            p:nth-child(1){
-                font-size: 50px;
-                line-height: 45px;
-                font-family: var(--font-seven);
-                color: rgb(0, 0, 0);
-                font-weight: 500;
-                margin: 0;
-                
-            }
-           h5{
-                font-size: 33px;
-                font-family: var(--font-eight);
-            }
            h6{
             font-size: 1.1rem;
                 font-weight: 600;
@@ -75,6 +78,9 @@
                     transform: scale(1.02);
                 }
             }
+            .discount{
+                display: none;
+            }
         }
     }
    
@@ -82,7 +88,7 @@
 .working{
     width: 90%;
     margin: auto;
-    min-height: 100vh;
+    min-height: 50vh;
     height: fit-content;
     p{
         font-size: var(--xlarge);
@@ -99,6 +105,9 @@
     transform: scale(0.8);
    }
   
+}
+.schema-mobile{
+    display: none;
 }
 .avilability{
     width: 70%;
@@ -201,45 +210,65 @@
     .container{
        
         .box{
-            width: 50%;   
+            width: 100%;  
+            margin-bottom: 2rem; 
+            p:nth-child(1){
+                font-size: 30px;
+                line-height: 6px;
+                
+            }
+           h5{
+                font-size: 15px;
+                width: 100%;
+                font-family: var(--font-eight);
+            }
             .plan-info{
-                  
-              
-              
-                p:nth-child(1){
-                    font-size: 30px;
-                    line-height: 6px;
-                    
-                }
-               h5{
-                    font-size: 15px;
-
-                    width: 100%;
-                    font-family: var(--font-eight);
-                }
+                width: 90%;
+                  border: 2px solid var(--color-secondary);
+              padding: 1rem;
+              box-sizing: border-box;
+              border-radius: 0.7rem;
+              background-color: white;
                h6{
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                    
                 }
                 .input{
                 display: flex;
                     width: 100%;
+                    flex-direction: column;
                     justify-content: space-between;
                     input{
-                        width: 50%;
+                        width: 90%;
+                        border: 2px solid var(--color-secondary);
                         height: 20px;
-                        border-radius: 3px;
+                        border-radius: 0.5rem;
                         padding:0.5rem ;
-                        font-size: 0.5rem;
+                        font-size: 0.9rem;
     
                     }
                 }
+                .discount{
+                    height: 5rem;
+                    width:95%;
+                    border-radius: 10px;
+                    background-color: var(--color-secondary-light);
+                  display: flex;
+                  align-items: center;
+                  box-sizing: border-box;
+                  padding: 3rem;
+                  justify-content: center;
+                    p{
+                    font-size: 1rem;
+                    line-height: 1.2;
+                  }
+                }
                 button{
-                    width: 7rem;
-                    margin: 0.4rem;
-                    padding: 0.3rem;
+                    width: 50%;
+                    padding: 0.5rem 0.9rem; 
                
-                   
+                   background-color: var(--color-tertiary);
+                   color: white;
                     font-size: var(--font-small);
                     font-weight: 500;
                     font-family: var(--font-eight);
@@ -250,49 +279,57 @@
        
     }
     .working{
+        box-sizing: border-box;
         .schema{
-  
-            flex-direction: column;
-           gap: 3rem;
-            .schema_details{
-             width: 40%;
-             display: flex;
-             flex-direction: column;
-             gap: 3rem;
-             span{
-                 b{
-                     font-size: var(--xsmall);
-                     font-weight: bold;
-                     color: black;
-                 }
-                 font-size: var(--xsmall);
-                 font-family: var(--font-one);
-                 color: black;
-                 width: 100%;
-             }
-                span:nth-child(odd){
-                    transform: translateX(0px);
-                }
-           
-            }
-         }
+            display: none;
+        }
+        .schema-mobile{
+            display: block;
+            width: 95%;
+            margin: auto;
+        }
+        .avilability{
+            box-sizing: border-box;
+            margin: auto;
+            width: 100%;
+            height: 3.5rem;
+            background-color: var(--color-secondary-light);
+           padding: 0.5rem 2rem;
+           color: black;
+            border-radius: 5px;
+            margin-top: 2rem;
+            line-height: 1.2;
+            font-size: 11px;
+        }
     }
     .callculate{
-        
         height: fit-content;
-       
-        flex-direction: column;
-        gap: 3rem;
+       background-color: transparent;
+        gap: 1rem;
         padding: 0.4rem;
+        width: 90%;
         .choose{
-        
-            gap: 0.7rem;
-            width: 100%;
-            
            
+        display: flex;
+        align-items: center;
+       justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+   
+        padding: 0.8rem;
+            width: 100%;
+            background-color: var(--color-secondary-light);
+            input{
+                width: 80%;
+            }
+           button{
+            width: 50%;
+            border-radius: 0.3rem;
+           }
         }
         .card{
-            width:350px;
+            width:100%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             margin: auto;
             display: flex;
             align-items: center;
@@ -318,11 +355,9 @@
             }
         }
     }
-    .avilability{
-    transform: scale(0.8);
     
-    }
     .plan-info{
+        width: 100%;
         display: block;
         margin: auto;
         align-items: center;

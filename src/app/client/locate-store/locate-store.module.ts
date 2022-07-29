@@ -5,6 +5,7 @@ import { LocateStoreRoutingModule } from './locate-store-routing.module';
 import { LocateStoreComponent } from './locate-store.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     LocateStoreRoutingModule,
     MatDividerModule,
     MatTabsModule,
-    WidgetsModule
+    WidgetsModule,
+    ComponentsModule
     
   ]
 })

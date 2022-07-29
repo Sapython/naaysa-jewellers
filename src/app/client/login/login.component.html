@@ -13,7 +13,7 @@
           <img class="m-image2" src="../../../assets/blog3.png" >
         </div>
       <form>
-        <b>Login</b>
+        <b routerLink="/">Login</b>
         <div class="input_conatiner">
           <label>Email</label>
           <input type="email" formControlName="email" placeholder="username@host.com" />
@@ -23,9 +23,9 @@
           <input type="password" formControlName="password" placeholder="Password" />
         </div>
         <div class="authentication">
-          <button type="submit">Login</button>
+          <button type="submit" routerLink="/">Login</button>
         </div>
-        <span>Forgot Password?</span>
+        <span routerLink="/forgot-password">Forgot Password?</span>
         <button id="normal">
             <i class="fa-brands fa-google"></i>
             Continue With Google

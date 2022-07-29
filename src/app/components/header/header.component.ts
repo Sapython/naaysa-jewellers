@@ -153,8 +153,11 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
+  showMenu(){
 
-  hideSearch() {
+}  
+
+hideSearch() {
     this.searchBox.nativeElement.setAttribute('closed', '');
     this.searchBox.nativeElement.addEventListener(
       'animationend',

@@ -8,6 +8,7 @@ const components = [TenPlusOneComponent]
 @NgModule({
   declarations: [
   
+  
   ],
   imports: [
     CommonModule,

@@ -109,6 +109,15 @@ footer {
       }
     }
   }
+  b{
+    margin: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+    padding: 1rem 0;
+    cursor: pointer;
+
+  }
 
   font-family: var(--font-one);
   box-shadow: var(--normal-shadow);
