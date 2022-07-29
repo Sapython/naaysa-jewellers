@@ -371,7 +371,11 @@ body {
         background-color: var(--color-secondary);
         border-radius: 0.3rem;
         border: none;
+        cursor: pointer;
         color: var(--color-light);
+        &:hover{
+          transform: scale(1.02);
+        }
       }
     }
   }

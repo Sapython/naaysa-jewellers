@@ -189,6 +189,7 @@
             }
           }
           button {
+            cursor: pointer;
             padding: 0.2rem 0.3rem;
             border: 2px solid var(--color-secondary);
             background-color: transparent;
@@ -244,6 +245,7 @@
               }
             }
             button {
+              cursor: pointer;
               padding: 0.1rem;
               border: 1px solid var(--color-secondary);
               background-color: transparent;
@@ -288,6 +290,7 @@
       }
     }
     button {
+      cursor: pointer;
       padding: 0.2rem 0.5rem;
       background-color: var(--color-secondary);
       font-size: 14px;

@@ -27,7 +27,7 @@
             <div class="categories">
               <b>Shop for category</b>
               <ul>
-                <li *ngFor="let category of byCategory">
+                <li *ngFor="let category of byCategory"  routerLink="../all-product">
                   <img src="{{ category.image }}" alt="image" />
                   <p>{{ category.name }}</p>
                 </li>
@@ -36,7 +36,7 @@
             <div class="categories">
               <b>Shop By</b>
               <ul>
-                <li *ngFor="let filter of filters">
+                <li *ngFor="let filter of filters"  routerLink="../all-product">
                   <p>{{ filter.name }}</p>
                 </li>
               </ul>
@@ -44,7 +44,7 @@
             <div class="categories">
               <b>Shop by Metal ans Stone</b>
               <ul>
-                <li *ngFor="let metal of byMetals">
+                <li *ngFor="let metal of byMetals" routerLink="../all-product">
                   <img src="{{ metal.image }}" alt="image" />
                   <p>{{ metal.name }}</p>
                 </li>
@@ -165,7 +165,7 @@
   </div>
   <div class="buttons">
     <button routerLink="../wishlist"><i class="fa-regular fa-heart"></i></button>
-    <button routerLink="../login"><i  class="ri-store-3-line"></i></button>
+    <button routerLink="../locate-store "><i  class="ri-store-3-line"></i></button>
     <button routerLink="../cart"><i class="fa-solid fa-cart-shopping"></i></button>
   </div>
 </div>

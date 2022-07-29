@@ -91,6 +91,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./profile/profile.module').then((m) => m.ProfileModule),
   },
+
   {
     path: 'all-product',
     loadChildren: () =>

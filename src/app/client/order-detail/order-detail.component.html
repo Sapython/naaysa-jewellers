@@ -53,7 +53,7 @@
               <i class="ri-star-fill"></i>
             </div>
           </div>
-        <b routerLink="/mobile-review">Write a review</b>
+        <b routerLink="/mobile-review" style="cursor: pointer;">Write a review</b>
       </div>
     </div>
     <div class="bill">
@@ -104,7 +104,7 @@
         >
         
           <button *ngIf="arrived">Track Order</button>
-          <button *ngIf="!arrived" routerLink="/mobile-review">Write A Review</button>
+          <button *ngIf="!arrived"  routerLink="/mobile-review">Write A Review</button>
         </div>
       </div>
     </div>
@@ -218,3 +218,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>
