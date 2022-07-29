@@ -15,6 +15,10 @@ export class ProductWidgetComponent implements OnInit {
   @Input() jewellery_Name:string = 'Rings'
   @Input() discount:string = '10%'
   @Input() liked:boolean = false
+
+  onclick(){
+    alert('Your Product has Been Added To Cart')
+  }
   constructor() { }
 
   ngOnInit(): void {
