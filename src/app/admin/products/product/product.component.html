@@ -1,9 +1,20 @@
-<h2 class="heading">Products</h2>
-
-<div class="search-bar">
-  <input type="text" class="input" >
-  <div class="search-btn">
-    <button>Search</button>
+<div class="container">
+  <div class="header">
+    <div class="para">
+        <p id="heading">Products</p>
+    </div>
+    <div class="links">
+        <button><i class="fa-solid fa-tags"></i>Manage Products</button>
+        <button><i class="fa-solid fa-square-plus"></i>Add Products</button>
+        <button><i class="fa-solid fa-toggle-on"></i>Pretty View</button>
+    </div>
+  </div>
+  <div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="uk-search-input" type="search" placeholder="Search">
+    </form>
+    <i class="fa-solid fa-bell" id="bell"></i>
   </div>
 </div>
 

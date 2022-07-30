@@ -80,7 +80,20 @@ export class DashboardComponent implements OnInit {
       src: 'assets/'
     },
   ]
-
+  features = [
+    {
+      feature_Name:'Add Product'
+    },
+    {
+      feature_Name:'Add Vendor'
+    },
+    {
+      feature_Name:'Category'
+    },
+    {
+      feature_Name:'Add Vendor'
+    },
+  ]
   constructor() { }
 
 

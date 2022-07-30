@@ -39,7 +39,14 @@
         }
     }
 }
-
+.uk-flex{
+    justify-content: space-between;
+    align-items: center;
+    .image{
+        padding: 15px;
+        margin: 15px 0px;
+    }
+}
 .boxes {
     margin-top: 25px;
     display: flex;
@@ -60,6 +67,7 @@
         padding-left: 15px;
         p{
             font-size: var(--xxsmall);
+            margin-top: 10px;
         }
         .numbers{
             font-size: var(--large);
