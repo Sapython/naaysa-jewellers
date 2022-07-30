@@ -22,8 +22,8 @@
             margin-left: 25px;
             p:nth-child(1){
                 font-weight: 500;
-                font-size: var(--msmall);
-                margin-right: 15px;
+                font-size: var(--xxsmall);
+                margin-right: 00px;
             }
             p:nth-child(2){
                 font-size: var(--xxxsmall);
@@ -31,6 +31,7 @@
                 color: #009970;
                 border-radius: 15px;
                 padding: 2px 5px;
+                margin-left: 10px;
                 background-color: #E0FFF7;
             }
         }
@@ -48,7 +49,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: 68px;
+        margin-left: 45px;
         .quantity{
             input{
                 width: 50px;
@@ -74,6 +75,7 @@
                 align-items: center;
                 margin-right: 15px;
                 cursor: pointer;
+                font-size: var(--xxxsmall);
                 span{
                     margin-right: 5px;
                 }
