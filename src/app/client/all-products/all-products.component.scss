@@ -50,6 +50,9 @@
             display: grid;
             grid-template: auto / auto auto;
             overflow-x: auto;
+            app-product-widget{
+                width: 175px;
+            }
         }
     }
 }
