@@ -1,0 +1,212 @@
+<div class="header">
+  <p id="heading">Offers</p>
+
+  <div class="links">
+    <button><i class="ri-price-tag-3-line"></i> Manage Categories</button>
+    <button  uk-toggle="target: #add-offers-modal"><i class="ri-add-line"></i> Add Offers</button>
+  </div>
+</div>
+
+<div class="search-bar">
+  <input type="text" class="input" />
+  <div class="search-btn">
+    <button>Search</button>
+  </div>
+</div>
+<div class="conatiner">
+  <table>
+    <thead>
+      <tr>
+        <th>Offer Name</th>
+        <th>Offer Usage period</th>
+        <th>Offer Usage period</th>
+        <th>Minimum amount</th>
+        <th>DMaximum discount</th>
+        <th>OfferCode</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><b>FLAT 1000 OFF</b></td>
+      <td>Finite</td>
+      <td>Rings</td>
+      <td>₹ 10000</td>
+      <td>₹ 300</td>
+      <td><b>RBYD29744ATG</b></td>
+      <td>
+        <button class="delete">
+          <i class="fa-solid fa-trash"></i>
+          delete
+        </button>
+
+        <button class="edit">
+          <i class="ri-edit-fill"></i>
+          Edit
+        </button>
+      </td>
+    </tr>
+    <tr>
+        <td><b>FLAT 1000 OFF</b></td>
+        <td>Finite</td>
+        <td>Rings</td>
+        <td>₹ 10000</td>
+        <td>₹ 300</td>
+        <td><b>RBYD29744ATG</b></td>
+        <td>
+          <button class="delete">
+            <i class="fa-solid fa-trash"></i>
+            delete
+          </button>
+  
+          <button class="edit">
+            <i class="ri-edit-fill"></i>
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td><b>FLAT 1000 OFF</b></td>
+        <td>Finite</td>
+        <td>Rings</td>
+        <td>₹ 10000</td>
+        <td>₹ 300</td>
+        <td><b>RBYD29744ATG</b></td>
+        <td>
+          <button class="delete">
+            <i class="fa-solid fa-trash"></i>
+            delete
+          </button>
+  
+          <button class="edit">
+            <i class="ri-edit-fill"></i>
+            Edit
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td><b>FLAT 1000 OFF</b></td>
+        <td>Finite</td>
+        <td>Rings</td>
+        <td>₹ 10000</td>
+        <td>₹ 300</td>
+        <td><b>RBYD29744ATG</b></td>
+        <td>
+          <button class="delete">
+            <i class="fa-solid fa-trash"></i>
+            delete
+          </button>
+  
+          <button class="edit">
+            <i class="ri-edit-fill"></i>
+            Edit
+          </button>
+        </td>
+      </tr>
+  </table>
+</div>
+
+<div id="add-offers-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <div class="modal_header">
+        <h2>Add offers</h2>
+      </div>
+  
+      <mat-stepper>
+        <mat-step>
+          <ng-template matStepLabel></ng-template>
+          
+              <div class="form-box">
+                <label for="plan-name-input"> Name  *</label>
+                <input type="text" id="plan-name-input" />
+              </div>
+            
+              <div class="form-box">
+                <label for="plan-name-input"> offers Description *</label>
+                <input type="text" id="plan-name-input" />
+              </div>
+              <div class="form-box">
+                <label for="plan-name-input"> Short Description *</label>
+                <input type="email" id="plan-name-input" />
+              </div>
+        
+              <div class="form-box">
+                <label for="plan-name-input"> SEO Description *   </label>
+                <input type="text" id="plan-name-input"  />
+              </div>
+              <div class="form-box">
+                <label for="plan-name-input"> Display Price *</label>
+                <input type="text" id="plan-name-input"  />
+              </div>
+              <div class="buttons">
+  
+                  <button  id="submit-button" matStepperNext>
+                   Next
+                  </button>
+              </div>
+           
+  
+        </mat-step>
+       
+        <mat-step>
+          <ng-template matStepLabel></ng-template>
+          
+              <div class="form-box">
+                <label for="plan-name-input">offers base weight *</label>
+                <input type="text" id="plan-name-input" />
+              </div>
+            
+              <div class="form-box">
+                <label for="plan-name-input"> offers Purity*</label>
+                <input type="text" id="plan-name-input" />
+              </div>
+              <div class="form-box">
+                <label for="plan-name-input"> offers Colour*</label>
+                <input type="email" id="plan-name-input" />
+              </div>
+        
+              <div class="form-box">
+                <label for="plan-name-input"> offers Metal</label>
+                <input type="text" id="plan-name-input"  />
+              </div>
+              <div class="buttons">
+  
+                  <button  matStepperPrevious>Back</button>
+                  <button  id="submit-button" matStepperNext>
+                      Next
+                  </button>
+              </div>
+           
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel></ng-template>
+          
+              <div class="form-box">
+                <label for="plan-name-input"> Vendor Name *</label>
+                <input type="text" id="plan-name-input" />
+              </div>
+            
+              <div class="form-box">
+                <label for="plan-name-input"> Vendor ID*</label>
+                <input type="text" id="plan-name-input" />
+              </div>
+              <div class="form-box">
+                <label for="plan-name-input"> Vendor *</label>
+                <input type="email" id="plan-name-input" />
+              </div>
+              <div class="form-box">
+                <label for="plan-name-input">  Price *</label>
+                <input type="text" id="plan-name-input"  />
+              </div>
+            
+              <div class="buttons">
+                <button  matStepperPrevious>Back</button>
+                  <button  id="submit-button" matStepperNext>
+                      Add offers
+                  </button>
+              </div>
+           
+        </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
+  
