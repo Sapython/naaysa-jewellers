@@ -91,6 +91,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./profile/profile.module').then((m) => m.ProfileModule),
   },
+
   {
     path: 'all-product',
     loadChildren: () =>
@@ -98,6 +99,14 @@ const routes: Routes = [
         (m) => m.AllProductsModule
       ),
   },
+  {
+    path: 'forgot-password',
+    loadChildren: () =>
+      import('./forgot-password/forgot-password.module').then(
+        (m) => m.ForgotPasswordModule
+      ),
+  },
+
   { path: 'order-detail', loadChildren: () => import('./order-detail/order-detail.module').then(m => m.OrderDetailModule) },
   { path: 'locate-store', loadChildren: () => import('./locate-store/locate-store.module').then(m => m.LocateStoreModule) },
   { path: 'disclaimer', loadChildren: () => import('./disclaimer/disclaimer.module').then(m => m.DisclaimerModule) },

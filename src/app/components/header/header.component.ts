@@ -22,18 +22,7 @@ export class HeaderComponent implements OnInit {
       image:'../../../assets/jewellery/jew1.svg',
       name:'Gold coins'
     },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew.3.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew6.svg',
-      name:'Gold coins'
-    },
+    
     {
       image:'../../../assets/jewellery/jew5.svg',
       name:'Gold coins'
@@ -153,8 +142,11 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
+  showMenu(){
 
-  hideSearch() {
+}  
+
+hideSearch() {
     this.searchBox.nativeElement.setAttribute('closed', '');
     this.searchBox.nativeElement.addEventListener(
       'animationend',

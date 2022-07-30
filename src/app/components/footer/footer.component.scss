@@ -67,12 +67,15 @@ footer {
       color: var(--color-light);
       gap: 30px;
       padding: 50px 0px;
+      // border-bottom: 1px solid rgba`(233, 233, 233, 0.566);
 
       .sosial {
         display: flex;
         flex-direction: column;
         width: 20rem;
-        gap: 40px;
+       align-items: flex-start;
+        justify-content: flex-start;
+        gap:5px;
         font-size: x-large;
         .logo {
           i {
@@ -82,11 +85,15 @@ footer {
         }
         b {
           font-size: 25px;
+          margin: 0;
+          color: white;
+          padding: 0.7rem 0;
         }
 
         .apps {
           display: flex;
           gap: 20px;
+          padding: 0.7rem 0;
           i {
             height: 50px;
             width: 50px;
@@ -110,6 +117,43 @@ footer {
     }
   }
 
+
+  .conatiner2{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    background-color: var(--color-secondary);
+    .links-container {
+      display: flex;
+      justify-content: space-between;
+   width: 80%;
+   gap: 1rem;
+      // background-color: var(--colo r-secondary);
+      @media (max-width: 600px) {
+        flex-wrap: wrap;
+      
+      }
+      .links {
+        width: 100%;
+  p{
+    margin: 1rem;
+    color: rgb(255, 255, 255);
+  }
+        a {
+          font-family: var(--font-one);
+          font-size: var(--xsmall);
+          color: var(--color-secondary-lighter);
+          &:hover{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+
   font-family: var(--font-one);
   box-shadow: var(--normal-shadow);
 
@@ -123,14 +167,17 @@ footer {
   }
 
   p {
-    margin: 0;
+    // margin: 1rem;
+    cursor: pointer;
+    font-size: var(--xsmall);
+   
+    a{
+      color: white;
+      text-decoration: none;
+    }
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+
 
 
 
@@ -138,43 +185,21 @@ footer {
 
 
   h5 {
-    font-size: var(--msmall);
-    font-weight: 600;
-    margin: 0;
-  }
-
-  h6 {
-    font-size: var(--xsmall);
+    font-size: var(--small);
     font-weight: 500;
-    margin: 0;
+    margin: 1rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
   }
 
-  .links-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2em 2em 2em;
-    
-    @media (max-width: 600px) {
-      flex-wrap: wrap;
-    
-    }
-    .links {
-      width: 100%;
 
-      a {
-        font-family: var(--font-one);
-        font-size: var(--xxsmall);
-        color: var(--color-tertiary);
-      }
-    }
-  }
+  
 
   #offices,
   #services {
     display: flex;
 
-    .office,
-    .service {
+    .offic   .service {
       width: 100%;
       font-size: var(--xxsmall);
       color: var(--color-tertiary);

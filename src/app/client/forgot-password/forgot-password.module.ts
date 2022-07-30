@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { VrProductTryRoutingModule } from './vr-product-try-routing.module';
-import { VrProductTryComponent } from './vr-product-try.component';
+import { ForgotPasswordRoutingModule } from './forgot-password-routing.module';
+import { ForgotPasswordComponent } from './forgot-password.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 
 @NgModule({
   declarations: [
-    VrProductTryComponent
+    ForgotPasswordComponent
   ],
   imports: [
     CommonModule,
-    VrProductTryRoutingModule,
+    ForgotPasswordRoutingModule,
     ComponentsModule
   ]
 })
-export class VrProductTryModule { }
+export class ForgotPasswordModule { }
