@@ -34,14 +34,6 @@
               </ul>
             </div>
             <div class="categories">
-              <b>Shop By</b>
-              <ul>
-                <li *ngFor="let filter of filters"  routerLink="../all-product">
-                  <p>{{ filter.name }}</p>
-                </li>
-              </ul>
-            </div>
-            <div class="categories">
               <b>Shop by Metal ans Stone</b>
               <ul>
                 <li *ngFor="let metal of byMetals" routerLink="../all-product">
@@ -49,6 +41,18 @@
                   <p>{{ metal.name }}</p>
                 </li>
               </ul>
+            </div>
+            <div class="categories">
+              <b>Shop By</b>
+              <ul>
+                <li *ngFor="let filter of filters"  routerLink="../all-product">
+                  <p>{{ filter.name }}</p>
+                </li>
+                <b>All Jewellery</b>
+              </ul>
+            </div>
+            <div class="categories">
+              <img src="https://i.pravatar.cc" alt="image" />
             </div>
           </div>
         </div>
