@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NotificationsRoutingModule } from './notifications-routing.module';
 import { NotificationsComponent } from './notifications.component';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';
+import { LayoutsModule } from '../layouts/layouts.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
   imports: [
     CommonModule,
     NotificationsRoutingModule,
-    WidgetsModule
+    WidgetsModule,
+    LayoutsModule
   ]
 })
 export class NotificationsModule { }

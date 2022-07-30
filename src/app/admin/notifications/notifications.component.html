@@ -1,16 +1,10 @@
+<app-header title="Notification"></app-header>
 <div class="container">
-    <div class="header">
-        <div class="para">
-            <p id="heading">Notifications</p>
-        </div>
+
         <div class="uk-margin">
-            <form class="uk-search uk-search-default">
-                <span class="uk-search-icon-flip" uk-search-icon></span>
-                <input class="uk-search-input" type="search" placeholder="Search">
-            </form>
-            <i class="fa-solid fa-bell" id="bell"></i>
+           
             <button id="edit" (click)="editMode = !editMode">Edit <i class="ri-edit-circle-{{editMode ? 'fill' : 'line'}}"></i></button>
         </div>
-    </div>
+
     <app-notification-widget (selected)="value($event)" [isCheckBoxVisible]="editMode" *ngFor="let item of items"></app-notification-widget>
 </div>

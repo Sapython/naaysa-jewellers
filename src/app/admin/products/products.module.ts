@@ -10,6 +10,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import {MatStepperModule} from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { LayoutsModule } from '../layouts/layouts.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     WidgetsModule,
     MatStepperModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    LayoutsModule
   ]
 })
 export class ProductsModule { }

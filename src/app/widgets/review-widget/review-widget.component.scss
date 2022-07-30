@@ -33,6 +33,7 @@
                 }
                 .reviews{
                     p{
+                        margin: 0;
                         font-size: var(--xxsmall);
                     }
                 }
@@ -53,12 +54,15 @@
                 .like{
                     display: flex;
                     align-items: center;
+                    margin-top: 0.5rem;
                     i{
                         margin-right: 05px;
                         margin-left: 5px;
                     }
-                    p:nth-child(2){
+                    p{
+                        margin: 0;
                         margin-right: 3px;
+
                     }
                 }
 

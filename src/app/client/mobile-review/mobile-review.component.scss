@@ -1,5 +1,12 @@
 .container{
+    display: block;
+    margin: auto;
     margin: 15px;
+    margin-left: 35px;
+    margin-top: 25px;
+    box-shadow: var(--normal-shadow);
+    padding: 25px;
+    border-radius: 15px;
     #heading{
         font-size: var(--small);
         font-weight: 500;
@@ -40,5 +47,15 @@
                 transform: scale(1.1);
             }
         }
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0;
+        margin: 15px;
+        border-radius: none;
+        box-shadow: none;
     }
 }

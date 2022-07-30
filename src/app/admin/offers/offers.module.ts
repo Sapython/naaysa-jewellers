@@ -6,6 +6,7 @@ import { OffersComponent } from './offers.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LayoutsModule } from '../layouts/layouts.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     OffersRoutingModule,
     MatStepperModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    LayoutsModule
   ]
 })
 export class OffersModule { }

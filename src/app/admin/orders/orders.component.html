@@ -1,56 +1,147 @@
-<div class="main-heading">
-  <h1>Orders</h1>
-</div>
+<app-header title="Orders"></app-header>
 
-<div class="heading">
-  <span>All Order</span>
-  <span>Completed</span>
-  <span>Cancelled</span>
-</div>
-
-<table>
-    <thead>
-  <tr>
-    <th *ngFor="let header of headers">
-      {{ header }}
-    </th>
-</tr>
-</thead>
-
-  <tr *ngFor="let order of orders">
-    <td>
-      {{ order.id }}
-    </td>
-    <td>
-      {{ order.name }}
-    </td>
-    <td>
-      {{ order.orderDate }}
-    </td>
-    <td><div class="payment">
-      {{ order.payment }}
-    </div>
-    </td>
-    <td><div class="status">
-      {{ order.status }}
-    </div>
-    </td>
-    <td><div class="total">
-      {{ order.total }}
-    </div>
-    </td>
-    <td><div class="phone"><i class="fa-solid fa-phone"></i>
-      {{ order.mobileNo }}
-    </div>
-    </td>
-    <td>
-        <button class="delete">
-            <i class="fa-solid fa-trash"></i>
-            delete</button>
-
-        <button class="info">
-            <i class="fa-solid fa-circle-info"></i>
-            info</button>
-      </td>
+<mat-tab-group>
+  <mat-tab label="All Orders"> 
+    <table>
+      <thead>
+    <tr>
+      <th *ngFor="let header of headers">
+        {{ header }}
+      </th>
   </tr>
-</table>
+  </thead>
+  
+    <tr *ngFor="let order of orders">
+      <td>
+        {{ order.id }}
+      </td>
+      <td>
+        {{ order.name }}
+      </td>
+      <td>
+        {{ order.orderDate }}
+      </td>
+      <td><div class="payment">
+        {{ order.payment }}
+      </div>
+      </td>
+      <td><div class="status">
+        {{ order.status }}
+      </div>
+      </td>
+      <td><div class="total">
+        {{ order.total }}
+      </div>
+      </td>
+      <td><div class="phone"><i class="fa-solid fa-phone"></i>
+        {{ order.mobileNo }}
+      </div>
+      </td>
+      <td>
+          <button class="delete">
+              <i class="fa-solid fa-trash"></i>
+              delete</button>
+  
+          <button class="info">
+              <i class="fa-solid fa-circle-info"></i>
+              info</button>
+        </td>
+    </tr>
+  </table></mat-tab>
+  <mat-tab label="Completed"> 
+    <table>
+      <thead>
+    <tr>
+      <th *ngFor="let header of headers">
+        {{ header }}
+      </th>
+  </tr>
+  </thead>
+  
+    <tr *ngFor="let order of orders">
+      <td>
+        {{ order.id }}
+      </td>
+      <td>
+        {{ order.name }}
+      </td>
+      <td>
+        {{ order.orderDate }}
+      </td>
+      <td><div class="payment">
+        {{ order.payment }}
+      </div>
+      </td>
+      <td><div class="status">
+        {{ order.status }}
+      </div>
+      </td>
+      <td><div class="total">
+        {{ order.total }}
+      </div>
+      </td>
+      <td><div class="phone"><i class="fa-solid fa-phone"></i>
+        {{ order.mobileNo }}
+      </div>
+      </td>
+      <td>
+          <button class="delete">
+              <i class="fa-solid fa-trash"></i>
+              delete</button>
+  
+          <button class="info">
+              <i class="fa-solid fa-circle-info"></i>
+              info</button>
+        </td>
+    </tr>
+  </table>
+  </mat-tab>
+  <mat-tab label="Cancelled"> 
+    <table>
+      <thead>
+    <tr>
+      <th *ngFor="let header of headers">
+        {{ header }}
+      </th>
+  </tr>
+  </thead>
+  
+    <tr *ngFor="let order of orders">
+      <td>
+        {{ order.id }}
+      </td>
+      <td>
+        {{ order.name }}
+      </td>
+      <td>
+        {{ order.orderDate }}
+      </td>
+      <td><div class="payment">
+        {{ order.payment }}
+      </div>
+      </td>
+      <td><div class="status">
+        {{ order.status }}
+      </div>
+      </td>
+      <td><div class="total">
+        {{ order.total }}
+      </div>
+      </td>
+      <td><div class="phone"><i class="fa-solid fa-phone"></i>
+        {{ order.mobileNo }}
+      </div>
+      </td>
+      <td>
+          <button class="delete">
+              <i class="fa-solid fa-trash"></i>
+              delete</button>
+  
+          <button class="info">
+              <i class="fa-solid fa-circle-info"></i>
+              info</button>
+        </td>
+    </tr>
+  </table>
+  </mat-tab>
+</mat-tab-group>

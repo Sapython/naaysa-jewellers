@@ -69,7 +69,11 @@ const routes: Routes = [
       },
       { path: 'feedback',
       loadChildren: () =>
-      import('./feedback/feedback.module').then(m => m.FeedbackModule)},
+      import('./feedback/feedback.module').then(m => m.FeedbackModule)}
+      ,
+      // { path: 'reviews',
+      // loadChildren: () =>
+      // import('./feedback/feedback.module').then(m => m.FeedbackModule)},
 
       { path: 'users', loadChildren: () => import('./users/users.module').then(m => m.UsersModule) },
       { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
