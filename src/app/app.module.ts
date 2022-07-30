@@ -30,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     provideFunctions(() => getFunctions()),
     providePerformance(() => getPerformance()),
     provideStorage(() => getStorage()),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ComponentsModule
   ],
   
   providers: [
