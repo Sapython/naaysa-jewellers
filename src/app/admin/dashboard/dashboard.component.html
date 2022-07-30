@@ -1,111 +1,181 @@
 <div class="quick-links">
-    <div class="links">
-        <p>Quick Links</p>
-        <button> Add Product</button>
-        <button> Add Category</button>
-        <button> Add Vendor</button>
-        <button> Add User</button>
-        <button> Add Offer</button>
-    </div>
-    <div class="icons">
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-bell" routerLink="../notification" style="cursor: pointer;"></i>
-    </div>
+  <div class="links">
+    <p>Quick Links</p>
+    <button>Add Product</button>
+    <button>Add Category</button>
+    <button>Add Vendor</button>
+    <button>Add User</button>
+    <button>Add Offer</button>
+  </div>
+  <div class="icons">
+    <i class="fa-solid fa-user"></i>
+    <i
+      class="fa-solid fa-bell"
+      routerLink="../notification"
+      style="cursor: pointer"
+    ></i>
+  </div>
 </div>
 <div class="uk-flex">
-    <div class="image">
-        <img src="assets/chart.png" alt="">
-    </div>
-    <div class="image">
-        <img src="assets/chart1.png" alt="">
-    </div>
+  <div class="image">
+    <img src="assets/chart.png" alt="" />
+  </div>
+  <div class="image">
+    <img src="assets/chart1.png" alt="" />
+  </div>
 </div>
 <div class="boxes">
-    <div class="scores">
-        <div class="points">
-            <p class="numbers">{{orders}}</p>
-            <p>Orders</p>
-        </div>
-        <p>See more</p>
+  <div class="scores">
+    <div class="points">
+      <p class="numbers">{{ orders }}</p>
+      <p>Orders</p>
     </div>
-    <div class="scores">
-        <div class="points">
-            <p class="numbers">{{orders}}</p>
-            <p>Orders</p>
-        </div>
-        <p>See more</p>
+    <p>See more</p>
+  </div>
+  <div class="scores">
+    <div class="points">
+      <p class="numbers">{{ orders }}</p>
+      <p>Orders</p>
     </div>
-    <div class="scores">
-        <div class="points">
-            <p class="numbers">{{orders}}</p>
-            <p>Orders</p>
-        </div>
-        <p>See more</p>
+    <p>See more</p>
+  </div>
+  <div class="scores">
+    <div class="points">
+      <p class="numbers">{{ orders }}</p>
+      <p>Orders</p>
     </div>
-    <div class="scores">
-        <div class="points">
-            <p class="numbers">{{orders}}</p>
-            <p>Orders</p>
-        </div>
-        <p>See more</p>
+    <p>See more</p>
+  </div>
+  <div class="scores">
+    <div class="points">
+      <p class="numbers">{{ orders }}</p>
+      <p>Orders</p>
     </div>
+    <p>See more</p>
+  </div>
 </div>
-<div class="sales">
-    <div class="product-sales">
-        <div class="heading">
-            <p>Product Sales</p>
-        </div>
-        <div class="table">
-            <table>
-                <tr>
-                  <th width = "22%"></th>
-                  <th width = "13%"></th>
-                  <th width = "13%"></th>
-                  <th width = "13%"></th>
-                  <th width = "13%"></th>
-                  <th width = "13%"></th>
-                  <th width = "13%"></th>
-                </tr>
-                <tr *ngFor="let item of items">
-                  <td>
-                    <div class="product">
-                        <img src="{{src}}" alt="">
-                        <div class="info">
-                            <p class="product-heading">{{product_Name}}</p>
-                            <p>{{product_Id}}</p>
-                        </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material">
-                        <p>{{material}}</p>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="material quanity">
-                        <p>{{weight}}</p>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="price">{{price}}</p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Sold: {{sold_Number}}
-                    </p>
-                  </td>
-                  <td>
-                    <p class="sold">
-                        Returned:{{returned_Number}}
-                    </p>
-                  </td>
-                  <td>
-                    <button class="more">
-                        More Info
-                    </button>
-                  </td>
-                </tr>
-              </table>    
-        </div>
+<div class="container">
+  <!-- ......section1...... -->
+  <div class="section1">
+    <!-- <div class="product-sales"> -->
+    <div class="table">
+      <div class="heading">
+        <p>Product Sales</p>
+      </div>
+      <table>
+        <tr>
+          <th width="22%"></th>
+          <th width="13%"></th>
+          <th width="13%"></th>
+          <th width="13%"></th>
+          <th width="13%"></th>
+          <th width="13%"></th>
+          <th width="13%"></th>
+        </tr>
+        <tr *ngFor="let item of items">
+          <td>
+            <div class="product">
+              <img src="/assets/ring1.png" alt="" />
+              <div class="info">
+                <p class="product-heading">{{ product_Name }}</p>
+                <p>{{ product_Id }}</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="material">
+              <p>{{ material }}</p>
+            </div>
+          </td>
+          <td>
+            <div class="material quanity">
+              <p>{{ weight }}</p>
+            </div>
+          </td>
+          <td>
+            <p class="price">{{ price }}</p>
+          </td>
+          <td>
+            <p class="sold">Sold: {{ sold_Number }}</p>
+          </td>
+          <td>
+            <p class="sold">Returned:{{ returned_Number }}</p>
+          </td>
+          <td>
+            <button class="more">More Info</button>
+          </td>
+        </tr>
+      </table>
+      <!-- </div> -->
     </div>
+  </div>
+  <!-- ......section2...... -->
+  <div class="section2">
+    <div class="main-box">
+      <div class="heading">
+        <p>Reviews</p>
+      </div>
+      <div class="box">
+        <div class="content">
+          <ul uk-accordion>
+            <li class="uk-open">
+              <a class="uk-accordion-title title" href="#"
+                ><img class="ring-img" src="/assets/ring2.png" alt="" />
+                <p class="txt">Gold Bracelet</p>
+                <i class="fa-solid fa-star star"></i>
+                <p class="txt1">4.5</p></a
+              >
+              <div class="uk-accordion-content">
+                <p class="main-txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="btns">
+                    <button><i class="fa-solid fa-circle-info btn-i"></i> See Full Review</button>
+                    <button><i class="fa-solid fa-trash btn-i"></i>Delete Review</button>
+                </div>
+              </div>
+            </li>
+            <li class="uk-open">
+              <a class="uk-accordion-title title" href="#"
+                ><img class="ring-img" src="/assets/ring2.png" alt="" />
+                <p class="txt">Gold Bracelet</p>
+                <i class="fa-solid fa-star star"></i>
+                <p class="txt1">4.5</p></a
+              >
+              <div class="uk-accordion-content">
+                <p class="main-txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="btns">
+                    <button><i class="fa-solid fa-circle-info btn-i"></i> See Full Review</button>
+                    <button><i class="fa-solid fa-trash btn-i"></i>Delete Review</button>
+                </div>
+              </div>
+            </li>
+            <li class="uk-open">
+              <a class="uk-accordion-title title" href="#"
+                ><img class="ring-img" src="/assets/ring2.png" alt="" />
+                <p class="txt">Gold Bracelet</p>
+                <i class="fa-solid fa-star star"></i>
+                <p class="txt1">4.5</p></a
+              >
+              <div class="uk-accordion-content">
+                <p class="main-txt">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+
+                <div class="btns">
+                    <button><i class="fa-solid fa-circle-info btn-i"></i> See Full Review</button>
+                    <button><i class="fa-solid fa-trash btn-i"></i>Delete Review</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
