@@ -7,7 +7,9 @@ import { ProductComponent } from './product/product.component';
 import { ReviewComponent } from './review/review.component';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-
+import {MatStepperModule} from '@angular/material/stepper';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    WidgetsModule
+    WidgetsModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ]
 })
 export class ProductsModule { }

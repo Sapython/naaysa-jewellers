@@ -67,6 +67,16 @@
           </li>
           <li class="sidebar-li">
             <a
+              routerLink="/admin/customers"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-user-group sidebar-icon"></i
+              ><span class="sidebar-text">Offers</span></a
+            >
+          </li>
+          <li class="sidebar-li">
+            <a
               routerLink="/admin/pricing"
               routerLinkActive="active"
               (click)="toggleSidebar()"

@@ -1,1 +1,162 @@
-<app-product></app-product>
+<h2 class="heading">Products</h2>
+
+<div class="search-bar">
+  <input type="text" class="input" />
+  <div class="search-btn">
+    <button>Search</button>
+  </div>
+</div>
+<button class="add-product" uk-toggle="target: #add-product-modal">
+  Add Product +
+</button>
+
+<div class="main-card">
+
+  <div class="section1">
+    <div class="sec1">
+    <span>Movable Round Gold Necklace</span>
+  </div>
+
+  <div class="sec2">
+    <img class="ring-img" src="/assets/jewellery/goldRing.svg" alt="Ring image">
+  </div>
+
+  <div class="sec3">
+    <p>₹ 5,00,000</p>
+    <span>250 piece</span>
+  </div>
+  <div class="sec4">
+    <p>This 18 karat rosegold ring feature 1 diamond between two dis-jointed stone studed arcs.</p>
+  </div>
+<div class="sec5">
+  <span>Metal: </span>
+  <p> 10k, 14k, 18k, 22k and 24k.</p>
+<br>
+  <span>Weight: </span>
+  <p>2 grams, 4 grams</p>
+<br>
+  <span>Colour: </span>
+  <p>Yellow, White</p>
+<br>
+  <span>size:</span>
+  <p>4, 6, 7, 8, 10, 11</p>
+</div>
+
+
+<div class="sec6">
+  <button><i class="fa-solid fa-pencil"></i> Edit</button>
+</div>
+
+<div class="sec7">
+  <button class="btn1">Disable</button>
+  <button class="btn2">Delete</button>
+</div>
+  </div>
+
+  
+</div>
+
+<div id="add-product-modal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <div class="modal_header">
+      <h2>Add Product</h2>
+    </div>
+
+    <mat-stepper>
+      <mat-step>
+        <ng-template matStepLabel></ng-template>
+        
+            <div class="form-box">
+              <label for="plan-name-input"> Name  *</label>
+              <input type="text" id="plan-name-input" />
+            </div>
+          
+            <div class="form-box">
+              <label for="plan-name-input"> Product Description *</label>
+              <input type="text" id="plan-name-input" />
+            </div>
+            <div class="form-box">
+              <label for="plan-name-input"> Short Description *</label>
+              <input type="email" id="plan-name-input" />
+            </div>
+      
+            <div class="form-box">
+              <label for="plan-name-input"> SEO Description *   </label>
+              <input type="text" id="plan-name-input"  />
+            </div>
+            <div class="form-box">
+              <label for="plan-name-input"> Display Price *</label>
+              <input type="text" id="plan-name-input"  />
+            </div>
+            <div class="buttons">
+
+                <button  id="submit-button" matStepperNext>
+                 Next
+                </button>
+            </div>
+         
+
+      </mat-step>
+     
+      <mat-step>
+        <ng-template matStepLabel></ng-template>
+        
+            <div class="form-box">
+              <label for="plan-name-input">Product base weight *</label>
+              <input type="text" id="plan-name-input" />
+            </div>
+          
+            <div class="form-box">
+              <label for="plan-name-input"> Product Purity*</label>
+              <input type="text" id="plan-name-input" />
+            </div>
+            <div class="form-box">
+              <label for="plan-name-input"> Product Colour*</label>
+              <input type="email" id="plan-name-input" />
+            </div>
+      
+            <div class="form-box">
+              <label for="plan-name-input"> Product Metal</label>
+              <input type="text" id="plan-name-input"  />
+            </div>
+            <div class="buttons">
+
+                <button  matStepperPrevious>Back</button>
+                <button  id="submit-button" matStepperNext>
+                    Next
+                </button>
+            </div>
+         
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel></ng-template>
+        
+            <div class="form-box">
+              <label for="plan-name-input"> Vendor Name *</label>
+              <input type="text" id="plan-name-input" />
+            </div>
+          
+            <div class="form-box">
+              <label for="plan-name-input"> Vendor ID*</label>
+              <input type="text" id="plan-name-input" />
+            </div>
+            <div class="form-box">
+              <label for="plan-name-input"> Vendor *</label>
+              <input type="email" id="plan-name-input" />
+            </div>
+            <div class="form-box">
+              <label for="plan-name-input">  Price *</label>
+              <input type="text" id="plan-name-input"  />
+            </div>
+          
+            <div class="buttons">
+
+                <button  id="submit-button" matStepperNext>
+                    Add Product
+                </button>
+            </div>
+         
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>
