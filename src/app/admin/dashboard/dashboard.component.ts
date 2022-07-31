@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
- import { Chart, registerables } from 'chart.js';
+import { Chart, registerables } from 'chart.js';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -82,21 +82,113 @@ export class DashboardComponent implements OnInit {
   ]
   features = [
     {
-      feature_Name:'Add Product'
+      feature_Name: 'Add Product'
     },
     {
-      feature_Name:'Add Vendor'
+      feature_Name: 'Add Vendor'
     },
     {
-      feature_Name:'Category'
+      feature_Name: 'Category'
     },
     {
-      feature_Name:'Add Vendor'
+      feature_Name: 'Add Vendor'
+    },
+  ]
+  mobile_widgets = [
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
+    },
+    {
+      product_Name: 'Product',
+      product_Id: '12345678912',
+      product_price: '₹30,000',
+      sold: 14,
+      return: 14,
+      material: 'Diamond',
+      weight: '5.56 grams',
+      src: 'assets/2.jpeg',
     },
   ]
   constructor() {
     Chart.register(...registerables);
-   }
+  }
 
 
   ngOnInit(): void {
@@ -114,7 +206,7 @@ export class DashboardComponent implements OnInit {
             'April',
             'May',
             'June',
-        
+
           ],
           datasets: [
             {
@@ -123,7 +215,7 @@ export class DashboardComponent implements OnInit {
               borderColor: '#E88F9F',
               tension: 0.2,
             },
-           
+
           ],
         },
       });
@@ -134,7 +226,7 @@ export class DashboardComponent implements OnInit {
     if (lineChart) {
       const Charts = new Chart(doughnutChart, {
         type: 'doughnut',
-        data:{
+        data: {
           labels: [
             'Necklace',
             'Rings',
@@ -145,7 +237,7 @@ export class DashboardComponent implements OnInit {
           ],
           datasets: [{
             label: 'My First Dataset',
-            data: [30, 50, 10,20,30,40],
+            data: [30, 50, 10, 20, 30, 40],
             backgroundColor: [
               '#E88F9F',
               '#27B9E7',
@@ -159,16 +251,16 @@ export class DashboardComponent implements OnInit {
         },
         options: {
           maintainAspectRatio: false,
-        
-        scales: {
+
+          scales: {
             y: {
-                display: false // Hide Y axis labels
+              display: false // Hide Y axis labels
             },
             x: {
-                display: false // Hide X axis labels
+              display: false // Hide X axis labels
             }
-        }   
-      }
+          }
+        }
       });
     }
   }
