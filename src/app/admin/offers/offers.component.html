@@ -92,42 +92,50 @@
   </table>
 </div>
 
-<div id="add-offers-modal" uk-modal>
+
+
+  <div id="add-offers-modal" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
       <div class="modal_header">
-        <h2>Add offers</h2>
+        <h2>Create your offer here</h2>
       </div>
   
       <mat-stepper>
         <mat-step>
           <ng-template matStepLabel></ng-template>
-          
+          <b style="font-size: 1.3rem; margin:1rem 0;">Fill Details</b>
               <div class="form-box">
-                <label for="plan-name-input"> Name  *</label>
-                <input type="text" id="plan-name-input" />
+                <label for="plan-name-input"> Offer Name</label>
+                <input type="text" id="plan-name-input"  class="number" />
               </div>
             
               <div class="form-box">
-                <label for="plan-name-input"> offers Description *</label>
-                <input type="text" id="plan-name-input" />
+                <label for="plan-name-input"> Offer Type</label>
+                <div class="buttons" >
+                  <button class="select"> FLAT CUT</button>
+                  <button class="">PERCENT CUT</button>
+
+                </div>
               </div>
               <div class="form-box">
-                <label for="plan-name-input"> Short Description *</label>
-                <input type="email" id="plan-name-input" />
+                <label for="plan-name-input">Offer Usage Period</label>
+                <div class="buttons" >
+                  <button class=""> SINGLE TIME</button>
+                  <button class="">FINITE TIME</button>
+                  <button class="">INFINITE TIME</button>
+                </div>
               </div>
-        
+         
               <div class="form-box">
-                <label for="plan-name-input"> SEO Description *   </label>
-                <input type="text" id="plan-name-input"  />
+                <label for="plan-name-input">Offer Cost  </label>
+                <input type="text" id="plan-name-input"  class="number" />
               </div>
-              <div class="form-box">
-                <label for="plan-name-input"> Display Price *</label>
-                <input type="text" id="plan-name-input"  />
-              </div>
+           
+            
               <div class="buttons">
   
                   <button  id="submit-button" matStepperNext>
-                   Next
+                   Next <i class="fa-solid fa-angle-right"></i>
                   </button>
               </div>
            
@@ -136,64 +144,47 @@
        
         <mat-step>
           <ng-template matStepLabel></ng-template>
-          
-              <div class="form-box">
-                <label for="plan-name-input">offers base weight *</label>
-                <input type="text" id="plan-name-input" />
-              </div>
+         
             
               <div class="form-box">
-                <label for="plan-name-input"> offers Purity*</label>
-                <input type="text" id="plan-name-input" />
+                <label for="plan-name-input"> Offer Code </label>
+                <input type="text" id="plan-name-input"  class="number" />
               </div>
               <div class="form-box">
-                <label for="plan-name-input"> offers Colour*</label>
-                <input type="email" id="plan-name-input" />
+                <label for="plan-name-input"> Maximum price in INR</label>
+                  <input type="number" id="plan-name-input"  class="number" />
               </div>
         
               <div class="form-box">
-                <label for="plan-name-input"> offers Metal</label>
-                <input type="text" id="plan-name-input"  />
+                <label for="plan-name-input"> Minimum Products</label>
+                <input type="number" id="plan-name-input"  class="number" />
+
+              </div>
+              <div class="form-box">
+                <label for="plan-name-input"> Maximum Discount</label>
+                <input type="number" id="plan-name-input"  class="number" />
+
+              </div>
+              <div class="form-box">
+                <label for="plan-name-input">Minimum Products</label>
+               <select name="" id="">
+                <option value="">Earings</option>
+                <option value="">Ring</option>
+               </select>
+
               </div>
               <div class="buttons">
   
-                  <button  matStepperPrevious>Back</button>
+                  <button  matStepperPrevious>
+                     <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem;"> </i>Back
+                  </button>
                   <button  id="submit-button" matStepperNext>
-                      Next
+                    Add +
                   </button>
               </div>
            
         </mat-step>
-        <mat-step>
-          <ng-template matStepLabel></ng-template>
-          
-              <div class="form-box">
-                <label for="plan-name-input"> Vendor Name *</label>
-                <input type="text" id="plan-name-input" />
-              </div>
-            
-              <div class="form-box">
-                <label for="plan-name-input"> Vendor ID*</label>
-                <input type="text" id="plan-name-input" />
-              </div>
-              <div class="form-box">
-                <label for="plan-name-input"> Vendor *</label>
-                <input type="email" id="plan-name-input" />
-              </div>
-              <div class="form-box">
-                <label for="plan-name-input">  Price *</label>
-                <input type="text" id="plan-name-input"  />
-              </div>
-            
-              <div class="buttons">
-                <button  matStepperPrevious>Back</button>
-                  <button  id="submit-button" matStepperNext>
-                      Add offers
-                  </button>
-              </div>
-           
-        </mat-step>
+       
       </mat-stepper>
     </div>
   </div>
-  

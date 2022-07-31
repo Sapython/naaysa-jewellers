@@ -38,6 +38,25 @@
               margin-right: 5px;
             }
         }
+        .uk-dropdown{
+          margin: 0.4rem 0;
+          padding: 0;
+          width: 10rem;
+          ul{
+            
+            li{
+              margin: 0.4rem 0;
+              padding: 0.2rem;
+              color: #5c5c5c;
+            &:hover{
+              color: #fff;
+              background-color: var(--color-secondary-darker);
+            }
+            }
+            
+          }
+        }
+       
     }
   }
   .uk-margin{

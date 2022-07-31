@@ -1,5 +1,5 @@
 <app-header title="Products"></app-header>
-<div class="main-card">
+<div class="main-card" *ngIf="card">
 
   <div class="section1">
     <div class="sec1">
@@ -45,6 +45,116 @@
   
 </div>
 
+
+ <div id="table_view"  *ngIf="!card">
+ 
+    <table>
+      <tr>
+        <th style="width: 13%">Sales</th>
+        <th style="width: 27%">Name & Description</th>
+        <th style="width: 30%">Customizable Options   </th>
+        <th style="width: 15%">Reviews</th>
+        <th style="width: 15%">Action</th>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="../../../../assets/jewel3.png"
+            alt=""
+            
+          />
+        </td>
+        <td class="name_description">
+          <h3 style="color: rgb(51, 232, 51);">₹ 5,00,000</h3>
+          <b>Movable Round Gold Necklace</b>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, autem?</p>
+        </td>
+        <td class="customize">
+        <h4><b>Metal :</b>    10K, 14K, 18K, 22K and 24K. </h4>
+        <h4><b>Weight : </b>    2 grams,4 grams </h4>
+        <h4><b> Color :</b>   Yellow,White </h4>
+        <h4><b>  size :</b> 4,6,7,8,10,11 </h4>
+        </td>
+        <td class="ratings">
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </td>
+        <td class="actions">
+          <button style="background-color: #5C5C5C;"><i class="fa-solid fa-circle-xmark"></i>Disable</button>
+          <button style="background-color: #E88F9F;"><i class="ri-delete-bin-3-line"></i> Delete  </button>
+          <button style="background-color: #FFD5DC;"><i class="ri-edit-fill"></i>Edit</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="../../../../assets/jewel3.png"
+            alt=""
+            
+          />
+        </td>
+        <td class="name_description">
+          <h3 style="color: rgb(51, 232, 51);">₹ 5,00,000</h3>
+          <b>Movable Round Gold Necklace</b>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, autem?</p>
+        </td>
+        <td class="customize">
+        <h4><b>Metal :</b>    10K, 14K, 18K, 22K and 24K. </h4>
+        <h4><b>Weight : </b>    2 grams,4 grams </h4>
+        <h4><b> Color :</b>   Yellow,White </h4>
+        <h4><b>  size :</b> 4,6,7,8,10,11 </h4>
+        </td>
+        <td class="ratings">
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </td>
+        <td class="actions">
+          <button style="background-color: #5C5C5C;"><i class="fa-solid fa-circle-xmark"></i>Disable</button>
+          <button style="background-color: #E88F9F;"><i class="ri-delete-bin-3-line"></i> Delete  </button>
+          <button style="background-color: #FFD5DC;"><i class="ri-edit-fill"></i>Edit</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="../../../../assets/jewel3.png"
+            alt=""
+            
+          />
+        </td>
+        <td class="name_description">
+          <h3 style="color: rgb(51, 232, 51);">₹ 5,00,000</h3>
+          <b>Movable Round Gold Necklace</b>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, autem?</p>
+        </td>
+        <td class="customize">
+        <h4><b>Metal :</b>    10K, 14K, 18K, 22K and 24K. </h4>
+        <h4><b>Weight : </b>    2 grams,4 grams </h4>
+        <h4><b> Color :</b>   Yellow,White </h4>
+        <h4><b>  size :</b> 4,6,7,8,10,11 </h4>
+        </td>
+        <td class="ratings">
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill active"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+        </td>
+        <td class="actions">
+          <button style="background-color: #5C5C5C;"><i class="fa-solid fa-circle-xmark"></i>Disable</button>
+          <button style="background-color: #E88F9F;"><i class="ri-delete-bin-3-line"></i> Delete  </button>
+          <button style="background-color: #FFD5DC;"><i class="ri-edit-fill"></i>Edit</button>
+        </td>
+      </tr>
+      
+    </table>
+</div> 
 <div id="add-product-modal" uk-modal>
   <div class="uk-modal-dialog uk-modal-body">
     <div class="modal_header">
@@ -80,7 +190,7 @@
             <div class="buttons">
 
                 <button  id="submit-button" matStepperNext>
-                 Next
+                 Next <i class="fa-solid fa-angle-right"></i>
                 </button>
             </div>
          
@@ -92,27 +202,47 @@
         
             <div class="form-box">
               <label for="plan-name-input">Product base weight *</label>
-              <input type="text" id="plan-name-input" />
+              <input  type="number" id="plan-name-input "  class="number"/>
             </div>
           
             <div class="form-box">
               <label for="plan-name-input"> Product Purity*</label>
-              <input type="text" id="plan-name-input" />
+              <select name="" id=""  class="number">
+              
+                <option value="">90%</option>
+                <option value="">70%</option>
+                <option value="">40%</option>
+                <option value="">10%</option>
+              </select>
             </div>
             <div class="form-box">
               <label for="plan-name-input"> Product Colour*</label>
-              <input type="email" id="plan-name-input" />
+              <select name="" id=""  class="number">
+              
+                <option value="">Golden</option>
+                <option value="">Pink</option>
+                <option value="">Ruby</option>
+                <option value="">Silver</option>
+              </select>
             </div>
       
             <div class="form-box">
               <label for="plan-name-input"> Product Metal</label>
-              <input type="text" id="plan-name-input"  />
+              <select name="" id=""  class="number">
+              
+                <option value="">Golden</option>
+                <option value="">Silver</option>
+                <option value="">Diamond</option>
+                <option value="">Platinum</option>
+              </select>
             </div>
             <div class="buttons">
 
-                <button  matStepperPrevious>Back</button>
+                <button  matStepperPrevious>
+                   <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem;"> </i>Back
+                </button>
                 <button  id="submit-button" matStepperNext>
-                    Next
+                  Next <i class="fa-solid fa-angle-right"></i>
                 </button>
             </div>
          
@@ -122,7 +252,13 @@
         
             <div class="form-box">
               <label for="plan-name-input"> Vendor Name *</label>
-              <input type="text" id="plan-name-input" />
+              <select name="" id=""  class="number">
+              
+                <option value="">Mohon Seth</option>
+                <option value="">Pablo escort</option>
+                <option value="">Mark </option>
+                <option value="">Petter Griffins</option>
+              </select>
             </div>
           
             <div class="form-box">
@@ -135,13 +271,15 @@
             </div>
             <div class="form-box">
               <label for="plan-name-input">  Price *</label>
-              <input type="text" id="plan-name-input"  />
+              <input  type="number" id="plan-name-input "  class="number"/>
             </div>
           
             <div class="buttons">
-                <button  matStepperPrevious>Back</button>
+              <button  matStepperPrevious>
+                <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem;"> </i>Back
+             </button>
                 <button  id="submit-button" matStepperNext>
-                    Add Product
+                    Add + 
                 </button>
             </div>
          

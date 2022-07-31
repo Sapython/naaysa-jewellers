@@ -49,12 +49,30 @@
         }
     }
 }
-.uk-flex{
+.charts{
     justify-content: space-between;
     align-items: center;
-    .image{
-        padding: 15px;
-        margin: 15px 0px;
+    min-height: 25rem;
+    height: fit-content;
+    width: 98%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+box-sizing: border-box;
+    .chart{
+        box-sizing: border-box;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;        width: 50%;
+        min-width: 30rem;
+        height: 100%;
+        width: 48%;
+        canvas{
+            height: 100%;
+            width: 100%;
+        }
+        
+       
     }
 }
 .boxes {

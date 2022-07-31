@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
- import { Chart } from 'chart.js';
 
+ import { Chart, registerables } from 'chart.js';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -94,10 +94,83 @@ export class DashboardComponent implements OnInit {
       feature_Name:'Add Vendor'
     },
   ]
-  constructor() { }
+  constructor() {
+    Chart.register(...registerables);
+   }
 
 
   ngOnInit(): void {
+    const lineChart = document.getElementById(
+      'line'
+    ) as HTMLCanvasElement;
+    if (lineChart) {
+      const Charts = new Chart(lineChart, {
+        type: 'line',
+        data: {
+          labels: [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+        
+          ],
+          datasets: [
+            {
+              label: '',
+              data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
+              borderColor: '#E88F9F',
+              tension: 0.2,
+            },
+           
+          ],
+        },
+      });
+    }
+    const doughnutChart = document.getElementById(
+      'doughnut'
+    ) as HTMLCanvasElement;
+    if (lineChart) {
+      const Charts = new Chart(doughnutChart, {
+        type: 'doughnut',
+        data:{
+          labels: [
+            'Necklace',
+            'Rings',
+            'Earings',
+            'Bracelets',
+            'Ornaments',
+            'Utensils'
+          ],
+          datasets: [{
+            label: 'My First Dataset',
+            data: [30, 50, 10,20,30,40],
+            backgroundColor: [
+              '#E88F9F',
+              '#27B9E7',
+              '#FFAA5B',
+              '#00D35A',
+              '#FB889C',
+              '#FFD56A',
+            ],
+            hoverOffset: 4
+          }]
+        },
+        options: {
+          maintainAspectRatio: false,
+        
+        scales: {
+            y: {
+                display: false // Hide Y axis labels
+            },
+            x: {
+                display: false // Hide X axis labels
+            }
+        }   
+      }
+      });
+    }
   }
 
 }
