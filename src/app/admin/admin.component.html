@@ -47,6 +47,16 @@
           </li>
           <li class="sidebar-li">
             <a
+              routerLink="/admin/users"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              ><i class="fa-solid fa-user"></i>
+              <span class="sidebar-text">Users</span></a
+            >
+          </li>
+          <li class="sidebar-li">
+            <a
               routerLink="/admin/products"
               routerLinkActive="active"
               (click)="toggleSidebar()"

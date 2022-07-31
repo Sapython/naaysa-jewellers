@@ -1,104 +1,151 @@
-<h2 class="heading">Users</h2>
-
-<div class="search-bar">
-  <input type="text" class="input" />
-  <div class="search-btn">
-    <button>Search</button>
-  </div>
+<div class="container">
+    <div class="header">
+        <div class="para">
+            <p id="heading">Users</p>
+        </div>
+        <div class="links">
+            <button><i class="fa-solid fa-tags"></i>Manage Products</button>
+            <button uk-toggle="target: #add-product-modal"><i class="fa-solid fa-square-plus"></i>Add Products</button>
+            <button><i class="fa-solid fa-toggle-on"></i>Pretty View</button>
+        </div>
+    </div>
+    <div class="uk-margin">
+        <form class="uk-search uk-search-default">
+            <span class="uk-search-icon-flip" uk-search-icon></span>
+            <input class="uk-search-input" type="search" placeholder="Search">
+        </form>
+        <i class="fa-solid fa-bell" id="bell"></i>
+    </div>
 </div>
-
 <mat-tab-group>
-  <mat-tab label="users"> Customers </mat-tab>
-  <mat-tab label="10+1 Users"> 10+1 Users </mat-tab>
+    <mat-tab label="Users">
+        <div class="parent-container">
+            <div class="chart">
+                <img src="assets/chart4.png" alt="">
+            </div>
+            <div class="boxes">
+                <div class="scores">
+                    <div class="points">
+                        <p class="numbers">{{tenplusone_Users}}</p>
+                        <p>Orders</p>
+                    </div>
+                    <p class="more">See more</p>
+                </div>
+                <div class="scores">
+                    <div class="points">
+                        <p class="numbers">{{total_Users}}</p>
+                        <p>Orders</p>
+                    </div>
+                    <p class="more">See more</p>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="heading">
+                <p>All Users</p>
+            </div>
+            <table>
+                <tr>
+                    <th width="10%">Id</th>
+                    <th width="20%">Name</th>
+                    <th width="10%">Email</th>
+                    <th width="10%">No. of<br>Purchase</th>
+                    <th width="10%">Join<br>Date</th>
+                    <th width="10%">End<br>Date</th>
+                    <th width="10%">Total<br>Value</th>
+                    <th width="10%">Monthly<br>Recieved</th>
+                    <th width="10%">Available<br>Options</th>
+                </tr>
+                <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>
+                        <div class="profile">
+                            <img src="{{user.image}}" alt="">
+                            <div class="details">
+                                <p>{{user.name}}</p>
+                                <p>{{user.last_Name}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><p>{{user.emailId}}</p></td>
+                    <td id="purchase"><p>{{user.purchase}}</p></td>
+                    <td><p class="uk-alert-danger">{{user.dateJoin}}</p></td>
+                    <td><p>{{user.dateExp}}</p></td>
+                    <td><p class="uk-alert-success">{{user.totalvalue}}</p></td>
+                    <td><p class="uk-alert-warning">{{user.monthlyrecieved}}</p></td>
+                    <td class="icons">
+                        <p><i class="fa-solid fa-user-pen"></i></p>
+                        <p><i class="fa-solid fa-user-xmark"></i></p>
+                        <p><i class="fa-solid fa-user"></i></p>
+                        <p><i class="fa-solid fa-phone"></i></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </mat-tab>
+    <mat-tab label="10+1 User">
+        <div class="parent-container">
+            <div class="chart">
+                <img src="assets/chart4.png" alt="">
+            </div>
+            <div class="boxes">
+                <div class="scores">
+                    <div class="points">
+                        <p class="numbers">{{tenplusone_Users}}</p>
+                        <p>Orders</p>
+                    </div>
+                    <p class="more">See more</p>
+                </div>
+                <div class="scores">
+                    <div class="points">
+                        <p class="numbers">{{total_Users}}</p>
+                        <p>Orders</p>
+                    </div>
+                    <p class="more">See more</p>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="heading">
+                <p>All Users</p>
+            </div>
+            <table>
+                <tr>
+                    <th width="10%">Id</th>
+                    <th width="20%">Name</th>
+                    <th width="10%">Email</th>
+                    <th width="10%">No. of<br>Purchase</th>
+                    <th width="10%">Join<br>Date</th>
+                    <th width="10%">End<br>Date</th>
+                    <th width="10%">Total<br>Value</th>
+                    <th width="10%">Monthly<br>Recieved</th>
+                    <th width="10%">Available<br>Options</th>
+                </tr>
+                <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>
+                        <div class="profile">
+                            <img src="{{user.image}}" alt="">
+                            <div class="details">
+                                <p>{{user.name}}</p>
+                                <p>{{user.last_Name}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><p>{{user.emailId}}</p></td>
+                    <td id="purchase"><p>{{user.purchase}}</p></td>
+                    <td><p class="uk-alert-danger">{{user.dateJoin}}</p></td>
+                    <td><p>{{user.dateExp}}</p></td>
+                    <td><p class="uk-alert-success">{{user.totalvalue}}</p></td>
+                    <td><p class="uk-alert-warning">{{user.monthlyrecieved}}</p></td>
+                    <td class="icons">
+                        <p><i class="fa-solid fa-user-pen"></i></p>
+                        <p><i class="fa-solid fa-user-xmark"></i></p>
+                        <p><i class="fa-solid fa-user"></i></p>
+                        <p><i class="fa-solid fa-phone"></i></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </mat-tab>
 </mat-tab-group>
-
-<div class="section">
-  <label>View By:</label>
-  <select class="opt">
-    <option>Year</option>
-    <option>2022</option>
-    <option>2021</option>
-    <option>2020</option>
-    <option>2019</option>
-  </select>
-</div>
-
-<div class="section1">
-  <div class="left">
-    <div class="chart"></div>
-  </div>
-
-  <div class="right">
-    <div class="box">
-      <span class="num">{{ totalUsers }}</span>
-      <span class="text"> See More</span>
-      <p>Total</p>
-      <p>User</p>
-    </div>
-    <div class="box">
-      <span class="num">{{ newUsers }}</span>
-      <span class="text"> See More</span>
-      <p>New</p>
-      <p>User</p>
-    </div>
-  </div>
-</div>
-
-<div class="section2">
-  <div class="head">
-    <h4>All Users</h4>
-  </div>
-
-  <table>
-    <tr *ngFor="let user of users">
-      <td>
-        {{ user.id }}
-      </td>
-      <td>
-        <div class="img">
-          <img src="/assets/profile 142.jpg" alt="" />
-          {{ user.pic }}
-        </div>
-      </td>
-      <td>
-        {{ user.emailId }}
-      </td>
-      <td>
-        <div class="amnt">
-          {{ user.amount }}
-        </div>
-      </td>
-      <td>
-        {{ user.dateJoin }}
-      </td>
-      <td>
-        {{ user.dateExp }}
-      </td>
-      <td>
-        {{ user.payment }}
-      </td>
-      <td>
-        {{ user.amnt }}
-      </td>
-      <td>
-        <div class="icons">
-          <i class="fa-solid fa-phone icon"></i>
-          <i class="fa-solid fa-user-pen icon"></i>
-          <i class="fa-solid fa-user-lock icon"></i>
-          <i class="fa-solid fa-user-slash icon"></i>
-          <i class="fa-solid fa-user-slash icon"></i>
-          {{ user.icon }}
-        </div>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div class="section3">
-  <button>View All</button>
-</div>
-
-<!-- <input type="text" *ngIf="editmode">
-<p *ngIf="!editmode">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, modi!</p>
-
-<button (click)="editmode=!editmode">{{editmode ? "Update": "Edit"}}</button> -->

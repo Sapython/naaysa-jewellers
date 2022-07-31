@@ -48,17 +48,20 @@
         background-color: var(--color-secondary-light);
         height: 20%;
         margin: auto;
-        font-weight: 500;
-        color: black;
+        font-weight: 400;
+        color: rgb(65, 65, 65);
         padding: 0.1rem 0.2rem;
         font-size: var(--xxsmall);
         border-radius: 0.4rem;
       }
     }
+    th{
+      font-size: var(--msmall);
+    }
     .review {
       font-size: 0.8rem;
-      font-weight: 600;
-      color:black;
+      font-weight: 450;
+      color:rgb(65, 65, 65);
       text-align: start;
 
     }
