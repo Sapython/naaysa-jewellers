@@ -2,7 +2,7 @@
     background-color: #FFF2F5;
     padding: 15px;
     border-radius: 15px;
-    width: fit-content;
+    width: auto;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -26,12 +26,26 @@
         display: block;
         margin: auto;
         margin-top: 15px;
-        width: fit-content;
-        font-size: var(--xsmall);
+        font-size: var(--xxsmall);
         cursor: pointer;
         transition: 0.5s;
         &:hover{
             transform: scale(1.2);
+        }
+    }
+}
+@media only screen and (max-width: 600px){
+    .container{
+        .details{
+            p{
+
+                font-size: var(--xxxsmall);
+            }
+        }
+        
+        #view{
+            font-size: var(--xxxsmall);
+            border-radius: 10px;
         }
     }
 }

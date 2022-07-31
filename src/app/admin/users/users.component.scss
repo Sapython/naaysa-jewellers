@@ -1,99 +1,115 @@
-.container{
+.container {
   margin-right: 15px;
-  #heading{
+
+  #heading {
     color: var(--color-secondary-dark);
     font-size: var(--medium);
-    font-weight: 500; 
+    font-weight: 500;
     margin-left: 10px;
   }
-  .header{
+
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    .links{
-        background-color: var(--color-secondary-dark);
-        padding: 0px 15px;
-        border-radius: 10px;
-        i{
-            margin-right: 10px;
-        }
-        button{
-            background-color: var(--color-secondary-darker);
-            color: #fff;
-            font-weight: 500;
-            border: none;
-            padding: 5px 10px;
-            margin: 5px 0px;
-            margin-left: 5px;
-            border-radius: 5px;
-            transition: .3s;
-            cursor: pointer;
-            &:hover{
-              transform: scale(1.1);
-            }
-            i{
-              margin-right: 5px;
-            }
-        }
-    }
-  }
-  .uk-margin{
-    display: flex;
-    align-items: center;
-    span{
-        color: var(--color-secondary-darker);
-    }
-    input{
-        border: 2px solid var(--color-secondary-darker);
-        border-radius: 10px;
-        color: var(--color-secondary-darker);
-        margin-left: 10px;
-    }
-    #bell{
-        font-size: var(--medium);
-        color: var(--color-secondary-darker);
-        margin-left: 25px;
-        cursor: pointer;
-    }
-    #edit{
+
+    .links {
+      background-color: var(--color-secondary-dark);
+      padding: 0px 15px;
+      border-radius: 10px;
+
+      i {
+        margin-right: 10px;
+      }
+
+      button {
         background-color: var(--color-secondary-darker);
         color: #fff;
+        font-weight: 500;
         border: none;
-        border-radius: 10px;
-        padding: 5px 15px;
-        margin: 0px 15px;
-        display: flex;
-        align-items: center;
-        i{
-            font-size: var(--msmall);
-            margin-left: 5px;
+        padding: 5px 10px;
+        margin: 5px 0px;
+        margin-left: 5px;
+        border-radius: 5px;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
         }
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .uk-margin {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: var(--color-secondary-darker);
+    }
+
+    input {
+      border: 2px solid var(--color-secondary-darker);
+      border-radius: 10px;
+      color: var(--color-secondary-darker);
+      margin-left: 10px;
+    }
+
+    #bell {
+      font-size: var(--medium);
+      color: var(--color-secondary-darker);
+      margin-left: 25px;
+      cursor: pointer;
+    }
+
+    #edit {
+      background-color: var(--color-secondary-darker);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 5px 15px;
+      margin: 0px 15px;
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: var(--msmall);
+        margin-left: 5px;
+      }
     }
   }
 }
-.parent-container{
+
+.parent-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  .chart{
+
+  .chart {
     width: 70%;
     box-shadow: var(--normal-shadow);
     background-color: #fff;
     padding: 15px;
     border-radius: 15px;
   }
-  .boxes {
-  width: 25%;
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  flex-direction: column;
 
-  .scores {
+  .boxes {
+    width: 25%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+
+    .scores {
       display: flex;
       justify-content: space-between;
       background: linear-gradient(180.08deg, #F894A4 0.14%, #F9D1B7 94.34%);
@@ -104,24 +120,28 @@
       padding-top: 10px;
       padding-left: 15px;
       margin-bottom: 15px;
-      p{
-          font-size: var(--xxsmall);
-          margin-top: 10px;
+
+      p {
+        font-size: var(--xxsmall);
+        margin-top: 10px;
       }
-      .numbers{
-          font-size: var(--large);
+
+      .numbers {
+        font-size: var(--large);
       }
-      .more{
+
+      .more {
         margin-left: 15px;
         margin-top: 0px;
       }
 
-  }
+    }
 
+  }
 }
-}
-.table{
-  .heading{
+
+.table {
+  .heading {
     background-color: #FF9292;
     color: #fff;
     font-size: var(--small);
@@ -130,21 +150,25 @@
     border-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    p{
+
+    p {
       margin-top: 5px;
       margin-left: 15px;
     }
   }
+
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     border-radius: 5px;
   }
-  .profile{
+
+  .profile {
     display: flex;
     align-items: center;
-    img{
+
+    img {
       width: 45px;
       height: 45px;
       border-radius: 50%;
@@ -152,23 +176,28 @@
       margin-right: 15px;
       margin-top: -5px;
     }
-    p{
+
+    p {
       margin-top: 5px;
       line-height: 10px;
       font-weight: 450;
     }
   }
-  td, th {
+
+  td,
+  th {
     border: 1px solid #FF9292;
     text-align: left;
     padding: 8px;
   }
-  .icons{
+
+  .icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 18px;
-    p{
+
+    p {
       cursor: pointer;
       background-color: #FF9292;
       color: #fff;
@@ -176,19 +205,50 @@
       border-radius: 2px;
       margin-right: 2px;
       transition: .3s;
-      &:hover{
+
+      &:hover {
         transform: scale(1.1);
       }
     }
   }
-  #purchase{
-    p{
+
+  #purchase {
+    p {
       text-align: center;
       padding: 3px 3px;
       border-radius: 10px;
       background-color: #D1E6EF;
       color: #3C95BC;
       border: 1px solid #3C95BC;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .parent-container {
+    flex-direction: column;
+    .chart{
+      width: 96%;
+    }
+    .boxes{
+      width: 96%;
+      flex-direction: row;
+      padding: 10px;
+      .scores{
+        width: 48%;
+        margin-right: 15px;
+        border-radius: 10px;
+        padding: 10px 35px;
+        padding-left: 15px;
+        .numbers{
+          font-size: var(--small);
+          margin-top: 10px;
+        }
+        .more{
+          font-size: var(--xxxsmall);
+          cursor: pointer;
+        }
+      }
     }
   }
 }

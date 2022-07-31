@@ -75,3 +75,13 @@
         grid-template: auto / auto auto auto; 
     }
 }
+@media only screen and (max-width: 600px){
+    .container{
+        margin-right: 0;
+        .widgets{
+            display: grid;
+            grid-template: auto / auto auto;
+            grid-gap: 15px;
+        }
+    }
+}
