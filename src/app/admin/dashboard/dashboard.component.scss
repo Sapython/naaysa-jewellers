@@ -95,7 +95,6 @@
 
 
 .section1{
-    width: 70%;
     margin-top: 35px;
     // .product-sales{
         .heading{
@@ -147,9 +146,10 @@
                 background-color: #FFD5D5;
                 p{
                     display: block;
-                    // margin: auto;
+                    margin: auto;
                     text-align: center;
                     color: var(--color-secondary-darker);
+                    font-size: var(--xxsmall);
                 }
               }
               .quanity{
@@ -157,23 +157,29 @@
                 border: 2px solid #3E94E0;
                 p{
                     color: #3E94E0;
+                    font-size: var(--xxsmall);
                 }
               }
               .price{
                 color: #00B986;
-                font-size: var(--msmall);
+                font-size: var(--xsmall);
               }
               .sold{
                 color: #FF8F73;
-                font-size: var(--msmall);
+                font-size: var(--xsmall);
               }
               .more{
                 border: none;
                 background-color: var(--color-secondary-dark);
                 color:#fff;
-                font-size: var(--msmall);
+                font-size: var(--xsmall);
                 padding: 3px 7px;
                 border-radius: 5px;
+                transition: .3s;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.1);
+                }
               }
         }
     // }
