@@ -1,3 +1,4 @@
+import { WidgetsModule } from 'src/app/widgets/widgets.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +14,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    WidgetsModule
   ]
 })
 export class DashboardModule { }

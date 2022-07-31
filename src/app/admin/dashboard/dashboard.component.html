@@ -16,48 +16,51 @@
     ></i>
   </div>
 </div>
-
+<div class="mobile-view">
+  <button><img src="assets/icons/add-product.png" alt=""> Add<br>Product</button>
+  <button><img src="assets/icons/add-user.png" alt=""> Add<br>User</button>
+  <button><img src="assets/icons/add-cate.png" alt="">  Add<br>Category</button>
+  <button><img src="assets/icons/offer.png" alt="">  Add<br>Offer</button>
+</div>
 <div class="boxes">
   <div class="scores">
     <div class="points">
       <p class="numbers">{{ orders }}</p>
       <p>Orders</p>
     </div>
-    <p>See more</p>
+    <p id="martt">See more</p>
   </div>
   <div class="scores">
     <div class="points">
       <p class="numbers">{{ orders }}</p>
       <p>Orders</p>
     </div>
-    <p>See more</p>
+    <p id="martt">See more</p>
   </div>
   <div class="scores">
     <div class="points">
       <p class="numbers">{{ orders }}</p>
       <p>Orders</p>
     </div>
-    <p>See more</p>
+    <p id="martt">See more</p>
   </div>
   <div class="scores">
     <div class="points">
       <p class="numbers">{{ orders }}</p>
       <p>Orders</p>
     </div>
-    <p>See more</p>
+    <p id="martt">See more</p>
   </div>
 </div>
 <div class="charts">
   <div class="chart">
-    
     <canvas id="line" ></canvas>
   </div>
   <div class="chart">
     <canvas id="doughnut" style="height:275px;width:200px" ></canvas>
   </div>
 </div>
-<div class="container">
-  <div class="section1">
+<div class="section1">
     <div class="table">
       <div class="heading">
         <p>Product Sales</p>
@@ -107,4 +110,17 @@
         </tr>
       </table>
     </div>
+</div>
+<div class="mobile-section">
+  <div class="heading">
+    <p>Product Sales</p>
   </div>
+  <app-admin-mobile-dashboard-widget *ngFor="let widget of mobile_widgets" [src]="widget.src" 
+  [material]="widget.material"
+  [product_Name]="widget.product_Name"
+  [product_Id]="widget.product_Id"
+  [product_price]="widget.product_price"
+  [sold]="widget.sold"
+  [return]="widget.return"
+  [weight]="widget.weight"></app-admin-mobile-dashboard-widget>
+</div>
