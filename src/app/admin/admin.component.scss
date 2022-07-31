@@ -31,7 +31,7 @@
   min-width: max(20vw, 270px);
   height: 100%;
   padding: 1em;
-  z-index: 1;
+  z-index: 9999;
 }
 
 @media (max-width: 1000px) {
@@ -127,22 +127,62 @@ main {
   overflow-y: auto;
   position: relative;
   width: 100%;
-  padding: 1em;
   background-color: var(--color-light);
+  .content{
+    padding: 1em;
+
+  }
+  header{
+    display: none;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    #toggle-button {
+      color: var(--color-tertiary);
+      min-height: unset;
+      margin: 0;
+    }
+    p{
+      font-family: var(--font-one);
+      font-size: var(--small);
+      margin: 0;
+      color: black;
+    }
+    .user{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-family: var(--font-one);
+      font-size: var(--medium);
+      color: var(--color-secondary);
+      gap:1rem;
+      img{
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 0.5em;
+      }
+    }
+  }
 }
 
-#toggle-button {
-  color: var(--color-tertiary);
-  min-height: unset;
-  margin: 1em 0.5em;
-}
 
 #overlay {
   width: var(--overlay-width);
   height: 100%;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary-lighter);
   opacity: 0.3;
   position: absolute;
   top: 0;
+  z-index: 9998;
   left: 0;
 }

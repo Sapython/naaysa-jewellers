@@ -11,7 +11,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LayoutsModule } from '../layouts/layouts.module';
-
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -26,7 +26,8 @@ import { LayoutsModule } from '../layouts/layouts.module';
     MatStepperModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    LayoutsModule
+    LayoutsModule,
+    MatTabsModule
   ]
 })
 export class ProductsModule { }

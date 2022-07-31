@@ -15,13 +15,15 @@ export class AdminComponent implements OnInit {
   constructor(private router: Router) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
-        // Update header heading
         const url = this.router.url;
         const urlArr = url.split('/');
         const panel = urlArr[urlArr.length - 1];
         const panelWords = panel.split('-');
         panelWords.forEach((word, index) => {
           panelWords[index] = word.charAt(0).toUpperCase() + word.substring(1);
+          console.log(panelWords);
+          this.currentPanel=panelWords.join(' ');
+          console.log(this.currentPanel);
         });
         this.currentPanel = panelWords.join(' ');
       }

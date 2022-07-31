@@ -110,14 +110,27 @@
     </div>
   </div>
   <main>
-    <button
-      *ngIf="!largeScreen"
-      class="uk-navbar-toggle"
-      uk-navbar-toggle-icon
-      id="toggle-button"
-      (click)="toggleSidebar()"
-    ></button>
-    <router-outlet></router-outlet>
+    <header>
+      <button
+        *ngIf="!largeScreen"
+        class="uk-navbar-toggle"
+        uk-navbar-toggle-icon
+        id="toggle-button"
+        (click)="toggleSidebar()"
+      ></button>
+
+      <p>
+       {{currentPanel}}
+      </p>
+      <div class="user">
+        <i class="ri-notification-2-fill"></i>
+        <img src="https://i.pravatar.cc/300" alt="">
+      </div>
+
+    </header>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
     <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
   </main>
 </div>
