@@ -48,7 +48,7 @@
   </div>
 </div>
 
-<div id="table_view" *ngIf="card">
+<div id="table_view" *ngIf="!card">
   <table>
     <tr>
       <th style="width: 13%">Sales</th>
@@ -172,6 +172,7 @@
   <div class="uk-modal-dialog uk-modal-body">
     <div class="modal_header">
       <h2>Add Product</h2>
+      <i class="ri-close-circle-line"   uk-toggle="target: #add-product-modal"></i>
     </div>
 
     <mat-stepper>
@@ -202,7 +203,7 @@
         </div>
         <div class="buttons">
           <button id="submit-button" matStepperNext>
-            Next <i class="fa-solid fa-angle-right"></i>
+            Next <i class="fa-solid fa-angle-right" ></i>
           </button>
         </div>
       </mat-step>
@@ -243,6 +244,22 @@
             <option value="">Platinum</option>
           </select>
         </div>
+        <div class="form-box">
+          <label for="plan-name-input"> Select Category*</label>
+          <select name="" id="" class="number">
+            <option value="">Bangles</option>
+            <option value="">Bracelets</option>
+            <option value="">Earrings</option>
+            <option value="">Gold Chains</option>
+            <option value="">Gold Coins</option>
+            <option value="">Kadas</option>
+            <option value="">Mangalsutras</option>
+            <option value="">Mangalsutra Bracelets</option>
+            <option value="">Mangalsutra Chains</option>
+            <option value="">Necklaces</option>
+            <option value="">Nose Pins</option>
+          </select>
+        </div>
         <div class="buttons">
           <button matStepperPrevious>
             <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i
@@ -278,28 +295,44 @@
           <label for="plan-name-input"> Price *</label>
           <input type="number" id="plan-name-input " class="number" />
         </div>
+        <div class="form-box">
+          <label for="plan-name-input"> Add Image/videos *</label>
+           <div class="images">
+            <div class="img">
+              <!-- <img src="https://via.placeholder.com/150" alt=""> -->
+              <i class="ri-add-line"></i>
+            </div>
+           </div>
+        </div>
 
         <div class="buttons">
           <button matStepperPrevious>
             <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i
             >Back
           </button>
-          <button id="submit-button" matStepperNext>Add +</button>
+          <button
+            id="submit-button"
+            matStepperNext
+            uk-toggle="target: #add-product-modal"
+          >
+            Add +
+          </button>
         </div>
       </mat-step>
     </mat-stepper>
   </div>
 </div>
-<button class="filter">
-  View By <i class="ri-arrow-down-s-line"></i>
+<button class="filter" uk-toggle="target: #add-product-modal">
+  Add Product <i class="ri-add-line"></i>
 </button>
+<button class="filter">View By <i class="ri-arrow-down-s-line"></i></button>
 <div uk-dropdown="mode: click">
   <ul>
-    <li >Recent</li>
-    <li >Yesterday</li>
-    <li >This Month</li>
-    <li >This Week</li>
-    <li ><input type="date"></li>
+    <li>Recent</li>
+    <li>Yesterday</li>
+    <li>This Month</li>
+    <li>This Week</li>
+    <li><input type="date" /></li>
   </ul>
 </div>
 
@@ -313,20 +346,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -334,8 +365,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>
@@ -348,20 +383,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -369,8 +402,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>
@@ -383,20 +420,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -404,8 +439,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>
@@ -418,20 +457,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -439,8 +476,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>
@@ -453,20 +494,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -474,8 +513,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>
@@ -488,20 +531,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -509,8 +550,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>
@@ -523,20 +568,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -544,8 +587,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>
@@ -558,20 +605,18 @@
         <i class="ri-star-fill"></i>
         <i class="ri-star-fill"></i>
       </div>
-
-     
     </div>
 
     <div class="product_img">
-      <img
-        src="../../../assets/jewel1.png"
-        alt=""
-      />
+      <img src="../../../assets/jewel1.png" alt="" />
     </div>
     <div class="product_description">
-      <span><p style="color: green;">₹ 5,00,000</p> <p style="color: #FF9292;">250 piece</p></span>
+      <span
+        ><p style="color: green">₹ 5,00,000</p>
+        <p style="color: #ff9292">250 piece</p></span
+      >
       <b>Movable Round Gold Necklace</b>
-      <hr>
+      <hr />
       <div class="appearance">
         <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
         <h4><b>Weight : </b> 2 grams,4 grams</h4>
@@ -579,8 +624,12 @@
         <h4><b> size :</b> 4,6,7,8,10,11</h4>
       </div>
       <div class="product_buttons">
-        <button class="add_to_cart" style="background-color: #5C5C5C;"><i class="ri-pencil-line"></i> Edit</button>
-        <button class="add_to_cart" style="background-color: #E88F9F;"><i class="ri-delete-bin-7-line"></i> Delete</button>
+        <button class="add_to_cart" style="background-color: #5c5c5c">
+          <i class="ri-pencil-line"></i> Edit
+        </button>
+        <button class="add_to_cart" style="background-color: #e88f9f">
+          <i class="ri-delete-bin-7-line"></i> Delete
+        </button>
       </div>
     </div>
   </div>

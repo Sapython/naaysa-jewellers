@@ -48,17 +48,34 @@
 }
 
 #add-product-modal {
+  @media (max-width: 768px) {
+
+    margin: 0;
+    padding: 0;
+  }
   .uk-modal-body {
     padding: 0;
     margin: auto;
     width: 45%;
     height: 80%;
     border-radius: 0.5rem;
+   
     .modal_header {
       border-radius: 0.5rem 0.5rem 0 0;
       width: 100%;
-      height: 2rem;
+      height: 3rem;
       background-color: #ff9292;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i{
+        position: fixed;
+        right: 1rem;
+        top: 0.5rem;
+        font-size: var(--medium);
+        color: white;
+      }
       h2 {
         color: white;
         padding: 0 2rem;
@@ -118,12 +135,88 @@
       .secondary-button {
         margin-top: 1em;
       }
+      .images{
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .img{
+height: 90%;
+width:4rem;
+border: 1px dashed grey;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 0.3rem;
+i{
+  font-size: 2rem;
+}
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      .modal_header {
+        border-radius:  0;
+        width: 100%;
+        height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        h2 {
+      
+          margin: 0;
+          font-size: var(--xsmall);
+        }
+      }
+      .form-box {
+        margin: 0.9em 0;
+  
+        label {
+          font-family: var(--font-one);
+          font-weight: 500;
+          font-size: var(--xsmall);
+          color: rgb(121, 121, 121);
+          
+          margin: 0.3rem 0;
+        }
+  
+        input,
+        select {
+          width: 100%;
+          margin: auto;
+          outline: none;
+          background-color: transparent;
+          color: var(--color-ten);
+          font-family: var(--font-one);
+          font-size: var(--xsmall);
+          padding: 0.3em;
+          border: none;
+          border-radius: 0.3rem;
+          border: 2px solid var(--color-secondary);
+          margin: 0.5rem 0;
+        }
+        .number {
+          margin-top: 0.5rem;
+          border: 1px solid #ff9292;
+          border-radius: 0.5rem;
+        }
+        .secondary-button {
+          margin-top: 1em;
+        }
+      }
     }
   }
 }
 
 #table_view {
   width: 100%;
+  @media (max-width: 768px) {
+display: none;
+  }
   table {
     margin-top: 10px;
     border-collapse: collapse;
@@ -207,6 +300,9 @@
     }
   }
 }
+
+
+
 
 .input {
   border: #ff9292 1px solid;
@@ -300,6 +396,7 @@
   cursor: pointer;
 }
 .filter{
+  cursor: pointer;
   display: flex;
   justify-content: space-around;
   width: 34%;
@@ -310,6 +407,11 @@
   border-radius: 0.4rem;
  color: white;
  align-items: center;
+ display: none;
+ @media (max-width: 768px) {
+  display: block;
+
+}
 }
 .uk-dropdown{
   margin: 0;
@@ -403,7 +505,7 @@
       }
       b {
         width: 100%;
-        font-size: 10px;
+          font-size: 0.5rem;
         margin: 0 0.2rem;
         font-weight: 400;
       }
@@ -414,7 +516,7 @@
         h4 {
           margin: 0;
           padding: 0;
-          font-size: 9px;
+          font-size: 0.5rem;
         }
       }
       .product_buttons {
