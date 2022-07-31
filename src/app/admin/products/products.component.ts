@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-   card:true;
+   card:false;
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
