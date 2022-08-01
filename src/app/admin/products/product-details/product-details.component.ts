@@ -32,7 +32,7 @@ export class ProductDetailsComponent implements OnInit {
           ],
           datasets: [
             {
-              label: 'Bookings',
+              label: '',
               data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80],
               borderColor: '#ee93a3',
               tension: 0.2,
@@ -41,6 +41,7 @@ export class ProductDetailsComponent implements OnInit {
           ],
         },
         options: {
+          maintainAspectRatio: false,
           plugins:{
             legend: {
              display: false

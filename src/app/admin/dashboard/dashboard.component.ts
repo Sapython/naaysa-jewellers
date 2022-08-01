@@ -218,6 +218,27 @@ export class DashboardComponent implements OnInit {
 
           ],
         },
+        options: {
+          
+          maintainAspectRatio: false,
+          plugins:{
+            legend: {
+             display: false
+            }
+           },
+          scales: {
+               x: {
+                  grid: {
+                     display: false
+                  }
+               },
+               y: {
+                  grid: {
+                     display: false
+                  }
+               }
+          }
+       }  
       });
     }
     const doughnutChart = document.getElementById(
