@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { AddUsersComponent } from './add-users/add-users.component';
 
 @Component({
   selector: 'app-users',
@@ -113,9 +115,15 @@ export class UsersComponent implements OnInit {
    
   ]
 
-  constructor() { }
+  constructor(private dialogModule: MatDialog) { 
+    
+  }
 
   ngOnInit(): void {
+
+  }
+  adduser(){
+    this.dialogModule.open(AddUsersComponent)
   }
 
 }

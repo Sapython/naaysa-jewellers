@@ -46,6 +46,8 @@
     }
   }
 
+ 
+
   .uk-margin {
     display: flex;
     align-items: center;
@@ -252,3 +254,29 @@
     }
   }
 }
+
+.au-btn{
+  border-radius: 10px;
+  background-color: #F894A4;
+  color: #ffffff;
+  cursor: pointer;
+  border:none;
+  padding: 8px 15px;
+  margin-left: 1em;
+  transition: .3s;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+}
+
+
+
+
+
+
+
+
+
+// ........adduserrsss.........
+

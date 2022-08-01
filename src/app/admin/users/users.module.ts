@@ -4,9 +4,12 @@ import { UsersRoutingModule } from './users-routing.module';
 import { UsersComponent } from './users.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { LayoutsModule } from '../layouts/layouts.module';
+import {MatDialogModule} from '@angular/material/dialog';
+import { AddUsersComponent } from './add-users/add-users.component';
+
 
 @NgModule({
-  declarations: [UsersComponent],
-  imports: [CommonModule, UsersRoutingModule, MatTabsModule, LayoutsModule],
+  declarations: [UsersComponent, AddUsersComponent],
+  imports: [CommonModule, UsersRoutingModule, MatTabsModule, LayoutsModule, MatDialogModule],
 })
 export class UsersModule {}
