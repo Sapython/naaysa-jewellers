@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+ import { ViewHistoryComponent } from './view-history/view-history.component';
 
 @Component({
   selector: 'app-wallet',
@@ -62,9 +64,12 @@ export class WalletComponent implements OnInit {
       member_Since:"06/04/2022",
     },
   ]
-  constructor() { }
+   constructor(private dialogModule: MatDialog) { }
 
   ngOnInit(): void {
   }
+   viewhistory(){
+      this.dialogModule.open(ViewHistoryComponent)
+   }
 
 }
