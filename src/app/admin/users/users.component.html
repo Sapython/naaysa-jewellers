@@ -65,6 +65,14 @@
                 </tr>
             </table>
         </div>
+        <div class="mobile-view">
+            <div class="heading">
+                <p>All Users</p>
+            </div>
+            <div class="mobile-widget">
+                <app-admin-mobile-users-widget *ngFor="let components of mobile_users"></app-admin-mobile-users-widget>
+            </div>
+        </div>
     </mat-tab>
     <mat-tab label="10+1 User">
         <div class="parent-container">

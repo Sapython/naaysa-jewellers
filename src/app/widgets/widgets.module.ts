@@ -17,6 +17,7 @@ import { MobileReviewWidgetComponent } from './mobile-review-widget/mobile-revie
 import { MobileStoreAddressWidgetComponent } from './mobile-store-address-widget/mobile-store-address-widget.component';
 import { AdminMobileDashboardWidgetComponent } from './admin-mobile-dashboard-widget/admin-mobile-dashboard-widget.component';
 import { FeedbackWidgetsComponent } from './feedback-widgets/feedback-widgets.component';
+import { AdminMobileUsersWidgetComponent } from './admin-mobile-users-widget/admin-mobile-users-widget.component';
 
 
 const components = [ ProductWidgetComponent,
@@ -34,7 +35,8 @@ const components = [ ProductWidgetComponent,
   MobileReviewWidgetComponent,
   MobileStoreAddressWidgetComponent,
   AdminMobileDashboardWidgetComponent,
-FeedbackWidgetsComponent
+  FeedbackWidgetsComponent,
+  AdminMobileUsersWidgetComponent
 ]
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ FeedbackWidgetsComponent
     MobileReviewWidgetComponent,
     MobileStoreAddressWidgetComponent,
     AdminMobileDashboardWidgetComponent,
-    FeedbackWidgetsComponent
+    FeedbackWidgetsComponent,
+    AdminMobileUsersWidgetComponent
   ],
   exports: [components],
   imports: [

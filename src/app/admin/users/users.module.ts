@@ -6,10 +6,11 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { LayoutsModule } from '../layouts/layouts.module';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AddUsersComponent } from './add-users/add-users.component';
+import { WidgetsModule } from 'src/app/widgets/widgets.module';
 
 
 @NgModule({
   declarations: [UsersComponent, AddUsersComponent],
-  imports: [CommonModule, UsersRoutingModule, MatTabsModule, LayoutsModule, MatDialogModule],
+  imports: [CommonModule, UsersRoutingModule, MatTabsModule, LayoutsModule, MatDialogModule,WidgetsModule],
 })
 export class UsersModule {}

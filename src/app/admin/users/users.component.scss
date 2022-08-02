@@ -46,8 +46,6 @@
     }
   }
 
- 
-
   .uk-margin {
     display: flex;
     align-items: center;
@@ -142,6 +140,9 @@
   }
 }
 
+.mobile-view{
+  display: none;
+}
 .table {
   .heading {
     background-color: #FF9292;
@@ -250,6 +251,27 @@
           font-size: var(--xxxsmall);
           cursor: pointer;
         }
+      }
+    }
+  }
+  .table{
+    display: none;
+  }
+  .mobile-view{
+    display: block;
+    margin: auto;
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    .mobile-widget{
+      margin: 10px 05px;
+    }
+    .heading{
+      border-radius: 10px;
+      background-color: #FF9292;
+      color: #fff;
+      padding: 10px 15px;
+      p{
+        margin-bottom: 0;
+        font-size: var(--small);
       }
     }
   }
