@@ -315,6 +315,9 @@ body {
       height: 3rem;
       width: 2rem;
       font-size: 5rem;
+      @media (max-width: 600px){
+        // left: 1rem;
+      }
     }
     .review {
       min-width: 400px;
@@ -455,9 +458,12 @@ body {
         height: 3rem;
         width: 2rem;
         font-size: 2rem;
+        @media (max-width: 600px){
+          left: 0;
+        }
       }
       .review {
-        padding: 2rem;
+        padding: 2rem 4rem;
         color: black;
         p {
           padding: 3rem 0;

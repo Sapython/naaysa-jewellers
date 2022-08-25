@@ -16,7 +16,14 @@
   transition: transform 0.3s ease-in-out;
   .history_img {
     height: 100%;
-    width: 8rem;
+    width: 15rem;
+    padding: 10px;
+    border: 2px solid var(--color-dark-primary);
+    @media (max-width: 600px){
+      border: none;
+      padding: none;
+      width: 8rem;
+    }
     img {
       height: 100%;
       width: 100%;
