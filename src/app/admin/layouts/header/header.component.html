@@ -1,24 +1,23 @@
-<div class="container">
+<div class="container-fluid">
   <div class="header">
+
     
-    <div class="para">
-      <!-- <p id="heading">{{ title }}</p> -->
+    <div class="uk-margin">
+      <form class="uk-search uk-search-default">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="uk-search-input" type="search" placeholder="Search" />
+      </form>
+      <i class="fa-solid fa-bell" id="bell"></i>
     </div>
     <div class="links">
       <button><i class="fa-solid fa-tags"></i>Manage Categories</button>
       <button><i class="fa-solid fa-toggle-on"></i>Pretty View</button>
       <!-- <button *ngIf="path==='/admin/products'"><i class="fa-solid fa-plus"></i>Add Products</button> -->
-      <button
-        *ngIf="path === '/admin/offers'"
-        uk-toggle="target: #add-offers-modal"
-      >
+      <button *ngIf="path === '/admin/offers'" uk-toggle="target: #add-offers-modal">
         <i class="fa-solid fa-plus"></i>Add Offers
       </button>
 
-      <button
-        *ngIf="path === '/admin/products'"
-        uk-toggle="target: #add-product-modal"
-      >
+      <button *ngIf="path === '/admin/products'" uk-toggle="target: #add-product-modal">
         <i class="fa-solid fa-plus"></i>Add Products
       </button>
 
@@ -32,12 +31,7 @@
         </ul>
       </div>
     </div>
+
   </div>
-  <div class="uk-margin">
-    <form class="uk-search uk-search-default">
-      <span class="uk-search-icon-flip" uk-search-icon></span>
-      <input class="uk-search-input" type="search" placeholder="Search" />
-    </form>
-    <i class="fa-solid fa-bell" id="bell"></i>
-  </div>
+
 </div>

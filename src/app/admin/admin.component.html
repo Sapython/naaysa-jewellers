@@ -109,8 +109,9 @@
       </aside>
     </div>
   </div>
+
   <main>
-    <header>
+    <header class="shadow">
       <button
         *ngIf="!largeScreen"
         class="uk-navbar-toggle"
@@ -133,4 +134,5 @@
     </div>
     <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
   </main>
+
 </div>

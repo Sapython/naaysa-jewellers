@@ -28,10 +28,11 @@
 #sidebar {
   background-color: var(--color-primary);
   box-shadow: var(--normal-shadow);
-  min-width: max(20vw, 270px);
+  min-width: max(16vw, 270px);
   height: 100%;
   padding: 1em;
   z-index: 9999;
+  // position: fixed;
 }
 
 @media (max-width: 1000px) {

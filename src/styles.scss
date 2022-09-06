@@ -89,6 +89,11 @@ $naaysa-jewellers-theme: mat.define-light-theme(
   --normal-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+body{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -169,3 +174,11 @@ li{
   list-style: none;
 }
 
+.row{
+ margin: 0 !important;
+ padding: 0 !important;
+}
+
+.uk-search-default{
+  width: 310px;
+}
