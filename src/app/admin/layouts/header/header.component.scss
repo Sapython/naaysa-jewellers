@@ -15,8 +15,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    width: 100%;
     .links{
-        background-color: var(--color-secondary-dark);
+        // background-color: var(--color-secondary-dark);
         padding: 0px 15px;
         border-radius: 10px;
         @media (max-width: 700px) {
