@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 declare var UIkit: any;
 import { HostListener } from '@angular/core';
+import { ProductsService } from 'src/app/services/Products/products.service';
 @HostListener('window:scroll', ['$event'])
 @Component({
   selector: 'app-header',
@@ -17,56 +18,56 @@ export class HeaderComponent implements OnInit {
   @ViewChild('offcanvas') offcanvas: ElementRef;
   searchVisible:boolean = false;
 
-  byCategory=[
-    {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
+   byCategory:any[] =[
+    // {
+    //   image:'../../../assets/jewellery/jew1.svg',
+    //   name:'Gold coins'
+    // },
     
-    {
-      image:'../../../assets/jewellery/jew5.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew6.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew8.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew.3.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew5.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew8.svg',
-      name:'Gold coins'
-    }
+    // {
+    //   image:'../../../assets/jewellery/jew5.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew6.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew2.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew8.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew1.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew.3.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew2.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew5.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew1.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew2.svg',
+    //   name:'Gold coins'
+    // },
+    // {
+    //   image:'../../../assets/jewellery/jew8.svg',
+    //   name:'Gold coins'
+    // }
   ]
   byMetals=[
     {
@@ -110,9 +111,33 @@ export class HeaderComponent implements OnInit {
       name:'FOR WOMEN'
     },
   ]
-  constructor() {}
+  constructor( private products:ProductsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.getProductsCategory()
+  }
+
+  async getProductsCategory(){
+     const res:any = await this.products.getCategories()
+    //  this.byCategory = Array.from(res).map((element:any) => {
+    //     return {
+    //       ...element.data(),
+    //       id:element.id
+    //     }
+    //   });
+    res.forEach((element:any) => {
+      this.byCategory.push(
+        {
+          ...element.data(),
+          id:element.id
+        }
+      ) 
+              
+            
+    });
+    console.log(this.byCategory)
+  }
 
   showSearch() {
     this.nav.nativeElement.setAttribute('closed', '');

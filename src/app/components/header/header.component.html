@@ -28,8 +28,8 @@
               <b>Shop for category</b>
               <ul>
                 <li *ngFor="let category of byCategory"  routerLink="../all-product">
-                  <img src="{{ category.image }}" alt="image" />
-                  <p>{{ category.name }}</p>
+                  <img src="{{ category?.img }}" alt="image" />
+                  <p>{{ category?.title }}</p>
                 </li>
               </ul>
             </div>
