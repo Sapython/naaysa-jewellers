@@ -1,1 +1,19 @@
+<main>
+    <div class="uk-text-uppercase uk-text-bold uk-margin-bottom">Add Product Category</div>
+    <form class="example-form" [formGroup]="addCategoryForm" (ngSubmit)="addCategory()">
+        <div class="uk-margin">
+            <input class="uk-input" type="text" formControlName="title" name="name"  placeholder="Input">
+        </div>
+        <div class="uk-margin" uk-margin>
+            <div uk-form-custom="target: true">
+                <input type="file" formControlName="img"  (change)="file = $event">
+                <input class="uk-input uk-form-width-large" type="text" placeholder="Select file" disabled>
+            </div>
+            
+        </div>
+        <button class="uk-button uk-button-danger" (click)="uploadFile(file.files)">Submit</button>
+      </form>
+    
+</main>
+
 

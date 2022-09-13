@@ -7,14 +7,15 @@ import * as AOS from 'aos'
   styleUrls: ['./product-widget.component.scss']
 })
 export class ProductWidgetComponent implements OnInit {
-  @Input() product_name:string = 'Diamond Ring'
+  @Input() product_name:string 
   @Input() src:string = 'jewellery/jewel1.svg'
-  @Input () price:number = 125632
+  @Input() price:string = '125632'
   @Input() purity:string = '18k'
   @Input() category:string = 'Women'
   @Input() jewellery_Name:string = 'Rings'
   @Input() discount:string = '10%'
   @Input() liked:boolean = false
+  @Input() navigateUrl:string
 
   onclick(){
     alert('Your Product has Been Added To Cart')

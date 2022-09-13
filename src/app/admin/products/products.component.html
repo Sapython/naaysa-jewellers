@@ -6,11 +6,7 @@
     </div>
 
     <div class="sec2">
-      <img
-        class="ring-img"
-        src="/assets/jewellery/goldRing.svg"
-        alt="Ring image"
-      />
+      <img class="ring-img" src="/assets/jewellery/goldRing.svg" alt="Ring image" />
     </div>
 
     <div class="sec3">
@@ -57,7 +53,7 @@
       <th style="width: 15%">Reviews</th>
       <th style="width: 15%">Action</th>
     </tr>
-    <tr  routerLink="../products/details">
+    <tr routerLink="../products/details">
       <td>
         <img src="../../../../assets/jewel3.png" alt="" />
       </td>
@@ -93,7 +89,7 @@
         </button>
       </td>
     </tr>
-    <tr  routerLink="../products/details">
+    <tr routerLink="../products/details">
       <td>
         <img src="../../../../assets/jewel3.png" alt="" />
       </td>
@@ -129,7 +125,7 @@
         </button>
       </td>
     </tr>
-    <tr  routerLink="../products/details">
+    <tr routerLink="../products/details">
       <td>
         <img src="../../../../assets/jewel3.png" alt="" />
       </td>
@@ -168,160 +164,188 @@
   </table>
 </div>
 
-<div id="add-product-modal" uk-modal>
-  <div class="uk-modal-dialog uk-modal-body">
-    <div class="modal_header">
-      <h2>Add Product</h2>
-      <i class="ri-close-circle-line"   uk-toggle="target: #add-product-modal"></i>
-    </div>
+<!-- ADD product start -->
 
-    <mat-stepper>
-      <mat-step>
-        <ng-template matStepLabel></ng-template>
+  <div id="add-product-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+      <div class="modal_header">
+        <h2>Add Product</h2>
+        <i class="ri-close-circle-line" uk-toggle="target: #add-product-modal"></i>
+      </div>
+      <form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+      <mat-stepper>
+        <mat-step>
+          <ng-template matStepLabel></ng-template>
 
-        <div class="form-box">
-          <label for="plan-name-input"> Name *</label>
-          <input type="text" id="plan-name-input" />
-        </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Name *</label>
+            <input type="text" formControlName="productName" id="plan-name-input" />
+          </div>
 
-        <div class="form-box">
-          <label for="plan-name-input"> Product Description *</label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Short Description *</label>
-          <input type="email" id="plan-name-input" />
-        </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Product Description *</label>
+            <input type="text" id="plan-name-input" formControlName="description" />
+          </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Short Description *</label>
+            <input type="email" id="plan-name-input" formControlName="shortDescription"/>
+          </div>
 
-        <div class="form-box">
-          <label for="plan-name-input"> SEO Description * </label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Display Price *</label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="buttons">
-          <button id="submit-button" matStepperNext>
-            Next <i class="fa-solid fa-angle-right" ></i>
-          </button>
-        </div>
-      </mat-step>
+          <div class="form-box">
+            <label for="plan-name-input"> SEO Description * </label>
+            <input type="text" id="plan-name-input" formControlName="seoDescription"/>
+          </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Display Price *</label>
+            <input type="text" id="plan-name-input" formControlName="price" />
+          </div>
+          <div class="buttons">
+            <button  matStepperNext>
+              Next <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </mat-step>
 
-      <mat-step>
-        <ng-template matStepLabel></ng-template>
+        <mat-step>
+          <ng-template matStepLabel></ng-template>
 
-        <div class="form-box">
-          <label for="plan-name-input">Product base weight *</label>
-          <input type="number" id="plan-name-input " class="number" />
-        </div>
+          <div class="form-box">
+            <label for="plan-name-input">Product base weight *</label>
+            <input type="number" id="plan-name-input " class="number" formControlName="baseWeight"/>
+          </div>
 
-        <div class="form-box">
-          <label for="plan-name-input"> Product Purity*</label>
-          <select name="" id="" class="number">
-            <option value="">90%</option>
-            <option value="">70%</option>
-            <option value="">40%</option>
-            <option value="">10%</option>
-          </select>
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Product Colour*</label>
-          <select name="" id="" class="number">
-            <option value="">Golden</option>
-            <option value="">Pink</option>
-            <option value="">Ruby</option>
-            <option value="">Silver</option>
-          </select>
-        </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Product Purity*</label>
+            <select name="" id="" class="number" formControlName="purity">
+              <option value="90%">90%</option>
+              <option value="70%">70%</option>
+              <option value="40%">40%</option>
+              <option value="10%">10%</option>
+            </select>
+          </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Product Colour*</label>
+            <select name="" id="" class="number" formControlName="productColor">
+              <option value="Golden">Golden</option>
+              <option value="Pink">Pink</option>
+              <option value="Ruby">Ruby</option>
+              <option value="Silver">Silver</option>
+            </select>
+          </div>
 
-        <div class="form-box">
-          <label for="plan-name-input"> Product Metal</label>
-          <select name="" id="" class="number">
-            <option value="">Golden</option>
-            <option value="">Silver</option>
-            <option value="">Diamond</option>
-            <option value="">Platinum</option>
-          </select>
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Select Category*</label>
-          <select name="" id="" class="number">
-            <option value="">Bangles</option>
-            <option value="">Bracelets</option>
-            <option value="">Earrings</option>
-            <option value="">Gold Chains</option>
-            <option value="">Gold Coins</option>
-            <option value="">Kadas</option>
-            <option value="">Mangalsutras</option>
-            <option value="">Mangalsutra Bracelets</option>
-            <option value="">Mangalsutra Chains</option>
-            <option value="">Necklaces</option>
-            <option value="">Nose Pins</option>
-          </select>
-        </div>
-        <div class="buttons">
-          <button matStepperPrevious>
-            <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i
-            >Back
-          </button>
-          <button id="submit-button" matStepperNext>
-            Next <i class="fa-solid fa-angle-right"></i>
-          </button>
-        </div>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel></ng-template>
+          <div class="form-box">
+            <label for="plan-name-input"> Product Metal</label>
+            <select name="" id="" class="number" formControlName="metal">
+              <option value="Golden">Golden</option>
+              <option value="Silver">Silver</option>
+              <option value="Diamond">Diamond</option>
+              <option value="Platinum">Platinum</option>
+            </select>
+          </div>
+          
+         
+          <div class="buttons">
+            <button matStepperPrevious>
+              <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i>Back
+            </button>
+            <button  matStepperNext>
+              Next <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel></ng-template>
 
-        <div class="form-box">
-          <label for="plan-name-input"> Vendor Name *</label>
-          <select name="" id="" class="number">
-            <option value="">Mohon Seth</option>
-            <option value="">Pablo escort</option>
-            <option value="">Mark</option>
-            <option value="">Petter Griffins</option>
-          </select>
-        </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Vendor Name *</label>
+            <select name="" id="" class="number" formControlName="vendorName">
+              <option value="Mohon Seth">Mohon Seth</option>
+              <option value="Pablo escort">Pablo escort</option>
+              <option value="Mark">Mark</option>
+              <option value="Petter Griffins">Petter Griffins</option>
+            </select>
+          </div>
 
-        <div class="form-box">
-          <label for="plan-name-input"> Vendor ID*</label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Vendor *</label>
-          <input type="email" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Price *</label>
-          <input type="number" id="plan-name-input " class="number" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Add Image/videos *</label>
-           <div class="images">
-            <div class="img">
-              <!-- <img src="https://via.placeholder.com/150" alt=""> -->
-              <i class="ri-add-line"></i>
+          <div class="form-box">
+            <label for="plan-name-input"> Vendor ID*</label>
+            <input type="text" id="plan-name-input" formControlName="vendorID"/>
+          </div>
+          <div class="form-box">
+            <label for="plan-name-input"> Vendor Email *</label>
+            <input type="email" id="plan-name-input" formControlName="vendorEmail"/>
+          </div>
+          <!-- <div class="form-box">
+            <label for="plan-name-input"> Price *</label>
+            <input type="number" id="plan-name-input" class="number" />
+          </div> -->
+
+          <div class="form-box">
+            <label for="plan-name-input"> Discount *</label>
+            <input type="number" id="plan-name-input"  class="number" formControlName="discount"/>
+          </div>
+
+          <div class="form-box">
+            <label for="plan-name-input"> Select Category*</label>
+            <select name="" id="" class="number" formControlName="jewelleryName">
+              <option value="Bangles">Bangles</option>
+              <option value="Bracelets">Bracelets</option>
+              <option value="Earrings">Earrings</option>
+              <option value="Gold Chains">Gold Chains</option>
+              <option value="Gold Coins">Gold Coins</option>
+              <option value="Kadas">Kadas</option>
+              <option value="Mangalsutras">Mangalsutras</option>
+              <option value="MangalsutraBracelets">Mangalsutra Bracelets</option>
+              <option value="MangalsutraChain">Mangalsutra Chains</option>
+              <option value="Necklaces">Necklaces</option>
+              <option value="NosePins">Nose Pins</option>
+            </select>
+          </div>
+
+          <div class="form-box">
+            <label for="plan-name-input"> Select Category*</label>
+            <select name="" id="" class="number" formControlName="category">
+              <option value="Bangles">Bangles</option>
+              <option value="Bracelets">Bracelets</option>
+              <option value="Earrings">Earrings</option>
+              <option value="Gold Chains">Gold Chains</option>
+              <option value="Gold Coins">Gold Coins</option>
+              <option value="Kadas">Kadas</option>
+              <option value="Mangalsutras">Mangalsutras</option>
+              <option value="MangalsutraBracelets">Mangalsutra Bracelets</option>
+              <option value="MangalsutraChain">Mangalsutra Chains</option>
+              <option value="Necklaces">Necklaces</option>
+              <option value="NosePins">Nose Pins</option>
+            </select>
+          </div>
+          
+          <div class="form-box">
+            <label for="plan-name-input"> Add Image/videos *</label>
+            <div class="images">
+              <div class="img">
+                <input type="file" formControlName="imgSrc" (change)="file = $event" id="">
+                <i class="ri-add-line"></i>
+              </div>
             </div>
-           </div>
-        </div>
+          </div>
 
-        <div class="buttons">
-          <button matStepperPrevious>
-            <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i
-            >Back
-          </button>
-          <button
-            id="submit-button"
-            matStepperNext
-            uk-toggle="target: #add-product-modal"
-          >
-            Add +
-          </button>
-        </div>
-      </mat-step>
-    </mat-stepper>
+          <div class="buttons">
+            <button matStepperPrevious>
+              <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i>Back
+            </button>
+            <button id="submit-button" type="submit" (click)="uploadFile(file.files)" matStepperNext uk-toggle="target: #add-product-modal">
+              Add +
+            </button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </form>
+    </div>
   </div>
-</div>
+
+
+<!-- ADD product end -->
+
+
 <button class="filter" uk-toggle="target: #add-product-modal">
   Add Product <i class="ri-add-line"></i>
 </button>
@@ -338,9 +362,9 @@
 
 
 
-<mat-tab-group  class="mobile_view">
- 
-  <mat-tab label="Products"> 
+<mat-tab-group class="mobile_view">
+
+  <mat-tab label="Products">
     <div id="mobile_product">
       <div class="product" routerLink="../products/details">
         <div class="top">
@@ -352,15 +376,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -379,7 +403,7 @@
           </div>
         </div>
       </div>
-      <div class="product"  routerLink="../products/details">
+      <div class="product" routerLink="../products/details">
         <div class="top">
           <div class="ratings">
             <i class="ri-star-fill active"></i>
@@ -389,15 +413,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -416,7 +440,7 @@
           </div>
         </div>
       </div>
-      <div class="product"  routerLink="../products/details">
+      <div class="product" routerLink="../products/details">
         <div class="top">
           <div class="ratings">
             <i class="ri-star-fill active"></i>
@@ -426,15 +450,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -453,7 +477,7 @@
           </div>
         </div>
       </div>
-      <div class="product"  routerLink="../products/details">
+      <div class="product" routerLink="../products/details">
         <div class="top">
           <div class="ratings">
             <i class="ri-star-fill active"></i>
@@ -463,15 +487,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -490,7 +514,7 @@
           </div>
         </div>
       </div>
-      <div class="product"  routerLink="../products/details">
+      <div class="product" routerLink="../products/details">
         <div class="top">
           <div class="ratings">
             <i class="ri-star-fill active"></i>
@@ -500,15 +524,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -527,7 +551,7 @@
           </div>
         </div>
       </div>
-      <div class="product"  routerLink="../products/details">
+      <div class="product" routerLink="../products/details">
         <div class="top">
           <div class="ratings">
             <i class="ri-star-fill active"></i>
@@ -537,15 +561,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -564,7 +588,7 @@
           </div>
         </div>
       </div>
-      <div class="product"  routerLink="../products/details">
+      <div class="product" routerLink="../products/details">
         <div class="top">
           <div class="ratings">
             <i class="ri-star-fill active"></i>
@@ -574,15 +598,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -601,7 +625,7 @@
           </div>
         </div>
       </div>
-      <div class="product"  routerLink="../products/details">
+      <div class="product" routerLink="../products/details">
         <div class="top">
           <div class="ratings">
             <i class="ri-star-fill active"></i>
@@ -611,15 +635,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -639,10 +663,10 @@
         </div>
       </div>
     </div>
-    
+
   </mat-tab>
-  
-  <mat-tab label="Pending Products"> 
+
+  <mat-tab label="Pending Products">
     <div id="mobile_product">
       <div class="product">
         <div class="top">
@@ -654,15 +678,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -691,15 +715,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -728,15 +752,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -765,15 +789,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -802,15 +826,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -839,15 +863,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -876,15 +900,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -913,15 +937,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -941,9 +965,9 @@
         </div>
       </div>
     </div>
-    
+
   </mat-tab>
-  <mat-tab label="Cancelled Products"> 
+  <mat-tab label="Cancelled Products">
     <div id="mobile_product">
       <div class="product">
         <div class="top">
@@ -955,15 +979,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -992,15 +1016,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -1029,15 +1053,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -1066,15 +1090,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -1103,15 +1127,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -1140,15 +1164,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -1177,15 +1201,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -1214,15 +1238,15 @@
             <i class="ri-star-fill"></i>
           </div>
         </div>
-    
+
         <div class="product_img">
           <img src="../../../assets/jewel1.png" alt="" />
         </div>
         <div class="product_description">
-          <span
-            ><p style="color: green">₹ 5,00,000</p>
-            <p style="color: #ff9292">250 piece</p></span
-          >
+          <span>
+            <p style="color: green">₹ 5,00,000</p>
+            <p style="color: #ff9292">250 piece</p>
+          </span>
           <b>Movable Round Gold Necklace</b>
           <hr />
           <div class="appearance">
@@ -1242,6 +1266,6 @@
         </div>
       </div>
     </div>
-    
+
   </mat-tab>
 </mat-tab-group>

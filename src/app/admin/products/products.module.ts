@@ -12,8 +12,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LayoutsModule } from '../layouts/layouts.module';
 import {MatTabsModule} from '@angular/material/tabs';
-import { ManageCategoryComponent } from './manage-category/manage-category.component';
+
 import {DialogModule} from '@angular/cdk/dialog';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import {DialogModule} from '@angular/cdk/dialog';
     ProductComponent,
     ReviewComponent,
     ProductDetailsComponent,
-    ManageCategoryComponent
+    
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,7 @@ import {DialogModule} from '@angular/cdk/dialog';
     MatFormFieldModule,
     LayoutsModule,
     MatTabsModule,
-    DialogModule
+    DialogModule,
   ]
 })
 export class ProductsModule { }

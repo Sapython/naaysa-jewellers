@@ -12,18 +12,18 @@
         </div>
           <img class="m-image2" src="../../../assets/blog3.png" >
         </div>
-      <form>
+      <form  >
         <b routerLink="/">Login</b>
         <div class="input_conatiner">
           <label>Email</label>
-          <input type="email" formControlName="email" placeholder="username@host.com" />
+          <input type="email" [(ngModel)]="email" placeholder="username@host.com" />
         </div>
         <div class="input_conatiner">
           <label>Password</label>
-          <input type="password" formControlName="password" placeholder="Password" />
+          <input type="password" [(ngModel)]="password" placeholder="Password" />
         </div>
         <div class="authentication">
-          <button type="submit" routerLink="/">Login</button>
+          <button (click)="emailLogin()" type="submit">Login</button>
         </div>
         <span routerLink="/forgot-password">Forgot Password?</span>
         <button id="normal">

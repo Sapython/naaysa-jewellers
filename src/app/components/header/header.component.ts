@@ -16,14 +16,14 @@ export class HeaderComponent implements OnInit {
   @ViewChild('searchBox') searchBox: ElementRef;
   @ViewChild('offcanvasContainer') offcanvasContainer: ElementRef;
   @ViewChild('offcanvas') offcanvas: ElementRef;
-  searchVisible:boolean = false;
+  searchVisible: boolean = false;
 
-   byCategory:any[] =[
+  byCategory: any[] = [
     // {
     //   image:'../../../assets/jewellery/jew1.svg',
     //   name:'Gold coins'
     // },
-    
+
     // {
     //   image:'../../../assets/jewellery/jew5.svg',
     //   name:'Gold coins'
@@ -69,74 +69,87 @@ export class HeaderComponent implements OnInit {
     //   name:'Gold coins'
     // }
   ]
-  byMetals=[
+  byMetals = [
     {
-      image:'../../../assets/metals/metal1.svg',
-      name:'Diamond'
+      image: '../../../assets/metals/metal1.svg',
+      name: 'Diamond'
     },
     {
-      image:'../../../assets//metals/metal2.svg',
-      name:'Gold '
+      image: '../../../assets//metals/metal2.svg',
+      name: 'Gold '
     },
     {
-      image:'../../../assets/metals/metal.svg',
-      name:'Silver'
+      image: '../../../assets/metals/metal.svg',
+      name: 'Silver'
     },
     {
-      image:'../../../assets/metals/gemstone.svg',
-      name:'Gemstone'
+      image: '../../../assets/metals/gemstone.svg',
+      name: 'Gemstone'
     },
-    
+
   ]
-  filters=[
-    {
-      name:'For KIDS/BABY'
-    },
-    {
-      name:'Under ₹ 10k'
-    },
-    {
-      name:'₹ 10k - ₹ 20k '
-    },
-    {
-      name:' ₹ 20k to ₹ 75K '
-    },
-    {
-      name:'₹ 75k to ₹ 1 LAKH'
-    },
-    {
-      name:'Above ₹ 1 LAKH'
-    },
-    {
-      name:'FOR WOMEN'
-    },
+  filters: any[] = [
+    // {
+    //   name: 'For KIDS/BABY'
+    // },
+    // {
+    //   name: 'Under ₹ 10k'
+    // },
+    // {
+    //   name: '₹ 10k - ₹ 20k '
+    // },
+    // {
+    //   name: ' ₹ 20k to ₹ 75K '
+    // },
+    // {
+    //   name: '₹ 75k to ₹ 1 LAKH'
+    // },
+    // {
+    //   name: 'Above ₹ 1 LAKH'
+    // },
+    // {
+    //   name: 'FOR WOMEN'
+    // },
   ]
-  constructor( private products:ProductsService) {}
+  constructor(private products: ProductsService) { }
 
   ngOnInit(): void {
 
-    this.getProductsCategory()
+    this.getProductsCategory();
+    this.getPriceRange()
   }
 
-  async getProductsCategory(){
-     const res:any = await this.products.getCategories()
+  async getProductsCategory() {
+    const res: any = await this.products.getCategories()
     //  this.byCategory = Array.from(res).map((element:any) => {
     //     return {
     //       ...element.data(),
     //       id:element.id
     //     }
     //   });
-    res.forEach((element:any) => {
+    res.forEach((element: any) => {
       this.byCategory.push(
         {
           ...element.data(),
-          id:element.id
+          id: element.id
         }
-      ) 
-              
-            
+      )
+
+
     });
-    console.log(this.byCategory)
+  }
+
+  async getPriceRange() {
+    const res: any = await this.products.getPriceRange()
+    res.forEach((element: any) => {
+      this.filters.push(
+        {
+          ...element.data(),
+          id: element.id
+        }
+        )
+    });
+    console.log(this.filters)
   }
 
   showSearch() {
@@ -167,11 +180,11 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
-  showMenu(){
+  showMenu() {
 
-}  
+  }
 
-hideSearch() {
+  hideSearch() {
     this.searchBox.nativeElement.setAttribute('closed', '');
     this.searchBox.nativeElement.addEventListener(
       'animationend',
