@@ -15,9 +15,9 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthService } from './services/Auth/auth.service';
 import { ProductsService } from './services/Products/products.service';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AuthService } from './services/Auth/auth.service';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/Auth/auth.service';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'naaysa-jewellers';
+  constructor(private auth:AuthService){}
   isheadervisible(){
     return window.location.pathname.startsWith('/admin')
   }
