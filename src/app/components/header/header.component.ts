@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/Auth/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 declare var UIkit: any;
 import { HostListener } from '@angular/core';
@@ -111,13 +112,15 @@ export class HeaderComponent implements OnInit {
     //   name: 'FOR WOMEN'
     // },
   ]
-  constructor(private products: ProductsService) { }
+  constructor(private products: ProductsService, public authService:AuthService) { }
 
   ngOnInit(): void {
 
     this.getProductsCategory();
     this.getPriceRange()
   }
+
+
 
   async getProductsCategory() {
     const res: any = await this.products.getCategories()

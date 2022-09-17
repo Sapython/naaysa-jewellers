@@ -1,6 +1,8 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { Component, Input, OnInit } from '@angular/core';
+import { AddProductsComponent } from '../../products/add-products/add-products.component';
 import { ManageCategoryComponent } from '../../products/manage-category/manage-category.component';
+
 
 @Component({
   selector: 'app-header',
@@ -18,7 +20,13 @@ export class HeaderComponent implements OnInit {
     this.path = window.location.pathname;
     console.log(this.path);
   }
+
+  
   manageCategory(){
     this.dialog.open(ManageCategoryComponent)
+  }
+
+  addProduct(){
+    this.dialog.open(AddProductsComponent)
   }
 }

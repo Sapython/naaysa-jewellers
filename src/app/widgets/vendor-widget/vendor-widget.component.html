@@ -1,9 +1,9 @@
 <div class="container shadow">
-    <img src="assets/tanishq.png" alt="">
+    <img [src]="vendorImg" alt="">
     <div class="details">
         <p>Vendor Name : <span>{{vendor_name}}</span></p>
-        <p>Vendor ID : <span>{{vendor_id}}</span></p>
-        <p>Total listed Products : <span>{{products}}</span></p>
+        <p>Vendor ID : <span class="text-uppercase">{{vendor_id}}</span></p>
+        <p>Vendor Email : <span>{{vendorEmail}}</span></p>
     </div>
     <button id="view">View Listed Products</button>
 </div>

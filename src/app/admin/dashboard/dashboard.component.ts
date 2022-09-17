@@ -1,6 +1,16 @@
+
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 
 import { Chart, registerables } from 'chart.js';
+
+import { AddVendorComponent } from '../add-vendor/add-vendor.component';
+import { Dialog } from '@angular/cdk/dialog';
+import { AddProductsComponent } from '../products/add-products/add-products.component';
+import { ManageCategoryComponent } from '../products/manage-category/manage-category.component';
+import { AddOffersComponent } from '../products/add-offers/add-offers.component';
+
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -186,7 +196,9 @@ export class DashboardComponent implements OnInit {
       src: 'assets/2.jpeg',
     },
   ]
-  constructor() {
+
+
+  constructor(public dialog:Dialog) {
     Chart.register(...registerables);
   }
 
@@ -219,26 +231,26 @@ export class DashboardComponent implements OnInit {
           ],
         },
         options: {
-          
+
           maintainAspectRatio: false,
-          plugins:{
+          plugins: {
             legend: {
-             display: false
+              display: false
             }
-           },
+          },
           scales: {
-               x: {
-                  grid: {
-                     display: false
-                  }
-               },
-               y: {
-                  grid: {
-                     display: false
-                  }
-               }
+            x: {
+              grid: {
+                display: false
+              }
+            },
+            y: {
+              grid: {
+                display: false
+              }
+            }
           }
-       }  
+        }
       });
     }
     const doughnutChart = document.getElementById(
@@ -285,6 +297,24 @@ export class DashboardComponent implements OnInit {
       });
     }
   }
+  addProductsPopUp(){
+    this.dialog.open(AddProductsComponent)
+  }
+  addVendorPopUp() {
+    this.dialog.open(AddVendorComponent)
+  }
+
+  addCategoryPopUp() {
+    this.dialog.open(ManageCategoryComponent)
+  }
+
+  addOffersPopUp() {
+    this.dialog.open(AddOffersComponent)
+  }
+
+  
+
+  
 
 }
 

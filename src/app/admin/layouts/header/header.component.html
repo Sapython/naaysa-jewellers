@@ -17,7 +17,7 @@
         <i class="fa-solid fa-plus"></i>Add Offers
       </button>
 
-      <button *ngIf="path === '/admin/products'" uk-toggle="target: #add-product-modal">
+      <button *ngIf="path === '/admin/products'" (click)="addProduct()" uk-toggle="target: #add-product-modal">
         <i class="fa-solid fa-plus"></i>Add Products
       </button>
 

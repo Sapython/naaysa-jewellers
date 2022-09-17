@@ -1,5 +1,5 @@
 <header class="desktop_version">
-  <div class="topBar">
+  <div class="topBar" *ngIf="authService.userIsLoggedIn">
     <div class="logo">
       <span>NAAYSA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span
         class="secondary-color"
@@ -113,7 +113,7 @@
     (click)="hideOffcanvas($event)"
   >
     <div id="offcanvas" #offcanvas>
-      <div id="profile" routerLink="/profile">
+      <div id="profile" routerLink="/profile" *ngIf="authService.userIsLoggedIn">
         <img
           src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         />

@@ -2,7 +2,10 @@
 
 <div class="container-fluid">
     <div class="widgets">
-        <app-vendor-widget *ngFor="let item of items"></app-vendor-widget>
+        <ng-container *ngFor="let vendor of vendors">
+            <app-vendor-widget [vendor_name]="vendor?.vendorName" [vendor_id]="vendor?.id" [vendorEmail]="vendor?.vendorEmail" [vendorImg]="vendor?.vendorImg"></app-vendor-widget>
+        </ng-container>
+        
     </div>
 </div>
 

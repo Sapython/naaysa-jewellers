@@ -1,7 +1,7 @@
 import { Navigation } from 'swiper';
 import { Injectable } from '@angular/core';
-import { Firestore, collection, docData, doc } from "@angular/fire/firestore";
-import { getDocs,addDoc } from 'firebase/firestore';
+import { Firestore, collection, docData, doc, getDoc } from "@angular/fire/firestore";
+import { getDocs, addDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL, getStorage } from 'firebase/storage';
 import { urls } from "../urls"
 
@@ -11,17 +11,17 @@ import { urls } from "../urls"
 export class ProductsService {
 
   storage = getStorage();
-  constructor(private fs:Firestore) { }  
+  constructor(private fs: Firestore) { }
 
   getCategories() {
     return getDocs(collection(this.fs, '/ProductsCategory'));
   }
 
-  public addCategories(data: any){
+  public addCategories(data: any) {
     return addDoc(collection(this.fs, '/ProductsCategory/'), data);
   }
 
-  public getPriceRange(){
+  public getPriceRange() {
     return getDocs(collection(this.fs, '/PriceRange'));
   }
 
@@ -31,18 +31,33 @@ export class ProductsService {
     return getDocs(collection(this.fs, '/product/'));
   }
 
-  getProductsById(PRODUCT_ID:string) {
+  productById(PRODUCT_ID: string) {
     const productIdUrl = urls.productId.replace('{PRODUCT_ID}', PRODUCT_ID);
-    return getDocs(collection(this.fs, productIdUrl ));
+    return getDoc(doc(this.fs, productIdUrl));
   }
+
+
 
 
   addProductsByCat(data: any) {
-    return addDoc(collection(this.fs, '/product/'),data);
+    return addDoc(collection(this.fs, '/product/'), data);
+  }
+
+  // Vendor
+
+  public addVendor(data: any) {
+    return addDoc(collection(this.fs, urls.vendors), data);
+  }
+
+  public getVendors() {
+    return getDocs(collection(this.fs, urls.vendors));
   }
 
 
-  
+  // Offers
+  public addOffers(data: any) {
+    return addDoc(collection(this.fs, urls.offers), data);
+  }
 
   // Update Product
 
@@ -71,5 +86,5 @@ export class ProductsService {
       return false;
     }
   }
-  
+
 }

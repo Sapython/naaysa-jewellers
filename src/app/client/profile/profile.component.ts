@@ -1,5 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+
+import { ProductsService } from 'src/app/services/Products/products.service';
+import { DataproviderService } from './../../services/dataprovider.service';
+import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { AuthService } from 'src/app/services/Auth/auth.service';
+import { Observable } from '@firebase/util';
 
 @Component({
   selector: 'app-profile',
@@ -11,9 +16,11 @@ export class ProfileComponent implements OnInit {
   breakpoint: number = 1000;
   largeScreen: boolean = window.innerWidth > this.breakpoint;
   showSidebar: boolean = false;
-  @Input() name:string = 'Stupidita'
+  @Input() name: string = 'Stupidita'
 
-  constructor(private router: Router) {
+  public user: any[] = []
+
+  constructor(private router: Router, public dataproviderService: DataproviderService, public auth: AuthService, public productsService: ProductsService) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         // Update header heading
@@ -27,10 +34,16 @@ export class ProfileComponent implements OnInit {
         this.currentPanel = panelWords.join(' ');
       }
     });
-   }
 
-  ngOnInit(): void {
+
+
   }
+
+  ngOnInit() {
+
+  }
+
+
 
   onWindowResize() {
     this.largeScreen = window.innerWidth > this.breakpoint;
@@ -47,4 +60,10 @@ export class ProfileComponent implements OnInit {
       !this.largeScreen && this.showSidebar ? '100%' : '0%'
     );
   }
+
+
+  
+
 }
+
+

@@ -1,5 +1,6 @@
+import { AuthService } from 'src/app/services/Auth/auth.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { AddUsersComponent } from './add-users/add-users.component';
 
 @Component({
@@ -157,7 +158,7 @@ export class UsersComponent implements OnInit {
     },
   ]
 
-  constructor(private dialogModule: MatDialog) {
+  constructor(private dialogModule: MatDialog, private auth:AuthService) {
 
   }
 
@@ -166,6 +167,21 @@ export class UsersComponent implements OnInit {
   }
   adduser() {
     this.dialogModule.open(AddUsersComponent)
+  }
+
+
+  getAllUsers() {
+    return this.auth.getAllUsers().then((res) => {
+      res.forEach((element: any) => {
+        this.users.push(
+          {
+            ...element.data(),
+            id: element.id
+          }
+        )
+      });
+      console.log(this.users)
+    })
   }
 
 }

@@ -137,10 +137,12 @@ export class ProductPageComponent implements OnInit {
     },
   ]
 
-  public PRODUCT_ID: string = "SxEXFo03ZPhBfgrDmlJw"
+  public PRODUCT_ID: string;
+  public productDetails: any;
   constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) {
     this.activatedRoute.params.subscribe((data: any) => {
       console.log(data)
+      this.PRODUCT_ID = data.productId
     })
   }
   onclick() {
@@ -155,8 +157,11 @@ export class ProductPageComponent implements OnInit {
   public productId(PRODUCT_ID: string) {
 
 
-    return this.productsService.getProductsById(PRODUCT_ID).then((res) => {
-      console.log(res)
+    return this.productsService.productById(PRODUCT_ID).then((res) => {
+      
+      this.productDetails = res.data();
+      console.log(this.productDetails)
+
     }).catch((err) => {
       console.log(err)
     })

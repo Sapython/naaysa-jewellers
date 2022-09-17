@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="box">
         <div class="image">
-            <img src="{{large_Image}}" alt="">
+            <img class="uk-width-1-1" src="{{productDetails?.imgSrc}}" alt="">
             <div class="small-images">
                 <img [src]="image" alt="" *ngFor="let image of images;let i = index" (click)='large_Image = images[i]'>
             </div>
@@ -10,14 +10,14 @@
         <div class="inner-box">
             <div class="section-one">
                 <div class="cell">
-                    <p>{{jewel_name}}</p>
+                    <p>{{productDetails?.productName}}</p>
                     <div class="price">
-                        <p>₹ {{price}}</p>
+                        <p>₹ {{productDetails?.price}}</p>
                         <p class="opacity">MRP Incl. of all taxes</p>
                     </div>
                 </div>
                 <p class="opacity off"><span uk-icon="tag"></span>20% off on making charge</p>
-                <p class="mart">Diamond Ring In 18Kt Gold (5.68 gram) with Diamonds (0.4130 Ct)</p>
+                <p class="mart">{{productDetails?.shortDescription}}</p>
             </div>
             <div class="pincode-and-quantity">
                 <div class="pincode">
@@ -30,7 +30,7 @@
                         <input type="number" value="1">
                     </div> -->
                 </div>
-                <p class="opacity mart" style="margin-left: 0;">Available in our store at PRAYAGRAJ, and <a href="">12
+                <p class="opacity mart" style="margin-left: 0;">Available in our store at {{productDetails?.countryOfOrigin}}, and <a href="">12
                         other store(s)</a></p>
             </div>
             <div class="delivery">
@@ -45,7 +45,7 @@
                 <p><i class="fa-solid fa-arrow-rotate-left"></i> 30-Day Money Back</p>
                 <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Lifetime Exchange & Buy-Back</p>
             </div>
-            <div class="customize">
+            <!-- <div class="customize">
                 <div class="flex">
                     <div class="button">
                         <label id="label">Customize this Product:</label>
@@ -74,7 +74,7 @@
                     <button class="primary-button" routerLink="/vr-product-try">Try On Me</button>
                     <button class="primary-button" >Add To Cart</button>
                 </div>
-            </div>
+            </div> -->
             <div class="certify">
                 <p><i class="fa-solid fa-medal"></i>Certified Jewellery</p>
                 <p><i class="fa-solid fa-rotate-left"></i>30 -Day Money Back</p>
@@ -89,87 +89,47 @@
             <div class="pink-box">Product Details</div>
             <div class="list-flex">
                 <p>Product Code</p>
-                <p>{{product_Code}}</p>
+                <p>{{productDetails?.productCode}}</p>
             </div>
             <mat-divider></mat-divider>
             <div class="list-flex">
                 <p>Height</p>
-                <p>{{height}}</p>
+                <p>{{productDetails?.height}}</p>
             </div>
             <mat-divider></mat-divider>
             <div class="list-flex">
                 <p>Width</p>
-                <p>{{width}}</p>
+                <p>{{productDetails?.width}}</p>
             </div>
             <mat-divider></mat-divider>
             <div class="list-flex">
                 <p>Weight</p>
-                <p>{{weight}}</p>
+                <p>{{productDetails?.baseWeight}}</p>
             </div>
             <mat-divider></mat-divider>
             <div class="list-flex">
                 <p>Country Of Origin</p>
-                <p>{{origin}}</p>
+                <p>{{productDetails?.countryOfOrigin}}</p>
             </div>
             <mat-divider></mat-divider>
         </div>
     </div>
 
-    <div class="section3">
-        <div class="specification">
-            <div class="pink-box">Price Details</div>
-            <div class="list-flex">
-                <p>Product Code</p>
-                <p>{{product_Code}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Height</p>
-                <p>{{height}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Width</p>
-                <p>{{width}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Weight</p>
-                <p>{{weight}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Country Of Origin</p>
-                <p>{{origin}}</p>
-            </div>
-            <mat-divider></mat-divider>
-        </div>
-    </div>
     <div class="specification">
         <div class="pink-box">Metal Details</div>
         <div class="list-flex">
-            <p>Product Code</p>
-            <p>{{product_Code}}</p>
+            <p>Metal type</p>
+            <p>{{productDetails?.metal}}</p>
         </div>
         <mat-divider></mat-divider>
         <div class="list-flex">
-            <p>Height</p>
-            <p>{{height}}</p>
+            <p>color</p>
+            <p>{{productDetails?.productColor}}</p>
         </div>
         <mat-divider></mat-divider>
         <div class="list-flex">
-            <p>Width</p>
-            <p>{{width}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Weight</p>
-            <p>{{weight}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Country Of Origin</p>
-            <p>{{origin}}</p>
+            <p>Purity</p>
+            <p>{{productDetails?.purity}}</p>
         </div>
         <mat-divider></mat-divider>
     </div>

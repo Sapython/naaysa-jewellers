@@ -18,56 +18,30 @@ export class ProductsComponent implements OnInit {
   isLinear = false;
 
 
-  public file: any;
-  public url: string;
-
-  public addProductForm: FormGroup = new FormGroup({
-    productName: new FormControl(''),
-    imgSrc: new FormControl(''),
-    jewelleryName: new FormControl(''),
-    discount: new FormControl(''),
-    price: new FormControl(''),
-    category: new FormControl(''),
-    purity: new FormControl(''),
-    description: new FormControl(''),
-    shortDescription: new FormControl(''),
-    seoDescription: new FormControl(''),
-    baseWeight: new FormControl(''),
-    productColor: new FormControl(''),
-    metal: new FormControl(''),
-    vendorName: new FormControl(''),
-    vendorID: new FormControl(''),
-    vendorEmail: new FormControl(''),
-  });
+  products: any[] = [];
 
 
 
 
   constructor(private _formBuilder: FormBuilder, private productService: ProductsService) { }
 
-  ngOnInit(): void { }
-
-
-  async uploadFile(files: FileList | null) {
-    if (files) {
-      const file = files[0]
-      const url = await this.productService.upload('productCategory/' + file.name, file);
-      this.url = url
-    }
+  ngOnInit(): void { 
+    this.allProductsByCat();
   }
 
-  async addProduct() {
-    await this.uploadFile(this.file.target.files);
-    this.addProductForm.value['imgSrc'] = this.url;
-
-    if (this.addProductForm.value) {
-      this.productService.addProductsByCat(this.addProductForm.value).then((res) => {
-        // console.log(res)
-      })
-    }
-    alert('Product added')
+  async allProductsByCat() {
+    const res: any = await this.productService.getProducts()
+    res.forEach((element: any) => {
+      this.products.push(
+        {
+          ...element.data(),
+          id: element.id
+        }
+      )
+    });
+    console.log(this.products)
   }
-
+ 
 
 
 

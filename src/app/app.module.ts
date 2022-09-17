@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsService } from './services/Products/products.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AuthService } from './services/Auth/auth.service';
+import { DataproviderService } from './services/dataprovider.service';
 
 @NgModule({
   declarations: [
@@ -35,11 +36,11 @@ import { AuthService } from './services/Auth/auth.service';
     providePerformance(() => getPerformance()),
     provideStorage(() => getStorage()),
     BrowserAnimationsModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   
   providers: [
-    ScreenTrackingService,UserTrackingService, AuthService, ProductsService
+    ScreenTrackingService,UserTrackingService, AuthService, ProductsService, DataproviderService
   ],
   bootstrap: [AppComponent]
 })

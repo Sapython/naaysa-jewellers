@@ -1,6 +1,7 @@
 import { AuthService } from './../../services/Auth/auth.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,27 +13,32 @@ export class LoginComponent implements OnInit {
 
 
 
-  email: string = '';
-  password: string = '';
-  constructor(private auth: AuthService) { }
+  public loginForm: FormGroup = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+    
+  });
+
+  
+  constructor(private auth: AuthService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  emailLogin() {
-    if (this.email == '') {
+  loginWithEmail() {
+    if (this.loginForm.value.email == '') {
       alert('please enter your email');
       return
     }
 
-    if (this.password == '') {
+    if (this.loginForm.value.password == '') {
       alert('please enter your Password');
       return
     }
 
-    this.auth.emailLogin(this.email, this.password);
-    this.email = '';
-    this.password = '';
+     this.auth.emailLogin(this.loginForm.value.email, this.loginForm.value.password).then((res)=>{console.log(res)}).catch((err)=>{console.log(err)});
+     this.router.navigateByUrl('/all-product')
+    
 
   }
 

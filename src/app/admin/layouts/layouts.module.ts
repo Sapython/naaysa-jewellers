@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutsRoutingModule } from './layouts-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { ManageCategoryComponent } from '../products/manage-category/manage-category.component';
+import { DialogModule } from '@angular/cdk/dialog';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ManageCategoryComponent } from '../products/manage-category/manage-cate
     CommonModule,
     LayoutsRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DialogModule
     
   
   ],

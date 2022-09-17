@@ -1,3 +1,4 @@
+import { ProductsService } from 'src/app/services/Products/products.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,48 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendorsComponent implements OnInit {
 
-  items = [
-    {
-      vendor_name:'Tansihq',
-      vendor_id:'PJH234',
-      products:30
-  
-    },
-    {
-      vendor_name:'Tansihq',
-      vendor_id:'PJH234',
-      products:30
-  
-    },
-    {
-      vendor_name:'Tansihq',
-      vendor_id:'PJH234',
-      products:30
-  
-    },
-    {
-      vendor_name:'Tansihq',
-      vendor_id:'PJH234',
-      products:30
-  
-    },
-    {
-      vendor_name:'Tansihq',
-      vendor_id:'PJH234',
-      products:30
-  
-    },
-    {
-      vendor_name:'Tansihq',
-      vendor_id:'PJH234',
-      products:30
-  
-    },
-  ]
-  
-  constructor() { }
+  vendors: any[] = []
+
+
+
+
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
+    this.getVendors()
+  }
+
+
+
+
+  async getVendors() {
+    const res: any = await this.productsService.getVendors()
+
+
+
+    res.forEach((element: any) => {
+      this.vendors.push(
+        {
+          ...element.data(),
+          id: element.id
+        }
+      )
+    });
+    console.log(this.vendors)
   }
 
 }
