@@ -1,7 +1,7 @@
 import { Address, ExtraLoginEmailInfo } from './../../structures/user.structure';
 import { Injectable } from '@angular/core';
 import { Auth, authState, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, User, UserCredential } from '@angular/fire/auth';
-import { addDoc, collection, doc, DocumentReference, Firestore, getDoc, getDocs, setDoc, updateDoc } from '@angular/fire/firestore';
+import { addDoc, collection, deleteDoc, doc, DocumentReference, Firestore, getDoc, getDocs, setDoc, updateDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { UserData } from 'src/app/structures/user.structure';
 import { DataproviderService } from '../dataprovider.service';
@@ -133,7 +133,7 @@ export class AuthService {
   }
 
   getAllUsers() {
-    return getDocs(collection(this.fs, '/AllUsers'))
+    return getDocs(collection(this.fs, '/users'))
   }
 
   // edit User
@@ -167,6 +167,14 @@ export class AuthService {
     return getDocs(collection(this.fs, userIDUrl + urls.wishlist))
   }
 
+  deleteWishListItem(USER_ID:any, WISHLIST_ID:any ){
+    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
+    const wishlistIdUrl = urls.wishlistId.replace('{WISHLIST_ID}', WISHLIST_ID);
+    return deleteDoc(doc(this.fs, userIDUrl + wishlistIdUrl))
+  }
+
+
+
   // Cart
 
   getUserCartList(USER_ID: any) {
@@ -183,9 +191,11 @@ export class AuthService {
     });
   }
 
-  deleteUserCart(USER_ID: any, cartId: any){
+  deleteUserCart(USER_ID: any, CART_ID: any){
     const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    const cartIDUrl = urls.cartId.replace('{USER_ID}', USER_ID);
+    const cartIDUrl = urls.cartId.replace('{CART_ID}', CART_ID);
+    return deleteDoc(doc(this.fs, userIDUrl + cartIDUrl))
+
   }
 
   // Orders

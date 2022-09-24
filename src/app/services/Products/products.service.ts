@@ -62,6 +62,10 @@ export class ProductsService {
     return addDoc(collection(this.fs, urls.offers), data);
   }
 
+  public getOffers() {
+    return getDocs(collection(this.fs, urls.offers));
+  }
+
   // Update Product
 
   public updateTrendingProducts(data: any) {

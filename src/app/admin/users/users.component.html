@@ -33,33 +33,33 @@
                     <th width="20%">Name</th>
                     <th width="10%">Email</th>
                     <th width="10%">No. of<br>Purchase</th>
-                    <th width="10%">Join<br>Date</th>
-                    <th width="10%">End<br>Date</th>
-                    <th width="10%">Total<br>Value</th>
-                    <th width="10%">Monthly<br>Recieved</th>
+                    <!-- <th width="10%">Join<br>Date</th>
+                    <th width="10%">End<br>Date</th> -->
+                    <th width="10%"><br>Phone Number</th>
+                    <!-- <th width="10%">Monthly<br>Recieved</th> -->
                     <th width="10%">Available<br>Options</th>
                 </tr>
                 <tr *ngFor="let user of users">
                     <td>{{user.id}}</td>
                     <td>
                         <div class="profile">
-                            <img src="{{user.image}}" alt="">
+                            <img src="{{user.photoURL}}" alt="">
                             <div class="details">
-                                <p>{{user.name}}</p>
-                                <p>{{user.last_Name}}</p>
+                                <p>{{user.displayName}}</p>
+                                <!-- <p>{{user.last_Name}}</p> -->
                             </div>
                         </div>
                     </td>
-                    <td><p>{{user.emailId}}</p></td>
-                    <td id="purchase"><p>{{user.purchase}}</p></td>
-                    <td><p class="uk-alert-danger">{{user.dateJoin}}</p></td>
-                    <td><p>{{user.dateExp}}</p></td>
-                    <td><p class="uk-alert-success">{{user.totalvalue}}</p></td>
-                    <td><p class="uk-alert-warning">{{user.monthlyrecieved}}</p></td>
+                    <td><p>{{user.email}}</p></td>
+                    <td id="purchase"><p>{{user.totalOrders}}</p></td>
+                    <td><p class="uk-alert-danger">{{user.phoneNumber}}</p></td>
+                    <!-- <td><p>{{user.dateExp}}</p></td>
+                    <td><p class="uk-alert-success"></p></td>
+                    <td><p class="uk-alert-warning">{{user.monthlyrecieved}}</p></td> -->
                     <td class="icons">
-                        <p><i class="fa-solid fa-user-pen"></i></p>
+                        <!-- <p><i class="fa-solid fa-user-pen"></i></p>
                         <p><i class="fa-solid fa-user-xmark"></i></p>
-                        <p><i class="fa-solid fa-user"></i></p>
+                        <p><i class="fa-solid fa-user"></i></p> -->
                         <p><i class="fa-solid fa-phone"></i></p>
                     </td>
                 </tr>

@@ -1,5 +1,5 @@
 import { docData } from '@angular/fire/firestore';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from 'src/app/services/Auth/auth.service';
 import { DataproviderService } from 'src/app/services/dataprovider.service';
 
@@ -11,44 +11,33 @@ import { DataproviderService } from 'src/app/services/dataprovider.service';
 export class WishlistComponent implements OnInit {
 
   public userId: any;
-  public UserWishlist:any[]=[];
+  public wishListItemId:any
+  public UserWishlist: any[] = [];
+  @Output() deleted: EventEmitter<any> = new EventEmitter();
 
   constructor(public dataProvider: DataproviderService, public auth: AuthService) { }
 
   ngOnInit() {
-     this.auth.getUser.subscribe(
-      (res) => {
-        this.userId = res?.uid
-       console.log(this.userId)
-       this.getUserWishlist()
-        
-      }
+    this.auth.getUser.subscribe((res) => { this.userId = res?.uid; })
+  }
+
+
+  getWishListItem(this: any) {
+
+    let data = {
+      id: this.id,
       
-    )
-    
+    }
+    this.deleted.emit(data);
+    this.cartId = data
+    console.log(data)
+    this.deleteCartItem()
   }
 
-  // getUserWishlist(){
-  //   this.auth.getUserWishlist(this.userId).then((res)=>{
-  //    const data =  res
-  //    console.log(data.docs)
-  //   })
-  // }
-
-
-  getUserWishlist() {
-    return this.auth.getUserWishlist(this.userId).then((res) => {
-      res.forEach((element: any) => {
-        this.UserWishlist.push(
-          {
-            ...element.data(),
-            id: element.id
-          }
-        )
-      });
-      console.log(this.UserWishlist)
-    })
-
+  deleteWishListItem(){
+    this.auth.deleteWishListItem(this.userId, this.wishListItemId)
   }
+
+
 
 }

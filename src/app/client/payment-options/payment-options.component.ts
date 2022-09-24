@@ -31,6 +31,7 @@ export class PaymentOptionsComponent implements OnInit {
   }
 
   selectPaymentMethoud(){
+    console.log(this.DataProvider.cartItems , '', this.DataProvider.deliveryAddressSelected, '', this.DataProvider.paymentsCheck)
     this.DataProvider.paymentsCheck
   }
 

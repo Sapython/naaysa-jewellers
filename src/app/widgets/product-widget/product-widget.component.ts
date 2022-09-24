@@ -24,13 +24,16 @@ export class ProductWidgetComponent implements OnInit {
   @Input() liked: boolean = false
   @Input() navigateUrl: string
   @Input() id: string
+  @Input() wishlist:Boolean = false
 
   @Output() addToCart: EventEmitter<any> = new EventEmitter();
+  @Output() delete: EventEmitter<any> = new EventEmitter();
+
   public userId: any
   public cartItem: any
   public cartItemId: any
   public cartItems:any
-
+  public wishListItemId:any
 
   onclick() {
     alert('Your Product has Been Added To Cart')
@@ -69,6 +72,23 @@ export class ProductWidgetComponent implements OnInit {
   }
 
 
+  getWishListItem(this: any) {
+
+    let data = {
+      id: this.id,
+      
+    }
+    this.delete.emit(data);
+    this.wishListItemId = data
+    
+  }
+
+  deleteWishListItem(){
+    this.getWishListItem()
+    this.auth.deleteWishListItem(this.userId, this.wishListItemId.id)
+  }
+
+
 
 
 
@@ -101,7 +121,10 @@ export class ProductWidgetComponent implements OnInit {
      })
     
     if (CartValue) {
-      this.dataBaseService.updateWishListQuantity(this.userId, CartValue.id)
+     
+        this.getWishListItem()
+        this.auth.deleteWishListItem(this.userId, this.wishListItemId.id)
+      
     } 
     
     else {

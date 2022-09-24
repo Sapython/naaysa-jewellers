@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/services/Auth/auth.service';
 
 @Component({
   selector: 'app-cart-added-item',
@@ -7,22 +8,46 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CartAddedItemComponent implements OnInit {
 
-  @Input() imgsrc: String="";
-  @Input() item_name: String="";
-  @Input() item_price: String="";
-  @Input() stock: String="";
-  @Input() item_count: String="";
-  @Input() total_price: String="";
-  @Output() deleted:EventEmitter<any> = new EventEmitter();
-  constructor() { }
+  @Input() imgsrc: String = "";
+  @Input() item_name: String = "";
+  @Input() item_price: String = "";
+  @Input() stock: String = "";
+  @Input() item_count: String = "";
+  @Input() total_price: String = "";
+  @Input() id: any = "";
+  @Output() deleted: EventEmitter<any> = new EventEmitter();
+  constructor(private auth: AuthService) { }
 
-  ngOnInit(): void {
+  userId: any;
+  cartId: any;
+
+  ngOnInit() {
+    return this.auth.getUser.subscribe((res) => { this.userId = res?.uid })
   }
-  delete(){
+
+  getCartItem(this: any) {
+
+    let data = {
+      id: this.id,
+      
+    }
+    this.deleted.emit(data);
+    this.cartId = data
+    console.log(data)
+    this.deleteCartItem()
+  }
+
+
+  delete() {
     alert('Removed')
     this.deleted.emit(true);
   }
-  alert(){
+  alert() {
     alert('Added to wishlist');
   }
+
+  deleteCartItem() {
+    this.auth.deleteUserCart(this.userId, this.cartId.id).then((res) => { console.log(res) })
+  }
+
 }

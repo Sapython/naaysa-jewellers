@@ -2,7 +2,7 @@
     <div class="cart-items uk-animation-slide-left-medium">
         <h1>Cart</h1>
         <hr class="aa">
-        <app-cart-added-item *ngFor="let item of cartList" [imgsrc]="item.src" [item_name]="item.name"
+        <app-cart-added-item *ngFor="let item of this.dataProvider.cartItems" [id]="item.id" [imgsrc]="item.src" [item_name]="item.name"
             [item_price]="item.price" [stock]="item.stock" [item_count]="item.quantity"
             [total_price]="item.price"></app-cart-added-item>
     </div>

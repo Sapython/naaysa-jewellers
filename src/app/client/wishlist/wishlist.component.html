@@ -1,7 +1,7 @@
 
 <p id="heading">Wishlist</p>
 <div class="widget">
-    <ng-container *ngFor="let wishlistItems of UserWishlist" >
+    <ng-container *ngFor="let wishlistItems of dataProvider.wishlistItems" >
         <app-product-widget *ngIf="wishlistItems.wishlist == true"  [product_name]="wishlistItems?.name" [src]="wishlistItems?.src" [price]="wishlistItems?.price" [category]="wishlistItems?.category"></app-product-widget>
     </ng-container>
     

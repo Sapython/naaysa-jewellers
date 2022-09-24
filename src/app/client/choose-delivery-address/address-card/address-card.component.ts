@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/services/Auth/auth.service';
 import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
+import { DataproviderService } from 'src/app/services/dataprovider.service';
 
 @Component({
   selector: 'app-address-card',
@@ -30,7 +31,7 @@ export class AddressCardComponent implements OnInit {
 
   
 
-  constructor(private auth:AuthService, public dataProvider:DatabaseServiceService, private dataBaseService: DatabaseServiceService) { }
+  constructor(private auth:AuthService, public dataProvider:DataproviderService, private dataBaseService: DatabaseServiceService) { }
 
 
   ngOnInit(): void {}

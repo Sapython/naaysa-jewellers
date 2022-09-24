@@ -15,7 +15,7 @@
     <div class="cart-price">
         <h1>Paying Naaysa Jewellers</h1>
         <hr class="new2">
-        <app-payment-item imgsrc="https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png" itemName="Golden Ring"></app-payment-item>
+        <app-payment-item *ngFor="let item of this.DataProvider.cartItems" [imgsrc]="item.src" [itemName]="item.name"></app-payment-item>
         <!-- <app-payment-item imgsrc="https://w7.pngwing.com/pngs/626/880/png-transparent-wedding-ring-carat-diamond-gold-jewelry-love-gemstone-ring.png" itemName="Platinum-diamond Ring"></app-payment-item> -->
         <hr class="new2">
         <div class="price-detail">

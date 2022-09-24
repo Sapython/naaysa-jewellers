@@ -16,105 +16,7 @@ export class UsersComponent implements OnInit {
 
   title = 'Table'
 
-  users = [
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-
-  ]
+  users:any[] = []
   mobile_users = [
     {
       img: 'assets/2.jpeg',
@@ -163,7 +65,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.getAllUsers()
   }
   adduser() {
     this.dialogModule.open(AddUsersComponent)

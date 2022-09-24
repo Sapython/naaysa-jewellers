@@ -23,11 +23,11 @@
     </div>
     
     <div *ngFor="let category of categories">
-        <p data-aos="fade-right" data-aos-delay="500">{{category.title}}</p>
+        <p data-aos="fade-right"  data-aos-delay="500">{{category.title}}</p>
         <div class="widgets">
             <ng-container *ngFor="let product of products">
                 <app-product-widget  *ngIf="category.title === product.category" 
-                [navigateUrl]="'../product/'+product.id" [id]="product.id" [product_name]="product.productName"
+                [navigateUrl]="'../product/'+product.id" [id]="product.id" [product_name]="product.productName" [wishlist]="product.wishlist"
                 [src]="product.imgSrc" [price]="product.price"
                 [purity]="product.purity" [category]="product.category"
                 [jewellery_Name]="product.jewelleryName" [discount]="product.discount">
