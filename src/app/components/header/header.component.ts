@@ -18,58 +18,10 @@ export class HeaderComponent implements OnInit {
   @ViewChild('offcanvasContainer') offcanvasContainer: ElementRef;
   @ViewChild('offcanvas') offcanvas: ElementRef;
   searchVisible: boolean = false;
+  public dbUserDetail:any
+  public userId:any
 
-  byCategory: any[] = [
-    // {
-    //   image:'../../../assets/jewellery/jew1.svg',
-    //   name:'Gold coins'
-    // },
-
-    // {
-    //   image:'../../../assets/jewellery/jew5.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew6.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew2.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew8.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew1.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew.3.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew2.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew5.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew1.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew2.svg',
-    //   name:'Gold coins'
-    // },
-    // {
-    //   image:'../../../assets/jewellery/jew8.svg',
-    //   name:'Gold coins'
-    // }
-  ]
+  byCategory: any[] = []
   byMetals = [
     {
       image: '../../../assets/metals/metal1.svg',
@@ -89,36 +41,31 @@ export class HeaderComponent implements OnInit {
     },
 
   ]
-  filters: any[] = [
-    // {
-    //   name: 'For KIDS/BABY'
-    // },
-    // {
-    //   name: 'Under ₹ 10k'
-    // },
-    // {
-    //   name: '₹ 10k - ₹ 20k '
-    // },
-    // {
-    //   name: ' ₹ 20k to ₹ 75K '
-    // },
-    // {
-    //   name: '₹ 75k to ₹ 1 LAKH'
-    // },
-    // {
-    //   name: 'Above ₹ 1 LAKH'
-    // },
-    // {
-    //   name: 'FOR WOMEN'
-    // },
-  ]
-  constructor(private products: ProductsService, public authService:AuthService) { }
+  filters: any[] = []
+  constructor(private products: ProductsService, public auth:AuthService) { }
 
   ngOnInit(): void {
+     this.auth.getUser.subscribe(
+      (res) => {
+        this.userId = res?.uid
+        this.getUser()
+      }
+    )
 
     this.getProductsCategory();
     this.getPriceRange()
   }
+
+  public getUser() {
+    this.auth.getDbUser(this.userId).then((res) => {
+     this.dbUserDetail = res.data()
+     console.log(this.dbUserDetail)
+    })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
 
 
 

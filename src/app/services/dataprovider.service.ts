@@ -5,10 +5,17 @@ import { Injectable } from '@angular/core';
 })
 export class DataproviderService {
 
-  public userData : any;
+  public userData: any;
+  public cartItems: any[] = [];
+  public wishlistItems: any[] = [];
+  public orderData:any[] = [];
+  public deliveryAddressSelected:any;
+  public paymentsCheck:any; 
 
   constructor() {
     console.log(this.userData)
-   }
-  
+    console.log(this.deliveryAddressSelected)
+
+  }
+
 }

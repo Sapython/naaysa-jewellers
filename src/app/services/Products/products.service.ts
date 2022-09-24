@@ -43,6 +43,9 @@ export class ProductsService {
     return addDoc(collection(this.fs, '/product/'), data);
   }
 
+
+ 
+
   // Vendor
 
   public addVendor(data: any) {

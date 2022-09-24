@@ -22,7 +22,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  signupWithEmail() {
+  signUpWithEmailAndPassword() {
     if (this.signupForm.value.email == '') {
       alert('please enter your email');
       return
@@ -33,12 +33,7 @@ export class SignupComponent implements OnInit {
       return
     }
 
-    this.auth.emailSignUp(this.signupForm.value.email, this.signupForm.value.password).then((res) => {
-      if(this.auth.newUser === true){
-        this.addUser()
-      }
-      
-     }).catch((err) => { console.log(err) });
+    this.auth.signUpWithEmailAndPassword(this.signupForm.value.email, this.signupForm.value.password)
     this.router.navigateByUrl('/all-product')
 
 
@@ -46,28 +41,28 @@ export class SignupComponent implements OnInit {
 
 
 
-  addUser() {
+  // addUser() {
 
-    const userData = {
-      accessToken: this.dataProvider?.userData.accessToken,
-      displayName: this.dataProvider?.userData.displayName,
-      email: this.dataProvider?.userData.email,
-      emailVerified: this.dataProvider?.userData.emailVerified,
-      isAnonymous: this.dataProvider?.userData.isAnonymous,
-      phoneNumber: this.dataProvider?.userData.phoneNumber,
-      photoURL: this.dataProvider?.userData.photoURL,
-      providerId: this.dataProvider?.userData.providerId,
-      reloadListener: this.dataProvider?.userData.reloadListener,
-      tenantId: this.dataProvider?.userData.tenantId,
-      uid: this.dataProvider?.userData.uid,
-      access: {access:'user'},
-      orders:[],
-      wishlist:[],
-      cart:[],
+  //   const userData = {
+  //     accessToken: this.dataProvider?.userData.accessToken,
+  //     displayName: this.dataProvider?.userData.displayName,
+  //     email: this.dataProvider?.userData.email,
+  //     emailVerified: this.dataProvider?.userData.emailVerified,
+  //     isAnonymous: this.dataProvider?.userData.isAnonymous,
+  //     phoneNumber: this.dataProvider?.userData.phoneNumber,
+  //     photoURL: this.dataProvider?.userData.photoURL,
+  //     providerId: this.dataProvider?.userData.providerId,
+  //     reloadListener: this.dataProvider?.userData.reloadListener,
+  //     tenantId: this.dataProvider?.userData.tenantId,
+  //     uid: this.dataProvider?.userData.uid,
+  //     access: {access:'user'},
+  //     orders:[],
+  //     wishlist:[],
+  //     cart:[],
 
 
-    }
-    this.auth.addUser(userData).then((res) => { }).catch((res) => { })
-  }
+  //   }
+  //   this.auth.addUser(userData).then((res) => { }).catch((res) => { })
+  // }
 }
 

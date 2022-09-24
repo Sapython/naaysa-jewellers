@@ -5,5 +5,10 @@ export const urls = {
     vendors: `vendors/`,
     offers: `offers/`,
     users: `users`,
-    user:`/users/{USER_ID}`
+    user:`/users/{USER_ID}`,
+    wishlist:`/wishlist`,
+    cart:`/cart`,
+    cartId:`/cart/{CART_ID}`,
+    orders:`/orders`,
+    deliveryAddress:`/deliveryAddress`
 }

@@ -1,6 +1,6 @@
-<div class="container .uk-animation-fade">
-    <div class="box">
-        <div routerLink="{{navigateUrl}}">
+<div class="container .uk-animation-fade ">
+    <div class="box ">
+        <div >
             <div class="upper-section">
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
@@ -9,7 +9,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <div class="heart"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }"
+                <div class="heart" (click)="addToWishlist()"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }"
                         (click)="liked = !liked"></i></div>
             </div>
             <div class="image" >
@@ -25,8 +25,8 @@
             <p id="info"><span>{{category}} </span> | <span>{{jewellery_Name}}</span></p>
         </div>
         <div class="buttons">
-            <button (click)="onclick()">Add To Cart</button>
-            <!-- <button><span uk-icon="trash"></span></button> -->
+            <button (click)="addProductCart()" >Add To Cart</button>
+            <!-- <button (click)="buyNow()">Buy Now</button> -->
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@ import { AfterContentInit, Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/Auth/auth.service';
 import { Observable } from '@firebase/util';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -18,7 +19,16 @@ export class ProfileComponent implements OnInit {
   showSidebar: boolean = false;
   @Input() name: string = 'Stupidita'
 
-  public user: any[] = []
+  public userId: any
+  public dbUserDetail:any
+
+  public updateProfileForm:FormGroup = new FormGroup({
+    displayName: new FormControl(),
+    phoneNumber: new FormControl(),
+    email: new FormControl(),
+    // photoURL: new FormControl(),
+
+  });
 
   constructor(private router: Router, public dataproviderService: DataproviderService, public auth: AuthService, public productsService: ProductsService) {
     router.events.forEach((event) => {
@@ -40,10 +50,37 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
+   return this.auth.getUser.subscribe(
+      (res) => {
+        this.userId = res?.uid
+        this.getUser()
+      }
+    )
+
+   
 
   }
 
+  public getUser() {
+    this.auth.getDbUser(this.userId).then((res) => {
+     this.dbUserDetail = res.data()
+     console.log(this.dbUserDetail)
+    })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 
+  public updateProfile(){
+    // console.log(this.userId)
+    console.log(this.updateProfileForm.value)
+     this.auth.updateUser(this.userId, this.updateProfileForm.value ).then((res)=>{
+      console.log(res)
+    }).catch((err)=>{
+      console.log(err)
+    })
+   }
+  
 
   onWindowResize() {
     this.largeScreen = window.innerWidth > this.breakpoint;
@@ -62,7 +99,7 @@ export class ProfileComponent implements OnInit {
   }
 
 
-  
+
 
 }
 

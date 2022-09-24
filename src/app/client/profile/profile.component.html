@@ -1,57 +1,59 @@
-
 <section>
   <div class="profile">
     <div class="left">
       <b>Hello, Don Joe</b>
       <div class="profile-image">
         <div class="image">
-          <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+          <!-- <img
+            [src]="dbUserDetail?.photoURL" /> -->
         </div>
       </div>
+      <form action="" [formGroup]="updateProfileForm" (ngSubmit)="updateProfile()">
+        <div class="input">
+          <p>
+            Name
+          </p>
+          <input type="text" placeholder="Name" [value]="dbUserDetail?.displayName" formControlName="displayName">
+        </div>
+        <div class="input">
+          <p>
+            Phone Number
+          </p>
+          <input type="text" placeholder="Phone Number" [value]="dbUserDetail?.phoneNumber" formControlName="phoneNumber">
+        </div>
+        <div class="input">
+          <p>
+            PAN Card no.
+          </p>
+          <input type="text" placeholder="Pan Card Number">
+        </div>
+        <div class="input">
+          <p>
+            Email Address
+          </p>
+          <input type="text" placeholder="Email Adress" [value]="dbUserDetail?.email" formControlName="email">
+        </div>
+        <div class="buttons">
+          <button type="submit">Save</button>
+          <button>Edit profile</button>
+        </div>
+      </form>
 
-     <div class="input">
-      <p>
-        Name
-      </p>
-      <input type="text" placeholder="Name" >
-     </div>
-     <div class="input">
-      <p>
-        Phone Number 
-      </p>
-      <input type="text" placeholder="Phone Number">
-     </div>
-     <div class="input">
-      <p>
-        PAN Card no. 
-      </p>
-      <input type="text" placeholder="Pan Card Number">
-     </div>
-     <div class="input">
-      <p>
-        Email Address 
-      </p>
-      <input type="text" placeholder="Email Adress" [value]="dataproviderService?.userData?.email">
-     </div>
-     <div class="buttons">
-      <button>Save</button>
-      <button>Edit profile</button>
-     </div>
-     
+
     </div>
     <div class="right">
-    <div class="boxes" routerLink="../choose-delivery-address">
-      Check Address
-    </div>
-    <div class="boxes" routerLink="../order-history">
-      Orders
-    </div>
-    <div class="boxes"  routerLink="/choose-plan">
-      Plan history
-    </div>
-    <div class="boxes light"  routerLink="../forgot-password">
-      Change password
-    </div>
+      <div class="boxes" routerLink="../choose-delivery-address">
+        Check Address
+      </div>
+      <div class="boxes" routerLink="../order-history">
+        Orders
+      </div>
+      <div class="boxes" routerLink="/choose-plan">
+        Plan history
+      </div>
+      <div class="boxes light" routerLink="../forgot-password">
+        Change password
+      </div>
     </div>
   </div>
 </section>
@@ -68,9 +70,8 @@
   <input type="text" placeholder="Gender">
   <input type="text" placeholder="DOB">
   <div class="buttons">
-    <button  routerLink="/forgot-password">Change Password</button>
-    <button routerLink="/login">Logout  <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+    <button routerLink="/forgot-password">Change Password</button>
+    <button routerLink="/login">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
   </div>
 </div>
 <app-footer></app-footer>
-

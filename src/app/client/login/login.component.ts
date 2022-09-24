@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       return
     }
 
-     this.auth.emailLogin(this.loginForm.value.email, this.loginForm.value.password).then((res)=>{console.log(res)}).catch((err)=>{console.log(err)});
+     this.auth.loginWithEmailPassword(this.loginForm.value.email, this.loginForm.value.password).then((res)=>{console.log(res)}).catch((err)=>{console.log(err)});
      this.router.navigateByUrl('/all-product')
     
 

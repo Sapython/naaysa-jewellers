@@ -1,9 +1,10 @@
-
 <div class="cart-main">
     <div class="cart-items uk-animation-slide-left-medium">
         <h1>Cart</h1>
         <hr class="aa">
-        <app-cart-added-item *ngFor="let item of products" [imgsrc]="item.imgsrc" [item_name]="item.item_name" [item_price]="item.item_price" [stock]="item.stock" [item_count]="item.item_count" [total_price]="item.total_price"></app-cart-added-item>
+        <app-cart-added-item *ngFor="let item of cartList" [imgsrc]="item.src" [item_name]="item.name"
+            [item_price]="item.price" [stock]="item.stock" [item_count]="item.quantity"
+            [total_price]="item.price"></app-cart-added-item>
     </div>
     <div class="cart-price uk-animation-slide-right-medium">
         <p id="heading">Delivery</p>
