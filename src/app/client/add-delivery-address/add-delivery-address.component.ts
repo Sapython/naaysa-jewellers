@@ -36,6 +36,6 @@ export class AddDeliveryAddressComponent implements OnInit {
   }
 
   addDeliveryAddress(){
-    this.auth.addDeliveryAddress(this.userId, this.addDeliveryAddressForm.value).then((res)=>{console.log(res)})
+    this.dataBaseService.addDeliveryAddress(this.userId, this.addDeliveryAddressForm.value).then((res)=>{console.log(res)})
   }
 }

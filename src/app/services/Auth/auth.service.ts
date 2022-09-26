@@ -39,8 +39,6 @@ export class AuthService {
           this.userIsLoggedIn = false;
         }
       })
-
-
     }
   }
 
@@ -118,108 +116,6 @@ export class AuthService {
 
   getRandomImage(): string {
     return 'https://avatars.dicebear.com/api/gridy/' + (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)) + '.svg';
-  }
-
-
-
-  // user collection
-  public addUser(data: any) {
-    return addDoc(collection(this.fs, urls.users), data);
-  }
-
-  public getDbUser(USER_ID: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    return getDoc(doc(this.fs, userIDUrl));
-  }
-
-  getAllUsers() {
-    return getDocs(collection(this.fs, '/users'))
-  }
-
-  // edit User
-
-  updateUser(USER_ID: any, data: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    return updateDoc(doc(this.fs, userIDUrl), data).then((res) => {
-      console.log(res)
-    }).catch((err) => {
-      console.log(err)
-    });
-  }
-
-  // cart
-
-
-
-  // wishlist
-
-  userWishlist(USER_ID: any, data: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-
-    return addDoc(collection(this.fs, userIDUrl + urls.wishlist), data).then((res) => {
-
-    });
-  }
-
-  getUserWishlist(USER_ID: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-
-    return getDocs(collection(this.fs, userIDUrl + urls.wishlist))
-  }
-
-  deleteWishListItem(USER_ID:any, WISHLIST_ID:any ){
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    const wishlistIdUrl = urls.wishlistId.replace('{WISHLIST_ID}', WISHLIST_ID);
-    return deleteDoc(doc(this.fs, userIDUrl + wishlistIdUrl))
-  }
-
-
-
-  // Cart
-
-  getUserCartList(USER_ID: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-
-    return getDocs(collection(this.fs, userIDUrl + urls.cart))
-  }
-
-  userCart(USER_ID: any, data: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    data['productId'] = data.id
-    return addDoc(collection(this.fs, userIDUrl + urls.cart), data).then(async (res) => {
-
-    });
-  }
-
-  deleteUserCart(USER_ID: any, CART_ID: any){
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    const cartIDUrl = urls.cartId.replace('{CART_ID}', CART_ID);
-    return deleteDoc(doc(this.fs, userIDUrl + cartIDUrl))
-
-  }
-
-  // Orders
-
-
-  userOrders(USER_ID: any, data: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    return addDoc(collection(this.fs, userIDUrl + urls.orders), data).then(async (res) => {
-
-    });
-  }
-
-  // Add Delivery addresss
-
-  addDeliveryAddress(USER_ID: any, data: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    return addDoc(collection(this.fs, userIDUrl + urls.deliveryAddress), data).then(async (res) => {
-
-    });
-  }
-
-  getDeliveryAddress(USER_ID: any) {
-    const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
-    return getDocs(collection(this.fs, userIDUrl + urls.deliveryAddress)).then()
   }
 
   public async logout() {

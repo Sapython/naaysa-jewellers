@@ -25,26 +25,7 @@ export class CartComponent implements OnInit {
   userId: any;
   cartItems: any
   constructor(public auth: AuthService, public dataProvider: DataproviderService, public fs: Firestore) { }
-
   ngOnInit() {
-    return this.auth.getUser.subscribe((res) => { this.userId = res?.uid; this.getUserCartList() })
+    alert(this.dataProvider.cartItems.length)
   }
-
-
-  getUserCartList() {
-    return this.auth.getUserCartList(this.userId).then((res) => {
-      res.forEach((element: any) => {
-        this.cartList.push(
-          {
-            ...element.data(),
-            id: element.id
-          }
-        )
-      });
-      console.log(this.cartList)
-    })
-
-  }
-
-
 }

@@ -2,6 +2,7 @@ import { docData } from '@angular/fire/firestore';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AuthService } from 'src/app/services/Auth/auth.service';
 import { DataproviderService } from 'src/app/services/dataprovider.service';
+import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -15,7 +16,7 @@ export class WishlistComponent implements OnInit {
   public UserWishlist: any[] = [];
   @Output() deleted: EventEmitter<any> = new EventEmitter();
 
-  constructor(public dataProvider: DataproviderService, public auth: AuthService) { }
+  constructor(public dataProvider: DataproviderService, public auth: AuthService,private databaseService:DatabaseServiceService) { }
 
   ngOnInit() {
     this.auth.getUser.subscribe((res) => { this.userId = res?.uid; })
@@ -35,7 +36,7 @@ export class WishlistComponent implements OnInit {
   }
 
   deleteWishListItem(){
-    this.auth.deleteWishListItem(this.userId, this.wishListItemId)
+    this.databaseService.deleteWishListItem(this.userId, this.wishListItemId)
   }
 
 

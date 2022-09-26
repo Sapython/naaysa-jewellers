@@ -1,6 +1,6 @@
 <div class="container .uk-animation-fade ">
     <div class="box">
-        <div >
+        <div>
             <div class="upper-section">
                 <div class="stars">
                     <i class="fa-solid fa-star"></i>
@@ -9,9 +9,9 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <div class="heart" (click)="addToWishlist()"><i 
-                    [ngClass]="{'fa-heart': this.wishlist == true, 'fa-solid': this.wishlist == false }"
-                       ></i></div>
+                <div class="heart" (click)="addToWishlist()">
+                    <i [class]="wishlist ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"></i>
+                </div>
             </div>
             <div class="image" routerLink="../product/{{id}}">
                 <img src="{{src}}" alt="">
@@ -26,7 +26,7 @@
             <p id="info"><span>{{category}} </span> | <span>{{jewellery_Name}}</span></p>
         </div>
         <div class="buttons">
-            <button (click)="addProductCart()" >Add To Cart</button>
+            <button (click)="addProductCart()">Add To Cart</button>
             <!-- <button (click)="buyNow()">Buy Now</button> -->
         </div>
     </div>

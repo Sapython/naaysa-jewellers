@@ -3,6 +3,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 declare var UIkit: any;
 import { HostListener } from '@angular/core';
 import { ProductsService } from 'src/app/services/Products/products.service';
+import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
 @HostListener('window:scroll', ['$event'])
 @Component({
   selector: 'app-header',
@@ -18,59 +19,59 @@ export class HeaderComponent implements OnInit {
   @ViewChild('offcanvasContainer') offcanvasContainer: ElementRef;
   @ViewChild('offcanvas') offcanvas: ElementRef;
   searchVisible: boolean = false;
-  public dbUserDetail:any
-  public userId:any
+  public dbUserDetail: any;
+  public userId: any;
 
-  byCategory: any[] = []
+  byCategory: any[] = [];
   byMetals = [
     {
       image: '../../../assets/metals/metal1.svg',
-      name: 'Diamond'
+      name: 'Diamond',
     },
     {
       image: '../../../assets//metals/metal2.svg',
-      name: 'Gold '
+      name: 'Gold ',
     },
     {
       image: '../../../assets/metals/metal.svg',
-      name: 'Silver'
+      name: 'Silver',
     },
     {
       image: '../../../assets/metals/gemstone.svg',
-      name: 'Gemstone'
+      name: 'Gemstone',
     },
-
-  ]
-  filters: any[] = []
-  constructor(private products: ProductsService, public auth:AuthService) { }
+  ];
+  filters: any[] = [];
+  constructor(
+    private products: ProductsService,
+    public auth: AuthService,
+    private databaseService: DatabaseServiceService
+  ) {}
 
   ngOnInit(): void {
-     this.auth.getUser.subscribe(
-      (res) => {
-        this.userId = res?.uid
-        this.getUser()
-      }
-    )
+    this.auth.getUser.subscribe((res) => {
+      this.userId = res?.uid;
+      this.getUser();
+    });
 
     this.getProductsCategory();
-    this.getPriceRange()
+    this.getPriceRange();
   }
 
   public getUser() {
-    this.auth.getDbUser(this.userId).then((res) => {
-     this.dbUserDetail = res.data()
-     console.log(this.dbUserDetail)
-    })
-      .catch((err) => {
-        console.log(err)
+    this.databaseService
+      .getDbUser(this.userId)
+      .then((res) => {
+        this.dbUserDetail = res.data();
+        console.log(this.dbUserDetail);
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
-
-
-
   async getProductsCategory() {
-    const res: any = await this.products.getCategories()
+    const res: any = await this.products.getCategories();
     //  this.byCategory = Array.from(res).map((element:any) => {
     //     return {
     //       ...element.data(),
@@ -78,28 +79,22 @@ export class HeaderComponent implements OnInit {
     //     }
     //   });
     res.forEach((element: any) => {
-      this.byCategory.push(
-        {
-          ...element.data(),
-          id: element.id
-        }
-      )
-
-
+      this.byCategory.push({
+        ...element.data(),
+        id: element.id,
+      });
     });
   }
 
   async getPriceRange() {
-    const res: any = await this.products.getPriceRange()
+    const res: any = await this.products.getPriceRange();
     res.forEach((element: any) => {
-      this.filters.push(
-        {
-          ...element.data(),
-          id: element.id
-        }
-        )
+      this.filters.push({
+        ...element.data(),
+        id: element.id,
+      });
     });
-    console.log(this.filters)
+    console.log(this.filters);
   }
 
   showSearch() {
@@ -130,9 +125,7 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
-  showMenu() {
-
-  }
+  showMenu() {}
 
   hideSearch() {
     this.searchBox.nativeElement.setAttribute('closed', '');

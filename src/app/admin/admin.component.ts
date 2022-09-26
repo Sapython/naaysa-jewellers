@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { AuthService } from '../services/Auth/auth.service';
+import { DatabaseServiceService } from '../services/database-service/database-service.service';
 
 @Component({
   selector: 'app-admin',
@@ -15,7 +16,7 @@ export class AdminComponent implements OnInit {
   userId:any;
   dbUserDetail:any
 
-  constructor(private router: Router, private auth:AuthService) {
+  constructor(private router: Router, private databaseService:DatabaseServiceService, private auth: AuthService) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         const url = this.router.url;
@@ -38,7 +39,7 @@ export class AdminComponent implements OnInit {
   }
 
   public getUser() {
-    this.auth.getDbUser(this.userId).then((res) => {
+    this.databaseService.getDbUser(this.userId).then((res) => {
      this.dbUserDetail = res.data()
      console.log(this.dbUserDetail)
     })
