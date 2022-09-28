@@ -1,0 +1,16 @@
+<div class="container shadow no-padding-x pb-4 mt-4">
+    <div class="box w-100 ">
+        <i class="ri-map-pin-fill"></i>
+        <p>Deliver To</p>
+    </div>
+    <div class="parent-container">
+        <app-address-card *ngFor="let deliveryAddress of deliveryAddressItems" [name]="deliveryAddress.name"
+            [address]="deliveryAddress.address" [phoneNumber]="deliveryAddress.phoneNumber"
+            [pinCode]="deliveryAddress.pinCode" [address_type]="deliveryAddress.pinCode" [state]="deliveryAddress.state"
+            [city]="deliveryAddress.city" [houseNo]="deliveryAddress.houseNo"></app-address-card>
+    </div>
+    <div class="d-flex justify-content-between px-3">
+        <button routerLink="../payment-options">Next</button>
+        <button class="add" routerLink="/add-delivery-address">Add New Address</button>
+    </div>
+</div>

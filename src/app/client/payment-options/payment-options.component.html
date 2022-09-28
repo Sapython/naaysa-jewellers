@@ -1,0 +1,92 @@
+
+<div class="cart-main container pt-5">
+    <div class="row w-100 justify-content-between ">
+        <div class="cart-items col-sm-12 col-md-7">
+            <h1>Payment Options</h1>
+            <hr class="aa">
+            <div class="payment-types">
+                <app-payment-type paymentType="Credit/Debit/ATM card"></app-payment-type>
+                <app-payment-type paymentType="UPI"></app-payment-type>
+                <app-payment-type paymentType="EMI"></app-payment-type>
+                <app-payment-type paymentType="Net Banking"></app-payment-type>
+                <app-payment-type paymentType="Cash on Delivery"></app-payment-type>
+            </div>
+            <button class="proceed-btn" (click)="onclick()">Continue &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="cart-price col-sm-12 col-md-4">
+            <h1>Paying Naaysa Jewellers</h1>
+            <hr class="new2">
+            <app-payment-item *ngFor="let item of this.DataProvider.cartItems" [imgsrc]="item.src" [itemName]="item.name"></app-payment-item>
+            <!-- <app-payment-item imgsrc="https://w7.pngwing.com/pngs/626/880/png-transparent-wedding-ring-carat-diamond-gold-jewelry-love-gemstone-ring.png" itemName="Platinum-diamond Ring"></app-payment-item> -->
+            <hr class="new2">
+            <div class="price-detail">
+                <div class="price-detail-text pd">
+                    <h1>Subtotal</h1>
+                    <p>Discount</p>
+                    <p>Delivery</p>
+                    <p>Tax</p>
+                </div>
+                <div class="price-detail-data pd">
+                    <h1>₹ 1,34,507</h1>
+                    <p>₹ 500</p>
+                    <p>Free</p>
+                    <p>₹ 100</p>
+                </div>
+            </div>
+            <br>
+            <hr class="new2">
+            <div class="total-price">
+                <p>Total</p> <p id="price-final">₹ 1,34,107</p>
+            </div>
+            <p><a href=""><i class="fa-solid fa-arrow-left"></i> Back to Shopping</a></p>
+        </div>
+    </div>
+    <div class="mobile-view">
+        <div class="mobile-bill">
+            <div class="uk-flex heading">
+                <p>Order Summary</p>
+                <p>{{delivery_Date}}</p>
+            </div>
+            <hr>
+            <div class="bill-info">
+                <div class="uk-flex">
+                    <p>Subtotal</p>
+                    <p>{{subtotal}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>You saved</p>
+                    <p>{{saved}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Discount Coupon</p>
+                    <p>{{discount}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Gold</p>
+                    <p>{{material_Price}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>GST</p>
+                    <p>{{gst}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Tax</p>
+                    <p>{{tax}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Delivery</p>
+                    <p>{{delivery}}</p>
+                </div>
+                <hr>
+                <div class="uk-flex" id="mart">
+                    <p>Amount Payable</p>
+                    <p>{{total}}</p>
+                </div>
+    
+            </div>
+        </div>
+        <button class="place" (click)="onclick()">
+            Pay {{total}}
+        </button>
+    </div>
+</div>

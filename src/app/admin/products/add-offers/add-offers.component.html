@@ -1,0 +1,20 @@
+<main>
+    <form  [formGroup]="addOfferForm" (ngSubmit)="addOffer()">
+        <div class="uk-text-large uk-margin-small-bottom">Add Offer</div>
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-large" type="text" placeholder="Offer Name" formControlName="offerName">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-large" type="text" placeholder="Offer Type" formControlName="offerType">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-large" type="text" placeholder="Offer Amount Off" formControlName="offerAmountOff">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-large" type="text" placeholder="Offer MaxDiscount" formControlName="OfferMaxDiscount">
+        </div>
+
+        <button class="uk-button uk-button-danger"  type="submit" >Submit</button>
+
+    </form>
+</main>

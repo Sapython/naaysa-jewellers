@@ -1,0 +1,24 @@
+<main>
+    <form  [formGroup]="addVendorForm" (ngSubmit)="addVendor()">
+        <div class="uk-text-large uk-margin-small-bottom">Add vendor</div>
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-large" type="text" placeholder="Vender Name" formControlName="vendorName">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-large" type="text" placeholder="Vender Email" formControlName="vendorEmail">
+        </div>
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-large" type="text" placeholder="Vendor Id" formControlName="vendorId">
+        </div>
+
+        <div class="uk-margin" uk-margin>
+            <div uk-form-custom="target: true">
+                <input type="file" (change)="file = $event" id="" formControlName="vendorImg">
+                <input class="uk-input uk-form-width-large" type="text" placeholder="Vendor Image" disabled>
+            </div>
+        </div>
+
+        <button class="uk-button uk-button-danger" (click)="uploadFile(file.files)" type="submit" >Submit</button>
+
+    </form>
+</main>

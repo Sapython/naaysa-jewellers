@@ -1,0 +1,113 @@
+.container{
+  // width: 80%;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #F3C7CF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .section-one{
+    font-weight: 500;
+    width: 50%;
+    .details{
+      button{
+        cursor: pointer;
+        background-color: var(--color-dark-primary);
+        color: #fff;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 05px;
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: var(--xsmall);
+      }
+      .phone{
+        margin-top: 15px;
+        margin-bottom: -5px;
+      }
+      .address{
+        margin-top: 10px;
+      }
+      .uk-flex{
+        font-weight: 500;
+        align-items: center;
+        .address{
+          display: flex;
+          align-items: center;
+        }
+        .input{
+          margin-top: 15px;
+          margin-left: 25px;
+          margin-top: -3px;
+        }
+        p:nth-child(1){
+          font-size: var(--msmall);
+        }
+        p:nth-child(2){
+          background-color: var(--color-primary);
+          padding: 05px 10px;
+          color: var(--color-dark-primary);
+          border: 1px solid var(--color-dark-primary);
+          border-radius: 10px;
+          margin-top: -5px;
+          margin-left: 55px;
+        }
+      }
+    }
+  }
+  .section-second{
+    button{
+      background-color: var(--color-dark-primary);
+      color: #fff;
+      font-size: var(xsmall);
+      font-weight: 500;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      i{
+        color: #fff;
+        margin-left: 5px;
+        font-size: var(--xsmall);
+      }
+    }
+  }
+}
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.7em;
+  height: 1.7em;
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+  text-align: right;
+  &:checked{
+      background-color: var(--color-secondary);
+      outline: max(2px, 0.18em) solid currentColor;
+      outline-offset: max(1px, 0.15em);
+  }
+}
+@media only screen and (max-width: 600px){
+  .container{
+    width: auto;
+    .section-one{
+      .details{
+        .uk-flex{
+          .input{
+            margin-top: 15px;
+            margin-left: 100px;
+          }
+          p:nth-child(2){
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

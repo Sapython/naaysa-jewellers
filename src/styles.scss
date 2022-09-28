@@ -1,0 +1,189 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$naaysa-jewellers-primary: mat.define-palette(mat.$indigo-palette);
+$naaysa-jewellers-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
+
+// The warn palette is optional (defaults to red).
+$naaysa-jewellers-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$naaysa-jewellers-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $naaysa-jewellers-primary,
+      accent: $naaysa-jewellers-accent,
+      warn: $naaysa-jewellers-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($naaysa-jewellers-theme);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
+
+:root {
+  --ref-color: #ffe4e1;
+  --color-primary: #ffe4e1;
+  --color-secondary: #ee93a3;
+  --color-secondary-light: #fcd4db;
+  --color-secondary-lighter: #fde7eb;
+  --color-secondary-dark: #ffa8a8;
+  --color-secondary-darker: #ff9292;
+  --color-tertiary: #bb6878;
+  --color-four: #949494;
+  --color-dark: grey;
+  --color-light: #ffffff;
+  --color-light-text: grey00081;
+  --color-primary-light: #f4c7cf6c;
+  --color-gold: #f9dcc7;
+  --color-gold-light: #f9dcc769;
+  --color-dark-primary: #e88f9f;
+  --color-light-primary: #fff5fb;
+  --color-success: #309e7d;
+  --color-primary-contrast: #000;
+  --color-rating: #ffd500;
+  --color-button: #fae4e8;
+
+  --font-six: "Andada Pro", sans-serif;
+  --font-one: "Poppins", sans-serif;
+  --font-two: "Great Vibes";
+  --font-three: "Philosopher", sans-serif;
+  --font-four: "Questrial", sans-serif;
+  --font-five: "Noto Sans", sans-serif;
+--font-seven: "Quando", sans-serif;
+--font-eight:"Poppins", sans-serif;
+
+  --xxlarge: 36px;
+  --xlarge: 32px;
+  --large: 28px;
+  --medium: 24px;
+  --small: 20px;
+  --msmall: 18px;
+  --xsmall: 16px;
+  --xxsmall: 14px;
+  --xxxsmall: 12px;
+  --normal-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-three);
+  font-size: var(--medium);
+
+  img {
+    width: 50px;
+    margin: 0 0.25em;
+  }
+
+  span:nth-child(1) {
+    color: var(--color-tertiary);
+  }
+}
+
+.primary-button {
+  padding: 0.25em 0.5em;
+  background-color: var(--color-secondary);
+  color: #fff;
+  border: none;
+  font-size: var(--msmall);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  outline: none;
+
+  span {
+    font-weight: bold;
+  }
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+
+.navigation {
+  li {
+    a {
+      color: red !important;
+    }
+  }
+}
+
+.widgets {
+  display: grid;
+  grid-template:
+    auto
+    / auto auto auto auto;
+  grid-gap: 05%;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+  background-color: #3fb562;
+  color: white;
+}
+.mat-step-label-selected {
+  font-size: var(--xxsmall);
+
+  font-weight: 600;
+}
+@media only screen and (max-width: 600px){
+  html,body{
+    background-color: #FFF5FB;
+  }
+}
+li{
+  list-style: none;
+}
+
+.row{
+ margin: 0 !important;
+ padding: 0 !important;
+}
+
+.uk-search-default{
+  width: 310px;
+}
+
+.no-padding-x{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

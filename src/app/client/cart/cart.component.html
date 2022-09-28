@@ -1,0 +1,128 @@
+<div class="container py-5">
+    <div class="row justify-content-between ">
+        <div class="col-sm-12 col-md-6 cart-items uk-animation-slide-left-medium">
+            <h1>Cart</h1>
+            <hr class="aa">
+            <div *ngIf="this.dataProvider.cartItems.length ; else emptyCart"></div>
+            <app-cart-added-item *ngFor="let item of this.dataProvider.cartItems" [id]="item.id" [imgsrc]="item.src"
+                [item_name]="item.name" [item_price]="item.price" [stock]="item.stock" [item_count]="item.quantity"
+                [total_price]="item.price"></app-cart-added-item>
+            <ng-template #emptyCart>
+                <div class=" w-100 px-3 py-4">
+                    <div class="fs-4 shadow text-center py-5">Cart is Empty, Add some <span class="text-danger" routerLink="/all-product">Product</span></div>
+                </div>
+            </ng-template>
+        </div>
+        <div class="col-sm-12 col-md-5 cart-price uk-animation-slide-right-medium">
+            <p id="heading">Delivery</p>
+            <p id="date">Delivery Date : {{delivery_Date}}</p>
+            <hr id="hr">
+            <p id="discount">{{disc_percentage}} off Discount</p>
+            <div class="promo-code">
+                <input type="text" placeholder="PROMOCODE">
+                <button>Apply</button>
+            </div>
+            <div class="bill">
+                <div class="uk-flex subtotal">
+                    <p>Subtotal</p>
+                    <p>{{subtotal}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Discount</p>
+                    <p>-{{discount}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>{{material}}</p>
+                    <p>{{material_Price}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>GST</p>
+                    <p>{{gst}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Tax</p>
+                    <p>{{tax}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Delivery</p>
+                    <p>{{delivery}}</p>
+                </div>
+                <hr id="hr">
+                <div class="uk-flex subtotal">
+                    <p>Total</p>
+                    <p>{{total}}</p>
+                </div>
+                <button class="primary-button" routerLink="../choose-delivery-address">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-view">
+        <p id="heading"><span uk-icon="cart"></span>Cart</p>
+        <hr id="hr-mobile">
+        <div class="widget">
+            <app-mobile-cart-widget></app-mobile-cart-widget>
+            <app-mobile-cart-widget></app-mobile-cart-widget>
+        </div>
+        <div class="exchange">
+            <p><span><i class="fa-solid fa-arrow-right-arrow-left"></i> Lifetime Exchange & Buy-Back</span></p>
+            <p>|</p>
+            <p><span>30-Day Money Back <i class="fa-solid fa-arrow-rotate-left"></i></span></p>
+        </div>
+        <div class="off">
+            <p>30% off Discount</p>
+            <div class="code">
+                <input type="text" placeholder="PROMOCODE">
+                <button>Apply</button>
+            </div>
+        </div>
+        <div class="mobile-bill">
+            <div class="uk-flex heading">
+                <p>Order Summary</p>
+                <p>{{delivery_Date}}</p>
+            </div>
+            <hr>
+            <div class="bill-info">
+                <div class="uk-flex">
+                    <p>Subtotal</p>
+                    <p>{{subtotal}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>You saved</p>
+                    <p>{{saved}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Discount Coupon</p>
+                    <p>{{discount}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Gold</p>
+                    <p>{{material_Price}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>GST</p>
+                    <p>{{gst}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Tax</p>
+                    <p>{{tax}}</p>
+                </div>
+                <div class="uk-flex">
+                    <p>Delivery</p>
+                    <p>{{delivery}}</p>
+                </div>
+                <hr>
+                <div class="uk-flex" id="mart">
+                    <p>Amount Payable</p>
+                    <p>{{total}}</p>
+                </div>
+    
+            </div>
+        </div>
+        <button class="place" routerLink="../choose-delivery-address">
+            Place Order
+        </button>
+    </div>
+</div>
+<app-footer></app-footer>

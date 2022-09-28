@@ -1,0 +1,56 @@
+.payment-mode {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+  width: auto;
+  align-items: center;
+  height: 70px;
+  border: 1px solid rgb(225, 225, 225);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+
+  &:hover {
+    border: 2px solid var(--color-primary);
+    transform: scale(1.02);
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(246, 174, 220, 0.608);
+  }
+}
+
+.payment-mode p {
+  margin: 0;
+  padding: 15px;
+  font-size: var(--small);
+  font-weight: 500;
+  width: 85%;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.7em;
+  height: 1.7em;
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+}
+
+input:checked {
+  background-color: var(--color-secondary);
+  outline: max(2px, 0.18em) solid currentColor;
+  outline-offset: max(1px, 0.15em);
+
+}
+@media only screen and (max-width: 600px){
+  .payment-mode p {
+    font-size: var(--xsmall);
+  }
+  input[type="radio"]{
+    width: 1.2em;
+    height: 1.2em;
+  }
+}

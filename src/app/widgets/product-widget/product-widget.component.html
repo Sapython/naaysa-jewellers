@@ -1,0 +1,35 @@
+<div class="container .uk-animation-fade ">
+    <div class="box">
+        <div>
+            <div class="py-4 d-flex align-item-center justify-content-between" >
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="heart" (click)="addToWishlist()">
+                    <i [class]="wishlist ? 'fa-solid fa-heart' : 'fa-regular fa-heart'"></i>
+                </div>
+            </div>
+            <div class="box-outer" routerLink="../product/{{id}}">
+                <img src="{{src}}" alt="">
+            </div>
+            <div class="discount pt-5">
+                <p>Flat {{discount}}</p>
+                <p>{{purity}} Gold</p>
+            </div>
+            <hr id="hr">
+            <p id="name">{{product_name}}</p>
+            <p id="price">&#x20B9; {{price}}</p>
+            <p id="info"><span>{{category}} </span> | <span>{{jewellery_Name}}</span></p>
+        </div>
+        <div class="buttons">
+            <button (click)="addProductCart()">Add To Cart</button>
+            <!-- <button (click)="buyNow()">Buy Now</button> -->
+        </div>
+    </div>
+</div>
+
+

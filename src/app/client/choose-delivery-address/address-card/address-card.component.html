@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="section-one">
+    <div class="check-box">
+    </div>
+    <div class="details">
+      <div class="uk-flex">
+        <div class="address">
+          <p>{{name}}</p>
+          <p>{{address_type}}</p>
+        </div>
+       <div class="input"> <input type="radio" name="pay-mode" formControlName="selectedAddress"   checked (click)="selectDeliveryAddress()"></div>
+      </div>
+      <div class="address">{{address}}</div>
+      <p class="phone">{{phoneNumber}}</p>
+      <div class=""><button routerLink="../payment-options">Deliver Here</button></div>
+    </div>
+  </div>
+  <div class="section-second">
+    <div class="">
+      <button routerLink="../add-delivery-address">Edit<i class="ri-edit-circle-fill"></i></button>
+    </div>
+  </div>
+</div>

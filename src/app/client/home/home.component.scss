@@ -1,0 +1,555 @@
+html,
+body {
+  background-color: var(--color-primary);
+}
+#explore_conatiner {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+    margin-top: 1px;
+    height: 23vh;
+    width: 100%;
+    background-color: var(--color-light-primary);
+
+    .search_container {
+      width: 95%;
+      margin: auto;
+      box-sizing: border-box;
+      height: 27%;
+      transform: translate(0, 20%);
+
+      form {
+        width: 100%;
+        height: 100%;
+        border-radius: 10rem;
+        background-color: white;
+        box-shadow: rgba(99, 99, 99, 0.44) 0px 2px 8px 0px;
+        color: black;
+        a {
+          color: black;
+          margin: 0 0.5rem;
+        }
+        input {
+          width: 100%;
+          height: 100%;
+          border: none;
+          margin-left: 0.5rem;
+          color: black;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+    .explore {
+      width: 100%;
+      height: 70%;
+      margin-top: 1rem;
+      padding: 1rem;
+      box-sizing: border-box;
+      gap: 1rem;
+      overflow-x: scroll;
+      display: flex;
+      .box {
+        background-color: var(--color-secondary-light);
+        width: 5rem;
+        height: 5rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: rgb(0, 0, 0);
+        i {
+          font-size: 1.5rem;
+        }
+        b {
+          font-size: 0.7rem;
+          width: 4.5rem;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+.subscription {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+    width: 100%;
+    height: 12vh;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+#first-section {
+  height: 90vh;
+  background-color: var(--color-secondary);
+  position: relative;
+
+  .uk-slider {
+    height: 100%;
+    width: 100%;
+    ul {
+      height: 100%;
+      width: 100%;
+
+      li {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  #first-text {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 10em 7rem;
+    z-index: 2;
+    width: 42%;
+    h2 {
+      color: var(--color-light);
+      margin: 0;
+      font-family: var(--font-two);
+      font-size: var(--xlarge);
+      font-size: 3rem;
+      line-height: 1.2;
+      letter-spacing: 0.1rem;
+    }
+
+    p {
+      color: var(--color-light);
+      font-size: var(--medium);
+      margin: 1.5em 0;
+    }
+
+    button {
+      padding: 0.25em 1.75em;
+    }
+  }
+}
+#product-section {
+  height: 80vh;
+  min-height: 20vh;
+  .uk-slider {
+    height: 50%;
+    width: 100%;
+    .uk-slider-items {
+      width: 100%;
+      height: 100%;
+      li {
+        min-width: 400px;
+        height: 100%;
+        width: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .navigation {
+    transform: translateY(-450%);
+    color: white;
+  }
+}
+
+#discount-section {
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+  padding: 1em;
+  text-align: left;
+  font-size: var(--small);
+  border: 1px solid grey;
+
+  button {
+    background: transparent;
+    border: 1px solid var(--color-dark);
+    padding: 0.5em 0.75em;
+    font-size: var(--xsmall);
+    margin-top: 0.5em;
+    cursor: pointer;
+  }
+
+  #t-and-c {
+    font-size: var(--xxsmall);
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+#shop-by-metals {
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  // min-height: 80vh;
+  height: fit-content;
+
+  h3 {
+    font-size: var(--medium);
+    text-align: center;
+    font-size: var(--xlarge);
+    font-family: var(--font-one);
+    color: var(--color-tertiary);
+    margin: 3rem auto;
+    font-weight: 500;
+  }
+
+  #metals {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: fit-content;
+  }
+}
+
+#trendings {
+  h3 {
+    font-size: var(--medium);
+    text-align: center;
+    font-size: var(--xlarge);
+    font-family: var(--font-one);
+    color: var(--color-tertiary);
+    margin: 3rem auto;
+    font-weight: 500;
+  }
+
+  // width: 95%;
+  //  height: fit-content;
+
+  // min-height: 50rem;
+  margin: 2rem auto;
+  display: flex;
+  // flex-wrap: wrap;
+  gap: 1.5rem;
+  .images {
+    display: flex;
+    height: 28rem;
+    height: fit-content;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+    
+  }
+  .image {
+    min-width: 350px;
+    max-height: fit-content;
+    height: 100%;
+    position: relative;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  p {
+    position: absolute;
+    left: 4rem;
+    bottom: 6rem;
+    font-size: var(--large);
+    color: var(--color-light);
+    font-family: var(--font-three);
+  }
+  .image2 {
+    min-width: 330px;
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+#blog {
+  width: 100%;
+  max-height: fit-content;
+  // min-height: 100%;
+  height: fit-content;
+  .customer_review {
+    background-color: var(--color-gold-light);
+    width: 100%;
+    min-height: 50%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    div {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      text-align: start;
+      font-family: var(--font-three);
+      font-weight: var(--large);
+      padding: 5rem;
+    }
+    .customer {
+      min-width: 400px;
+      width: 40%;
+      //
+      font-size: 2.4rem;
+      font-family: var(--font-six);
+      color: black;
+    }
+    .quote {
+      position: absolute;
+      top: 2rem;
+      left: -5rem;
+      height: 3rem;
+      width: 2rem;
+      font-size: 5rem;
+      @media (max-width: 600px){
+        // left: 1rem;
+      }
+    }
+    .review {
+      min-width: 400px;
+      box-sizing: border-box;
+      width: 50%;
+      position: relative;
+      padding: 5rem;
+      box-sizing: border-box;
+      font-family: var(--font-six);
+      color: black;
+      p {
+        padding: 3rem 0;
+      }
+    }
+  }
+  .about {
+    width: 100%;
+    margin: auto;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    div {
+      width: 50%;
+      min-width: 350px;
+      height: 100%;
+      margin: auto;
+    }
+    .person {
+      width: 25rem;
+      height: 23rem;
+      transform: translateY(-6rem);
+      padding: 1rem;
+      margin: auto;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .explore_us {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h5 {
+        font-size: var(--xxlarge);
+        font-family: var(--font-three);
+      }
+      p {
+        font-size: var(--xlarge);
+        font-family: var(--font-two);
+      }
+      button {
+        margin-top: 8rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--color-secondary);
+        border-radius: 0.3rem;
+        border: none;
+        cursor: pointer;
+        color: var(--color-light);
+        &:hover{
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #first-section {
+    height: 40vh;
+    background-color: var(--color-secondary);
+    position: relative;
+
+    .uk-slider {
+      height: 100%;
+      width: 100%;
+      ul {
+        height: 100%;
+        width: 100%;
+
+        li {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    #first-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2em;
+
+      width: 55%;
+      h2 {
+        font-size: var(--xsmall);
+        line-height: 1.3;
+        letter-spacing: 1.3px;
+      }
+
+      p {
+        color: var(--color-light);
+        font-size: 12px;
+      }
+
+      button {
+        padding: 0.5em;
+        border-radius: 0.3rem;
+        font-size: var(--xxxsmall);
+      }
+    }
+  }
+
+  #product-section {
+    height: 30vh;
+  }
+  #blog {
+    .customer_review {
+      div {
+        padding: 2rem;
+      }
+      .customer {
+        margin-left: -10rem;
+        padding: 3rem;
+        font-size: 2.4rem;
+        font-family: var(--font-six);
+        color: black;
+      }
+      .quote {
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        height: 3rem;
+        width: 2rem;
+        font-size: 2rem;
+        @media (max-width: 600px){
+          left: 0;
+        }
+      }
+      .review {
+        padding: 2rem 4rem;
+        color: black;
+        p {
+          padding: 3rem 0;
+        }
+      }
+    }
+    .about {
+      margin: 0;
+      .person {
+        width: 8rem;
+        height: 13rem;
+        transform: translateY(-3rem);
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        img {
+          margin: auto;
+          height: 100%;
+          width: 60%;
+        }
+      }
+      .explore_us {
+        height: 300px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .blog_text {
+    font-size: 1.3rem;
+  }
+
+  .cards {
+    .card {
+      width: 18rem;
+      height: 30rem;
+      gap: 10px;
+
+      img {
+        height: 75%;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      b {
+        color: var(--color-dark);
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        padding: 10px 0px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #discount-section {
+    display: none;
+  }
+
+  #shop-by-metals {
+    padding: 0px;
+    margin: 0;
+    padding: 0;
+    h3 {
+      margin-top: 6rem;
+    }
+    #metals {
+      transform: scale(0.9);
+    }
+  }
+
+  .rings {
+    width: 100%;
+  }
+}
