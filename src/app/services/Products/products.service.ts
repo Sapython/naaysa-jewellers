@@ -1,6 +1,6 @@
 import { Navigation } from 'swiper';
 import { Injectable } from '@angular/core';
-import { Firestore, collection, docData, doc, getDoc } from "@angular/fire/firestore";
+import { Firestore, collection, docData, doc, getDoc, deleteDoc } from "@angular/fire/firestore";
 import { getDocs, addDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL, getStorage } from 'firebase/storage';
 import { urls } from "../urls"
@@ -34,6 +34,11 @@ export class ProductsService {
   productById(PRODUCT_ID: string) {
     const productIdUrl = urls.productId.replace('{PRODUCT_ID}', PRODUCT_ID);
     return getDoc(doc(this.fs, productIdUrl));
+  }
+
+  removeProduct(PRODUCT_ID: string) {
+    const productIdUrl = urls.productId.replace('{PRODUCT_ID}', PRODUCT_ID);
+    return deleteDoc(doc(this.fs, productIdUrl));
   }
 
 

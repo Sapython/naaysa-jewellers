@@ -46,7 +46,7 @@ export class DatabaseServiceService {
       });
   }
 
-  // cart
+ 
 
   // wishlist
 
@@ -94,7 +94,7 @@ export class DatabaseServiceService {
 
   // Orders
 
-  userOrders(USER_ID: any, data: any) {
+  createOrders(USER_ID: any, data: any) {
     const userIDUrl = urls.user.replace('{USER_ID}', USER_ID);
     return addDoc(collection(this.fs, userIDUrl + urls.orders), data).then(
       async (res) => {}

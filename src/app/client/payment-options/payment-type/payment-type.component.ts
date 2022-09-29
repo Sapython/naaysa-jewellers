@@ -1,6 +1,8 @@
 import { DataproviderService } from 'src/app/services/dataprovider.service';
 
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
+import { AuthService } from 'src/app/services/Auth/auth.service';
 
 
 @Component({
@@ -11,12 +13,13 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 export class PaymentTypeComponent implements OnInit {
 
   @Input() paymentType: string="";
-
+  public userId:any
   @Output() selectedPaymentType: EventEmitter<any> = new EventEmitter();
 
-  constructor(public DataproviderService: DataproviderService) { }
+  constructor(public DataproviderService: DataproviderService, public dataBaseService:DatabaseServiceService, public auth:AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    return this.auth.getUser.subscribe((res) => { this.userId = res?.uid; });
   }
 
   selectedPayment(this: any) {
@@ -33,9 +36,19 @@ export class PaymentTypeComponent implements OnInit {
     console.log(this.DataproviderService.cartItems)
     console.log(this.DataproviderService.deliveryAddressSelected)
     console.log(this.DataproviderService.paymentsCheck)
+    this.orderGenrate()
+    
+  }
 
 
-    // console.log(this.selectedPaymentType)
+  orderGenrate(){
+    const data = {
+      products : this.DataproviderService.cartItems,
+      deliveryAddress : this.DataproviderService.deliveryAddressSelected,
+      paymentType:this.DataproviderService.paymentsCheck,
+      paymentStatus:'processing'
+    }
+    this.dataBaseService.createOrders(this.userId, data)
   }
 
 }

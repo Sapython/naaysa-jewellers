@@ -23,7 +23,7 @@
                     <div class="pincode">
                         <div class="quantity">
                             <p>Your Pincode:</p>
-                            <input type="text" placeholder="Pincode"><button class="submit-btn">Submit</button>
+                            <input type="text" class="w-100" placeholder="Pincode"><button class="submit-btn">Submit</button>
                         </div>
                         <div class="quantity">
                             <p>Quantity:</p>
@@ -50,24 +50,28 @@
                 <div class="customize">
                     <div class="flex">
                         <div class="button">
-                            <label id="label">Customize this Product:</label>
-                            <select name="cars" class="cars">
-                                <option value=""></option>
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="opel">Opel</option>
-                                <option value="audi">Audi</option>
-                            </select>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Customize this Product</mat-label>
+                                <select matNativeControl required>
+                                  <option value="Select ">Customize this Product</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                                </select>
+                              </mat-form-field>
+                            
                         </div>
                         <div class="button">
-                            <label for="cars" id="label">Select Ring Size:</label>
-                            <select name="cars" class="cars">
-                                <option value=""></option>
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="opel">Opel</option>
-                                <option value="audi">Audi</option>
-                            </select>
+                            
+                            <mat-form-field appearance="fill">
+                                <mat-label>Customize this Product</mat-label>
+                                <select matNativeControl required>
+                                  <option value="Select ">Select Ring Size</option>
+                                  <option value="saab">Saab</option>
+                                  <option value="mercedes">Mercedes</option>
+                                  <option value="audi">Audi</option>
+                                </select>
+                              </mat-form-field>
                         </div>
                     </div>
                     <div class="flex">

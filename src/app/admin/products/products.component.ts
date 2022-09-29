@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataproviderService } from 'src/app/services/dataprovider.service';
 import { ProductsService } from 'src/app/services/Products/products.service';
 
 @Component({
@@ -16,14 +17,15 @@ export class ProductsComponent implements OnInit {
     secondCtrl: ['', Validators.required],
   });
   isLinear = false;
-
+  @Input() id: any = '';
 
   products: any[] = [];
+  productId:any;
+
+  @Output() deleted: EventEmitter<any> = new EventEmitter();
 
 
-
-
-  constructor(private _formBuilder: FormBuilder, private productService: ProductsService) { }
+  constructor(private _formBuilder: FormBuilder, private productService: ProductsService, public dataProvider:DataproviderService) { }
 
   ngOnInit(): void { 
     this.allProductsByCat();
@@ -39,7 +41,23 @@ export class ProductsComponent implements OnInit {
         }
       )
     });
+    this.dataProvider.products = this.products
     console.log(this.products)
+  }
+
+  removeProductTrigger(this: any) {
+    let data = {
+      id: this.id,
+    };
+    this.deleted.emit(data);
+    this.productId = data;
+    console.log(data);
+    this.removeProduct()
+  }
+
+
+  removeProduct(){
+    this.productService.removeProduct(this.productId.id)
   }
  
 

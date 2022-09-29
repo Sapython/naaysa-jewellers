@@ -26,6 +26,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.auth.userAvailable.subscribe((value) => {
+      
       collectionSnapshots(
         collection(this.firestore, 'users/' + value.uid + '/cart')
       ).subscribe((dataChange) => {
@@ -38,6 +39,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.dataProvider.cartItems = items;
         console.log("CartItems",items);
       });
+
       collectionSnapshots(
         collection(this.firestore, 'users/' + value.uid + '/wishlist')
       ).subscribe((dataChange) => {
@@ -51,6 +53,8 @@ export class AppComponent implements OnInit, OnDestroy {
         this.dataProvider.wishlistItems = items;
         console.log("WishlistItems",items);
       });
+
+
     });
   }
   ngOnDestroy(): void {

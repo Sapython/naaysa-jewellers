@@ -11,6 +11,8 @@ export class DataproviderService {
   public orderData:any[] = [];
   public deliveryAddressSelected:any;
   public paymentsCheck:any; 
+  public LoggedInuserData:any;
+  public products:any[] = []
 
   constructor() {
     console.log(this.userData)
