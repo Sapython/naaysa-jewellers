@@ -1,6 +1,9 @@
+import { AuthService } from './../../services/Auth/auth.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 declare var UIkit: any;
 import { HostListener } from '@angular/core';
+import { ProductsService } from 'src/app/services/Products/products.service';
+import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
 @HostListener('window:scroll', ['$event'])
 @Component({
   selector: 'app-header',
@@ -15,104 +18,84 @@ export class HeaderComponent implements OnInit {
   @ViewChild('searchBox') searchBox: ElementRef;
   @ViewChild('offcanvasContainer') offcanvasContainer: ElementRef;
   @ViewChild('offcanvas') offcanvas: ElementRef;
-  searchVisible:boolean = false;
+  searchVisible: boolean = false;
+  public dbUserDetail: any;
+  public userId: any;
 
-  byCategory=[
+  byCategory: any[] = [];
+  byMetals = [
     {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
-    
-    {
-      image:'../../../assets/jewellery/jew5.svg',
-      name:'Gold coins'
+      image: '../../../assets/metals/metal1.svg',
+      name: 'Diamond',
     },
     {
-      image:'../../../assets/jewellery/jew6.svg',
-      name:'Gold coins'
+      image: '../../../assets//metals/metal2.svg',
+      name: 'Gold ',
     },
     {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
+      image: '../../../assets/metals/metal.svg',
+      name: 'Silver',
     },
     {
-      image:'../../../assets/jewellery/jew8.svg',
-      name:'Gold coins'
+      image: '../../../assets/metals/gemstone.svg',
+      name: 'Gemstone',
     },
-    {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew.3.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew5.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew8.svg',
-      name:'Gold coins'
-    }
-  ]
-  byMetals=[
-    {
-      image:'../../../assets/metals/metal1.svg',
-      name:'Diamond'
-    },
-    {
-      image:'../../../assets//metals/metal2.svg',
-      name:'Gold '
-    },
-    {
-      image:'../../../assets/metals/metal.svg',
-      name:'Silver'
-    },
-    {
-      image:'../../../assets/metals/gemstone.svg',
-      name:'Gemstone'
-    },
-    
-  ]
-  filters=[
-    {
-      name:'For KIDS/BABY'
-    },
-    {
-      name:'Under ₹ 10k'
-    },
-    {
-      name:'₹ 10k - ₹ 20k '
-    },
-    {
-      name:' ₹ 20k to ₹ 75K '
-    },
-    {
-      name:'₹ 75k to ₹ 1 LAKH'
-    },
-    {
-      name:'Above ₹ 1 LAKH'
-    },
-    {
-      name:'FOR WOMEN'
-    },
-  ]
-  constructor() {}
+  ];
+  filters: any[] = [];
+  constructor(
+    private products: ProductsService,
+    public auth: AuthService,
+    private databaseService: DatabaseServiceService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.auth.getUser.subscribe((res) => {
+      this.userId = res?.uid;
+      this.getUser();
+    });
+
+    this.getProductsCategory();
+    this.getPriceRange();
+  }
+
+  public getUser() {
+    this.databaseService
+      .getDbUser(this.userId)
+      .then((res) => {
+        this.dbUserDetail = res.data();
+        console.log(this.dbUserDetail);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  async getProductsCategory() {
+    const res: any = await this.products.getCategories();
+    //  this.byCategory = Array.from(res).map((element:any) => {
+    //     return {
+    //       ...element.data(),
+    //       id:element.id
+    //     }
+    //   });
+    res.forEach((element: any) => {
+      this.byCategory.push({
+        ...element.data(),
+        id: element.id,
+      });
+    });
+  }
+
+  async getPriceRange() {
+    const res: any = await this.products.getPriceRange();
+    res.forEach((element: any) => {
+      this.filters.push({
+        ...element.data(),
+        id: element.id,
+      });
+    });
+    console.log(this.filters);
+  }
 
   showSearch() {
     this.nav.nativeElement.setAttribute('closed', '');
@@ -142,11 +125,9 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
-  showMenu(){
+  showMenu() {}
 
-}  
-
-hideSearch() {
+  hideSearch() {
     this.searchBox.nativeElement.setAttribute('closed', '');
     this.searchBox.nativeElement.addEventListener(
       'animationend',

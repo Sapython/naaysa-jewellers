@@ -5,9 +5,7 @@
         <p>Deliver To</p>
     </div>
     <div class="parent-container">
-        <app-address-card></app-address-card>
-        <app-address-card></app-address-card>
-        <app-address-card></app-address-card>
+        <app-address-card *ngFor="let deliveryAddress of deliveryAddressItems"  [name]="deliveryAddress.name" [address]="deliveryAddress.address" [phoneNumber]="deliveryAddress.phoneNumber" [pinCode]="deliveryAddress.pinCode" [address_type]="deliveryAddress.pinCode" [state]="deliveryAddress.state" [city]="deliveryAddress.city" [houseNo]="deliveryAddress.houseNo"></app-address-card>
     </div>
     <!-- <button class="add" routerLink="../add-delivery-address">Add New Address</button> -->
 </div>

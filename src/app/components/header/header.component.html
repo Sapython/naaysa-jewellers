@@ -1,5 +1,5 @@
 <header class="desktop_version">
-  <div class="topBar">
+  <div class="topBar" >
     <div class="logo">
       <span>NAAYSA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span
         class="secondary-color"
@@ -28,8 +28,8 @@
               <b>Shop for category</b>
               <ul>
                 <li *ngFor="let category of byCategory"  routerLink="../all-product">
-                  <img src="{{ category.image }}" alt="image" />
-                  <p>{{ category.name }}</p>
+                  <img src="{{ category?.img }}" alt="image" />
+                  <p>{{ category?.title }}</p>
                 </li>
               </ul>
             </div>
@@ -46,7 +46,7 @@
               <b>Shop By</b>
               <ul>
                 <li *ngFor="let filter of filters"  routerLink="../all-product">
-                  <p>{{ filter.name }}</p>
+                  <p>{{ filter.PriceRangeTitle }}</p>
                 </li>
                 <b>All Jewellery</b>
               </ul>
@@ -106,6 +106,8 @@
     </div>
   </div>
 
+
+
 </header>
   <div
     id="offcanvas-container"
@@ -113,11 +115,11 @@
     (click)="hideOffcanvas($event)"
   >
     <div id="offcanvas" #offcanvas>
-      <div id="profile" routerLink="/profile">
+      <div id="profile" routerLink="/profile" *ngIf="auth.userIsLoggedIn">
         <img
           src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         />
-        <h4>Sudipta Doe</h4>
+        <h4>{{dbUserDetail?.displayName}}</h4>
       </div>
       <ul>
         <li>

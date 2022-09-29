@@ -1,28 +1,53 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/services/Auth/auth.service';
+import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
 
 @Component({
   selector: 'app-cart-added-item',
   templateUrl: './cart-added-item.component.html',
-  styleUrls: ['./cart-added-item.component.scss']
+  styleUrls: ['./cart-added-item.component.scss'],
 })
 export class CartAddedItemComponent implements OnInit {
+  @Input() imgsrc: String = '';
+  @Input() item_name: String = '';
+  @Input() item_price: String = '';
+  @Input() stock: String = '';
+  @Input() item_count: String = '';
+  @Input() total_price: String = '';
+  @Input() id: any = '';
+  @Output() deleted: EventEmitter<any> = new EventEmitter();
+  constructor(private auth: AuthService,private databaseService:DatabaseServiceService) {}
 
-  @Input() imgsrc: String="";
-  @Input() item_name: String="";
-  @Input() item_price: String="";
-  @Input() stock: String="";
-  @Input() item_count: String="";
-  @Input() total_price: String="";
-  @Output() deleted:EventEmitter<any> = new EventEmitter();
-  constructor() { }
+  userId: any;
+  cartId: any;
 
-  ngOnInit(): void {
+  ngOnInit() {
+    return this.auth.getUser.subscribe((res) => {
+      this.userId = res?.uid;
+    });
   }
-  delete(){
-    alert('Removed')
+
+  getCartItem(this: any) {
+    let data = {
+      id: this.id,
+    };
+    this.deleted.emit(data);
+    this.cartId = data;
+    console.log(data);
+    this.deleteCartItem();
+  }
+
+  delete() {
+    alert('Removed');
     this.deleted.emit(true);
   }
-  alert(){
+  alert() {
     alert('Added to wishlist');
+  }
+
+  deleteCartItem() {
+    this.databaseService.deleteUserCart(this.userId, this.cartId.id).then((res) => {
+      console.log(res);
+    });
   }
 }

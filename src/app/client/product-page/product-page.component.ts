@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { urls } from '../../../app/services/urls';
 import * as AOS from 'aos';
+import { ProductsService } from 'src/app/services/Products/products.service';
 interface Food {
   value: string;
   viewValue: string;
@@ -75,17 +78,17 @@ export class ProductPageComponent implements OnInit {
   ]
   reviews = [
     {
-      jewel_name:'Royal Pink Diamond Ring',
+      jewel_name: 'Royal Pink Diamond Ring',
       reviewer_Name: 'John Doe',
       review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     },
     {
-      jewel_name:'Royal Pink Diamond Ring',
+      jewel_name: 'Royal Pink Diamond Ring',
       reviewer_Name: 'John Doe',
       review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     },
     {
-      jewel_name:'Royal Pink Diamond Ring',
+      jewel_name: 'Royal Pink Diamond Ring',
       reviewer_Name: 'John Doe',
       review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     },
@@ -109,37 +112,62 @@ export class ProductPageComponent implements OnInit {
     //   reviewer_Name: 'John Doe',
     //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     // },
-    
+
   ]
   specificatons = [
     {
-      details_Src:'assets/gold.png',
-      material:'18kt Royal Pink Gold',
-      text:'Gold weight (Approx) 2.14 Gram'
+      details_Src: 'assets/gold.png',
+      material: '18kt Royal Pink Gold',
+      text: 'Gold weight (Approx) 2.14 Gram'
     },
     {
-      details_Src:'assets/diamond.png',
-      material:'11 SIIJ Diamonds',
-      text:'Diamond weight (Approx) 0.072 Ct'
+      details_Src: 'assets/diamond.png',
+      material: '11 SIIJ Diamonds',
+      text: 'Diamond weight (Approx) 0.072 Ct'
     },
     {
-      details_Src:'assets/dimension.png',
-      material:'Product Dimension',
-      text:'20.12mm X 9.4mm (Height x width)'
+      details_Src: 'assets/dimension.png',
+      material: 'Product Dimension',
+      text: '20.12mm X 9.4mm (Height x width)'
     },
     {
-      details_Src:'assets/measure.png',
-      material:'Product Weight (Approx)',
-      text:'2.15 Gram'
+      details_Src: 'assets/measure.png',
+      material: 'Product Weight (Approx)',
+      text: '2.15 Gram'
     },
   ]
-  constructor() { }
+
+  public PRODUCT_ID: string;
+  public productDetails: any;
+  constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) {
+    this.activatedRoute.params.subscribe((data: any) => {
+      console.log(data)
+      this.PRODUCT_ID = data.productId
+    })
+  }
   onclick() {
     alert('Successfully added to cart')
   }
   ngOnInit(): void {
     AOS.init();
+    this.productId(this.PRODUCT_ID);
   }
 
+
+  public productId(PRODUCT_ID: string) {
+
+
+    return this.productsService.productById(PRODUCT_ID).then((res) => {
+      
+      this.productDetails = res.data();
+      console.log(this.productDetails)
+
+    }).catch((err) => {
+      console.log(err)
+    })
+
+
+
+  }
 }
 

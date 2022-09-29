@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { collection, collectionSnapshots, Firestore } from '@angular/fire/firestore';
+import { AuthService } from 'src/app/services/Auth/auth.service';
+import { DataproviderService } from 'src/app/services/dataprovider.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,71 +9,23 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  products:any[] = [
-    {
-      imgsrc:"https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png",
-      item_name:"Golden Ring",
-      item_price:"2000",
-      stock:"in stock",
-      item_count:"3",
-      total_price:"6000",
-    },
-    {
-      imgsrc:"https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png",
-      item_name:"Golden Ring",
-      item_price:"2000",
-      stock:"in stock",
-      item_count:"3",
-      total_price:"6000",
-    },
-    {
-      imgsrc:"https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png",
-      item_name:"Golden Ring",
-      item_price:"2000",
-      stock:"in stock",
-      item_count:"3",
-      total_price:"6000",
-    },
-    {
-      imgsrc:"https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png",
-      item_name:"Golden Ring",
-      item_price:"2000",
-      stock:"in stock",
-      item_count:"3",
-      total_price:"6000",
-    },
-    {
-      imgsrc:"https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png",
-      item_name:"Golden Ring",
-      item_price:"2000",
-      stock:"in stock",
-      item_count:"3",
-      total_price:"6000",
-    },
-    {
-      imgsrc:"https://pluspng.com/img-png/jewelry-images-png-hd-gold-rings-png-hd-1000.png",
-      item_name:"Golden Ring",
-      item_price:"2000",
-      stock:"in stock",
-      item_count:"3",
-      total_price:"6000",
-    },
-    
-  ]
-  @Input() delivery_Date:string = '20 April 2022'
-  @Input() disc_percentage:string = '30%'
-  @Input() subtotal:string = '₹ 1,34,507'
-  @Input() discount:string = '₹ 900'
-  @Input() material_Price:string = '₹ 15000'
-  @Input() material:string = 'Gold'
-  @Input() gst:string = '₹ 800'
-  @Input() tax:string = '₹ 250'
-  @Input() delivery:string = '₹ 150'
-  @Input() total:string = '₹ 1,34,507'
-  @Input() saved:string = '₹ 500'
-  constructor() { }
+  cartList: any[] = []
+  @Input() delivery_Date: string = '20 April 2022'
+  @Input() disc_percentage: string = '30%'
+  @Input() subtotal: string = '₹ 1,34,507'
+  @Input() discount: string = '₹ 900'
+  @Input() material_Price: string = '₹ 15000'
+  @Input() material: string = 'Gold'
+  @Input() gst: string = '₹ 800'
+  @Input() tax: string = '₹ 250'
+  @Input() delivery: string = '₹ 150'
+  @Input() total: string = '₹ 1,34,507'
+  @Input() saved: string = '₹ 500'
 
-  ngOnInit(): void {
+  userId: any;
+  cartItems: any
+  constructor(public auth: AuthService, public dataProvider: DataproviderService, public fs: Firestore) { }
+  ngOnInit() {
+    alert(this.dataProvider.cartItems.length)
   }
-
 }

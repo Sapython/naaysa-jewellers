@@ -7,6 +7,7 @@ export const environment = {
     authDomain: 'nayasa-jewel.firebaseapp.com',
     messagingSenderId: '907454421991',
     measurementId: 'G-GV3YM09QQ8',
+    
   },
   production: true
 };

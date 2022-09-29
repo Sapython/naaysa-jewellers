@@ -15,6 +15,10 @@ import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductsService } from './services/Products/products.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AuthService } from './services/Auth/auth.service';
+import { DataproviderService } from './services/dataprovider.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+    AngularFireModule.initializeApp(environment.firebase),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
@@ -31,11 +36,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     providePerformance(() => getPerformance()),
     provideStorage(() => getStorage()),
     BrowserAnimationsModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,UserTrackingService, AuthService, ProductsService, DataproviderService
   ],
   bootstrap: [AppComponent]
 })

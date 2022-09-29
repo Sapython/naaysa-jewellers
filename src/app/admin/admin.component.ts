@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { AuthService } from '../services/Auth/auth.service';
+import { DatabaseServiceService } from '../services/database-service/database-service.service';
 
 @Component({
   selector: 'app-admin',
@@ -11,8 +13,10 @@ export class AdminComponent implements OnInit {
   breakpoint: number = 1000;
   largeScreen: boolean = window.innerWidth > this.breakpoint;
   showSidebar: boolean = false;
+  userId:any;
+  dbUserDetail:any
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private databaseService:DatabaseServiceService, private auth: AuthService) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         const url = this.router.url;
@@ -30,7 +34,19 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit() { this.auth.getUser.subscribe( (res) => { this.userId = res?.uid; this.getUser() })
+
+  }
+
+  public getUser() {
+    this.databaseService.getDbUser(this.userId).then((res) => {
+     this.dbUserDetail = res.data()
+     console.log(this.dbUserDetail)
+    })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 
   onWindowResize() {
     this.largeScreen = window.innerWidth > this.breakpoint;

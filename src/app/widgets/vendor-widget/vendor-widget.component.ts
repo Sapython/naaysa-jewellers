@@ -6,9 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./vendor-widget.component.scss']
 })
 export class VendorWidgetComponent implements OnInit {
-  @Input() vendor_name:string = 'Tanishq'
-  @Input() vendor_id:string = 'PJH234'
-  @Input() products:number = 74
+  @Input() vendor_name:string; 
+  @Input() vendor_id:string;
+  @Input() vendorImg:string;
+  @Input() vendorEmail:string;
+
 
   constructor() { }
 

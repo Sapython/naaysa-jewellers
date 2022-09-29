@@ -1,11 +1,11 @@
 <div class="quick-links">
   <div class="links">
     <p>Quick Links</p>
-    <button>Add Product</button>
-    <button>Add Category</button>
-    <button>Add Vendor</button>
+    <button (click)="addProductsPopUp()" uk-toggle="target: #add-product-modal">Add Product</button>
+    <button (click)="addCategoryPopUp()">Add Category</button>
+    <button (click)="addVendorPopUp()">Add Vendor</button>
     <button>Add User</button>
-    <button>Add Offer</button>
+    <button (click)="addOffersPopUp()">Add Offer</button>
   </div>
   <div class="icons">
     <i class="fa-solid fa-user"></i>

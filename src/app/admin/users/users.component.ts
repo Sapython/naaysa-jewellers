@@ -1,119 +1,21 @@
+import { AuthService } from 'src/app/services/Auth/auth.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { AddUsersComponent } from './add-users/add-users.component';
+import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
+  @Input() tenplusone_Users: number = 1069;
+  @Input() total_Users: number = 2069;
 
-  @Input() tenplusone_Users: number = 1069
-  @Input() total_Users: number = 2069
+  title = 'Table';
 
-
-  title = 'Table'
-
-  users = [
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-    {
-      'last_Name': 'Arora',
-      'name': 'Akshat',
-      "id": "16979",
-      "image": "assets/2.jpeg",
-      "emailId": "travisscott69@gmail.com",
-      "purchase": "334",
-      "dateJoin": "07/07/2019",
-      "dateExp": "07/07/2019",
-      "monthlyrecieved": "₹ 3000",
-      "totalvalue": "₹ 80000",
-    },
-
-  ]
+  users: any[] = [];
   mobile_users = [
     {
       img: 'assets/2.jpeg',
@@ -155,17 +57,29 @@ export class UsersComponent implements OnInit {
       wallet: '80000',
       purchase: 698,
     },
-  ]
+  ];
 
-  constructor(private dialogModule: MatDialog) {
-
-  }
+  constructor(
+    private dialogModule: MatDialog,
+    private databaseService: DatabaseServiceService
+  ) {}
 
   ngOnInit(): void {
-
+    this.getAllUsers();
   }
   adduser() {
-    this.dialogModule.open(AddUsersComponent)
+    this.dialogModule.open(AddUsersComponent);
   }
 
+  getAllUsers() {
+    return this.databaseService.getAllUsers().then((res) => {
+      res.forEach((element: any) => {
+        this.users.push({
+          ...element.data(),
+          id: element.id,
+        });
+      });
+      console.log(this.users);
+    });
+  }
 }

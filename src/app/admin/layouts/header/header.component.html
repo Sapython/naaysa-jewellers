@@ -10,14 +10,14 @@
       <i class="fa-solid fa-bell" id="bell"></i>
     </div>
     <div class="links">
-      <button><i class="fa-solid fa-tags"></i>Manage Categories</button>
+      <button (click)="manageCategory()"><i class="fa-solid fa-tags"></i>Manage Categories</button>
       <button><i class="fa-solid fa-toggle-on"></i>Pretty View</button>
       <!-- <button *ngIf="path==='/admin/products'"><i class="fa-solid fa-plus"></i>Add Products</button> -->
       <button *ngIf="path === '/admin/offers'" uk-toggle="target: #add-offers-modal">
         <i class="fa-solid fa-plus"></i>Add Offers
       </button>
 
-      <button *ngIf="path === '/admin/products'" uk-toggle="target: #add-product-modal">
+      <button *ngIf="path === '/admin/products'" (click)="addProduct()" uk-toggle="target: #add-product-modal">
         <i class="fa-solid fa-plus"></i>Add Products
       </button>
 

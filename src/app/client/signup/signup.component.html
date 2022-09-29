@@ -11,7 +11,7 @@
           </div>
           <img class="m-img2" src="../../../assets/blog3.png" />
         </div>
-      <form>
+      <form [formGroup]="signupForm" (ngSubmit)="signUpWithEmailAndPassword()">
         <b>Sign Up</b>
         <div class="input_conatiner">
           <label>Email</label>
@@ -21,17 +21,18 @@
           <label>Password</label>
           <input type="password" formControlName="password" placeholder="Password" />
         </div>
-        <div class="input_conatiner">
-          <label>Confirm Password</label>
-          <input type="password" formControlName="password" placeholder="Password" />
-        </div>
+        
         <div class="authentication">
-          <button type="submit" routerLink="/">Sign Up</button>
+          <button type="submit" >Sign Up</button>
         </div>
         <button id="normal">
             <i class="fa-brands fa-google"></i>
             Continue With Google
         </button>
+        
+      </form>
+      <form action="">
+        <button  (click)="auth.logout()">logout</button>
       </form>
     </div>
     <img src="../../../assets/blog3.png" id="mobile-imgg"/>

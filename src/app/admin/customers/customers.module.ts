@@ -5,6 +5,7 @@ import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomersComponent } from './customers.component';
 
 
+
 @NgModule({
   declarations: [
     CustomersComponent
@@ -12,7 +13,8 @@ import { CustomersComponent } from './customers.component';
   imports: [
     CommonModule,
     CustomersRoutingModule,
-    MatTabsModule
+    MatTabsModule,
+    
   ]
 })
 export class CustomersModule { }

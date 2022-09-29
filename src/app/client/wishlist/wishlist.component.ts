@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { docData } from '@angular/fire/firestore';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/services/Auth/auth.service';
+import { DataproviderService } from 'src/app/services/dataprovider.service';
+import { DatabaseServiceService } from 'src/app/services/database-service/database-service.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -7,9 +11,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishlistComponent implements OnInit {
 
-  constructor() { }
+  public userId: any;
+  public wishListItemId:any
+  public UserWishlist: any[] = [];
+  @Output() deleted: EventEmitter<any> = new EventEmitter();
 
-  ngOnInit(): void {
+  constructor(public dataProvider: DataproviderService, public auth: AuthService,private databaseService:DatabaseServiceService) { }
+
+  ngOnInit() {
+    this.auth.getUser.subscribe((res) => { this.userId = res?.uid; })
   }
+
+
+  getWishListItem(this: any) {
+
+    let data = {
+      id: this.id,
+      
+    }
+    this.deleted.emit(data);
+    this.cartId = data
+    console.log(data)
+    this.deleteCartItem()
+  }
+
+  deleteWishListItem(){
+    this.databaseService.deleteWishListItem(this.userId, this.wishListItemId)
+  }
+
+
 
 }

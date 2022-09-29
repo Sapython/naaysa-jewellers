@@ -1,3 +1,4 @@
+import { DataproviderService } from 'src/app/services/dataprovider.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -22,10 +23,18 @@ export class PaymentOptionsComponent implements OnInit {
   onclick(){
     alert('Your Order has been Placed')
   }
-  constructor() {
+  constructor(public DataProvider:DataproviderService) {
    }
 
   ngOnInit(): void {
+    this.DataProvider.deliveryAddressSelected
   }
+
+  selectPaymentMethoud(){
+    console.log(this.DataProvider.cartItems , '', this.DataProvider.deliveryAddressSelected, '', this.DataProvider.paymentsCheck)
+    this.DataProvider.paymentsCheck
+  }
+
+
 
 }

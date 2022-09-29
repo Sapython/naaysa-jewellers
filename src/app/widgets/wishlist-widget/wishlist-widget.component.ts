@@ -9,6 +9,7 @@ export class WishlistWidgetComponent implements OnInit {
 
   @Input() name:string = 'Gold jewellery'
   @Input() src:string = 'assets/jewel1.png'
+ 
   constructor() { }
 
   ngOnInit(): void {

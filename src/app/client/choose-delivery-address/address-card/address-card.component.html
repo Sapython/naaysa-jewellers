@@ -5,13 +5,13 @@
     <div class="details">
       <div class="uk-flex">
         <div class="address">
-          <p>{{name}} {{last_name}}</p>
+          <p>{{name}}</p>
           <p>{{address_type}}</p>
         </div>
-       <div class="input"> <input type="radio" name="pay-mode" checked></div>
+       <div class="input"> <input type="radio" name="pay-mode" formControlName="selectedAddress"   checked (click)="selectDeliveryAddress()"></div>
       </div>
       <div class="address">{{address}}</div>
-      <p class="phone">{{phone}}</p>
+      <p class="phone">{{phoneNumber}}</p>
       <div class=""><button routerLink="../payment-options">Deliver Here</button></div>
     </div>
   </div>
