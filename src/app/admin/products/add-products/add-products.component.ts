@@ -12,6 +12,7 @@ export class AddProductsComponent implements OnInit {
   public file: any;
   public url: string;
 
+
   public addProductForm: FormGroup = new FormGroup({
     productName: new FormControl(''),
     imgSrc: new FormControl(''),
@@ -25,7 +26,6 @@ export class AddProductsComponent implements OnInit {
     seoDescription: new FormControl(''),
     baseWeight: new FormControl(''),
     productColor: new FormControl(''),
-    metal: new FormControl(''),
     vendorName: new FormControl(''),
     vendorID: new FormControl(''),
     vendorEmail: new FormControl(''),
@@ -34,6 +34,12 @@ export class AddProductsComponent implements OnInit {
     formControlName: new FormControl(''),
     width: new FormControl(''),
     height: new FormControl(''),
+    main_metal: new FormControl(''),
+    carat: new FormControl(''),
+    selling_price: new FormControl(''),
+    cost_price: new FormControl(''),
+    metals_price: new FormControl(''),
+    profit: new FormControl(''),
   });
 
   constructor(private productService:ProductsService) { }
@@ -61,6 +67,4 @@ export class AddProductsComponent implements OnInit {
     }
     alert('Product added')
   }
-
-
 }

@@ -71,10 +71,22 @@
                             <label for="plan-name-input"> Width*</label>
                             <input type="text" id="plan-name-input" formControlName="width" />
                         </div>
-
+                        <div class="form-box">
+                            <label for="plan-name-input"> Carat*</label>
+                            <input type="text" id="plan-name-input" formControlName="carat" />
+                        </div>
+                        <div class="form-box">
+                            <label for="plan-name-input"> Product Main Metal</label>
+                            <select name="" id="" class="number" formControlName="main_metal">
+                                <option value="Golden">Golden</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Diamond">Diamond</option>
+                                <option value="Platinum">Platinum</option>
+                            </select>
+                        </div>
 
                         <div class="form-box">
-                            <label for="plan-name-input"> Product Purity*</label>
+                            <label for="plan-name-input"> Main Metal Percentage*</label>
                             <select name="" id="" class="number" formControlName="purity">
                                 <option value="90%">90%</option>
                                 <option value="70%">70%</option>
@@ -82,7 +94,6 @@
                                 <option value="10%">10%</option>
                             </select>
                         </div>
-
                         <div class="form-box">
                             <label for="plan-name-input"> Product Colour*</label>
                             <select name="" id="" class="number" formControlName="productColor">
@@ -92,16 +103,26 @@
                                 <option value="Silver">Silver</option>
                             </select>
                         </div>
-
                         <div class="form-box">
-                            <label for="plan-name-input"> Product Metal</label>
-                            <select name="" id="" class="number" formControlName="metal">
-                                <option value="Golden">Golden</option>
-                                <option value="Silver">Silver</option>
-                                <option value="Diamond">Diamond</option>
-                                <option value="Platinum">Platinum</option>
-                            </select>
+                            <label for="plan-name-input"> Metals Price*</label>
+                            <input type="text" id="plan-name-input" formControlName="metal_price" />
                         </div>
+                        <div class="form-box">
+                            <label for="plan-name-input"> Cost Price*</label>
+                            <input type="text" id="plan-name-input" type="number" formControlName="cost_price"  id="cost"/>
+                        </div>
+                        <div class="form-box">
+                            <label for="plan-name-input"> Selling Price*</label>
+                            <input type="text" id="plan-name-input" type="number" formControlName="selling_price" id="selling"/>
+                        </div>
+                        <div class="form-box">
+                            <label for="plan-name-input" id="profit"> Profit*</label>
+                            <input type="text" id="plan-name-input" type="number" formControlName="profit" />
+                        </div>
+
+                        
+
+
 
 
                         <div class="buttons">
