@@ -1,8 +1,9 @@
 .container{
-    margin: 35px;
+    margin: 16px;
     border: 1px solid #969696;
     border-radius: 10px;
     box-shadow: 1px 1px 06px -1px #969696;
+    margin-left: 85px;
     .parent-container{
         margin: 15px;
     }
@@ -42,6 +43,7 @@ button{
     font-size: var(--xsmall);
     margin-bottom: 20px;
     cursor: pointer;
+    float: right;
     transition: .3s;
     &:hover{
         transform: scale(1.1);

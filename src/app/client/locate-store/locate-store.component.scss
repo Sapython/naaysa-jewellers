@@ -32,8 +32,8 @@
                 text-align: center;
             }
             .places{
-                margin-bottom: 15px;
-                padding: 15px;
+                margin-bottom: 21px;
+                // padding: 15px;
                 i{
                     color: var(--color-dark-primary);
                     font-size: var(--msmall);
@@ -41,9 +41,9 @@
                 }
                 .content{
                     background-color: var(--color-primary);
-                    padding: 15px;
+                    padding: 10px;
                     border-radius: 10px;
-                    margin-top: 15px;
+                    margin-top: 5px;
                     display: flex;
                     align-items: center;
                     .detail{
@@ -97,6 +97,12 @@
     font-size: var(--small);
     margin-left: 10px;
 
+}
+.card{
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px #c5bebe;
+    padding: 14px;
 }
 @media only screen and (max-width: 600px){
     .container{

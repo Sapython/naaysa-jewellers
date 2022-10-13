@@ -37,14 +37,15 @@ input[type="radio"] {
   height: 1.7em;
   border: 0.1em solid currentColor;
   border-radius: 50%;
+  
 }
 
 input:checked {
   background-color: var(--color-secondary);
-  outline: max(2px, 0.18em) solid currentColor;
   outline-offset: max(1px, 0.15em);
-
+  border: none;
 }
+
 @media only screen and (max-width: 600px){
   .payment-mode p {
     font-size: var(--xsmall);

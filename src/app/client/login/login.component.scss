@@ -1,18 +1,18 @@
 section {
   background-color: #fff5fb;
-  height: 120vh;
+  height: 83vh;
   width: 100vw;
   box-sizing: border-box;
   display: flex;
   font-family: var(--font-one);
   .signup_details {
     width: 50%;
-    height: 80%;
+    height: 77%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 50px;
+    // gap: 50px;
     .mobile-img {
       display: none;
     }
