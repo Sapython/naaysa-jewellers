@@ -1,194 +1,196 @@
-
 <div class="container-fluid">
-    <div class="box">
-        <div class="image">
-            <img src="{{large_Image}}" alt="">
-            <div class="small-images">
-                <img [src]="image" alt="" *ngFor="let image of images;let i = index" (click)='large_Image = images[i]'>
-            </div>
+  <div class="box">
+    <div class="image">
+      <img src="{{large_Image}}" alt="">
+      <div class="small-images">
+        <img [src]="image" alt="" *ngFor="let image of images;let i = index"
+          (click)='large_Image = images[i]'>
+      </div>
+    </div>
+    <div class="inner-box">
+      <div class="section-one">
+        <div class="cell">
+          <p>{{jewel_name}}</p>
+          <div class="price">
+            <p>₹ {{price}}</p>
+            <p class="opacity">MRP Incl. of all taxes</p>
+          </div>
         </div>
-        <div class="inner-box">
-            <div class="section-one">
-                <div class="cell">
-                    <p>{{jewel_name}}</p>
-                    <div class="price">
-                        <p>₹ {{price}}</p>
-                        <p class="opacity">MRP Incl. of all taxes</p>
-                    </div>
-                </div>
-                <p class="opacity off"><span uk-icon="tag"></span>20% off on making charge</p>
-                <p class="mart">Diamond Ring In 18Kt Gold (5.68 gram) with Diamonds (0.4130 Ct)</p>
-            </div>
-            <div class="pincode-and-quantity">
-                <div class="pincode">
-                    <div class="quantity">
-                        <p>Your Pincode:</p>
-                        <input type="text" placeholder="Pincode"><button class="submit-btn">Submit</button>
-                    </div>
-                    <!-- <div class="quantity">
+        <p class="opacity off"><span uk-icon="tag"></span>20% off on making charge</p>
+        <p class="mart">Diamond Ring In 18Kt Gold (5.68 gram) with Diamonds (0.4130 Ct)</p>
+      </div>
+      <div class="pincode-and-quantity">
+        <div class="pincode">
+          <div class="quantity">
+            <p>Your Pincode:</p>
+            <input type="text" placeholder="Pincode"><button class="submit-btn">Submit</button>
+          </div>
+          <!-- <div class="quantity">
                         <p>Quantity:</p>
                         <input type="number" value="1">
                     </div> -->
-                </div>
-                <p class="opacity mart" style="margin-left: 0;">Available in our store at PRAYAGRAJ, and <a href="">12
-                        other store(s)</a></p>
-            </div>
-            <div class="delivery">
-                <p>Delivery By Today Evening <span>{{date}}</span> for Pincode <span>{{pincode}}</span></p>
-                <p>(Placed Order before 4pm for same-day-delivery)</p>
-                <!-- <div class="features">
+        </div>
+        <p class="opacity mart" style="margin-left: 0;">Available in our store at PRAYAGRAJ, and <a
+            href="">12
+            other store(s)</a></p>
+      </div>
+      <div class="delivery">
+        <p>Delivery By Today Evening <span>{{date}}</span> for Pincode <span>{{pincode}}</span></p>
+        <p>(Placed Order before 4pm for same-day-delivery)</p>
+        <!-- <div class="features">
                     <app-feature-widget *ngFor="let feature of features" [src]="feature.src" [text_Feature]="feature.feature_Text"></app-feature-widget>
                 </div> -->
-            </div>
-            <div class="mobile-view">
-                <p><i class="fa-solid fa-medal"></i> Certified Jewellery</p>
-                <p><i class="fa-solid fa-arrow-rotate-left"></i> 30-Day Money Back</p>
-                <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Lifetime Exchange & Buy-Back</p>
-            </div>
-            <div class="customize">
-                <div class="flex">
-                    <div class="button">
-                        <label id="label">Customize this Product:</label>
-                        <select name="cars" class="cars">
-                            <option value=""></option>
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
-                        </select>
-                    </div>
-                    <div class="button">
-                        <label for="cars" id="label">Select Ring Size:</label>
-                        <select name="cars" class="cars">
-                            <option value=""></option>
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="flex">
-                    <div class="like"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }"
-                            (click)="liked = !liked"></i></div>
-                    <button class="primary-button" routerLink="/vr-product-try">Try On Me</button>
-                    <button class="primary-button" >Add To Cart</button>
-                </div>
-            </div>
-            <div class="certify">
-                <p><i class="fa-solid fa-medal"></i>Certified Jewellery</p>
-                <p><i class="fa-solid fa-rotate-left"></i>30 -Day Money Back</p>
-                <p><i class="ri-arrow-left-right-line"></i>Lifetime Exchange & Buy-Back</p>
-            </div>
+      </div>
+      <div class="mobile-view">
+        <p><i class="fa-solid fa-medal"></i> Certified Jewellery</p>
+        <p><i class="fa-solid fa-arrow-rotate-left"></i> 30-Day Money Back</p>
+        <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Lifetime Exchange & Buy-Back</p>
+      </div>
+      <div class="customize">
+        <div class="flex">
+          <div class="button">
+            <label id="label">Customize this Product:</label>
+            <select name="cars" class="cars">
+              <option value=""></option>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div class="button">
+            <label for="cars" id="label">Select Ring Size:</label>
+            <select name="cars" class="cars">
+              <option value=""></option>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="opel">Opel</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
         </div>
-    </div>
-
-    <div class="section2">
-        <div class="specification">
-
-            <div class="pink-box">Product Details</div>
-            <div class="list-flex">
-                <p>Product Code</p>
-                <p>{{product_Code}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Height</p>
-                <p>{{height}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Width</p>
-                <p>{{width}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Weight</p>
-                <p>{{weight}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Country Of Origin</p>
-                <p>{{origin}}</p>
-            </div>
-            <mat-divider></mat-divider>
+        <div class="flex">
+          <div class="like"><i
+              [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }"
+              (click)="liked = !liked"></i></div>
+          <button class="primary-button" routerLink="/vr-product-try">Try On Me</button>
+          <button class="primary-button">Add To Cart</button>
         </div>
+      </div>
+      <div class="certify">
+        <p><i class="fa-solid fa-medal"></i>Certified Jewellery</p>
+        <p><i class="fa-solid fa-rotate-left"></i>30 -Day Money Back</p>
+        <p><i class="ri-arrow-left-right-line"></i>Lifetime Exchange & Buy-Back</p>
+      </div>
     </div>
+  </div>
 
-    <div class="section3">
-        <div class="specification">
-            <div class="pink-box">Price Details</div>
-            <div class="list-flex">
-                <p>Product Code</p>
-                <p>{{product_Code}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Height</p>
-                <p>{{height}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Width</p>
-                <p>{{width}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Weight</p>
-                <p>{{weight}}</p>
-            </div>
-            <mat-divider></mat-divider>
-            <div class="list-flex">
-                <p>Country Of Origin</p>
-                <p>{{origin}}</p>
-            </div>
-            <mat-divider></mat-divider>
-        </div>
-    </div>
+  <div class="section2">
     <div class="specification">
-        <div class="pink-box">Metal Details</div>
-        <div class="list-flex">
-            <p>Product Code</p>
-            <p>{{product_Code}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Height</p>
-            <p>{{height}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Width</p>
-            <p>{{width}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Weight</p>
-            <p>{{weight}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-            <p>Country Of Origin</p>
-            <p>{{origin}}</p>
-        </div>
-        <mat-divider></mat-divider>
+
+      <div class="pink-box">Product Details</div>
+      <div class="list-flex">
+        <p>Product Code</p>
+        <p>{{product_Code}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Height</p>
+        <p>{{height}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Width</p>
+        <p>{{width}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Weight</p>
+        <p>{{weight}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Country Of Origin</p>
+        <p>{{origin}}</p>
+      </div>
+      <mat-divider></mat-divider>
     </div>
-    <div class="mobile-view mobile-view-second">
-        <div class="code">
-            <p>Product Code</p>
-            <p>Code:{{product_Code}}</p>
-        </div>
-        <div class="details-box" *ngFor="let specification of specificatons">
-            <div class="icon">
-                <img src="{{details_Src}}" alt="">
-            </div>
-            <div class="details">
-                <p>{{material}}</p>
-                <p>{{text}}</p>
-            </div>
-        </div>   
+  </div>
+
+  <div class="section3">
+    <div class="specification">
+      <div class="pink-box">Price Details</div>
+      <div class="list-flex">
+        <p>Product Code</p>
+        <p>{{product_Code}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Height</p>
+        <p>{{height}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Width</p>
+        <p>{{width}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Weight</p>
+        <p>{{weight}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="list-flex">
+        <p>Country Of Origin</p>
+        <p>{{origin}}</p>
+      </div>
+      <mat-divider></mat-divider>
     </div>
-    <p id="heading">Customer Reviews</p>
+  </div>
+  <div class="specification">
+    <div class="pink-box">Metal Details</div>
+    <div class="list-flex">
+      <p>Product Code</p>
+      <p>{{product_Code}}</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="list-flex">
+      <p>Height</p>
+      <p>{{height}}</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="list-flex">
+      <p>Width</p>
+      <p>{{width}}</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="list-flex">
+      <p>Weight</p>
+      <p>{{weight}}</p>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="list-flex">
+      <p>Country Of Origin</p>
+      <p>{{origin}}</p>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+  <div class="mobile-view mobile-view-second">
+    <div class="code">
+      <p>Product Code</p>
+      <p>Code:{{product_Code}}</p>
+    </div>
+    <div class="details-box" *ngFor="let specification of specificatons">
+      <div class="icon">
+        <img src="{{details_Src}}" alt="">
+      </div>
+      <div class="details">
+        <p>{{material}}</p>
+        <p>{{text}}</p>
+      </div>
+    </div>
+  </div>
+  <!-- <p id="heading">Customer Reviews</p>
     <div class="parent-reviews">
         <div class="reviews" *ngFor="let review of reviews">
             <div class="parent">
@@ -221,7 +223,7 @@
                 <i class="fa-solid fa-thumbs-up"></i>|<i class="fa-solid fa-thumbs-down"></i>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <app-footer></app-footer>

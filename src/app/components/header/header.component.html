@@ -2,9 +2,7 @@
   <div class="topBar">
     <div class="logo">
       <span>NAAYSA</span><img src="assets/logo.svg" alt="Logo" id="logo" /><span
-        class="secondary-color"
-        >JEWELLERS</span
-      >
+        class="secondary-color">JEWELLERS</span>
     </div>
   </div>
   <div class="bottomBar">
@@ -12,29 +10,27 @@
       <button (click)="showOffcanvas()" class="mobileOnly">
         <i class="fa-solid fa-bars"></i>
       </button>
-      <li
-        routerLink=""
-        [class]="path === '/' || path === 'home' ? 'active' : 'none'"
-      >
+      <li routerLink="" [class]="path === '/' || path === 'home' ? 'active' : 'none'">
         Home
       </li>
-      <div>
+      <!-- <div>
         <li [class]="path === '' || path === 'home' ? 'active' : 'none'">
           Products
         </li>
+
         <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
           <div class="uk-dropdown-grid uk-child-width-1-2@m uk-flex" uk-grid>
             <div class="categories">
               <b>Shop for category</b>
               <ul>
-                <li *ngFor="let category of byCategory"  routerLink="../all-product">
+                <li *ngFor="let category of byCategory" routerLink="../all-product">
                   <img src="{{ category.image }}" alt="image" />
                   <p>{{ category.name }}</p>
                 </li>
               </ul>
             </div>
             <div class="categories">
-              <b>Shop by Metal ans Stone</b>
+              <b>Shop by Metal and Stone</b>
               <ul>
                 <li *ngFor="let metal of byMetals" routerLink="../all-product">
                   <img src="{{ metal.image }}" alt="image" />
@@ -45,7 +41,7 @@
             <div class="categories">
               <b>Shop By</b>
               <ul>
-                <li *ngFor="let filter of filters"  routerLink="../all-product">
+                <li *ngFor="let filter of filters" routerLink="../all-product">
                   <p>{{ filter.name }}</p>
                 </li>
                 <b>All Jewellery</b>
@@ -56,18 +52,67 @@
             </div>
           </div>
         </div>
+      </div> -->
+      <!--  -->
+
+      <li [class]="path === '' || path === 'home' ? 'active' : 'none'">
+        Shop for category</li>
+      <div class="uk-width-1-1" uk-dropdown style="border-radius: 15px">
+        <div class="uk-dropdown-grid uk-child-width-1-1 uk-flex" uk-grid>
+          <div class="categories">
+            <ul>
+              <li *ngFor="let category of byCategory" routerLink="../all-product">
+                <img src="{{ category.image }}" alt="image" />
+                <p>{{ category.name }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+
+
+      <li [class]="path === '' || path === 'home' ? 'active' : 'none'">Shop by Metal and Stone</li>
+      <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
+        <div class="uk-dropdown-grid uk-child-width-1-2@m uk-flex" uk-grid>
+          <div class="categories">
+            <ul>
+              <li *ngFor="let metal of byMetals" routerLink="../all-product">
+                <img src="{{ metal.image }}" alt="image" />
+                <p>{{ metal.name }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <li [class]="path === '' || path === 'home' ? 'active' : 'none'">Shop By</li>
+      <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
+        <div class="uk-dropdown-grid uk-child-width-1-2@m uk-flex" uk-grid>
+          <div class="categories">
+
+            <ul>
+              <li *ngFor="let filter of filters" routerLink="../all-product">
+                <p>{{ filter.name }}</p>
+              </li>
+              <b>All Jewellery</b>
+            </ul>
+          </div>
+          <div class="categories">
+            <img src="https://i.pravatar.cc" alt="image" />
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
       <li routerLink="" class="desktopOnly" routerLink="../locate-store">
         Locate Store
       </li>
-      <li
-        routerLink="../ten-plus-one-scheme"
-        [class]="
+      <li routerLink="../ten-plus-one-scheme" [class]="
           path === '/ten-plus-one-scheme' || path === 'home'
             ? 'borderedButton active'
             : 'borderedButton none'
-        "
-      >
+        ">
         10 + 1 Scheme
       </li>
     </nav>
@@ -78,7 +123,7 @@
           <button><i class="fa-solid fa-arrow-right-long"></i></button>
           <button (click)="searchVisible = false">
             <i class="fa-solid fa-xmark"></i>
-            
+
           </button>
         </div>
       </div>
@@ -107,70 +152,65 @@
   </div>
 
 </header>
-  <div
-    id="offcanvas-container"
-    #offcanvasContainer
-    (click)="hideOffcanvas($event)"
-  >
-    <div id="offcanvas" #offcanvas>
-      <div id="profile" routerLink="/profile">
-        <img
-          src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        />
-        <h4>Sudipta Doe</h4>
-      </div>
-      <ul>
-        <li>
-          <button routerLink="/cart " routerLink="/cart">
-            <i class="fa-solid fa-cart-shopping"></i> My Cart
-          </button>
-        </li>
-        <li>
-          <button routerLink="/order-history">
-            <i class="fa-solid fa-clipboard-list"></i> My Orders
-          </button>
-        </li>
-        <li>
-          <button routerLink="/add-delivery-address"><i class="fa-solid fa-address-card"></i> My Address</button>
-        </li>
-        <li>
-          <button routerLink="/payment-options">
-            <i class="fa-solid fa-credit-card"></i> Payment Method
-          </button>
-        </li>
-        <li>
-          <button routerLink="/login"><i class="fa-solid fa-arrow-left"></i> Logout</button>
-        </li>
-      </ul>
-      <div class="actions">
-        <button (click)="searchVisible = true" #searchButton id="search-button">
-          <i class="fa-solid fa-magnifying-glass"></i>
+<div id="offcanvas-container" #offcanvasContainer (click)="hideOffcanvas($event)">
+  <div id="offcanvas" #offcanvas>
+    <div id="profile" routerLink="/profile">
+      <img
+        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+      <h4>Sudipta Doe</h4>
+    </div>
+    <ul>
+      <li>
+        <button routerLink="/cart " routerLink="/cart">
+          <i class="fa-solid fa-cart-shopping"></i> My Cart
         </button>
-        <button routerLink="cart">
-          <i class="fa-solid fa-cart-shopping"></i>
+      </li>
+      <li>
+        <button routerLink="/order-history">
+          <i class="fa-solid fa-clipboard-list"></i> My Orders
         </button>
-        <button routerLink="login" routerLink="/login"><i class="fa-solid fa-user"></i></button>
-        <button (click)="showOffcanvas()">
-          <i class="fa-solid fa-bars"></i>
+      </li>
+      <li>
+        <button routerLink="/add-delivery-address"><i class="fa-solid fa-address-card"></i> My
+          Address</button>
+      </li>
+      <li>
+        <button routerLink="/payment-options">
+          <i class="fa-solid fa-credit-card"></i> Payment Method
         </button>
-      </div>
+      </li>
+      <li>
+        <button routerLink="/login"><i class="fa-solid fa-arrow-left"></i> Logout</button>
+      </li>
+    </ul>
+    <div class="actions">
+      <button (click)="searchVisible = true" #searchButton id="search-button">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button routerLink="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <button routerLink="login" routerLink="/login"><i class="fa-solid fa-user"></i></button>
+      <button (click)="showOffcanvas()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </div>
+</div>
 
 <div class="mobile_view">
   <button (click)="showOffcanvas()" class="mobileOnly">
     <i class="fa-solid fa-bars"></i>
   </button>
-  
+
   <div class="logo" routerLink="/">
     <img src="assets/logo.svg" alt="Logo" id="logo" />
-    <span >NAAYSA</span>
-  
+    <span>NAAYSA</span>
+
   </div>
   <div class="buttons">
     <button routerLink="../wishlist"><i class="fa-regular fa-heart"></i></button>
-    <button routerLink="../locate-store"><i  class="ri-store-3-line"></i></button>
+    <button routerLink="../locate-store"><i class="ri-store-3-line"></i></button>
     <button routerLink="../cart"><i class="fa-solid fa-cart-shopping"></i></button>
   </div>
 </div>
-
