@@ -8,6 +8,6 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent],
   imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent,AdminHeaderComponent],
+  exports: [HeaderComponent, FooterComponent, AdminHeaderComponent],
 })
 export class ComponentsModule {}

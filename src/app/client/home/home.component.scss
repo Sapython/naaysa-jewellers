@@ -90,7 +90,7 @@ body {
 }
 
 #first-section {
-  height: 90vh;
+  height: 90%;
   background-color: var(--color-secondary);
   position: relative;
 
@@ -102,13 +102,16 @@ body {
       width: 100%;
 
       li {
-        height: 100%;
+        height: auto;
         width: 100%;
         position: relative;
+        background-color: white;
+        padding: 0 1.4rem;
         img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
+          border-radius: 0.5rem;
+          height: auto;
+          max-width: 100%;
+          object-fit: contain;
         }
       }
     }
@@ -154,8 +157,10 @@ body {
         min-width: 400px;
         height: 100%;
         width: 100%;
+        padding: 0 1.4rem;
         img {
           height: 100%;
+          border-radius: 0.5rem;
           width: 100%;
           object-fit: cover;
         }
@@ -250,6 +255,7 @@ body {
       height: 100%;
       position: relative;
       img {
+        border-radius: 0.5rem;
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -271,6 +277,7 @@ body {
     img {
       height: 100%;
       width: 100%;
+      border-radius: 0.5rem;
       object-fit: cover;
     }
   }
@@ -315,7 +322,7 @@ body {
       height: 3rem;
       width: 2rem;
       font-size: 5rem;
-      @media (max-width: 600px){
+      @media (max-width: 600px) {
         // left: 1rem;
       }
     }
@@ -354,6 +361,7 @@ body {
       img {
         height: 100%;
         width: 100%;
+        border-radius: 0.5rem;
       }
     }
     .explore_us {
@@ -377,7 +385,7 @@ body {
         border: none;
         cursor: pointer;
         color: var(--color-light);
-        &:hover{
+        &:hover {
           transform: scale(1.02);
         }
       }
@@ -458,7 +466,7 @@ body {
         height: 3rem;
         width: 2rem;
         font-size: 2rem;
-        @media (max-width: 600px){
+        @media (max-width: 600px) {
           left: 0;
         }
       }
