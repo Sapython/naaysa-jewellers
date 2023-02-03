@@ -65,12 +65,12 @@
 </section>
 
 <section id="items-section">
-  <img src="assets/jew1.png">
-  <img src="assets/jew2.png">
-  <img src="assets/jew3.png">
-  <img src="assets/jew4.png">
-  <img src="assets/jew5.png">
-  <img src="assets/jew6.png">
+  <div class="img"><img src="assets/jew1.png"></div>
+  <div class="img"><img src="assets/jew2.png"></div>
+  <div class="img"><img src="assets/jew3.png"></div>
+  <div class="img"><img src="assets/jew4.png"></div>
+  <div class="img"><img src="assets/jew5.png"></div>
+  <div class="img"><img src="assets/jew6.png"></div>
 </section>
 
 <section id="discount-section" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
@@ -128,7 +128,11 @@
 <img src="assets/new-jew.svg" alt="">
 
 <section id="shop-by-metals">
-  <h3>Popular Collection</h3>
+  <div class="shop-head">
+    <img src="assets/left.png">
+    <h3>Popular Collection</h3>
+    <img src="assets/right.png">
+  </div>
   <div id="metals">
     <app-metal-widget uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
       src="../../../assets/jewel3.png" name="Platinum Jewellery"></app-metal-widget>
@@ -142,7 +146,11 @@
 </section>
 
 <section id="trendings">
-  <h3>Trending Jewellery</h3>
+  <div class="shop-head">
+    <img src="assets/left.png">
+    <h3>Trending Jewellery</h3>
+    <img src="assets/right.png">
+  </div>
   <div class="images">
     <div class="image" uk-scrollspy="cls: uk-animation-slide-left; repeat: true" style="width: 43%">
       <img src="../../../assets/trending1.png" alt="trending-1" />

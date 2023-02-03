@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     BreadcrumbModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     provideStorage(() => getStorage()),
     BrowserAnimationsModule,
     ComponentsModule,
+
   ],
 
   providers: [ScreenTrackingService, UserTrackingService],
