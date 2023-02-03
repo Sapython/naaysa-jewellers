@@ -9,9 +9,9 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
 import { LayoutsModule } from '../layouts/layouts.module';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatLegacyTabsModule as MatTabsModule} from '@angular/material/legacy-tabs';
 @NgModule({
   declarations: [
     ProductsComponent,

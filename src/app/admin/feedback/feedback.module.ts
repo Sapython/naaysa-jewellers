@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FeedbackRoutingModule } from './feedback-routing.module';
 import { FeedbackComponent } from './feedback.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatLegacyTabsModule as MatTabsModule} from '@angular/material/legacy-tabs';
 import { LayoutsModule } from '../layouts/layouts.module';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';
 
