@@ -528,7 +528,26 @@ header {
     display: flex;
     color: #F48081;
     cursor: pointer;
+
+    span{
+
+      nav {
+
+        img{
+          height: 100px;
+          width: 100px;
+        }
+
+        span{
+          margin-top: 30px;
+        }
+      }
+    }
   }
+
+  
+
+
 }
 
 .mobile_view {

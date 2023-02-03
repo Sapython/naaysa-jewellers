@@ -7,7 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ComponentsModule } from '../../components/components.module';
 import { SwiperModule } from 'swiper/angular';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { SwiperModule } from 'swiper/angular';
     ComponentsModule,
     SwiperModule,
     WidgetsModule,
-    RouterModule
+    RouterModule,
+    MatExpansionModule
   ]
 })
 export class HomeModule { }

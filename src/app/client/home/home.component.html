@@ -6,7 +6,7 @@
     </form>
   </div>
 
-  <div class="explore">
+  <!-- <div class="explore">
     <div class="box" routerLink="../all-product">
       <i class="ri-fire-line"></i>
       <b>Trending</b>
@@ -39,7 +39,7 @@
       <img src="../../../assets/pendent.svg" alt="" />
       <b>Pendent</b>
     </div>
-  </div>
+  </div> -->
 </div>
 <div class="subscription">
   <img src="../../../assets/subscription.svg" alt="" />
@@ -134,8 +134,8 @@
     <img src="assets/right.png">
   </div>
   <div id="metals">
-    <app-metal-widget uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
-      src="../../../assets/jewel3.png" name="Platinum Jewellery"></app-metal-widget>
+    <app-metal-widget uk-scrollspy="cls: uk-animation-slide-left; repeat: true" src="../../../assets/jewel3.png"
+      name="Platinum Jewellery"></app-metal-widget>
     <app-metal-widget src="../../../assets/jewel4.png" name="Silver Jewellery"
       uk-scrollspy="cls: uk-animation-slide-left; repeat: true"></app-metal-widget>
     <app-metal-widget src="../../../assets/jewel1.png" name="Platinum Jewellery"
@@ -145,14 +145,14 @@
   </div>
 </section>
 
-<section id="trendings">
+<!-- <section id="trendings">
   <div class="shop-head">
     <img src="assets/left.png">
     <h3>Trending Jewellery</h3>
     <img src="assets/right.png">
   </div>
   <div class="images">
-    <div class="image" uk-scrollspy="cls: uk-animation-slide-left; repeat: true" style="width: 43%">
+    <div class="image" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
       <img src="../../../assets/trending1.png" alt="trending-1" />
       <p uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
         Modern
@@ -167,11 +167,124 @@
         Engagement Rings
       </p>
     </div>
+    <div class="image" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"
+      style="width: 55%">
+      <img src="../../../assets/trending1.png" alt="trending-3" />
+      <p uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+        Engagement Rings
+      </p>
+    </div>
   </div>
   <div class="image2">
-    <!-- <img src="../../../assets/trending3.png" alt="trending-2" /> -->
     <img src="assets/jew-org.png" alt="">
   </div>
+</section> -->
+
+<section id="trendings">
+  <div class="shop-head">
+    <img src="assets/left.png">
+    <h3>Trending Jewellery</h3>
+    <img src="assets/right.png">
+  </div>
+
+  <div class="images">
+    <div class="image">
+      <img src="assets/trending1.png" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+      <p uk-scrollspy="cls: uk-animation-slide-left; repeat: true">Modern Mangalsutra</p>
+    </div>
+
+    <div class="image">
+      <img src="assets/just-arrived.png" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true" style="    transform: translateY(-100px);">
+      <p uk-scrollspy="cls: uk-animation-slide-top; repeat: true" style="bottom: 8rem;">Engagement Rings</p>
+    </div>
+
+    <div class="image">
+      <img src="assets/trending1.png" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+      <p uk-scrollspy="cls: uk-animation-slide-right; repeat: true">Modern EarRings</p>
+    </div>
+  </div>
+
+  <div class="btn">View All Collections</div>
+
+</section>
+
+<div class="image2">
+  <img src="assets/jew-org.png" alt="">
+</div>
+
+<section id="history">
+  <h1>Based on your History</h1>
+
+  <div uk-slider="finite: false; autoplay:true; autoplay-interval: 1500">
+    <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@">
+      <li>
+        <img src="/assets/history/ring1.png" alt="" />
+        <span>
+          <h2>Modern Jwellery</h2>
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+      <li>
+        <img src="/assets/history/ring2.png" alt="" />
+        <span>
+          <h2>₹20,586 <s>₹24,156</s></h2>
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+      <li>
+        <img src="/assets/history/ring3.png" alt="" />
+        <span>
+          <h2>₹20,586 <s>₹24,156</s></h2>
+
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+      <li>
+        <img src="/assets/history/ring4.png" alt="" />
+        <span>
+          <h2>₹20,586 <s>₹24,156</s></h2>
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+      <li>
+        <img src="/assets/history/ring5.png" alt="" />
+        <span>
+          <h2>₹20,586 <s>₹24,156</s></h2>
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+      <li>
+        <img src="/assets/history/ring1.png" alt="" />
+        <span>
+          <h2>₹20,586 <s>₹24,156</s></h2>
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+      <li>
+        <img src="/assets/history/ring2.png" alt="" />
+        <span>
+          <h2>₹20,586 <s>₹24,156</s></h2>
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+      <li>
+        <img src="/assets/history/ring3.png" alt="" />
+        <span>
+          <h2>₹20,586 <s>₹24,156</s></h2>
+          <p>Engagement Rings</p>
+          <nav>Kinberly Linear Diamond Hoop Piece</nav>
+        </span>
+      </li>
+    </ul>
+  </div>
+
 </section>
 
 <section id="blog">
@@ -180,18 +293,17 @@
     <div class="customer" style="width: 30%; padding-left: 10rem"
       uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
       <span uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-        Words <b style="font-size: var(--small)">From</b> <br />
+        Words <b style="font-size: var(--large)">From</b> <br />
         Customers
       </span>
     </div>
     <div class="review" style="width: 55%">
       <div class="quote"><i class="ri-double-quotes-l"></i></div>
       <span uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-        Lorem, ispansum dolor sit amet consectetur adispanisicing elit. Ab
-        consectetur consequuntur eum ex minima iure officia qui aut neque, quis
-        quia cum spanerferendis voluspantas, itaque, numquam voluspantatem
-        temspanore magni doloribus.
-        <p uk-scrollspy="cls: uk-animation-slide-right; repeat: true">-Endless Man</p>
+        “I just wanted to say that I am very pleased with the ring. I am waiting to give it to my daughter for their
+        ring ceremony so she hasn't seen it, but I know that she will be pleased also. It will be something she will be
+        able to wear forever instead of a class ring that she may wear just a few times. Thanks again.”
+        <p uk-scrollspy="cls: uk-animation-slide-right; repeat: true">-Amita singh</p>
       </span>
     </div>
   </div>
@@ -200,15 +312,130 @@
       <img src="../../../assets/person.png" alt="" />
     </div>
     <div class="explore_us" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-      <h5>EFFORTLESS</h5>
-      <p>Lifestyle</p>
-      <button routerLink="../disclaimer">About US</button>
+      <h5>Modern Jewellery</h5>
+      <p>Modern jewellery is a movement in jewellery design concepts that favours high personalisation and detachment of
+        designing from its stature as a specialised job.</p>
+      <button routerLink="../disclaimer">Read More</button>
     </div>
   </div>
 </section>
 
-<app-footer style="display: block;width: 100%;"
-  uk-scrollspy="cls:uk-animation-scale-up"></app-footer>
+<section id="similar-blog">
+  <div class="similar-head">
+    <img src="assets/left.png">
+    <h3>Similar Blog</h3>
+    <img src="assets/right.png">
+  </div>
+
+  <div class="gallery">
+    <div>
+      <img src="assets/jewelery.png" alt="">
+      <nav>January 27, 2023</nav>
+      <h3>Modern Jewellery</h3>
+      <p>Modern jewellery is a movement in jewellery design concepts that favours high personalisation
+        and detachment of designing from its stature as a specialised job.</p>
+    </div>
+    <div>
+      <img src="assets/jewelery.png" alt="">
+      <nav>January 27, 2023</nav>
+      <h3>Modern Jewellery</h3>
+      <p>Modern jewellery is a movement in jewellery design concepts that favours high personalisation
+        and detachment of designing from its stature as a specialised job.</p>
+    </div>
+    <div>
+      <img src="assets/jewelery.png" alt="">
+      <nav>January 27, 2023</nav>
+      <h3>Modern Jewellery</h3>
+      <p>Modern jewellery is a movement in jewellery design concepts that favours high personalisation
+        and detachment of designing from its stature as a specialised job.</p>
+    </div>
+  </div>
+</section>
+
+<section id="instagram">
+  <div class="similar-head">
+    <img src="assets/left.png">
+    <h3>Instagram Wall</h3>
+    <img src="assets/right.png">
+  </div>
+
+  <div class="grid">
+    <img src="assets/grid.png" alt="">
+  </div>
+</section>
+
+<section id="faq">
+  <div class="similar-head">
+    <img src="assets/left.png">
+    <h3>Frequency Asked Questions</h3>
+    <img src="assets/right.png">
+  </div>
+
+  <div class="expansion-panel">
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          What is Modern Jewellery?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Contemporary jewellery is something that is made in the time, it is relevant and something that ‘belongs to the
+        same or the present time’. So, basically, contemporary jewelry is something that is in trend in the present day.
+        And it is a beautiful mixture of jewelry and art.
+
+        Along with adorning the body and outfit, this jewelry is also worn as a way to express individual talent,
+        influences, and contemporary culture.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          What is Contemporary Jewellery?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Contemporary jewellery is something that is made in the time, it is relevant and something that ‘belongs to the
+        same or the present time’. So, basically, contemporary jewelry is something that is in trend in the present day.
+        And it is a beautiful mixture of jewelry and art.
+
+        Along with adorning the body and outfit, this jewelry is also worn as a way to express individual talent,
+        influences, and contemporary culture.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Difference between Modern Jewellery vs Contemporary Jwellery?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Contemporary jewellery is something that is made in the time, it is relevant and something that ‘belongs to the
+        same or the present time’. So, basically, contemporary jewelry is something that is in trend in the present day.
+        And it is a beautiful mixture of jewelry and art.
+
+        Along with adorning the body and outfit, this jewelry is also worn as a way to express individual talent,
+        influences, and contemporary culture.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Can I pay online payment when the parcel arrive?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        Contemporary jewellery is something that is made in the time, it is relevant and something that ‘belongs to the
+        same or the present time’. So, basically, contemporary jewelry is something that is in trend in the present day.
+        And it is a beautiful mixture of jewelry and art.
+
+        Along with adorning the body and outfit, this jewelry is also worn as a way to express individual talent,
+        influences, and contemporary culture.
+      </p>
+    </mat-expansion-panel>
+  </div>
+</section>
+
+<app-footer style="display: block;width: 100%;" uk-scrollspy="cls:uk-animation-scale-up"></app-footer>
 
 <!-- <div class="blog">
   <div class="blog-card" data-aos-delay="300" uk-scrollspy="cls:uk-animation-slide-bottom">

@@ -12,7 +12,8 @@ Swiper.use([Navigation, Pagination]);
 })
 
 export class HomeComponent implements OnInit {
-   
+  panelOpenState = false;
+  
   public swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'vertical',
