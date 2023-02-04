@@ -7,312 +7,70 @@
   </div> -->
 
   <div class="top-head-bar">
-    <img src="assets/logo.png"> 
-    <h1>NAAYSA</h1>
+    <span>
+      <img src="assets/logo.png" />
+      <h1>NAAYSA</h1>
+    </span>
 
     <div class="search">
-      <input type="text" placeholder="Search for Jewellery">
-      <span>Search</span>
+      <input type="text" placeholder="Search for Jewellery" />
+      <button>Search</button>
     </div>
 
-    <div class="plan">
+    <button class="plan">
       <p>10 + 1 Monthly Plan</p>
-    </div>
+    </button>
 
-    <mat-icon>shopping_cart</mat-icon>
-    <mat-icon>notifications</mat-icon>
-    <img src="assets/user.png" id="user_img">
+    <span>
+      <button class="action">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <button class="action">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <img src="assets/user.png" id="user_img" />
+    </span>
     <!-- <mat-icon>arrow_drop_down</mat-icon> -->
   </div>
-
   <!-- menu bar -->
-  <!-- <div class="bottomBar">
-    <nav #nav>
-      <button (click)="showOffcanvas()" class="mobileOnly">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <li routerLink="" [class]="path === '/' || path === 'home' ? 'active' : 'none'">
-        Home
+  <nav class="uk-navbar-container" uk-navbar>
+    <ul class="uk-navbar-nav">
+      <li *ngFor="let item of topBarItems">
+        <a href="#" class="title">
+          <p>{{ item.title }}</p>
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </a>
+        <div class="uk-dropbar uk-dropbar-top" uk-drop="stretch: x;animation: slide-top; animate-out: true">
+          <div class="container">
+            <nav style="display: flex">
+              <h4>Shop By Style</h4>
+              <div *ngFor="let link of item.styles" [routerLink]="link.link">
+                <img [src]="link.image" [alt]="link.title" />
+                <span>{{ link.title }}</span>
+              </div>
+            </nav>
+            <nav>
+              <h4>Shop By Metal & Stone</h4>
+              <div *ngFor="let link of item.byMetals" [routerLink]="link.link">
+                <img [src]="link.image" [alt]="link.title" />
+                <span>{{ link.title }}</span>
+              </div>
+            </nav>
+            <nav>
+              <h4>Shop By</h4>
+              <div *ngFor="let link of item.shopBy" [routerLink]="link.link">
+                <span>{{ link.title }}</span>
+              </div>
+            </nav>
+            <nav >
+              <img class="banner" [src]="item.banner" [alt]="item.title" />
+            </nav>
+          </div>
+        </div>
       </li>
-      <li [class]="path === '' || path === 'home' ? 'active' : 'none'">
-        Shop for category</li>
-      <div class="uk-width-1-1" uk-dropdown style="border-radius: 15px">
-        <div class="uk-dropdown-grid uk-child-width-1-1 uk-flex" uk-grid>
-          <div class="categories">
-            <ul>
-              <li *ngFor="let category of byCategory" routerLink="../all-product">
-                <img src="{{ category.image }}" alt="image" />
-                <p>{{ category.name }}</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-
-      <li [class]="path === '' || path === 'home' ? 'active' : 'none'">Shop by Metal and Stone</li>
-      <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
-        <div class="uk-dropdown-grid uk-child-width-1-2@m uk-flex" uk-grid>
-          <div class="categories">
-            <ul>
-              <li *ngFor="let metal of byMetals" routerLink="../all-product">
-                <img src="{{ metal.image }}" alt="image" />
-                <p>{{ metal.name }}</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <li [class]="path === '' || path === 'home' ? 'active' : 'none'">Shop By</li>
-      <div class="uk-width-large" uk-dropdown style="border-radius: 15px">
-        <div class="uk-dropdown-grid uk-child-width-1-2@m uk-flex" uk-grid>
-          <div class="categories">
-
-            <ul>
-              <li *ngFor="let filter of filters" routerLink="../all-product">
-                <p>{{ filter.name }}</p>
-              </li>
-              <b>All Jewellery</b>
-            </ul>
-          </div>
-          <div class="categories">
-            <img src="https://i.pravatar.cc" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <li routerLink="" class="desktopOnly" routerLink="../locate-store">
-        Locate Store
-      </li>
-      <li routerLink="../ten-plus-one-scheme" [class]="
-          path === '/ten-plus-one-scheme' || path === 'home'
-            ? 'borderedButton active'
-            : 'borderedButton none'
-        ">
-        10 + 1 Scheme
-      </li>
-    </nav>
-    <div class="actions desktopOnly">
-      <div id="search-box" class="uk-animation-scale-up" *ngIf="searchVisible">
-        <div class="field">
-          <input type="text" />
-          <button><i class="fa-solid fa-arrow-right-long"></i></button>
-          <button (click)="searchVisible = false">
-            <i class="fa-solid fa-xmark"></i>
-
-          </button>
-        </div>
-      </div>
-      <button (click)="searchVisible = true" #searchButton id="search-button">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-      <button routerLink="cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </button>
-      <button routerLink="login"><i class="fa-solid fa-user"></i></button>
-      <button (click)="showOffcanvas()">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-  </div> -->
-  
-  
-  <!-- new menu bar -->
-  <div class="menu-bar">
-    <p>
-      Rings
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/rings/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/rings/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/rings/3.png" alt=""> <span>Casual</span>
-          <img src="assets/rings/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/rings/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/rings/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/rings/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/rings/8.png" alt=""> <span>Party</span> 
-          <img src="assets/rings/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/rings/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Earrings
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/earings/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/earings/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/earings/3.png" alt=""> <span>Casual</span>
-          <img src="assets/earings/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/earings/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/earings/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/earings/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/earings/8.png" alt=""> <span>Party</span> 
-          <img src="assets/earings/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/earings/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Pendant
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/pendant/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/pendant/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/pendant/3.png" alt=""> <span>Casual</span>
-          <img src="assets/pendant/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/pendant/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/pendant/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/pendant/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/pendant/8.png" alt=""> <span>Party</span> 
-          <img src="assets/pendant/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/pendant/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Necklace
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/necklace/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/necklace/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/necklace/3.png" alt=""> <span>Casual</span>
-          <img src="assets/necklace/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/necklace/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/necklace/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/necklace/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/necklace/8.png" alt=""> <span>Party</span> 
-          <img src="assets/necklace/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/necklace/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Chains
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/chain/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/chain/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/chain/3.png" alt=""> <span>Casual</span>
-          <img src="assets/chain/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/chain/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/chain/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/chain/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/chain/8.png" alt=""> <span>Party</span> 
-          <img src="assets/chain/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/chain/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Braclets
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/bracelet/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/bracelet/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/bracelet/3.png" alt=""> <span>Casual</span>
-          <img src="assets/bracelet/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/bracelet/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/bracelet/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/bracelet/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/bracelet/8.png" alt=""> <span>Party</span> 
-          <img src="assets/bracelet/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/bracelet/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Nose Pins
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/nose/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/nose/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/nose/3.png" alt=""> <span>Casual</span>
-          <img src="assets/nose/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/nose/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/nose/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/nose/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/nose/8.png" alt=""> <span>Party</span> 
-          <img src="assets/nose/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/nose/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Bangles
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/bangels/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/bangels/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/bangels/3.png" alt=""> <span>Casual</span>
-          <img src="assets/bangels/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/bangels/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/bangels/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/bangels/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/bangels/8.png" alt=""> <span>Party</span> 
-          <img src="assets/bangels/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/bangels/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-    <p>
-      Gold Chains
-      <mat-icon>keyboard_arrow_down</mat-icon>
-      <span uk-dropdown>
-        <nav style="display: flex;">
-          <img src="assets/chain/1.png" alt=""> <span>Engagement</span>
-          <img src="assets/chain/2.png" alt=""> <span>Fashion</span>
-          <img src="assets/chain/3.png" alt=""> <span>Casual</span>
-          <img src="assets/chain/4.png" alt=""> <span>Adjustable</span>
-          <img src="assets/chain/5.png" alt=""> <span>For Everyone</span>
-        </nav>
-        <nav>
-          <img src="assets/chain/6.png" alt=""> <span>Silver rings</span>
-          <img src="assets/chain/7.png" alt=""> <span>Wedding</span>
-          <img src="assets/chain/8.png" alt=""> <span>Party</span> 
-          <img src="assets/chain/9.png" alt=""> <span>Showcase</span>
-          <img src="assets/chain/10.png" alt=""> <span>Occasionally</span>
-        </nav>
-      </span>
-    </p>
-
-  </div>
+    </ul>
+  </nav>
   <!-- new menu bar end -->
-  
   
   <div class="searchBarSep mobileOnly" *ngIf="searchVisible">
     <div id="search-box" class="uk-animation-scale-up">
@@ -325,13 +83,17 @@
       </div>
     </div>
   </div>
-
 </header>
-<div id="offcanvas-container" #offcanvasContainer (click)="hideOffcanvas($event)">
+<div
+  id="offcanvas-container"
+  #offcanvasContainer
+  (click)="hideOffcanvas($event)"
+>
   <div id="offcanvas" #offcanvas>
     <div id="profile" routerLink="/profile">
       <img
-        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      />
       <h4>Sudipta Doe</h4>
     </div>
     <ul>
@@ -346,8 +108,9 @@
         </button>
       </li>
       <li>
-        <button routerLink="/add-delivery-address"><i class="fa-solid fa-address-card"></i> My
-          Address</button>
+        <button routerLink="/add-delivery-address">
+          <i class="fa-solid fa-address-card"></i> My Address
+        </button>
       </li>
       <li>
         <button routerLink="/payment-options">
@@ -355,7 +118,9 @@
         </button>
       </li>
       <li>
-        <button routerLink="/login"><i class="fa-solid fa-arrow-left"></i> Logout</button>
+        <button routerLink="/login">
+          <i class="fa-solid fa-arrow-left"></i> Logout
+        </button>
       </li>
     </ul>
     <div class="actions">
@@ -365,7 +130,9 @@
       <button routerLink="cart">
         <i class="fa-solid fa-cart-shopping"></i>
       </button>
-      <button routerLink="login" routerLink="/login"><i class="fa-solid fa-user"></i></button>
+      <button routerLink="login" routerLink="/login">
+        <i class="fa-solid fa-user"></i>
+      </button>
       <button (click)="showOffcanvas()">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -381,11 +148,16 @@
   <div class="logo" routerLink="/">
     <img src="assets/logo.svg" alt="Logo" id="logo" />
     <span>NAAYSA</span>
-
   </div>
   <div class="buttons">
-    <button routerLink="../wishlist"><i class="fa-regular fa-heart"></i></button>
-    <button routerLink="../locate-store"><i class="ri-store-3-line"></i></button>
-    <button routerLink="../cart"><i class="fa-solid fa-cart-shopping"></i></button>
+    <button routerLink="../wishlist">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+    <button routerLink="../locate-store">
+      <i class="ri-store-3-line"></i>
+    </button>
+    <button routerLink="../cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </button>
   </div>
 </div>

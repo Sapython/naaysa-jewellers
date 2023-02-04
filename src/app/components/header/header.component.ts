@@ -17,103 +17,52 @@ export class HeaderComponent implements OnInit {
   @ViewChild('offcanvas') offcanvas: ElementRef;
   searchVisible:boolean = false;
 
-  byCategory=[
+  topBarItems:TopBarItem[] = [
     {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
+      banner:'assets/topBarImages/rings/banner.png',
+      title:'Rings',
+      styles:[
+        {image:'assets/topBarImages/rings/1.png',title:'Engagement',link:'/'},
+        {image:'assets/topBarImages/rings/2.png',title:'Wedding',link:'/'},
+        {image:'assets/topBarImages/rings/3.png',title:'Anniversary',link:'/'},
+        {image:'assets/topBarImages/rings/4.png',title:'Bridal',link:'/'},
+        {image:'assets/topBarImages/rings/5.png',title:'Fashion',link:'/'},
+        {image:'assets/topBarImages/rings/6.png',title:'Eternity',link:'/'},
+        {image:'assets/topBarImages/rings/7.png',title:'Stackable',link:'/'},
+      ],
+      byMetals:[
+        {image:'assets/topBarImages/secondCategories/diamond.png',title:'Diamond',link:'/'},
+        {image:'assets/topBarImages/secondCategories/gemstone.png',title:'Gemstone',link:'/'},
+        {image:'assets/topBarImages/secondCategories/solitaire.png',title:'Solitaire',link:'/'},
+        {image:'assets/topBarImages/secondCategories/rose gold.png',title:'Rose Gold',link:'/'},
+        {image:'assets/topBarImages/secondCategories/gold.png',title:'Gold',link:'/'},
+        {image:'assets/topBarImages/secondCategories/white gold.png',title:'White Gold',link:'/'},
+        {image:'assets/topBarImages/secondCategories/yellow gold.png',title:'Yellow Gold',link:'/'},
+      ],
+      shopBy:[
+        {title:'For Mens',link:'/'},
+        {title:'For Womens',link:'/'},
+        {title:'Under 10K',link:'/'},
+        {title:'10K to 20K',link:'/'},
+        {title:'20K to 30K',link:'/'},
+        {title:'30K to 45K',link:'/'},
+        {title:'Above 45K',link:'/'},
+        {title:'Show All',link:'/'},
+      ]
     },
-    
-    {
-      image:'../../../assets/jewellery/jew5.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew6.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew8.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew.3.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew5.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew1.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew2.svg',
-      name:'Gold coins'
-    },
-    {
-      image:'../../../assets/jewellery/jew8.svg',
-      name:'Gold coins'
-    }
-  ]
-  byMetals=[
-    {
-      image:'../../../assets/metals/metal1.svg',
-      name:'Diamond'
-    },
-    {
-      image:'../../../assets//metals/metal2.svg',
-      name:'Gold '
-    },
-    {
-      image:'../../../assets/metals/metal.svg',
-      name:'Silver'
-    },
-    {
-      image:'../../../assets/metals/gemstone.svg',
-      name:'Gemstone'
-    },
-    
-  ]
-  filters=[
-    {
-      name:'For KIDS/BABY'
-    },
-    {
-      name:'Under ₹ 10k'
-    },
-    {
-      name:'₹ 10k - ₹ 20k '
-    },
-    {
-      name:' ₹ 20k to ₹ 75K '
-    },
-    {
-      name:'₹ 75k to ₹ 1 LAKH'
-    },
-    {
-      name:'Above ₹ 1 LAKH'
-    },
-    {
-      name:'FOR WOMEN'
-    },
+
   ]
   constructor() {}
 
   ngOnInit(): void {}
-
+  setStyle(dropdown:any){
+    console.log(dropdown);
+    // dropdown.style.left = '30px;';
+    // dropdown.addEventListener('beforeshow',(data:any)=>{
+    //   console.log("before show",data);
+    //   dropdown.left = '30px;';
+    // })
+  }
   showSearch() {
     this.nav.nativeElement.setAttribute('closed', '');
     this.nav.nativeElement.addEventListener(
@@ -206,4 +155,12 @@ hideSearch() {
       }
     );
   }
+}
+
+type TopBarItem = {
+  title:string,
+  banner:string,
+  styles:{image:string,title:string,link:string}[],
+  byMetals:{image:string,title:string,link:string}[],
+  shopBy:{title:string,link:string}[]
 }

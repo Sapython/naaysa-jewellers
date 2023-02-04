@@ -100,11 +100,11 @@ body {
 
 #first-section {
   height: 90%;
-  background-color: var(--color-secondary);
+  // background-color: var(--color-secondary);
   position: relative;
 
   .uk-slider {
-    height: 100%;
+    height: calc(100% - 100px);
     width: 100%;
 
     ul {
@@ -138,6 +138,7 @@ body {
 
     h2 {
       color: var(--color-light);
+      mix-blend-mode: difference;
       margin: 0;
       font-family: var(--font-two);
       font-size: var(--xlarge);
@@ -149,6 +150,7 @@ body {
     p {
       color: var(--color-light);
       font-size: var(--medium);
+      mix-blend-mode: difference;
       margin: 1.5em 0;
     }
 
