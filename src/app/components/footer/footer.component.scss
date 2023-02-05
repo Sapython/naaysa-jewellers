@@ -227,6 +227,8 @@
 .container-fluid {
   width: 100%;
   background-color: var(--color-secondary);
+  background-image: url('/assets/footer.png');
+  background-repeat: repeat-x;
   padding: 1rem 1rem;
 
   .list_logo_container {
@@ -272,7 +274,7 @@
 
       img {
         width: 300px;
-        height: 550px;
+        height: 600px;
         transform: translate3d(-180px, -40px, 0px)
       }
 

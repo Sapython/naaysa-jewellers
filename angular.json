@@ -37,7 +37,9 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/vanilla-tilt.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -108,7 +110,8 @@
               "node_modules/aos/dist/aos.css"
             ],
             "scripts": [
-              "node_modules/aos/dist/aos.js"
+              "node_modules/aos/dist/aos.js",
+              "src/assets/js/vanilla-tilt.min.js"
             ]
           }
         },

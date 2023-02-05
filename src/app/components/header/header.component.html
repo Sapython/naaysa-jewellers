@@ -7,7 +7,7 @@
   </div> -->
 
   <div class="top-head-bar">
-    <span>
+    <span routerLink="">
       <img src="assets/logo.png" />
       <h1>NAAYSA</h1>
     </span>
@@ -22,11 +22,14 @@
     </button>
 
     <span>
-      <button class="action">
+      <button class="action" routerLink="cart">
         <mat-icon>shopping_cart</mat-icon>
       </button>
-      <button class="action">
-        <mat-icon>notifications</mat-icon>
+      <button class="action" routerLink="profile">
+        <mat-icon>person</mat-icon>
+      </button>
+      <button class="action" (click)="showOffcanvas()">
+        <mat-icon>menu</mat-icon>
       </button>
       <img src="assets/user.png" id="user_img" />
     </span>
@@ -36,10 +39,10 @@
   <nav class="uk-navbar-container" uk-navbar>
     <ul class="uk-navbar-nav">
       <li *ngFor="let item of topBarItems">
-        <a href="#" class="title">
+        <span href="#" class="title">
           <p>{{ item.title }}</p>
           <mat-icon>keyboard_arrow_down</mat-icon>
-        </a>
+        </span>
         <div class="uk-dropbar uk-dropbar-top" uk-drop="stretch: x;animation: slide-top; animate-out: true">
           <div class="container">
             <nav style="display: flex">

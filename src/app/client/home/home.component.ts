@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import Swiper, { Navigation, Pagination } from 'swiper';
 import * as AOS from 'aos'
 
-
+declare var VanillaTilt:any;
 
 Swiper.use([Navigation, Pagination]);
 @Component({
@@ -39,5 +39,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
+    console.log(VanillaTilt.init());
+    
   }
 }
