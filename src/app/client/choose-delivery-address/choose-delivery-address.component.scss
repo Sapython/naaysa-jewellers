@@ -1,11 +1,15 @@
 .container{
     margin: 16px;
     border: 1px solid #969696;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 1px 1px 06px -1px #969696;
     margin-left: 85px;
+    padding: 0px;
     .parent-container{
         margin: 15px;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
     }
     .box{
         padding: 15px;
