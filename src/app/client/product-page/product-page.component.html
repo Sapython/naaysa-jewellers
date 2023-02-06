@@ -1,245 +1,377 @@
 <div class="container-fluid">
-  <div class="box">
-    <div class="image">
-      <img src="{{large_Image}}" alt="">
-      <div class="small-images">
-        <img [src]="image" alt="" *ngFor="let image of images;let i = index"
-          (click)='large_Image = images[i]'>
+  <section class="productDescription">
+    <div class="imagesContainer">
+      <div class="list">
+        <div class="images">
+          <img
+            [src]="image"
+            *ngFor="let image of product.images; let i = index"
+            (click)="currentImageIndex = i"
+          />
+        </div>
+        <div class="carets">
+          <button
+            [disabled]="currentImageIndex == 0"
+            (click)="currentImageIndex = currentImageIndex - 1"
+          >
+            <i class="ri-arrow-left-s-fill"></i>
+          </button>
+          <button
+            [disabled]="currentImageIndex == product.images.length - 1"
+            (click)="currentImageIndex = currentImageIndex + 1"
+          >
+            <i class="ri-arrow-right-s-fill"></i>
+          </button>
+        </div>
+      </div>
+      <div class="main">
+        <img [src]="product.images[currentImageIndex]" />
       </div>
     </div>
-    <div class="inner-box">
-      <div class="section-one">
-        <div class="cell">
-          <p>{{jewel_name}}</p>
-          <div class="price">
-            <p>₹ {{price}}</p>
-            <p class="opacity">MRP Incl. of all taxes</p>
-          </div>
-        </div>
-        <p class="opacity off"><span uk-icon="tag"></span>20% off on making charge</p>
-        <p class="mart">Diamond Ring In 18Kt Gold (5.68 gram) with Diamonds (0.4130 Ct)</p>
-      </div>
-      <div class="pincode-and-quantity">
-        <div class="pincode">
-          <div class="quantity">
-            <p>Your Pincode:</p>
-            <input type="text" placeholder="Pincode"><button class="submit-btn">Submit</button>
-          </div>
-          <!-- <div class="quantity">
-                        <p>Quantity:</p>
-                        <input type="number" value="1">
-                    </div> -->
-        </div>
-        <p class="opacity mart" style="margin-left: 0;">Available in our store at PRAYAGRAJ, and <a
-            href="">12
-            other store(s)</a></p>
-      </div>
-      <div class="delivery">
-        <p>Delivery By Today Evening <span>{{date}}</span> for Pincode <span>{{pincode}}</span></p>
-        <p>(Placed Order before 4pm for same-day-delivery)</p>
-        <!-- <div class="features">
-                    <app-feature-widget *ngFor="let feature of features" [src]="feature.src" [text_Feature]="feature.feature_Text"></app-feature-widget>
-                </div> -->
-      </div>
-      <div class="mobile-view">
-        <p><i class="fa-solid fa-medal"></i> Certified Jewellery</p>
-        <p><i class="fa-solid fa-arrow-rotate-left"></i> 30-Day Money Back</p>
-        <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Lifetime Exchange & Buy-Back</p>
-      </div>
-      <div class="customize">
-        <div class="flex">
-          <div class="button">
-            <label id="label">Customize this Product:</label>
-            <select name="cars" class="cars">
-              <option value=""></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-            </select>
-          </div>
-          <div class="button">
-            <label for="cars" id="label">Select Ring Size:</label>
-            <select name="cars" class="cars">
-              <option value=""></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-            </select>
-          </div>
-        </div>
-        <div class="flex">
-          <div class="like"><i
-              [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }"
-              (click)="liked = !liked"></i></div>
-          <button class="primary-button" routerLink="/vr-product-try">Try On Me</button>
-          <button class="primary-button">Add To Cart</button>
+    <div class="detail">
+      <div class="head">
+        <h1>{{ product.name }}</h1>
+        <div class="heart">
+          <i
+            [class]="{
+              'fa-heart': true,
+              'fa-regular': !liked,
+              'fa-solid': liked
+            }"
+            (click)="liked = !liked"
+          ></i>
         </div>
       </div>
-      <div class="certify">
-        <p><i class="fa-solid fa-medal"></i>Certified Jewellery</p>
-        <p><i class="fa-solid fa-rotate-left"></i>30 -Day Money Back</p>
-        <p><i class="ri-arrow-left-right-line"></i>Lifetime Exchange & Buy-Back</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="details ">
-    <div class="sections">
-      <div class="section2">
-        <div class="specification">
-          <div class="pink-box">Product Details</div>
-          <div class="list-flex">
-            <p>Product Code</p>
-            <p>{{product_Code}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Height</p>
-            <p>{{height}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Width</p>
-            <p>{{width}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Weight</p>
-            <p>{{weight}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Country Of Origin</p>
-            <p>{{origin}}</p>
-          </div>
-          <mat-divider></mat-divider>
+      <p>{{ product.description }}</p>
+      <hr />
+      <div class="options">
+        <mat-form-field appearance="outline">
+          <mat-label>Type</mat-label>
+          <mat-select placeholder="Metal Purity" name="metal">
+            <mat-option
+              *ngFor="let metal of product.metalPurityTypes"
+              [value]="metal"
+            >
+              {{ metal.purity }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Diamond</mat-label>
+          <mat-select placeholder="Metal Purity" name="metal">
+            <mat-option
+              *ngFor="let metal of product.diamondTypes"
+              [value]="metal"
+            >
+              {{ metal.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Size</mat-label>
+          <mat-select placeholder="Metal Purity" name="metal">
+            <mat-option *ngFor="let metal of product.sizeTypes" [value]="metal">
+              {{ metal.size }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="quantity">
+          <button [disabled]="quantity == 1" (click)="quantity = quantity - 1">
+            <i class="ri-subtract-fill"></i>
+          </button>
+          <input
+            type="number"
+            [(ngModel)]="quantity"
+            [ngModelOptions]="{ standalone: true }"
+            type="text"
+          />
+          <button (click)="quantity = quantity + 1">
+            <i class="ri-add-fill"></i>
+          </button>
         </div>
-
-      </div>
-
-      <div class="section3">
-        <div class="specification">
-          <div class="pink-box">Price Details</div>
-          <div class="list-flex">
-            <p>Product Code</p>
-            <p>{{product_Code}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Height</p>
-            <p>{{height}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Width</p>
-            <p>{{width}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Weight</p>
-            <p>{{weight}}</p>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="list-flex">
-            <p>Country Of Origin</p>
-            <p>{{origin}}</p>
-          </div>
-          <mat-divider></mat-divider>
+        <mat-form-field appearance="outline">
+          <mat-label>Pincode</mat-label>
+          <input matInput #pincode />
+          <span matTextPrefix><i class="ri-map-pin-fill"></i></span>
+        </mat-form-field>
+        <div class="certifications">
+          <img
+            [src]="certificate.image"
+            [alt]="certificate.name"
+            *ngFor="let certificate of product.certifications"
+          />
         </div>
       </div>
-      <div class="specification">
-        <div class="pink-box">Metal Details</div>
-        <div class="list-flex">
-          <p>Product Code</p>
-          <p>{{product_Code}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-          <p>Height</p>
-          <p>{{height}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-          <p>Width</p>
-          <p>{{width}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-          <p>Weight</p>
-          <p>{{weight}}</p>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="list-flex">
-          <p>Country Of Origin</p>
-          <p>{{origin}}</p>
-        </div>
-        <mat-divider></mat-divider>
+      <hr />
+      <div class="pricing">
+        <h2>
+          {{
+            (product.configuredPrice
+              ? product.configuredPrice
+              : product.price) * quantity | currency : "INR" : "symbol-narrow"
+          }}
+        </h2>
+        <p>
+          Delivery By Today Evening 14th Jul for Pincode
+          {{ pincode.value ? pincode.value : "211019" }}
+        </p>
+        <p>MRP Incl of all taxes</p>
+        <p>20% off on making charge</p>
       </div>
-    </div>
-    <div class="pr-cert">
-      <div class="promise">
-        <h2>NAAYSA PROMISE</h2>
-        <div class="del_promises">
-          <div class="pr">
-            <img src="../../../assets/carbon_delivery.svg" alt="">
-            <p>Free Shipping & Insurance</p>
-          </div>
-          <div class="pr">
-            <img src="../../../assets/refund(1).svg" alt="">
-            <p>100% Refund</p>
-          </div>
-          <div class="pr">
-            <img src="../../../assets/exchange.svg" alt="">
-            <p>Lifetime Exchange & Buyback</p>
-          </div>
-          <div class="pr">
-            <img src="../../../assets/quality.svg" alt="">
-            <p>100% Certified Jwellery</p>
-          </div>
-          <div class="pr">
-            <img src="../../../assets/location.svg" alt="">
-            <p>Physical Store Near You</p>
-          </div>
-
-        </div>
+      <hr />
+      <div class="actions">
+        <button routerLink="../cart">Add To Cart</button>
+        <button>Buy Now</button>
       </div>
-      <div class="cert">
-        <img src="../../../assets/certificate.svg" alt="">
-        <h1>Certificate of Authenticity</h1>
-        <p>Every piece of jewellery that we
-          make is certified for
-          authenticity by
-          third-party international laboratories
-          like SGL, IGI, BIS, GIA, and HKD.
+      <div class="badges">
+        <p><i class="ri-calendar-2-fill"></i>30 -Day Money Back</p>
+        <p>
+          <i class="ri-arrow-left-right-line"></i>Lifetime Exchange & Buy-Back
         </p>
       </div>
     </div>
-  </div>
-
-  <div class="mobile-view mobile-view-second">
-    <div class="code">
-      <p>Product Code</p>
-      <p>Code:{{product_Code}}</p>
+  </section>
+  <section class="productDetails">
+    <div class="head">
+      <h2>Product Details</h2>
     </div>
-    <div class="details-box" *ngFor="let specification of specificatons">
-      <div class="icon">
-        <img src="{{details_Src}}" alt="">
-      </div>
-      <div class="details">
-        <p>{{material}}</p>
-        <p>{{text}}</p>
-      </div>
-    </div>
-  </div>
-
-
-
+    <main>
+      <ol>
+        <h3>Product Information</h3>
+        <li>Product Code : <strong> 15464-FDS1 </strong></li>
+        <li>Height : <strong> 24.7mm</strong></li>
+        <li>Width : <strong> 20.4mm</strong></li>
+        <li>Product Weight : <strong> 5.76 gram</strong></li>
+        <li>Country Origin : <strong> India</strong></li>
+      </ol>
+      <ol>
+        <h3>Diamond Details</h3>
+        <li>Diamond Type : <strong> IJ-SI </strong></li>
+        <li>Setting Type : <strong> Split Prong</strong></li>
+        <li>Total Weight : <strong> 0.087 ct</strong></li>
+        <li>Total Number : <strong> 18</strong></li>
+      </ol>
+      <ol>
+        <h3>Metal Details</h3>
+        <li>Metal Type : <strong> IJ-SI </strong></li>
+        <li>Setting Type : <strong> Split Prong</strong></li>
+        <li>Total Weight : <strong> 0.087 ct</strong></li>
+        <li>Total Number : <strong> 18</strong></li>
+      </ol>
+      <ol>
+        <h3>Price Breakup</h3>
+        <li>Gold : <strong> Rs. 22,447/-</strong></li>
+        <li>Diamond : <strong> Rs. 40,515/-</strong></li>
+        <li>30% off on Making Charge : <strong> Rs. 9,065/-</strong></li>
+        <li>GST : <strong> Rs. 2,161/-</strong></li>
+        <li>Total : <strong> Rs. 74,187/-</strong></li>
+      </ol>
+    </main>
+  </section>
+  <img src="assets/banner.png" alt="Banner" />
   <!-- Reviews -->
+  <section id="history">
+    <h1>Based on your History</h1>
 
+    <div uk-slider="finite: false; autoplay:true; autoplay-interval: 1500">
+      <ul class="uk-slider-items uk-child-width-1-3@s uk-child-width-1-4@">
+        <li>
+          <img src="/assets/topBarImages/history/ring1.png" alt="" />
+          <span>
+            <h2>Modern Jwellery</h2>
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+        <li>
+          <img src="/assets/topBarImages/history/ring2.png" alt="" />
+          <span>
+            <h2>₹20,586 <s>₹24,156</s></h2>
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+        <li>
+          <img src="/assets/topBarImages/history/ring3.png" alt="" />
+          <span>
+            <h2>₹20,586 <s>₹24,156</s></h2>
 
-  <section class="revs_sect">
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+        <li>
+          <img src="/assets/topBarImages/history/ring4.png" alt="" />
+          <span>
+            <h2>₹20,586 <s>₹24,156</s></h2>
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+        <li>
+          <img src="/assets/topBarImages/history/ring5.png" alt="" />
+          <span>
+            <h2>₹20,586 <s>₹24,156</s></h2>
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+        <li>
+          <img src="/assets/topBarImages/history/ring1.png" alt="" />
+          <span>
+            <h2>₹20,586 <s>₹24,156</s></h2>
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+        <li>
+          <img src="/assets/topBarImages/history/ring2.png" alt="" />
+          <span>
+            <h2>₹20,586 <s>₹24,156</s></h2>
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+        <li>
+          <img src="/assets/topBarImages/history/ring3.png" alt="" />
+          <span>
+            <h2>₹20,586 <s>₹24,156</s></h2>
+            <p>Engagement Rings</p>
+            <nav>Kinberly Linear Diamond Hoop Piece</nav>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div id="history">
+    <h1>Based on top Searches</h1>
+    <div
+      class="uk-position-relative uk-visible-toggle uk-light sliderParent"
+      tabindex="-1"
+      uk-slider
+    >
+      <ul
+        class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m"
+      >
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (1).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>All Rings</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (2).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>All Necklaces</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (3).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>All Bangles</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (4).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>Jewels</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (5).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>Chains</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (1).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>Rings</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (2).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>Necklaces</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (3).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>Bangles</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (4).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>Jewels</h5></div>
+        </li>
+        <li>
+          <img
+            class="sliderImages"
+            src="assets/images/slider (5).png"
+            width="400"
+            height="600"
+            alt=""
+          />
+          <div class="uk-position-center uk-panel"><h5>Chains</h5></div>
+        </li>
+      </ul>
+
+      <a
+        class="uk-position-center-left uk-position-small uk-hidden-hover"
+        href="#"
+        uk-slidenav-previous
+        uk-slider-item="previous"
+      ></a>
+      <a
+        class="uk-position-center-right uk-position-small uk-hidden-hover"
+        href="#"
+        uk-slidenav-next
+        uk-slider-item="next"
+      ></a>
+    </div>
+  </div>
+  <img src="assets/section.png" alt="" />
+
+  <!-- <section class="revs_sect">
     <section class="cust_revs">
       <h2>Customer Reviews</h2>
       <h4>659 ratings and 120 reviews</h4>
@@ -260,19 +392,19 @@
             <div class="icon">
               <i class="fa-solid fa-user"></i>
             </div>
-            <p>{{reviewer_Name}}</p>
+            <p>{{ reviewer_Name }}</p>
           </div>
           <div class="images">
-            <img src="assets/2.jpeg" alt="">
-            <img src="assets/2.jpeg" alt="">
-            <img src="assets/2.jpeg" alt="">
-            <img src="assets/2.jpeg" alt="">
-            <img src="assets/2.jpeg" alt="">
-            <img src="assets/2.jpeg" alt="">
-            <img src="assets/2.jpeg" alt="">
+            <img src="assets/2.jpeg" alt="" />
+            <img src="assets/2.jpeg" alt="" />
+            <img src="assets/2.jpeg" alt="" />
+            <img src="assets/2.jpeg" alt="" />
+            <img src="assets/2.jpeg" alt="" />
+            <img src="assets/2.jpeg" alt="" />
+            <img src="assets/2.jpeg" alt="" />
           </div>
         </div>
-        <p id="name">{{jewel_name}}</p>
+        <p id="name">{{ jewel_name }}</p>
         <div class="stars">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -280,13 +412,15 @@
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
         </div>
-        <p>{{review_Disc}}</p>
+        <p>{{ review_Disc }}</p>
         <div class="like-dislike">
-          <i class="fa-solid fa-thumbs-up"></i>|<i class="fa-solid fa-thumbs-down"></i>
+          <i class="fa-solid fa-thumbs-up"></i>|<i
+            class="fa-solid fa-thumbs-down"
+          ></i>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </div>
 
 <app-footer></app-footer>

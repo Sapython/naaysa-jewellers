@@ -1,0 +1,76 @@
+<section>
+    <mat-progress-bar *ngIf="uploading" mode="determinate" [value]="uploadPercent"></mat-progress-bar>
+    <mat-stepper linear="false">
+        <mat-step [stepControl]="productForm" errorMessage="Basic details are missing." label="Product">
+            <form [formGroup]="productForm" (ngSubmit)="basicDetailSubmit()">
+                <input type="file" name="images" hidden multiple (change)="addImages($event)" #imagePicker>
+                <div class="images">
+                    <p *ngIf="productImagesData.length == 0">Click to add images</p>
+                    <div class="image" *ngFor="let image of productImagesData;let i = index">
+                        <mat-icon (click)="removeImage(i)">close</mat-icon>
+                        <img [src]="image">
+                    </div>
+                    <button type="button" mat-flat-button (click)="imagePicker.click()" color="primary">Add Images</button>
+                </div>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input type="text" formControlName="name" matInput>
+                </mat-form-field>
+                
+                <mat-form-field appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <textarea type="text" formControlName="description" matInput></textarea>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Category</mat-label>
+                    <mat-select placeholder="Category" formControlName="category" name="category">
+                        <mat-option *ngFor="let category of categories" [value]="category">
+                            {{category.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Average Rating</mat-label>
+                    <mat-select placeholder="Rating" formControlName="averageRating" name="averageRating">
+                        <mat-option *ngFor="let averageRating of ratings" [value]="averageRating">
+                            {{averageRating}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div class="actions">
+                    <button type="button" mat-stroked-button (click)="cancel()" color="primary">Cancel</button>
+                    <button type="submit" mat-flat-button matStepperNext color="primary">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step label="Materials">
+            <h2>For Base Material</h2>
+            <button mat-flat-button color="primary" (click)="addMaterial()">Add Material</button>
+            <ol class="materials">
+                <li *ngFor="let material of selectedMaterials;let i = index">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Material</mat-label>
+                        <mat-select placeholder="Material" [(ngModel)]="material.name" [ngModelOptions]="{standalone:true}">
+                            <ng-container *ngFor="let material of filteredMaterials">
+                                <mat-option [value]="material.name">
+                                    {{material.name}}
+                                </mat-option>
+                            </ng-container>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Quantity</mat-label>
+                        <input type="number" matInput [(ngModel)]="material.quantity" [ngModelOptions]="{standalone:true}">
+                    </mat-form-field>
+                    <button mat-icon-button color="warn" (click)="removeMaterial(i)"> <mat-icon>delete</mat-icon></button>
+                </li>
+            </ol>
+        </mat-step>
+        <mat-step label="Variants">
+
+        </mat-step>
+    </mat-stepper>
+</section>

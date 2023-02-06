@@ -1,5 +1,8 @@
+import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { Validators } from '@angular/forms';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ManageCategoryComponent } from './manage-category/manage-category.component';
 
 @Component({
   selector: 'app-products',
@@ -7,18 +10,25 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-   card:false;
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-  isLinear = false;
-
-  constructor(private _formBuilder: UntypedFormBuilder) {}
+  card:boolean = false;
+  path: string = window.location.pathname;
+  constructor(private dialog:Dialog) {}
   ngOnInit(): void {
    
+  }
+
+  addProduct(){
+    const dialog = this.dialog.open(AddProductComponent)
+    dialog.closed.subscribe((res)=>{
+      console.log(res);
+    })
+  }
+
+  manageCategories(){
+    const dialog = this.dialog.open(ManageCategoryComponent)
+    dialog.closed.subscribe((res)=>{
+      console.log(res);
+    })
   }
 
 }

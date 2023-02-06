@@ -47,13 +47,58 @@ $naaysa-jewellers-theme: mat.define-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-legacy-component-themes($naaysa-jewellers-theme);
+
+$naaysa-palette: (
+ 50: #cefff2,
+ 100: #7affdc,
+ 200: #51ffd1,
+ 300: #0dffbe,
+ 400:rgb(12, 202, 151),
+ 500:#00be8b,
+ 600:#03a479,
+ 700:#E28092,
+ 800:#016e51,
+ 900:#008d67,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+ )
+);
+$my-primary: mat.define-palette($naaysa-palette, 700);
+$my-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent:$my-accent,
+   foreground: $naaysa-palette,
+ )
+));
+
+@include mat.core-theme($my-theme);
+@include mat.button-theme($my-theme);
+@include mat.tabs-theme($my-theme);
+@include mat.input-theme($my-theme);
+@include mat.form-field-theme($my-theme);
+@include mat.progress-spinner-theme($my-theme);
+@include mat.checkbox-color($my-theme);
+@include mat.datepicker-theme($my-theme);
+@include mat.datepicker-color($my-theme);
+@include mat.all-component-themes($naaysa-jewellers-theme);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@500;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
-
 :root {
   --ref-color: #ffe4e1;
   --color-primary: #ffe4e1;
@@ -74,7 +119,7 @@ $naaysa-jewellers-theme: mat.define-light-theme(
   --color-light-primary: #fff5fb;
   --color-success: #309e7d;
   --color-primary-contrast: #000;
-  --color-rating: #ffd500;
+  --color-rating: #E88F9F;
   --color-button: #fae4e8;
 
   --font-six: "Andada Pro", sans-serif;
@@ -91,9 +136,9 @@ $naaysa-jewellers-theme: mat.define-light-theme(
   --large: 28px;
   --medium: 24px;
   --small: 20px;
-  --msmall: 18px;
-  --xsmall: 16px;
-  --xxsmall: 14px;
+  --msmall: 15px;
+  --xsmall: 14px;
+  --xxsmall: 13px;
   --xxxsmall: 12px;
   --normal-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -190,4 +235,8 @@ li{
 
 .uk-search-default{
   width: 310px;
+}
+
+mat-form-field .mat-mdc-form-field-subscript-wrapper{
+  display: none;
 }

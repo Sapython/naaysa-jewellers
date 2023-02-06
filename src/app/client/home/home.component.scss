@@ -104,15 +104,14 @@ body {
   position: relative;
 
   .uk-slider {
-    height: calc(100% - 100px);
+    height: calc(100vh - 130px);
     width: 100%;
-
     ul {
-      height: 100%;
+      height: calc(100vh - 130px);
       width: 100%;
 
       li {
-        height: auto;
+        height: calc(100vh - 130px);
         width: 100%;
         position: relative;
         background-color: white;
@@ -120,9 +119,10 @@ body {
 
         img {
           border-radius: 0.5rem;
-          height: auto;
-          max-width: 100%;
-          object-fit: contain;
+          height: calc(100vh - 130px);
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
         }
       }
     }

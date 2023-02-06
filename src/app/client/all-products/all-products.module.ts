@@ -5,7 +5,10 @@ import { CommonModule } from '@angular/common';
 import { AllProductsRoutingModule } from './all-products-routing.module';
 import { AllProductsComponent } from './all-products.component';
 import { ComponentsModule } from 'src/app/components/components.module';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio'; 
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
 @NgModule({
   declarations: [
@@ -15,7 +18,11 @@ import { ComponentsModule } from 'src/app/components/components.module';
     CommonModule,
     AllProductsRoutingModule,
     ComponentsModule,
-    WidgetsModule
+    WidgetsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatCheckboxModule
   ]
 })
 export class AllProductsModule { }

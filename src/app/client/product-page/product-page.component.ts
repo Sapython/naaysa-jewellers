@@ -24,11 +24,58 @@ export class ProductPageComponent implements OnInit {
   @Input() weight: string = '120g'
   @Input() date: string = '14th Jul'
   @Input() pincode: number = 110001
-  @Input() large_Image: string = 'assets/jewellery/ring.png'
+  @Input() large_Image: string = 'assets/topBarImages/jewellery/ring.png'
   @Input() reviewer_Name: string = 'John Doe'
   @Input() text: string = 'Gold Weight Approx 12.4 gram'
   @Input() details_Src: string = 'assets/gold.png'
   @Input() review_Disc: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
+  currentImageIndex: number = 0;
+  quantity: number = 1;
+  product:any = {
+    name: 'Royal Pink Diamond Ring',
+    price: 14325,
+    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+    metalPurityTypes:[
+      {
+        purity:'18K',
+      },
+      {
+        purity:'22K',
+      },
+      {
+        purity:'24K',
+      },
+    ],
+    diamondTypes:[
+      {
+        name:'22 C',
+      },
+      {
+        name:'24 C',
+      },
+      {
+        name:'26 C',
+      },
+    ],
+    sizeTypes:[
+      {
+        size:'18',
+      },
+      {
+        size:'20',
+      },
+      {
+        size:'22',
+      },
+    ],
+    images:[
+      'assets/topBarImages/earings/ear (1).png',
+      'assets/topBarImages/earings/ear (6).png',
+      'assets/topBarImages/earings/ear (3).png',
+      'assets/topBarImages/earings/ear (4).png',
+      'assets/topBarImages/earings/ear (5).png',
+    ]
+  };
   foods: Food[] = [
     { value: 'steak-0', viewValue: 'Steak' },
     { value: 'pizza-1', viewValue: 'Pizza' },
@@ -65,13 +112,13 @@ export class ProductPageComponent implements OnInit {
     },
   ]
   images = [
-    'assets/jewellery/ring.png',
-    'assets/jewellery/goldRing.svg',
-    'assets/jewellery/dimondRing.svg',
-    'assets/jewellery/platinum.svg',
-    'assets/jewellery/platinum.svg',
-    'assets/jewellery/dimondRing.svg',
-    'assets/jewellery/dimondRing.svg',
+    'assets/topBarImages/jewellery/ring.png',
+    'assets/topBarImages/jewellery/goldRing.svg',
+    'assets/topBarImages/jewellery/dimondRing.svg',
+    'assets/topBarImages/jewellery/platinum.svg',
+    'assets/topBarImages/jewellery/platinum.svg',
+    'assets/topBarImages/jewellery/dimondRing.svg',
+    'assets/topBarImages/jewellery/dimondRing.svg',
   ]
   reviews = [
     {

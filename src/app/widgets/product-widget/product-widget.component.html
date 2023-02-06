@@ -1,29 +1,43 @@
 <div class="container .uk-animation-fade">
   <div class="box">
     <div class="upper-section">
-      <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+      <div class="bestSeller">Best Seller</div>
+      <div class="heart">
+        <i
+          [class]="{
+            'fa-heart': true,
+            'fa-regular': !liked,
+            'fa-solid': liked
+          }"
+          (click)="liked = !liked"
+        ></i>
       </div>
-      <div class="heart"><i [class]="{'fa-heart': true, 'fa-regular': !liked, 'fa-solid': liked }"
-          (click)="liked = !liked"></i></div>
     </div>
     <div routerLink="../product">
-
       <div class="image">
-        <img src="assets/{{src}}" alt="">
+        <img [src]="src" alt="" />
       </div>
       <div class="discount">
-        <p>Flat {{discount}}</p>
-        <p>{{purity}} Gold</p>
+        <p>Flat {{ discount }}</p>
+        <p>{{ purity }} Gold</p>
       </div>
-      <hr id="hr">
-      <p id="name">{{product_name}}</p>
-      <p id="price">&#x20B9; {{price}}</p>
-      <p id="info"><span>{{category}} </span> | <span>{{jewellery_Name}}</span></p>
+      <hr id="hr" />
+      <div class="priceRate">
+        <p id="price">
+          &#x20B9; {{ price }} <del>{{ price + 10000 }}</del>
+        </p>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <p id="name">{{ product_name }}</p>
+      <p id="info">
+        <span>{{ category }} </span> | <span>{{ jewellery_Name }}</span>
+      </p>
     </div>
     <!-- <div class="buttons">
             <button (click)="onclick()">Add To Cart</button>

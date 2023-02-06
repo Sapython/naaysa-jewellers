@@ -1,60 +1,58 @@
-<div class="container">
-  <div class="sort-and-filter">
-    <div class="button">
-      <select name="cars">
-        <option value="">Sort</option>
-        <option value="volvo">Newest Arrival</option>
-        <option value="saab">Price : High to Low</option>
-        <option value="opel">Price : Low to High</option>
-        <option value="audi">Avg. Customer Review</option>
-        <option value="audi">Popular</option>
-        <option value="audi">Discount</option>
-      </select>
-    </div>
-    <div class="button">
-      <select name="cars">
-        <option value="">Filter</option>
-        <option value="volvo">Earings</option>
-        <option value="saab">Rings</option>
-        <option value="opel">Bangles</option>
-        <option value="audi">Jhumkas</option>
-      </select>
-    </div>
-  </div>
-  <p data-aos="fade-right" data-aos-delay="500">Trending</p>
-  <div class="widgets">
-    <app-product-widget src="jewel1.png"></app-product-widget>
-    <app-product-widget src="jewel2.png"></app-product-widget>
-    <app-product-widget src="jewel3.png"></app-product-widget>
-    <app-product-widget src="jewel4.png"></app-product-widget>
-  </div>
-  <p data-aos="fade-right" data-aos-delay="500">Necklace</p>
-  <div class="widgets">
-    <app-product-widget src="jewel2.png"></app-product-widget>
-    <app-product-widget src="jewel2.png"></app-product-widget>
-    <app-product-widget src="jewel2.png"></app-product-widget>
-    <app-product-widget src="jewel2.png"></app-product-widget>
-  </div>
-  <p data-aos="fade-right" data-aos-delay="500">Rings</p>
-  <div class="widgets">
-    <app-product-widget></app-product-widget>
-    <app-product-widget src="jewel3.png"></app-product-widget>
-    <app-product-widget></app-product-widget>
-    <app-product-widget src="jewel3.png"></app-product-widget>
-  </div>
-  <p data-aos="fade-right" data-aos-delay="500">Bands</p>
-  <div class="widgets">
-    <app-product-widget src="jewel1.png"></app-product-widget>
-    <app-product-widget src="jewel1.png"></app-product-widget>
-    <app-product-widget src="jewel1.png"></app-product-widget>
-    <app-product-widget src="jewel1.png"></app-product-widget>
-  </div>
-  <p data-aos="fade-right" data-aos-delay="500">Ear Rings</p>
-  <div class="widgets">
-    <app-product-widget src="jewel4.png"></app-product-widget>
-    <app-product-widget src="jewel4.png"></app-product-widget>
-    <app-product-widget src="jewel4.png"></app-product-widget>
-    <app-product-widget src="jewel4.png"></app-product-widget>
-  </div>
-
-</div>
+<img src="assets/jew-org.png" alt="">
+<main>
+  <aside>
+    <ol>
+      <li>
+        <strong>Shop For</strong>
+        <ul>
+          <li>Women</li>
+          <li>Men</li>
+          <li>Kid</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Price</strong>
+        <ul>
+          <li>
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="5000">Under 5000</mat-radio-button>
+              <mat-radio-button value="1020">10000 - 20000</mat-radio-button>
+              <mat-radio-button value="2030">20000 - 30000</mat-radio-button>
+              <mat-radio-button value="3040">30000 - 40000</mat-radio-button>
+              <mat-radio-button value="4050">40000 - 50000</mat-radio-button>
+              <mat-radio-button value="5060">50000 - 60000</mat-radio-button>
+  
+            </mat-radio-group>
+          </li>
+          <li>
+            <div class="range">
+              &#8377;<input type="text" placeholder="Min">
+            </div>
+            <div class="range">
+              &#8377;<input type="text" placeholder="Max">
+            </div>
+            <button>Go</button>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Weight</strong>
+        <div class="col">
+          <mat-checkbox>0 - 2gm</mat-checkbox>
+          <mat-checkbox>2 - 10gm</mat-checkbox>
+          <mat-checkbox>10 - 30gm</mat-checkbox>
+          <mat-checkbox>30 - 40gm</mat-checkbox>
+          <mat-checkbox>40 - 50gm</mat-checkbox>
+        </div>
+      </li>
+    </ol>
+  </aside>
+  <section>
+    <h1>Products</h1>
+    <ul class="products">
+      <li *ngFor="let product of products">
+        <app-product-widget [product_name]="product.name" [category]="product.category" [liked]="product.category" [src]="product.src" [price]="product.price" [purity]="product.purity" [discount]="product.discount" [liked]="product.liked"></app-product-widget>
+      </li>
+    </ul>
+  </section>
+</main>

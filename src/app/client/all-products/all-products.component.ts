@@ -12,4 +12,97 @@ export class AllProductsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  products:any[] = [
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+    {
+      name: 'Nagla Inspired Ring',
+      src: 'assets/ring1.png',
+      price: 12500,
+      purity: '18k',
+      category:'Diamond',
+      jewellery_Name: 'Rings',
+      discount: '10%',
+      liked: false
+    },
+  ]
+
 }
