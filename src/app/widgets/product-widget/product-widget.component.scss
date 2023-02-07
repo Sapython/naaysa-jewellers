@@ -5,6 +5,10 @@
   box-shadow: var(--color-primary) 0px 4px 14px 0px;
   max-width: 300px;
   cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    scale: 1.05;
+  }
   .upper-section {
     display: flex;
     justify-content: space-between;
