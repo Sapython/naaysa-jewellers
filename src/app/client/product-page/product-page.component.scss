@@ -171,6 +171,10 @@ section.productDescription {
     .head {
       display: flex;
       justify-content: space-between;
+      h1{
+        color:#e68d9d;
+        font-weight: 500;
+      }
     }
     hr {
       margin: 1rem 0;
@@ -294,12 +298,13 @@ section.productDetails {
     justify-content: space-between;
     ol{
       h3{
-        font-size: 20px;
+        font-size: 23px;
         color: var(--color-dark-primary);
         margin-bottom: 10px;
       }
       li{
         color: #878787;
+        font-size: 15px;
         strong{
           color: var(--color-dark-primary);
         }

@@ -4,7 +4,7 @@ interface Food {
   value: string;
   viewValue: string;
 }
-
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'app-product-page',
@@ -74,6 +74,20 @@ export class ProductPageComponent implements OnInit {
       'assets/topBarImages/earings/ear (3).png',
       'assets/topBarImages/earings/ear (4).png',
       'assets/topBarImages/earings/ear (5).png',
+    ],
+    certifications:[
+      {
+        name:'bis',
+        image:'assets/badges/badge (1).png'
+      },
+      {
+        name:'bis',
+        image:'assets/badges/badge (2).png'
+      },
+      {
+        name:'bis',
+        image:'assets/badges/badge (3).png'
+      },
     ]
   };
   foods: Food[] = [
@@ -183,6 +197,26 @@ export class ProductPageComponent implements OnInit {
   constructor() { }
   onclick() {
     alert('Successfully added to cart')
+  }
+
+  addToCart(){
+    Notify.success(
+      'Product added to cart.',
+      {
+        zindex:99999
+      }
+    );
+    let currentCart = localStorage.getItem('cart');
+    if(currentCart){
+      let cart = JSON.parse(currentCart);
+      cart.push(this.product);
+      localStorage.setItem('cart',JSON.stringify(cart));
+    } else {
+      let cart = [];
+      cart.push(this.product);
+      localStorage.setItem('cart',JSON.stringify(cart));
+    }
+    
   }
   ngOnInit(): void {
     AOS.init();
