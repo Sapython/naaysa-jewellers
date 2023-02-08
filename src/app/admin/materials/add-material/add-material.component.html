@@ -1,0 +1,33 @@
+<section>
+  <h1>Add New Material</h1>
+  <form [formGroup]="newMaterialForm" (ngSubmit)="submit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Material Name</mat-label>
+      <input type="text" matInput formControlName="name" />
+    </mat-form-field>
+    <hr />
+    <button type="button" mat-flat-button color="primary" (click)="addVariant()">Add Variant</button>
+    <h2>Variants</h2>
+    <form [formGroup]="variantForm" *ngFor="let variantForm of variants">
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Variant Name</mat-label>
+          <input type="text" matInput formControlName="name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Unit</mat-label>
+          <mat-select placeholder="Select Unit" formControlName="unit" name="unit">
+            <mat-option *ngFor="let unit of units" [value]="unit">
+              {{ unit }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Rate</mat-label>
+          <input type="number" matInput formControlName="rate" />
+        </mat-form-field>
+      </div>
+    </form>
+    <button mat-flat-button color="primary" [disabled]="variants.length<=0 || newMaterialForm.invalid" type="submit">Submit</button>
+  </form>
+</section>

@@ -1,0 +1,17 @@
+section{
+    padding: 30px;
+    border-radius: 20px;
+    background: white;
+    button{
+        --mdc-filled-button-label-text-color:white !important;
+    }
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

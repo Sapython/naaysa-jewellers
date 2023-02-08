@@ -47,4 +47,16 @@ export class DatabaseService {
   addProduct(product:any){
     return addDoc(collection(this.fs,'products'), product)
   }
+
+  getMaterials(){
+    return getDocs(collection(this.fs,'materials'))
+  }
+  
+  addMaterial(material:any){
+    return addDoc(collection(this.fs,'materials'), material)
+  }
+
+  deleteMaterial(id:string){
+    return deleteDoc(doc(this.fs, 'materials', id))
+  }
 }

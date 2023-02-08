@@ -57,6 +57,17 @@
           </li>
           <li class="sidebar-li">
             <a
+              routerLink="/admin/materials"
+              routerLinkActive="active"
+              (click)="toggleSidebar()"
+              class="sidebar-li-a"
+              >
+              <i class="ri-vip-diamond-fill"></i>
+              <span class="sidebar-text">Materials</span></a
+            >
+          </li>
+          <li class="sidebar-li">
+            <a
               routerLink="/admin/products"
               routerLinkActive="active"
               (click)="toggleSidebar()"
