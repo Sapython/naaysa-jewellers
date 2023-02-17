@@ -1,5 +1,6 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
+import { Variant } from 'src/app/structures/product.structure';
 import { DatabaseService } from '../services/database.service';
 import { AddMaterialComponent } from './add-material/add-material.component';
 
@@ -31,16 +32,8 @@ export class MaterialsComponent implements OnInit {
     })
   }
 }
-
 export type Material = {
   id?: string,
   name: string,
   variants: Variant[]
-}
-export type Variant = {
-  id?: string,
-  name: string,
-  type: string,
-  unit: string,
-  rate: number,
 }

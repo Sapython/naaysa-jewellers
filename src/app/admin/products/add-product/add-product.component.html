@@ -47,30 +47,66 @@
             </form>
         </mat-step>
         <mat-step label="Materials">
-            <h2>For Base Material</h2>
+            <div class="stepContainer">
+                <h2>For Base Material</h2>
             <button mat-flat-button color="primary" (click)="addMaterial()">Add Material</button>
             <ol class="materials">
                 <li *ngFor="let material of selectedMaterials;let i = index">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Material</mat-label>
-                        <mat-select placeholder="Material" [(ngModel)]="material.name" [ngModelOptions]="{standalone:true}">
-                            <ng-container *ngFor="let material of filteredMaterials">
-                                <mat-option [value]="material.name">
-                                    {{material.name}}
-                                </mat-option>
-                            </ng-container>
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline">
-                        <mat-label>Quantity</mat-label>
-                        <input type="number" matInput [(ngModel)]="material.quantity" [ngModelOptions]="{standalone:true}">
-                    </mat-form-field>
+                    <div class="material">
+                        <div class="fields">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Material</mat-label>
+                                <mat-select placeholder="Material" [(ngModel)]="material.selectedMaterial" [ngModelOptions]="{standalone:true}">
+                                    <mat-option *ngFor="let material of material.materials" [value]="material">
+                                        {{material.name}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input type="text" matInput [(ngModel)]="material.name" [ngModelOptions]="{standalone:true}">
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" *ngIf="material.selectedMaterial" >
+                                <mat-label>Select Variant</mat-label>
+                                <mat-select placeholder="Select Variant" (selectionChange)="changedVariant(material,$event)" multiple name="variant">
+                                    <mat-option *ngFor="let variant of material.selectedMaterial.variants" [value]="variant">
+                                        {{variant.name}} - {{variant.rate | currency:'INR'}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <table class="uk-table uk-table-divider uk-table-justify uk-table-striped uk-table-hover">
+                            <tr>
+                                <th>Variant</th>
+                                <th>Price</th>
+                                <th>Unit</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr *ngFor="let item of material.selectedVariants">
+                                <td>{{item.name}}</td>
+                                <td>{{item.rate}}</td>
+                                <td>{{item.unit}}</td>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Quantity</mat-label>
+                                    <input type="number" matInput (input)="item.total = item.quantity * item.rate" [(ngModel)]="item.quantity">
+                                </mat-form-field>
+                                <td>{{item.total}}</td>
+                            </tr>
+                        </table>
+                        <!-- <ol>
+                            <li *ngFor="let item of material.selectedVariants">
+                                {{item.name}}
+                            </li>
+                        </ol> -->
+                    </div>
                     <button mat-icon-button color="warn" (click)="removeMaterial(i)"> <mat-icon>delete</mat-icon></button>
                 </li>
             </ol>
+            </div>
         </mat-step>
         <mat-step label="Variants">
-
+            
         </mat-step>
     </mat-stepper>
 </section>

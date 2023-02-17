@@ -1,4 +1,5 @@
 import { Timestamp } from "@angular/fire/firestore";
+import { Material } from "../admin/materials/materials.component";
 
 export type Product = {
     id?: string;
@@ -13,15 +14,12 @@ export type Product = {
     variants: Variant[];
 }
 export type Variant = {
-    name: string;
-    price: number;
-    weight: number;
-    materials: Material[];
-}
-export type Material = {
-    name: string;
-    quantity: number;
-}
+    id?: string,
+    name: string,
+    unit: string,
+    rate: number,
+    ratio: number,
+  }
 
 export type Category = {
     id?: string;

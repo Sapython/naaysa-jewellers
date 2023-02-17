@@ -1,6 +1,8 @@
 section{
     min-width: 60vw;
     min-height: 60vh;
+    max-height: 90vh;
+    overflow-y: scroll;
     background: white;
     border-radius: 20px;
     padding: 30px;
@@ -60,4 +62,8 @@ section{
             }
           }
     }
+    // .stepContainer{
+    //     height: 80vh;
+    //     overflow-y: scroll;
+    // }
 }

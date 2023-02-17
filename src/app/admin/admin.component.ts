@@ -1,5 +1,8 @@
+import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { MaterialUpdateModalComponent } from './material-update-modal/material-update-modal.component';
+import { DatabaseService } from './services/database.service';
 
 @Component({
   selector: 'app-admin',
@@ -12,7 +15,7 @@ export class AdminComponent implements OnInit {
   largeScreen: boolean = window.innerWidth > this.breakpoint;
   showSidebar: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,private databaseService:DatabaseService,private dialog:Dialog) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         const url = this.router.url;
@@ -30,7 +33,18 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.databaseService.checkForPriceUpdate().then((update) => {
+      if(!update) {
+        let dialog = this.dialog.open(MaterialUpdateModalComponent)
+        dialog.componentInstance?.requestCancel.subscribe((update) => {
+          if(update==true) {
+            dialog.close()
+          }
+        })
+      }
+    })
+  }
 
   onWindowResize() {
     this.largeScreen = window.innerWidth > this.breakpoint;

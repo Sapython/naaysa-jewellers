@@ -49,7 +49,7 @@ import { ManageCategoryComponent } from './manage-category/manage-category.compo
     MatSelectModule,
     MatIconModule,
     MatButtonModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ],
 })
 export class ProductsModule {}

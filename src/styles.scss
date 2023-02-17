@@ -60,9 +60,9 @@ $naaysa-palette: (
  800:#016e51,
  900:#008d67,
  contrast: (
-   50: rgba(black, 0.87),
-   100: rgba(black, 0.87),
-   200: rgba(black, 0.87),
+   50: white,
+   100: white,
+   200: white,
    300: white,
     400: white,
     500: white,
@@ -73,12 +73,11 @@ $naaysa-palette: (
  )
 );
 $my-primary: mat.define-palette($naaysa-palette, 700);
-$my-accent: mat.define-palette(mat.$cyan-palette, A200, A100, A400);
 
 $my-theme: mat.define-light-theme((
  color: (
    primary: $my-primary,
-   accent:$my-accent,
+   accent:$my-primary,
    foreground: $naaysa-palette,
  )
 ));
@@ -143,6 +142,9 @@ $my-theme: mat.define-light-theme((
   --xxsmall: 13px;
   --xxxsmall: 12px;
   --normal-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  button{
+    --mdc-filled-button-label-text-color:white !important;
+  }
 }
 
 body{

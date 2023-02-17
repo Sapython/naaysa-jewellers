@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Firestore } from '@angular/fire/firestore';
+import { Firestore, updateDoc } from '@angular/fire/firestore';
 import { ref, uploadBytesResumable, getDownloadURL, Storage } from '@angular/fire/storage';
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs } from '@firebase/firestore';
+import { Variant } from 'src/app/structures/product.structure';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
+  
 
   constructor(private fs:Firestore,private storage:Storage) { }
 
@@ -58,5 +60,15 @@ export class DatabaseService {
 
   deleteMaterial(id:string){
     return deleteDoc(doc(this.fs, 'materials', id))
+  }
+
+  async checkForPriceUpdate() {
+    let today = (new Date()).toISOString().split('T')[0]
+    let res = await getDoc(doc(this.fs, 'priceUpdate', today))
+    return res.exists()
+  }
+
+  updateMaterial(id:string,variants:Variant[]){
+    return updateDoc(doc(this.fs, 'materials', id), {variants:variants})
   }
 }

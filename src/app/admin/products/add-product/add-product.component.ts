@@ -2,7 +2,8 @@ import { DialogRef } from '@angular/cdk/dialog';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Category, Material, Variant } from 'src/app/structures/product.structure';
+import { Category, Variant } from 'src/app/structures/product.structure';
+import { Material } from '../../materials/materials.component';
 import { DatabaseService } from '../../services/database.service';
 
 @Component({
@@ -21,27 +22,10 @@ export class AddProductComponent implements OnInit {
   productImagesData:string[] = [];
   uploadPercent:number = 0;
   variants:Variant[] = [];
-  materials:Material[] = [
-    {name:'Gold', quantity:0},
-    {name:'Silver', quantity:0},
-    {name:'Platinum', quantity:0},
-    {name:'Diamond', quantity:0},
-    { name:'Bronze', quantity:0},
-    { name:'Brass', quantity:0},
-    {name:'Steel', quantity:0},
-    {name:'Copper', quantity:0},
-    {name:'Ruby', quantity:0},
-    {name:'Sapphire', quantity:0},
-    {name:'Emerald', quantity:0},
-    {name:'Pearl', quantity:0},
-    {name:'Topaz', quantity:0},
-    {name:'Amethyst', quantity:0},
-    {name:'Opal', quantity:0},
-    {name:'Onyx', quantity:0},
-    {name:'Turquoise', quantity:0},
-  ];
+  materials:Material[] = [];
+  onlineMaterials:Material[] = [];
   filteredMaterials:Material[] = [];
-  selectedMaterials:Material[] = [];
+  selectedMaterials:SelectableMaterial[] = [];
   categories:Category[] = [];
   formStage:0|1|2 = 0;
   uploading:boolean = false;
@@ -57,6 +41,10 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit(){
     this.getCategories();
+    this.databaseService.getMaterials().then((materials)=>{
+      this.materials = materials.docs.map((material:any)=>{return {id:material.id, ...material.data()}});
+      this.filteredMaterials = this.materials;
+    })
     this.filteredMaterials = this.materials;
   }
 
@@ -74,7 +62,16 @@ export class AddProductComponent implements OnInit {
   }
 
   addMaterial(){
-    this.selectedMaterials.push({name:'', quantity:0});
+    this.selectedMaterials.push({
+      materials: this.materials,
+      name: '',
+      selectedVariants:[],
+      selectedMaterial:undefined
+    });
+  }
+
+  log(data:any){
+    console.log(data);
   }
 
   removeMaterial(index:number){
@@ -142,5 +139,30 @@ export class AddProductComponent implements OnInit {
   generateId(){
     return Math.floor(Math.random()*100000000000000000);
   }
+
+  changedVariant(material:SelectableMaterial,event:any){
+    console.log(event);
+    let selectedVariants = JSON.parse(JSON.stringify(event.value));
+    console.log(selectedVariants);
+    selectedVariants.forEach((variant:NewVariant)=>{
+      if (!variant.quantity){
+        variant.quantity = 0;
+      }
+      variant.total = (variant.quantity * variant.rate) || 0;
+    })
+    material.selectedVariants = selectedVariants;
+  }
   
 }
+// extend material interface to add quantity
+interface SelectableMaterial{
+  materials:Material[];
+  name:string,
+  selectedMaterial:Material|undefined;
+  selectedVariants:NewVariant[]
+}
+
+interface NewVariant extends Variant {
+  quantity:number;
+  total:number;
+} 
