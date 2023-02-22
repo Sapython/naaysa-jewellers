@@ -73,6 +73,7 @@ main {
     ul {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-evenly;
       gap: 20px;
       li {
         width: min-content;

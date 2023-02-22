@@ -51,7 +51,7 @@
     <h1>Products</h1>
     <ul class="products">
       <li *ngFor="let product of products">
-        <app-product-widget [product_name]="product.name" [category]="product.category" [liked]="product.category" [src]="product.src" [price]="product.price" [purity]="product.purity" [discount]="product.discount" [liked]="product.liked"></app-product-widget>
+        <app-product-widget [product_name]="product.name" [category]="product.category.name" [liked]="false" [src]="product.images ? (product.images.length > 0 ? product.images[0] : '') : ''" [averageRating]="product.averageRating" [variants]="product.variants" [materials]="product.materials"></app-product-widget>
       </li>
     </ul>
   </section>

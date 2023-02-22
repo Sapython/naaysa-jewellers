@@ -36,12 +36,12 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.databaseService.checkForPriceUpdate().then((update) => {
       if(!update) {
-        let dialog = this.dialog.open(MaterialUpdateModalComponent)
-        dialog.componentInstance?.requestCancel.subscribe((update) => {
-          if(update==true) {
-            dialog.close()
-          }
-        })
+        // let dialog = this.dialog.open(MaterialUpdateModalComponent)
+        // dialog.componentInstance?.requestCancel.subscribe((update) => {
+        //   if(update==true) {
+        //     dialog.close()
+        //   }
+        // })
       }
     })
   }

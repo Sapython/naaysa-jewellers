@@ -8,22 +8,20 @@ import { MaterialUpdateModalComponent } from './material-update-modal/material-u
 import { DialogModule } from '@angular/cdk/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-
-
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; 
 
 @NgModule({
   declarations: [
     AdminComponent,
     MaterialUpdateModalComponent,
-
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     DialogModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ]
 })
 export class AdminModule { }

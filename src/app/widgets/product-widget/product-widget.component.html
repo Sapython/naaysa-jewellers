@@ -26,18 +26,9 @@
         <p id="price">
           &#x20B9; {{ price }} <del>{{ price + 10000 }}</del>
         </p>
-        <div class="stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
+        <app-stars [rating]="averageRating"></app-stars>
       </div>
       <p id="name">{{ product_name }}</p>
-      <p id="info">
-        <span>{{ category }} </span> | <span>{{ jewellery_Name }}</span>
-      </p>
     </div>
     <!-- <div class="buttons">
             <button (click)="onclick()">Add To Cart</button>

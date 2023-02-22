@@ -34,6 +34,8 @@ export class MaterialsComponent implements OnInit {
 }
 export type Material = {
   id?: string,
+  autoCalculate:boolean;
+  masterVariant:number;
   name: string,
   variants: Variant[]
 }

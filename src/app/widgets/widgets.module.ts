@@ -18,6 +18,7 @@ import { MobileStoreAddressWidgetComponent } from './mobile-store-address-widget
 import { AdminMobileDashboardWidgetComponent } from './admin-mobile-dashboard-widget/admin-mobile-dashboard-widget.component';
 import { FeedbackWidgetsComponent } from './feedback-widgets/feedback-widgets.component';
 import { AdminMobileUsersWidgetComponent } from './admin-mobile-users-widget/admin-mobile-users-widget.component';
+import { StarsModule } from '../stars/stars.module';
 
 
 const components = [ ProductWidgetComponent,
@@ -56,12 +57,13 @@ const components = [ ProductWidgetComponent,
     MobileStoreAddressWidgetComponent,
     AdminMobileDashboardWidgetComponent,
     FeedbackWidgetsComponent,
-    AdminMobileUsersWidgetComponent
+    AdminMobileUsersWidgetComponent,
   ],
   exports: [components],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    StarsModule
   ]
 })
 export class WidgetsModule { }

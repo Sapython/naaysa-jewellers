@@ -9,10 +9,13 @@ section{
     form{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
         padding: 20px;
         gap:20px;
+        h3{
+            text-align: start;
+        }
         p{
             margin:0px;
         }
@@ -56,14 +59,47 @@ section{
             display: flex;
             justify-content: space-between;
             text-align: center;
+            max-width: calc(70vw - 270px);
             p {
               height: min-content;
               font-size: 17px;
             }
+            .fields{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 0.2fr;
+            }
           }
     }
-    // .stepContainer{
-    //     height: 80vh;
-    //     overflow-y: scroll;
-    // }
+    ol.combinations{
+        li{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px lightgray solid;
+            p{
+                height: min-content;
+                font-size: 17px;
+            }
+            .item{
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                border:2px solid lightgray;
+                p{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .total{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                b{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }

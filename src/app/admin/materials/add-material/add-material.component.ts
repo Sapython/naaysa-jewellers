@@ -20,7 +20,8 @@ export class AddMaterialComponent implements OnInit{
   variants: any[] = []
   units: string[] = ["gram","caret","karet"]
   constructor(private databaseService:DatabaseService,private dialogRef:DialogRef) { }
-
+  colorsVariants:{name:string}[]=[]
+  purityvariants:{name:string,rate:number}[] = []
   ngOnInit(): void {
       // this.newMaterialForm.valueChanges.subscribe((val)=>{
       //   this.calculateRatioPricing()
@@ -45,7 +46,8 @@ export class AddMaterialComponent implements OnInit{
       name: new FormControl('',Validators.required),
       rate: new FormControl('',[Validators.required]),
       unit: new FormControl('',Validators.required),
-      ratio: new FormControl('')
+      ratio: new FormControl(''),
+      id:new FormControl(this.generateId())
     })
     this.variantsForm.addControl(this.variants.length.toString(), newVariantFormGroup)
     this.variants.push(newVariantFormGroup)
@@ -129,5 +131,9 @@ export class AddMaterialComponent implements OnInit{
       this.newMaterialForm.enable()
       this.dialogRef.close(this.newMaterialForm.value)
     })
+  }
+
+  generateId(){
+    return Math.random().toString(36);
   }
 }

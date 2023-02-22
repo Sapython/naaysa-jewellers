@@ -1,10 +1,12 @@
 import { DialogRef } from '@angular/cdk/dialog';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
+import { DocumentReference, Timestamp } from '@angular/fire/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Category, Variant } from 'src/app/structures/product.structure';
+import { Category, Combination, Variant } from 'src/app/structures/product.structure';
 import { Material } from '../../materials/materials.component';
 import { DatabaseService } from '../../services/database.service';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 @Component({
   selector: 'app-add-product',
@@ -30,15 +32,38 @@ export class AddProductComponent implements OnInit {
   formStage:0|1|2 = 0;
   uploading:boolean = false;
   ratings:number[] = [1,1.5,2,2.5,3,3.5,4,4.5,5];
+  metalForm:FormGroup = new FormGroup({
+    metal:new FormControl(''),
+    color: new FormControl(),
+  })
+  purities:{name:string}[] = [
+    {name:'24 K'},
+    {name:'22 K'},
+    {name:'18 K'},
+    {name:'14 K'},
+  ]
+  sizes:{name:string,weight:number,variation:number}[] = [
+  ]
   productForm:FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
     description: new FormControl('', [Validators.required]),
     category: new FormControl('', [Validators.required]),
     averageRating: new FormControl(''),
+
   })
-
+  colors:{name:string}[] = [
+    {name:'Red'},
+    {name:'Rose'},
+    {name:'White'},
+    {name:'Pink'},
+  ]
+  generatedCombinations:Combination[] = []
   materialsForm:FormGroup = new FormGroup({})
-
+  draftProduct:DocumentReference<any> | undefined;
+  tags:{name:string}[]=[]
+  metals:{viewValue:string}[] = [
+    {viewValue:'GOLD'},
+  ]
   ngOnInit(){
     this.getCategories();
     this.databaseService.getMaterials().then((materials)=>{
@@ -66,7 +91,9 @@ export class AddProductComponent implements OnInit {
       materials: this.materials,
       name: '',
       selectedVariants:[],
-      selectedMaterial:undefined
+      selectedMaterial:undefined,
+      makingRate:0,
+      perWeight:false
     });
   }
 
@@ -117,13 +144,22 @@ export class AddProductComponent implements OnInit {
     if (this.productForm.valid) {
       console.log(this.productForm.value);
       this.formStage = 1;
-      await this.uploadImages();
-      await this.databaseService.addProduct({...this.productForm.value, images:this.productImages})
+      try {
+        await this.uploadImages();
+        Notify.info('Images uploaded.',{zindex:999999})
+        this.draftProduct = await this.databaseService.addProduct({...this.productForm.value, images:this.productImages,date:new Date()})
+        Notify.info('Basic details saved.',{zindex:999999})
+      } catch (error) {
+        console.log(error);
+        Notify.failure('Problem saving basic details.',{zindex:999999})
+      }
       this.uploadPercent = 1;
       this.uploading = false;
+      return true;
     } else {
       console.log('invalid form');
       alert('Invalid Form');
+      return false;
     }
   }
 
@@ -134,6 +170,7 @@ export class AddProductComponent implements OnInit {
       this.productImages.push(res);
       this.uploadPercent = Math.floor((this.productImages.length/(this.productImageFiles.length + 1))*100);
     }
+
   }
 
   generateId(){
@@ -152,17 +189,83 @@ export class AddProductComponent implements OnInit {
     })
     material.selectedVariants = selectedVariants;
   }
+
+  async generateVariants(){
+    console.log(this.selectedMaterials);
+    if (!this.draftProduct){
+      let res = await this.basicDetailSubmit();
+      if(!res){
+        return
+      }
+    } else if(this.draftProduct && typeof this.draftProduct!.id == 'string'){
+      this.databaseService.updateProduct(this.draftProduct!.id, {materials:this.selectedMaterials}).then((res)=>{
+        Notify.info('Materials saved.',{zindex:999999})
+      }).catch((err)=>{
+        console.log(err);
+        Notify.failure('Problem saving materials.',{zindex:999999})
+      })
+    } else {
+      console.log('Basic details not found');
+      return;
+    }
+    // add name to variants from selectedmaterials
+    this.selectedMaterials.forEach((material)=>{
+      material.selectedVariants.forEach((variant)=>{
+        variant.materialName = material.selectedMaterial?.name;
+        variant.titleName = material.name;
+      })
+    })
+    console.log(this.selectedMaterials);
+    function getCombinations(arr:any[]){
+      if (arr.length === 0) return [[]]
+      let [current, ...rest] = arr
+      let combinations = getCombinations(rest)
+      return current.selectedVariants.reduce((a:any, variantObject:any) => 
+          [ ...a, ...combinations.map((c:any) => [variantObject, ...c])], [])
+    }
+    let combinations:any = getCombinations(this.selectedMaterials);
+    console.log(combinations);
+    combinations.forEach((combination:NewVariant[],index:number)=>{
+      combinations[index] = {combination:combination,quantity:0,rate:0,total:0}
+    })
+    this.generatedCombinations = combinations;
+
+  }
+
+  publishProduct(){
+    this.databaseService.updateProduct(this.draftProduct!.id, {published:true, variants:this.generatedCombinations,publishDate:new Date()}).then(()=>{
+      this.dialogRef.close();
+      Notify.success(
+        'Published '+this.productForm.value.name + ' successfully',
+        {
+          zindex:99999
+        }
+      );
+    }).catch((err)=>{
+      console.log(err);
+      Notify.failure('Some error occurred while publishing '+this.productForm.value.name+' product')
+    })
+  }
+
+  sumVariant(variant:NewVariant[]){
+    return variant.reduce((total,item)=>{return total+item.total},0)
+  }
   
 }
 // extend material interface to add quantity
-interface SelectableMaterial{
+export interface SelectableMaterial{
   materials:Material[];
   name:string,
   selectedMaterial:Material|undefined;
-  selectedVariants:NewVariant[]
+  selectedVariants:NewVariant[],
+  makingRate:number;
+  perWeight:boolean;
 }
 
-interface NewVariant extends Variant {
+export interface NewVariant extends Variant {
   quantity:number;
   total:number;
+  materialName?:string;
+  titleName?:string;
 } 
+

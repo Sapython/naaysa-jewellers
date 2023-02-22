@@ -31,60 +31,9 @@
         </ul>
       </div>
     </div>
-
-  </div>
-
-</div>
-<div class="main-card" *ngIf="card">
-  <div class="section1" routerLink="../products/details">
-    <div class="sec1">
-      <span>Movable Round Gold Necklace</span>
-    </div>
-
-    <div class="sec2">
-      <img
-        class="ring-img"
-        src="/assets/jewellery/goldRing.svg"
-        alt="Ring image"
-      />
-    </div>
-
-    <div class="sec3">
-      <p>₹ 5,00,000</p>
-      <span>250 piece</span>
-    </div>
-    <div class="sec4">
-      <p>
-        This 18 karat rosegold ring feature 1 diamond between two dis-jointed
-        stone studed arcs.
-      </p>
-    </div>
-    <div class="sec5">
-      <span>Metal: </span>
-      <p>10k, 14k, 18k, 22k and 24k.</p>
-      <br />
-      <span>Weight: </span>
-      <p>2 grams, 4 grams</p>
-      <br />
-      <span>Colour: </span>
-      <p>Yellow, White</p>
-      <br />
-      <span>size:</span>
-      <p>4, 6, 7, 8, 10, 11</p>
-    </div>
-
-    <div class="sec6">
-      <button><i class="fa-solid fa-pencil"></i> Edit</button>
-    </div>
-
-    <div class="sec7">
-      <button class="btn1">Disable</button>
-      <button class="btn2">Delete</button>
-    </div>
   </div>
 </div>
-
-<div id="table_view" *ngIf="!card">
+<div id="table_view">
   <table>
     <tr>
       <th style="width: 13%">Sales</th>
@@ -93,101 +42,22 @@
       <th style="width: 15%">Reviews</th>
       <th style="width: 15%">Action</th>
     </tr>
-    <tr  routerLink="../products/details">
+    <tr  routerLink="../products/details" *ngFor="let product of products">
       <td>
-        <img src="../../../../assets/jewel3.png" alt="" />
+        <img [src]="product.images[0]" alt="" />
       </td>
       <td class="name_description">
-        <h3 style="color: rgb(51, 232, 51)">₹ 5,00,000</h3>
-        <b>Movable Round Gold Necklace</b>
+        <!-- <h3 style="color: rgb(51, 232, 51)">₹ 5,00,000</h3> -->
+        <b>{{product.name}}</b>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, autem?
+          {{product.description}}
         </p>
       </td>
       <td class="customize">
-        <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
-        <h4><b>Weight : </b> 2 grams,4 grams</h4>
-        <h4><b> Color :</b> Yellow,White</h4>
-        <h4><b> size :</b> 4,6,7,8,10,11</h4>
+        <h4 *ngFor="let material of product.materials"><b>{{material.name}} :</b> {{material.selectedMaterial | materialVariants}}</h4>
       </td>
       <td class="ratings">
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill"></i>
-        <i class="ri-star-fill"></i>
-      </td>
-      <td class="actions">
-        <button style="background-color: #5c5c5c">
-          <i class="fa-solid fa-circle-xmark"></i>Disable
-        </button>
-        <button style="background-color: #e88f9f">
-          <i class="ri-delete-bin-3-line"></i> Delete
-        </button>
-        <button style="background-color: #ffd5dc">
-          <i class="ri-edit-fill"></i>Edit
-        </button>
-      </td>
-    </tr>
-    <tr  routerLink="../products/details">
-      <td>
-        <img src="../../../../assets/jewel3.png" alt="" />
-      </td>
-      <td class="name_description">
-        <h3 style="color: rgb(51, 232, 51)">₹ 5,00,000</h3>
-        <b>Movable Round Gold Necklace</b>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, autem?
-        </p>
-      </td>
-      <td class="customize">
-        <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
-        <h4><b>Weight : </b> 2 grams,4 grams</h4>
-        <h4><b> Color :</b> Yellow,White</h4>
-        <h4><b> size :</b> 4,6,7,8,10,11</h4>
-      </td>
-      <td class="ratings">
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill"></i>
-        <i class="ri-star-fill"></i>
-      </td>
-      <td class="actions">
-        <button style="background-color: #5c5c5c">
-          <i class="fa-solid fa-circle-xmark"></i>Disable
-        </button>
-        <button style="background-color: #e88f9f">
-          <i class="ri-delete-bin-3-line"></i> Delete
-        </button>
-        <button style="background-color: #ffd5dc">
-          <i class="ri-edit-fill"></i>Edit
-        </button>
-      </td>
-    </tr>
-    <tr  routerLink="../products/details">
-      <td>
-        <img src="../../../../assets/jewel3.png" alt="" />
-      </td>
-      <td class="name_description">
-        <h3 style="color: rgb(51, 232, 51)">₹ 5,00,000</h3>
-        <b>Movable Round Gold Necklace</b>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, autem?
-        </p>
-      </td>
-      <td class="customize">
-        <h4><b>Metal :</b> 10K, 14K, 18K, 22K and 24K.</h4>
-        <h4><b>Weight : </b> 2 grams,4 grams</h4>
-        <h4><b> Color :</b> Yellow,White</h4>
-        <h4><b> size :</b> 4,6,7,8,10,11</h4>
-      </td>
-      <td class="ratings">
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill active"></i>
-        <i class="ri-star-fill"></i>
-        <i class="ri-star-fill"></i>
+        <app-stars [rating]="product.averageRating"></app-stars>
       </td>
       <td class="actions">
         <button style="background-color: #5c5c5c">
@@ -203,173 +73,3 @@
     </tr>
   </table>
 </div>
-
-<div id="add-product-modal" uk-modal>
-  <div class="uk-modal-dialog uk-modal-body">
-    <div class="modal_header">
-      <h2>Add Product</h2>
-      <i class="ri-close-circle-line"   uk-toggle="target: #add-product-modal"></i>
-    </div>
-
-    <mat-stepper>
-      <mat-step>
-        <ng-template matStepLabel></ng-template>
-
-        <div class="form-box">
-          <label for="plan-name-input"> Name *</label>
-          <input type="text" id="plan-name-input" />
-        </div>
-
-        <div class="form-box">
-          <label for="plan-name-input"> Product Description *</label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Short Description *</label>
-          <input type="email" id="plan-name-input" />
-        </div>
-
-        <div class="form-box">
-          <label for="plan-name-input"> SEO Description * </label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Display Price *</label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="buttons">
-          <button id="submit-button" matStepperNext>
-            Next <i class="fa-solid fa-angle-right" ></i>
-          </button>
-        </div>
-      </mat-step>
-
-      <mat-step>
-        <ng-template matStepLabel></ng-template>
-
-        <div class="form-box">
-          <label for="plan-name-input">Product base weight *</label>
-          <input type="number" id="plan-name-input " class="number" />
-        </div>
-
-        <div class="form-box">
-          <label for="plan-name-input"> Product Purity*</label>
-          <select name="" id="" class="number">
-            <option value="">90%</option>
-            <option value="">70%</option>
-            <option value="">40%</option>
-            <option value="">10%</option>
-          </select>
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Product Colour*</label>
-          <select name="" id="" class="number">
-            <option value="">Golden</option>
-            <option value="">Pink</option>
-            <option value="">Ruby</option>
-            <option value="">Silver</option>
-          </select>
-        </div>
-
-        <div class="form-box">
-          <label for="plan-name-input"> Product Metal</label>
-          <select name="" id="" class="number">
-            <option value="">Golden</option>
-            <option value="">Silver</option>
-            <option value="">Diamond</option>
-            <option value="">Platinum</option>
-          </select>
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Select Category*</label>
-          <select name="" id="" class="number">
-            <option value="">Bangles</option>
-            <option value="">Bracelets</option>
-            <option value="">Earrings</option>
-            <option value="">Gold Chains</option>
-            <option value="">Gold Coins</option>
-            <option value="">Kadas</option>
-            <option value="">Mangalsutras</option>
-            <option value="">Mangalsutra Bracelets</option>
-            <option value="">Mangalsutra Chains</option>
-            <option value="">Necklaces</option>
-            <option value="">Nose Pins</option>
-          </select>
-        </div>
-        <div class="buttons">
-          <button matStepperPrevious>
-            <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i
-            >Back
-          </button>
-          <button id="submit-button" matStepperNext>
-            Next <i class="fa-solid fa-angle-right"></i>
-          </button>
-        </div>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel></ng-template>
-
-        <div class="form-box">
-          <label for="plan-name-input"> Vendor Name *</label>
-          <select name="" id="" class="number">
-            <option value="">Mohon Seth</option>
-            <option value="">Pablo escort</option>
-            <option value="">Mark</option>
-            <option value="">Petter Griffins</option>
-          </select>
-        </div>
-
-        <div class="form-box">
-          <label for="plan-name-input"> Vendor ID*</label>
-          <input type="text" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Vendor *</label>
-          <input type="email" id="plan-name-input" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Price *</label>
-          <input type="number" id="plan-name-input " class="number" />
-        </div>
-        <div class="form-box">
-          <label for="plan-name-input"> Add Image/videos *</label>
-           <div class="images">
-            <div class="img">
-              <!-- <img src="https://via.placeholder.com/150" alt=""> -->
-              <i class="ri-add-line"></i>
-            </div>
-           </div>
-        </div>
-
-        <div class="buttons">
-          <button matStepperPrevious>
-            <i class="fa-solid fa-angle-left" style="margin-right: 0.3rem"> </i
-            >Back
-          </button>
-          <button
-            id="submit-button"
-            matStepperNext
-            uk-toggle="target: #add-product-modal"
-          >
-            Add +
-          </button>
-        </div>
-      </mat-step>
-    </mat-stepper>
-  </div>
-</div>
-<button class="filter" uk-toggle="target: #add-product-modal">
-  Add Product <i class="ri-add-line"></i>
-</button>
-<button class="filter">View By <i class="ri-arrow-down-s-line"></i></button>
-<div uk-dropdown="mode: click">
-  <ul>
-    <li>Recent</li>
-    <li>Yesterday</li>
-    <li>This Month</li>
-    <li>This Week</li>
-    <li><input type="date" /></li>
-  </ul>
-</div>
-
-
