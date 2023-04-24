@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 html,
 body {
   background-color: var(--color-primary);
@@ -212,7 +214,7 @@ body {
   font-size: var(--small);
   // border: 1px solid grey;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   .data {
     padding: 40px 0;
@@ -256,13 +258,14 @@ body {
   .shop-head {
     display: flex;
     justify-content: center;
-    margin: 15px 0;
+    margin-top: 50px;
+    margin-bottom :40px ;
 
     h3 {
       font-size: var(--medium);
       text-align: center;
       font-size: var(--xlarge);
-      font-family: var(--font-one);
+      font-family: 'Andada Pro';
       color: var(--color-tertiary);
       // margin: 3rem auto;
       margin: 0 10px;
@@ -278,10 +281,15 @@ body {
   #metals {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+  // grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
     height: fit-content;
   }
+ .wid{
+   display: grid;grid-template-columns: repeat(4,1fr);
+ }
+
+ 
 }
 
 // #trendings {
@@ -391,12 +399,15 @@ body {
   .images {
     display: flex;
     width: 100%;
+    justify-content: center;
     margin-top: 160px;
 
     .image {
       min-width: 30%;
       max-height: fit-content;
       height: 100%;
+      display: flex;
+      justify-content: center;
       position: relative;
 
       img {
@@ -404,7 +415,7 @@ body {
         height: 500px;
         width: 400px;
         object-fit: cover;
-        margin-left: 110px;
+        // margin-left: 110px;
       }
 
       p {
@@ -449,6 +460,7 @@ body {
   h1 {
     color: #BB6878;
     font-weight: bolder;
+    text-align: center;
   }
 
   div {
@@ -499,6 +511,31 @@ body {
     img {
       height: 250px;
     }
+  .cimage {
+  margin-bottom: 60px;
+
+  }
+
+
+  }
+  .comment{
+    color: #666666;
+    // font-weight: 400;
+// font-size: 20px;
+// margin:  0px 50px;
+// margin-right: 50px;
+  }
+  .comment p{
+    margin-top: 20px;
+   color: #333333
+  }
+  .comment button{
+color: #BB6878;
+border: 1px solid #BB6878;
+border-radius: 8px;
+padding: 10px 55px;
+margin-top: 50px;
+background-color: white;
   }
 
   .customer_review {
@@ -663,6 +700,7 @@ body {
 
       img {
         margin: 20px 0;
+       
       }
 
       nav {
@@ -678,8 +716,10 @@ body {
         color: grey;
       }
     }
+    
   }
 }
+
 
 #instagram {
   width: 90%;
@@ -710,7 +750,8 @@ body {
   }
 
   .grid {
-
+    display: flex;
+    justify-content: center;
     img {
       margin: 15px 0;
     }
