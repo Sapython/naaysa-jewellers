@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as AOS from 'aos'
 import { NewVariant, SelectableMaterial } from 'src/app/admin/products/add-product/add-product.component';
-import { DatabaseService } from 'src/app/admin/services/database.service';
+import { DatabaseService } from 'src/app/services/database.service';
 import { Combination } from 'src/app/structures/product.structure';
 
 @Component({

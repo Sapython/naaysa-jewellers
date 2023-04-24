@@ -4,8 +4,7 @@ import { ref, uploadBytesResumable, getDownloadURL, Storage } from '@angular/fir
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs } from '@firebase/firestore';
 import { Subject } from 'rxjs';
 import { Variant } from 'src/app/structures/product.structure';
-import { Material } from '../materials/materials.component';
-import { NewVariant } from '../products/add-product/add-product.component';
+import { Material } from '../admin/materials/materials.component';
 
 @Injectable({
   providedIn: 'root'

@@ -3,7 +3,7 @@ import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { Product } from 'src/app/structures/product.structure';
 import { Material } from '../materials/materials.component';
-import { DatabaseService } from '../services/database.service';
+import { DatabaseService } from 'src/app/services/database.service';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ManageCategoryComponent } from './manage-category/manage-category.component';
 

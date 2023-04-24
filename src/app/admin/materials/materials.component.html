@@ -22,18 +22,20 @@
             <button mat-stroked-button color="primary">Delete</button>
         </div>
         <hr>
+        <span *ngFor="let color of material.colors">
+          {{color.name}}
+        </span>
+        <hr>
         <table class="uk-table uk-table-divider uk-table-hover uk-table-expand">
           <thead>
             <tr>
               <th>Name</th>
-              <th>Unit</th>
               <th>Rate</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let variant of material.variants">
               <td>{{ variant.name }}</td>
-              <td>{{ variant.unit }}</td>
               <td>{{ variant.rate }}</td>
             </tr>
           </tbody>

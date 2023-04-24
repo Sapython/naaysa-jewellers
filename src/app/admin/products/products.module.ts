@@ -23,6 +23,7 @@ import { ManageCategoryComponent } from './manage-category/manage-category.compo
 import { StarsModule } from 'src/app/stars/stars.module';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SelectSizeComponent } from './add-product/select-size/select-size.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     ProductDetailsComponent,
     AddProductComponent,
     ManageCategoryComponent,
-    MaterialVariantsPipe
+    MaterialVariantsPipe,
+    SelectSizeComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +56,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatProgressBarModule,
     StarsModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
   ],
 })
 export class ProductsModule {}

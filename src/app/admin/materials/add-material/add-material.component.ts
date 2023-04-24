@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { DatabaseService } from '../../services/database.service';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { DialogRef } from '@angular/cdk/dialog';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-add-material',
@@ -45,7 +45,6 @@ export class AddMaterialComponent implements OnInit{
     let newVariantFormGroup = new FormGroup({
       name: new FormControl('',Validators.required),
       rate: new FormControl('',[Validators.required]),
-      unit: new FormControl('',Validators.required),
       ratio: new FormControl(''),
       id:new FormControl(this.generateId())
     })
@@ -104,8 +103,10 @@ export class AddMaterialComponent implements OnInit{
   }
 
   submit(){
-    console.log(this.newMaterialForm.value);
+    if (this.newMaterialForm.valid && this.variantsForm.valid){
+      console.log(this.newMaterialForm.value);
     this.newMaterialForm.disable()
+    this.variantsForm.disable()
     let variants = []
     for (const key in this.newMaterialForm.value.variants) {
       if (Object.prototype.hasOwnProperty.call(this.newMaterialForm.value.variants, key)) {
@@ -118,6 +119,7 @@ export class AddMaterialComponent implements OnInit{
     let data = {
       name:this.newMaterialForm.value.name,
       variants:variants,
+      colors:this.colorsVariants,
       autoCalculate:this.newMaterialForm.value.autoCalculate,
       masterVariant:this.newMaterialForm.value.masterVariant
     }
@@ -131,9 +133,20 @@ export class AddMaterialComponent implements OnInit{
       this.newMaterialForm.enable()
       this.dialogRef.close(this.newMaterialForm.value)
     })
+    } else {
+      console.log(this.newMaterialForm,this.newMaterialForm.valid);
+      console.log(this.variantsForm,this.variantsForm.valid);
+      
+    }
   }
 
   generateId(){
     return Math.random().toString(36);
+  }
+
+  cancel(){
+    this.dialogRef.close();
+    this.variantsForm.reset();
+    this.newMaterialForm.reset()
   }
 }

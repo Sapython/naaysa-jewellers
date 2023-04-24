@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from 'src/app/admin/services/database.service';
+import { DatabaseService } from 'src/app/services/database.service';
 import { Product } from 'src/app/structures/product.structure';
 
 @Component({

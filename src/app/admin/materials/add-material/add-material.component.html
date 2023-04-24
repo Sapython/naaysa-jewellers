@@ -91,19 +91,21 @@
 </section> -->
 
 <section>
-  <form [formGroup]="newMaterialForm">
-    <mat-form-field>
+  <h1>Add New Material</h1>
+  <form [formGroup]="newMaterialForm" (ngSubmit)="submit()">
+    <mat-form-field appearance="outline">
       <mat-label>Name Of Metal</mat-label>
-      <input type="text" matInput>
+      <input type="text" formControlName="name" matInput>
     </mat-form-field>
+    <h2>Colors <button type="button" mat-flat-button color="primary" (click)="colorsVariants.push({name:''})">Add Color</button></h2>
     <ol>
-      <button mat-flat-button color="primary" (click)="colorsVariants.push({name:''})">Add Color</button>
       <li *ngFor="let color of colorsVariants; let i = index">
+        <span>{{i+1}} &nbsp;&nbsp;&nbsp;</span>
         <mat-form-field appearance="outline">
           <mat-label>Color Name</mat-label>
-          <input type="text" matInput [(ngModel)]="color.name">
+          <input type="text" matInput [ngModelOptions]="{standalone:true}" [(ngModel)]="color.name">
         </mat-form-field>
-        <button type="button" (click)="colorsVariants.splice(0,i)" mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
+        <button type="button" (click)="colorsVariants.splice(i,1)" mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
       </li>
     </ol>
     <h2>Purity <button
@@ -155,8 +157,8 @@
       </form>
     </ng-container>
     <div class="actions">
-      <button mat-flat-button color="primary">Save</button>
-      <button mat-stroked-button color="primary">Cancel</button>
+      <button mat-flat-button type="submit" color="primary">Save</button>
+      <button mat-stroked-button type="button" (click)="cancel()" color="primary">Cancel</button>
     </div>
   </form>
 </section>

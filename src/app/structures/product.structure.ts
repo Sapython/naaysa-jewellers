@@ -25,7 +25,6 @@ export interface Combination{
 export type Variant = {
     id?: string,
     name: string,
-    unit: string,
     rate: number,
     ratio: number,
   }
