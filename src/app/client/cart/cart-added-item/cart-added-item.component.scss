@@ -1,11 +1,12 @@
 .item-card {
-    margin: 25px;
+  padding: 24px;
+  margin-top: 25px;
     display: flex;
     justify-content: space-between;
-    border-radius: 8px;
-    border: 1px solid rgb(225, 225, 225);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    padding: 15px;
+    background: #FFFFFF;
+border: 1px solid #C4C4C4;
+border-radius: 20px;
+
     &:hover {
         border: 2px solid var(--color-primary);
         transform: scale(1.02);
@@ -16,8 +17,9 @@
 
 img {
     object-fit: cover;
-    width: 100px;
-    height: 100px;
+    width: 198px;
+    height: 189px;
+    border-radius: 10px;
 }
 
 .item-details {
@@ -26,10 +28,7 @@ img {
     width: 480px;
 }
 
-.item-details h3 {
-    font-size: var(--msmall);
-    font-weight: 600;
-}
+
 
 .stock-div {
     // margin-top: 5px;
@@ -43,8 +42,8 @@ img {
     margin-top: 5px;
 }
 #normal{
-    font-weight: 400;
-    font-size: var(--xmsmall);
+    // font-weight: 400;
+    // font-size: var(--xmsmall);
     // width:240px;
     margin-left: 0;
     cursor: pointer;
@@ -65,43 +64,235 @@ img {
     background-color: rgb(228, 228, 228);
 }
 
-.item-total p {
-    font-weight: bold;
-    font-size: var(--msmall);
-    margin-top: 15px;
-    margin-bottom: 35px;
-    margin-left: 100px;
+.wishButton{
+  background: #FFFFFF;
+  border: 1.67742px solid #BB6878;
+  border-radius: 10.0645px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  color: #BB6878;
+  box-shadow:none;
 }
-.count{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    padding: 5px;
-    margin: 5px;
-    width: 25%;
-    border-radius: 10px;
-    padding-left: 10px;
-    input{
-        border: none;
-        font-weight: 500;
-        font-size: var(--xxsmall);
-        width:100%;
-        font-size: 16px;
-        background-color: transparent;
-        &:hover,&:focus{
-            outline:none;
-        }
-    }
-    
+.item-details h3 {
+  color: #5C5E62;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  }
+  .remove{
+    background: #FFFFFF;
+    width: 201.29px;
+    height: 52px;
+border: 1.67742px solid rgba(102, 102, 102, 0.6);
+border-radius: 10.0645px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 20.129px;
+line-height: 24px;
+text-align: center;
+color: rgba(102, 102, 102, 0.6);
+box-shadow:none;
+  }
+  .Jnumber{
+    color: #666666;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+  }
+  .stockItem{
+    color: #EB4F5C;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+  }
+  .deliveryDay{
+    color: #BB6878;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+  }
+  .save{
+    color: #1CAE56;
+    font-family: 'Roboto';
+    text-align: end;
+font-style: normal;
+font-weight: 400!important;
+    font-size: 20px!important;
+line-height: 23px;
+margin-bottom: 70px;
+  }
+.totalPriceDiv{
+  display: flex;
+  justify-content: flex-end;
+}
+.quantity{
+  color: #666666;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+margin-right: 2px;
+}
+.inputBtn{
+  display: inline-flex;
+}
+.inputBtn input{
+  width: 39.44px;
+  height: 31.11px;
+  border: 0.5px solid #E88F9F;
+  border-radius: 5px;
+  text-align: center;
+}
+.totalPrice{
+  color: #E88F9F;
+  font-family: 'Philosopher';
+font-style: normal;
+font-weight: 700!important;
+font-size: 28px!important;
+line-height: 31px;
+text-align: center;
+}
+.price{
+  color: #5C5E62;
+  align-items: center;
+  text-decoration-line: line-through;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400!important;
+  font-size: 18px!important;
+  line-height: 27px;
+  margin-left: 8px;
+}
+.inputBtn input{
+  width: 39.44px;
+  height: 31.11px;
+  border: 0.5px solid #E88F9F;
+  border-radius: 5px;
+  text-align: center;
+}
+.inputBtn button{
+  width: 32px;
+height: 32px;
+margin-left: 2px!important;
+margin-right: 2px!important;
+background: #FFB3C0;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+color: #FFFFFF;
+}
+//  1300 1024 1920
+@media (min-width:1300px) {
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0px!important;
+  }
+  .wishButton{
+  font-size: 20.129px!important;
+  line-height: 24px;
+  text-align: center;
+  }
+
+
+.inputBtn button{
+  width: 32px;
+height: 32px;
+margin-left: 2px!important;
+margin-right: 2px!important;
+background: #FFB3C0;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+color: #FFFFFF;
+}
+.save{
+  color: #1CAE56;
+  text-align: start;
 }
 
-.count-btn {
-    background-color: inherit;
-    border: none;
-    margin: 0 7px;
+
+}
+@media (min-width:1300px) {
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0px!important;
+  }
+  .item-details {
+    // padding: 10px;
+    margin-left: 50px;
+    width: 480px;
+    flex-shrink: 0.5;
+}
+  .quantity{
+    color: #666666;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+margin-right: 2px;
+  }
+  .deliveryDay{
+    color: #BB6878;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+  }
+
+.totalPriceDiv{
+  display: flex;
+  justify-content: flex-end;
+}
+.save{
+  color: #1CAE56;
+  text-align: end;
+}
 }
 
-.count-btn:hover {
-    cursor: pointer;
+@media (max-width:1024px){
+  .item-details {
+    margin-left: 10px;
+    width: 480px;
 }
+  .remove,.wishButton{
+    width: 80px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 15px;
+    // line-height: 24px;
+  }
+  .totalPriceDiv{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .save{
+    text-align: end;
+    margin-bottom: 145px;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center!important;
+    width: auto;
+    margin-left: 0px!important;
+}
+}
+@media (max-width:1024px){}
+// for phone
 @media only screen and (max-width: 600px){
     .item-card{
         margin: 5px;
