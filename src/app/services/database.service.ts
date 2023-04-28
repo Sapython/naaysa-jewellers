@@ -1,16 +1,33 @@
 import { Injectable } from '@angular/core';
-import { Firestore, updateDoc } from '@angular/fire/firestore';
+import { collectionData, Firestore, updateDoc } from '@angular/fire/firestore';
 import { ref, uploadBytesResumable, getDownloadURL, Storage } from '@angular/fire/storage';
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs } from '@firebase/firestore';
+import { Subject } from 'rxjs';
 import { Variant } from 'src/app/structures/product.structure';
+import { Material } from '../admin/materials/materials.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
-  
-
-  constructor(private fs:Firestore,private storage:Storage) { }
+  variantUpdated:Subject<Variant[]> = new Subject();
+  materials:Material[] = []
+  variants:Variant[] = []
+  constructor(private fs:Firestore,private storage:Storage) {
+    collectionData(collection(this.fs,'materials'),{idField:'id'}).subscribe((data:any)=>{
+      console.log("got data",data);
+      this.materials = data;
+      this.variants = []
+      for (const iterator of this.materials) {
+        if (iterator.variants && iterator.variants.length > 0){
+          console.log(iterator.variants.length);
+          this.variants.push(...iterator.variants)
+        }
+        console.log("materials",this.materials);
+        this.variantUpdated.next(this.variants)
+      }
+    })
+  }
 
   async upload(
     path: string,
@@ -50,8 +67,20 @@ export class DatabaseService {
     return addDoc(collection(this.fs,'products'), product)
   }
 
+  getProducts(){
+    return getDocs(collection(this.fs,'products'))
+  }
+
+  updateProduct(productId:string,newData:any){
+    return updateDoc(doc(this.fs, 'products', productId), newData)
+  }
+
   getMaterials(){
     return getDocs(collection(this.fs,'materials'))
+  }
+
+  getMaterial(materialId:string){
+    getDoc(doc(this.fs,'materials/'+materialId))
   }
   
   addMaterial(material:any){

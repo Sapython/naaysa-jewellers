@@ -1,7 +1,8 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from 'src/app/services/database.service';
 import { Variant } from 'src/app/structures/product.structure';
-import { DatabaseService } from '../services/database.service';
+
 import { AddMaterialComponent } from './add-material/add-material.component';
 
 @Component({
@@ -34,6 +35,9 @@ export class MaterialsComponent implements OnInit {
 }
 export type Material = {
   id?: string,
+  autoCalculate:boolean;
+  masterVariant:number;
   name: string,
   variants: Variant[]
+  colors: {name:string}[],
 }

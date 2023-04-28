@@ -1,21 +1,39 @@
 <div class="item-card {{stock}}">
+  <!-- carts -->
     <img src="{{imgsrc}}" alt="item-photo">
     <div class="item-details">
         <h3>{{item_name}}</h3>
+        <h4 class="Jnumber">{{item_no}}</h4>
         <div class="stock-div">
-            <p>₹{{item_price}}</p>
-            &nbsp;|&nbsp;
-            <p class="{{stock}}">{{stock}}</p>
+          <p class="quantity">Quantity: {{item_quantity}}</p>
+            <!-- &nbsp;|&nbsp; -->
+            <p class="{{stock}} stockItem">{{stock}}</p>
+
         </div>
-        <div class="count">
+        <p class="deliveryDay">Delivery Date : {{item_date}}</p>
+        <div class="inputBtn">
+        <button type="button" (click)="plus()"><i class="fa fa-plus"></i></button>
+        <input type="text" [value]="quantityValue">
+        <button type="button" (click)="minus()"><i class="fa fa-minus"></i></button></div>
+        <!-- <div class="count">
+          <button>+</button>
             <input type="number" value="1">
-        </div>
+            <button>-</button>
+        </div> -->
     </div>
     <div class="item-total">
-        <p id="price">₹{{total_price}}</p>
+      <div class="totalPriceDiv">
+        <p id="price" class="totalPrice">{{total_price}}</p>
+        <p class="price">₹ {{item_price}}</p>
+      </div>
+
+
+        <p class="save">Save : {{item_save}}</p>
         <div class="buttons">
-            <button (click)="alert()">❤️ Wish List</button>
-            <button id="normal" (click)="delete()"><i class="fa-solid fa-trash-can"></i> Delete</button>
+          <button id="normal" (click)="delete()" class="remove"> Remove</button>
+            <button (click)="alert()" class="wishButton">Move to Wishlist</button>
+
+            <!-- <i class="fa-solid fa-trash-can"></i> -->
         </div>
     </div>
 </div>

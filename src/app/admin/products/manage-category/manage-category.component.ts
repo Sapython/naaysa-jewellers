@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Category } from 'src/app/structures/product.structure';
-import { DatabaseService } from '../../services/database.service';
+import { DatabaseService } from 'src/app/services/database.service';
+
 
 @Component({
   selector: 'app-manage-category',
