@@ -19,6 +19,7 @@ export class AllProductsComponent implements OnInit {
       category:'ring',
       liked:true,
       description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
       metalPurityTypes:[
         {
           purity:'18K',

@@ -100,6 +100,7 @@ $my-theme: mat.define-light-theme((
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@500;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 :root {
   --ref-color: #ffe4e1;
   --color-primary: #ffe4e1;
@@ -122,6 +123,7 @@ $my-theme: mat.define-light-theme((
   --color-primary-contrast: #000;
   --color-rating: #E88F9F;
   --color-button: #fae4e8;
+  --color-delPrice: #666666;
 
   --font-six: "Andada Pro", sans-serif;
   --font-one: "Poppins", sans-serif;
@@ -129,8 +131,9 @@ $my-theme: mat.define-light-theme((
   --font-three: "Philosopher", sans-serif;
   --font-four: "Questrial", sans-serif;
   --font-five: "Noto Sans", sans-serif;
---font-seven: "Quando", sans-serif;
---font-eight:"Poppins", sans-serif;
+  --font-seven: "Quando", sans-serif;
+  --font-eight:"Poppins", sans-serif;
+  --font-nine: 'Roboto', 'sans serif';
 
   --xxlarge: 36px;
   --xlarge: 32px;
@@ -211,6 +214,28 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+mat-checkbox{
+ .mdc-checkbox__background{
+    .mdc-checkbox__checkmark{
+      color: #fff !important;
+    }
+  }
+  .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background{
+      //CHECKED
+      border-color: #bb6878;
+      background-color: #bb6878 ;
+  }
+  .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background{
+    //UNCHECKED
+    border-color: #F9D5DC !important;
+    background-color: #F9D5DC !important;
+  }
+  label{
+    color: #bb6878;
+    font-weight: 400;
+    font-family: var(--font-nine);
+  }
 }
 .mat-step-header .mat-step-icon-selected,
 .mat-step-header .mat-step-icon-state-done,
