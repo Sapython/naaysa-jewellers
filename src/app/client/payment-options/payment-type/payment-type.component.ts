@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PaymentTypeComponent implements OnInit {
 
   @Input() paymentType: string="";
+  @Input() discount:string="";
 
   constructor() { }
 

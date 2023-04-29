@@ -1,24 +1,16 @@
 <div class="container">
   <div class="section-one">
-    <div class="check-box">
-    </div>
-    <div class="details">
-      <div class="uk-flex">
-        <div class="address">
-          <p>{{name}} {{last_name}}</p>
-          <p>{{address_type}}</p>
-        </div>
-       <div class="input"> <input type="radio" name="pay-mode" checked></div>
+
+      <div class="inputBox">
+        <input type="radio" name="pay-mode" checked>
+        <h1 class="Recipientname">{{name}} {{last_name}}</h1>
       </div>
-      <div class="address">{{address}}</div>
-      <p class="phone">{{phone}}</p>
-      <div class=""><button routerLink="../payment-options">Deliver Here</button></div>
+
+       <div class="addressButton">{{address_type}}</div>
+       <div><p class="editbtn">Edit | Remove</p></div>
     </div>
-  </div>
-  <div class="section-second">
-    <div class="">
-      <button routerLink="../add-delivery-address">Edit<i class="ri-edit-circle-fill"></i></button>
-      <div><button routerLink="../payment-options">Next</button></div>
+    <p class="recipientAddress">{{address}}</p>
+    <p class="recipientNumber">Phone: {{phone}}</p>
     </div>
-  </div>
-</div>
+
+

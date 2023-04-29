@@ -1,14 +1,37 @@
 
-<div class="container">
-    <div class="box">
-        <i class="ri-map-pin-fill"></i>
-        <p>Deliver To</p>
-    </div>
-    <div class="parent-container">
+<div class="cart-main">
+  <div class="cart-items">
+      <h1>Select</h1>
+      <hr class="aa">
+
+      <div class="parent-container">
         <!-- <button routerLink="../payment-options">Next</button> -->
         <app-address-card></app-address-card>
         <app-address-card></app-address-card>
         <app-address-card></app-address-card>
     </div>
-    <!-- <button class="add" routerLink="../add-delivery-address">Add New Address</button> -->
+<section class="billAddressSection">
+<h5 class="billAddress">Billing Address</h5>
+<div class="billAddressBox">
+  <div class="inputBox">
+    <input type="radio" name="pay-mode" checked>
+    <p class="inputBoxText">Same as Shipping Address</p>
+  </div>
+  <div class="inputBox">
+    <input type="radio" name="pay-mode" checked>
+    <p class="inputBoxText">Use a Different Address</p>
+  </div>
+  <div>
+
+  </div>
 </div>
+</section>
+<div>
+
+</div>
+</div>
+<div class="cart-price ">
+<app-order-summary></app-order-summary></div>
+
+</div>
+

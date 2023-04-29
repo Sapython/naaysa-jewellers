@@ -23,6 +23,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StarsComponent } from './stars/stars.component';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
