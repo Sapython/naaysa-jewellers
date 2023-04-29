@@ -11,16 +11,19 @@ import { Combination } from 'src/app/structures/product.structure';
 })
 export class ProductWidgetComponent implements OnInit {
   @Input() product_name:string = 'Diamond Ring'
-  @Input() src:string = 'jewellery/jewel1.svg'
-  @Input() price:number = 0
+  @Input() src:string = 'assets\BIRS0279R20-POSTER-11100.jpg.png'
+  @Input() price:number = 125632
   @Input() averageRating:number = 0
   @Input() purity:string = '18k'
   @Input() category:string = 'Women'
   @Input() discount:string = '10%'
   @Input() liked:boolean = false
+  @Input() tag:string
   @Input() variants:Combination[] = []
   @Input() materials:SelectableMaterial[] = []
 
+  isLoaded: boolean = false;
+  
   onclick(){
     alert('Your Product has Been Added To Cart')
   }

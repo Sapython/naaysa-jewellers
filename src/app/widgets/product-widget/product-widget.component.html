@@ -1,38 +1,23 @@
 <div class="container .uk-animation-fade">
-  <div class="box">
-    <div class="upper-section">
-      <div class="bestSeller">Best Seller</div>
-      <div class="heart">
-        <i
-          [class]="{
-            'fa-heart': true,
-            'fa-regular': !liked,
-            'fa-solid': liked
-          }"
-          (click)="liked = !liked"
-        ></i>
+  <div class="imageBox">
+      <div class="heart" (click)="liked = !liked">
+        <img *ngIf="liked" src="assets\likedWishlist.svg" alt="">
+        <img *ngIf="!liked" src="assets\unlikedWishlist.svg" alt="">
       </div>
+    <div *ngIf="!isLoaded; then altImage"></div>
+    <div class="image" routerLink="../product">
+      <!-- <img src="assets\BIRS0279R20-POSTER-11100.jpg.png" (load)="isLoaded=true" alt="" /> -->
+      <img [src]="src" (load)="isLoaded=true" *ngIf="isLoaded" alt="" />
+      <ng-template #altImage><img class="altImage"src="assets\NAAAYSA LOGO.svg" alt=""></ng-template>
     </div>
-    <div routerLink="../product">
-      <div class="image">
-        <img [src]="src" alt="" />
-      </div>
-      <div class="discount">
-        <p>Flat {{ discount }}</p>
-        <p>{{ purity }} Gold</p>
-      </div>
-      <hr id="hr" />
-      <div class="priceRate">
-        <p id="price">
-          &#x20B9; {{ price }} <del>{{ price + 10000 }}</del>
-        </p>
-        <app-stars [rating]="averageRating"></app-stars>
-      </div>
-      <p id="name">{{ product_name }}</p>
+
+    <div class="badges">
+      <div class="bestSeller">{{tag | titlecase}}</div>
     </div>
-    <!-- <div class="buttons">
-            <button (click)="onclick()">Add To Cart</button>
-            <button><span uk-icon="trash"></span></button>
-        </div> -->
+  </div>
+  <div class="priceInfo">
+    <div id="price">&#x20B9;{{ price }} <del> &#8377;{{ price + 10000 }}</del></div>
+    <div id="name">{{ product_name }}</div>
+    <div id="similar"><a href="">View Similar</a></div>
   </div>
 </div>
