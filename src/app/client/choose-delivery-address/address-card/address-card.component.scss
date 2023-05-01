@@ -12,18 +12,6 @@
       grid-template-columns: 0.33fr 0.33fr 0.33fr;
       width: 100%
     }
-    .Recipientname{
-      font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 28px;
-
-color: #5C5E62;
-    }
-
-
-
 }
  .inputBox{
   display: flex;
@@ -64,6 +52,11 @@ width: max-content;
 height: 36px;
 padding: 5px;
 }
+.btns{
+  color: #BB6878;
+  display: flex;
+  cursor: pointer;
+}
 .editbtn{
       font-family: 'Poppins';
   font-style: normal;
@@ -72,6 +65,7 @@ padding: 5px;
   line-height: 33px;
   align-items: center;
   color: #BB6878;
+  cursor: pointer;
     }
     .recipientAddress{
       font-family: 'Roboto';
@@ -81,6 +75,15 @@ font-size: 20px;
 line-height: 23px;
 color: #707477;
     }
+    .Recipientname{
+      font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+
+color: #5C5E62;
+    }
     .recipientNumber{
       font-family: 'Roboto';
 font-style: normal;
@@ -89,3 +92,150 @@ font-size: 20px;
 line-height: 23px;
 color: #707477;
     }
+
+
+@media(max-width:1300px){
+  .addressButton{
+    background: rgba(243, 199, 207, 0.51);
+    border-radius: 11.0286px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #BB6878;
+    width: 70px;
+    height: 32px;
+    /* padding: 13px; */
+    text-align: center;
+  }
+  .editbtn{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 33px;
+    align-items: center;
+    color: #BB6878;
+      }
+      .recipientAddress{
+        font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #707477;
+      }
+      .Recipientname{
+        font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: #5C5E62;
+      }
+      .recipientNumber{
+        font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #707477;
+      }
+      input[type="radio"] {
+        appearance: none;
+        background-color: #fff;
+        margin: 0;
+        font: inherit;
+        color: currentColor;
+        width: 1.5em;
+        height: 1.5em;
+        border: 0.1em solid currentColor;
+        border-radius: 50%;
+        text-align: right;
+        &:checked{
+          color: #F3C7CF;
+            background-color: var(--color-secondary);
+            outline: max(2px, 0.18em) solid currentColor;
+            outline-offset: max(1px, 0.15em);
+            border: none;
+            &:before{
+              font-size: 16px;
+              cursor: pointer;
+           }
+      }
+      }
+
+}
+@media (max-width:1025px) {
+  .addressButton{
+    background: rgba(243, 199, 207, 0.51);
+    border-radius: 11.0286px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #BB6878;
+    width: 60px;
+    height: 32px;
+    /* padding: 13px; */
+    text-align: center;
+  }
+  .editbtn{
+        font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 33px;
+    align-items: center;
+    color: #BB6878;
+      }
+      .recipientAddress{
+        font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #707477;
+      }
+      .Recipientname{
+        font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5C5E62;
+      }
+      .recipientNumber{
+        font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #707477;
+      }
+      input[type="radio"] {
+        appearance: none;
+        background-color: #fff;
+        margin: 0;
+        font: inherit;
+        color: currentColor;
+        width: 16px;
+        height: 16px;
+        border: 0.1em solid currentColor;
+        border-radius: 50%;
+        text-align: right;
+        margin-top: 5px;
+        &:checked{
+          color: #F3C7CF;
+            background-color: var(--color-secondary);
+            outline: max(2px, 0.18em) solid currentColor;
+            outline-offset: max(1px, 0.15em);
+            border: none;
+            &:before{
+              font-size: 16px;
+              cursor: pointer;
+           }
+      }
+      }
+}

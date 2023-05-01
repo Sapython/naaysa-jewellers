@@ -5,17 +5,15 @@
         <hr class="aa">
         <app-cart-added-item *ngFor="let item of cartItems" [imgsrc]="item.src" [item_name]="item.name" [item_date]="item.date"  [item_no]="item.no" [item_quantity]="item.quantity" [item_price]="item.price"[item_save]="item.save" [stock]="item.stock" [item_count]="'1'" [total_price]="item.totalprice"></app-cart-added-item>
     </div>
+
  <div class="uk-animation-slide-right-medium">
 <div>
   <div class="deliveryDateBox">
     <p class="deliveryDateText">
       <img src="../../../assets/CART/Mask group.png" class="deliveryImg" alt="" srcset="">
        Deliver to 364000</p>
-    <!-- Delivery Date : {{delivery_Date}} -->
     <p class="changeOption">Change</p>
   </div>
-
-  <!-- <p id="discount">{{disc_percentage}} off Discount</p> -->
     <div class="applyBox">
 
       <div class="applyBoxText">

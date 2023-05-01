@@ -1,5 +1,4 @@
 
-
 .cart-price h1{
   margin-left: 25px;
   margin-top: 20px;
@@ -75,7 +74,7 @@ border-radius: 16px;
   font-weight: 500;
 }
 .bill{
-width: 90%;
+width: 100%;
 padding: 25px;
 .uk-flex{
     // margin-top: 10px;
@@ -219,8 +218,42 @@ a{
   text-decoration: none;
   font-size: 15px;
 }
-
-
+@media (max-width:1300px) {
+  .billItems{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.45);
+    }
+    .totalBillAmount{
+    margin-top: 19px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #5C5E62;
+    }
+}
+@media (max-width:1025px) {
+  .billItems{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.45);
+    }
+    .totalBillAmount{
+    margin-top: 19px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #5C5E62;
+    }
+}
 
 
 @media only screen and (max-width: 600px){
