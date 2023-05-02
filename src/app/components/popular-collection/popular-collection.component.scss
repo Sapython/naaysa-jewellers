@@ -1,0 +1,166 @@
+#metals {
+    display: flex;
+    justify-content: center;
+  // grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    height: fit-content;
+  }
+ .wid{
+   display: grid;grid-template-columns: repeat(4,1fr);
+ }
+.card{
+  border: none;
+  padding: 20px;
+}
+.lable{
+  width: 83px;
+  background-color: #E88F9F;
+  border-radius: 0px 40px 0px 0px;
+  position: relative;
+  color: white;
+  padding: 6px 16px;
+  text-align: center;
+  top: 55%;
+}
+.carousel-control-next, .carousel-control-prev {
+  top: 40%;
+  width: 35px;
+    height: 35px;
+    background-color: 
+    #E88F9F;
+    color:  white;
+    border: 1px solid #E88F9F;
+    border-radius: 50%;
+    // padding: 10px;
+    text-align: center;
+    margin: 16px;
+}
+.cardp{
+  border-radius: 0px 0px 20px 20px;
+  border: 1px solid    #E88F9F;
+   width: 100%;
+   height: 85px;
+   text-align: center;
+   font-family: 'Quando';
+   font-size: 16px;
+   padding-top: 12px;
+    border-top:none
+}
+
+.cardp p{
+  font-family: 'Quando';
+}
+.cardp1{
+  color: #E88F9F ;
+  font-size: 17px;
+}
+.hr{
+  
+  width: 18%;
+  border: 1px solid #e28092;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7px;
+}
+@media only screen and (max-width: 1005px){
+  .lable{
+    width: 61px;
+    background-color: #E88F9F;
+    border-radius: 0px 40px 0px 0px;
+    position: relative;
+    color: white;
+    padding: 2px 0px;
+    text-align: center;
+    top: 54%;
+  }
+
+  .cardp{
+    border-radius: 0px 0px 17px 17px;
+    border: 1px solid    #E88F9F;
+     width: 100%;
+     height: 64px;
+     text-align: center;
+     font-family: 'Quando';
+     font-size: 10px;
+     padding-top: 6px;
+      border-top:none
+  }
+ 
+.cardp1{
+  color: #E88F9F ;
+  font-size: 11px;
+}
+.cardp p{
+  font-family: 'Quando';
+  margin-bottom: 4px;
+}
+}
+@media only screen and (max-width: 1005px){
+  .cardp{
+    border-radius: 0px 0px 13px 13px;
+    border: 1px solid    #E88F9F;
+     width: 100%;
+     height: 49px;
+     text-align: center;
+     font-family: 'Quando';
+     font-size: 9px;
+     padding-top: 2px;
+      border-top:none
+  }
+  .cardp p{
+    font-family: 'Quando';
+    margin-bottom: 0px;
+  }
+  .hr{
+    margin-bottom: 0px;
+  }
+  .lable{
+    width: 53px;
+  
+    top: 51%;
+  }
+}
+
+
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+
+
+   
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        // use your favourite prefixer here
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+
+    
+    }
+  }
+  .carouse-control{
+    &.left, &.right{
+      background-image: none;
+    }
+  }
+}
+

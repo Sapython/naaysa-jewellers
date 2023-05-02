@@ -6,9 +6,12 @@ import { RouterModule } from '@angular/router';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { MatIconModule } from '@angular/material/icon';
 
+import { SwiperModule } from 'swiper/angular';
+import { PopularCollectionComponent } from './popular-collection/popular-collection.component';
+
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent],
-  imports: [CommonModule, RouterModule, MatIconModule],
-  exports: [HeaderComponent, FooterComponent, AdminHeaderComponent],
+  declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent],
+  imports: [CommonModule, RouterModule, MatIconModule, SwiperModule],
+  exports: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent],
 })
-export class ComponentsModule {}
+export class ComponentsModule { }
