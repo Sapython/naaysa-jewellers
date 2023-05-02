@@ -142,29 +142,29 @@ color: #707477;
   line-height: 23px;
   color: #707477;
       }
-      input[type="radio"] {
-        appearance: none;
-        background-color: #fff;
-        margin: 0;
-        font: inherit;
-        color: currentColor;
-        width: 1.5em;
-        height: 1.5em;
-        border: 0.1em solid currentColor;
-        border-radius: 50%;
-        text-align: right;
-        &:checked{
-          color: #F3C7CF;
-            background-color: var(--color-secondary);
-            outline: max(2px, 0.18em) solid currentColor;
-            outline-offset: max(1px, 0.15em);
-            border: none;
-            &:before{
-              font-size: 16px;
-              cursor: pointer;
-           }
-      }
-      }
+      // input[type="radio"] {
+      //   appearance: none;
+      //   background-color: #fff;
+      //   margin: 0;
+      //   font: inherit;
+      //   color: currentColor;
+      //   width: 1.5em;
+      //   height: 1.5em;
+      //   border: 0.1em solid currentColor;
+      //   border-radius: 50%;
+      //   text-align: right;
+      //   &:checked{
+      //     color: #F3C7CF;
+      //       background-color: var(--color-secondary);
+      //       outline: max(2px, 0.18em) solid currentColor;
+      //       outline-offset: max(1px, 0.15em);
+      //       border: none;
+      //       &:before{
+      //         font-size: 16px;
+      //         cursor: pointer;
+      //      }
+      // }
+      // }
 
 }
 @media (max-width:1025px) {
@@ -214,28 +214,28 @@ color: #707477;
   line-height: 23px;
   color: #707477;
       }
-      input[type="radio"] {
-        appearance: none;
-        background-color: #fff;
-        margin: 0;
-        font: inherit;
-        color: currentColor;
-        width: 16px;
-        height: 16px;
-        border: 0.1em solid currentColor;
-        border-radius: 50%;
-        text-align: right;
-        margin-top: 5px;
-        &:checked{
-          color: #F3C7CF;
-            background-color: var(--color-secondary);
-            outline: max(2px, 0.18em) solid currentColor;
-            outline-offset: max(1px, 0.15em);
-            border: none;
-            &:before{
-              font-size: 16px;
-              cursor: pointer;
-           }
-      }
-      }
+      // input[type="radio"] {
+      //   appearance: none;
+      //   background-color: #fff;
+      //   margin: 0;
+      //   font: inherit;
+      //   color: currentColor;
+      //   width: 16px;
+      //   height: 16px;
+      //   border: 0.1em solid currentColor;
+      //   border-radius: 50%;
+      //   text-align: right;
+      //   margin-top: 5px;
+      //   &:checked{
+      //     color: #F3C7CF;
+      //       background-color: var(--color-secondary);
+      //       outline: max(2px, 0.18em) solid currentColor;
+      //       outline-offset: max(1px, 0.15em);
+      //       border: none;
+      //       &:before{
+      //         font-size: 16px;
+      //         cursor: pointer;
+      //      }
+      // }
+      // }
 }

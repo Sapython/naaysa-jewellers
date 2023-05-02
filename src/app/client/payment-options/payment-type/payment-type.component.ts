@@ -9,10 +9,16 @@ export class PaymentTypeComponent implements OnInit {
 
   @Input() paymentType: string="";
   @Input() discount:string="";
-
+  hidden:boolean=true;
   constructor() { }
 
   ngOnInit(): void {
   }
+showDiscount(){
+  if(this.paymentType=="Wallet"){
+    this.hidden=!this.hidden;
+  }
 
+
+}
 }
