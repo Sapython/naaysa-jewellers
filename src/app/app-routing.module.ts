@@ -17,6 +17,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
   },
+  { path: 'product-review', loadChildren: () => import('./client/product-review/product-review.module').then(m => m.ProductReviewModule) },
 ];
 
 @NgModule({
