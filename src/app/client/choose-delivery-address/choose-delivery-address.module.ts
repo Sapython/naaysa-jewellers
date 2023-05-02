@@ -5,17 +5,17 @@ import { ChooseDeliveryAddressRoutingModule } from './choose-delivery-address-ro
 import { ComponentsModule } from '../../components/components.module';
 import { ChooseDeliveryAddressComponent } from './choose-delivery-address.component';
 import { AddressCardComponent } from './address-card/address-card.component';
-
-
+import { OrderSummaryComponent } from '../order-summary/order-summary.component';
 @NgModule({
   declarations: [
     ChooseDeliveryAddressComponent,
-    AddressCardComponent
+    AddressCardComponent,
+    OrderSummaryComponent,
   ],
   imports: [
     CommonModule,
     ChooseDeliveryAddressRoutingModule,
-    ComponentsModule
+    ComponentsModule,
   ]
 })
 export class ChooseDeliveryAddressModule { }

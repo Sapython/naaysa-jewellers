@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CartAddedItemComponent } from './cart-added-item.component';
-
 describe('CartAddedItemComponent', () => {
   let component: CartAddedItemComponent;
   let fixture: ComponentFixture<CartAddedItemComponent>;

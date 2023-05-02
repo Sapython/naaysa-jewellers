@@ -7,11 +7,10 @@ import { ComponentsModule } from '../../components/components.module';
 import { CartAddedItemComponent } from './cart-added-item/cart-added-item.component';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';
 
-
 @NgModule({
   declarations: [
     CartComponent,
-    CartAddedItemComponent
+    CartAddedItemComponent,
   ],
   imports: [
     CommonModule,

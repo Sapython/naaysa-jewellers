@@ -1,9 +1,9 @@
 import { DialogRef } from '@angular/cdk/dialog';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { DatabaseService } from 'src/app/services/database.service';
 import { Variant } from 'src/app/structures/product.structure';
 
 import { Material } from '../materials/materials.component';
-import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-material-update-modal',

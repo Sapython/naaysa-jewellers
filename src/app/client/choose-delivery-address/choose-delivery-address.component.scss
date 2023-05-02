@@ -1,3 +1,167 @@
+.cart-main{
+  display: flex;
+}
+.mobile-view{
+  display: none;
+}
+.cart-items{
+  margin-top: 30px;
+  margin-left: 70px;
+  width: 58%;
+  height: auto;
+  border-radius: 16px;
+}
+.parent-container{
+  display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-gap: 24px;
+    width: 100%;
+}
+.hiddenContent{
+  display: none;
+}
+.containerDH{
+  width: auto;
+  height: 190px;
+  padding-top: 45px;
+  padding: 50px;
+  border: 2.95px dashed #D7D7D7;
+border-radius: 14.75px;
+cursor: pointer;
+}
+.containerHidden{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-gap: 24px;
+  width: 100%;
+}
+.containerHiddenImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30px;
+}
+.containerHiddenText{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 22.125px;
+line-height: 26px;
+text-align: center;
+color: #BB6979;
+}
+.showHiddenContent{
+  display: block;
+}
+// Summary Order for laptop
+#heading{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+color: #5C5E62;
+margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.cart-items h1{
+  margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  // font-family: var(--font-one);
+}
+
+hr{
+  border-top: 2px solid var(--color-secondary);
+  margin-left: 25px;
+  width: 93%;
+  margin-bottom: 15px;
+}
+#hr {
+color: #969696;
+// width: 100%;
+border: 1px dashed #969696;
+margin-bottom: 15px;
+}
+.cart-price{
+  margin-top: 30px;
+  margin-left: 50px;
+  width: 29%;
+  height: auto;
+}
+
+
+
+.cart-price h1{
+  margin-left: 25px;
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.bill{
+width: 90%;
+padding: 25px;
+.uk-flex{
+    // margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 450;
+    font-size: var(--xsmall);
+    margin-bottom: 16px;
+}
+.subtotal{
+    font-size: var(--small);
+}
+.primary-button{
+    display: block;
+    width: 100%;
+    font-size: var(--xsmall);
+    margin-top: 25px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.payNowBtn{
+  display: block;
+  width: 100%;
+height: 64px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 26px;
+text-align: center;
+background: #BB6979;;
+color: #FFFFFF;
+box-shadow: none;
+border-radius: 10px;
+border: none;
+}
+}
+
+.billItems{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+color: rgba(0, 0, 0, 0.45);
+}
+.totalBillAmount{
+margin-top: 19px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+color: #5C5E62;
+}
+.hrDash{
+border: 2px dashed #D7D7D7!important;
+}
+
+
 .container{
     margin: 16px;
     border: 1px solid #969696;
@@ -53,6 +217,142 @@ button{
         transform: scale(1.1);
     }
 }
+.location{
+  margin: 25px;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-around;
+}
+.h1{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 45px;
+text-transform: uppercase;
+color: #E88F9F;
+border: 0.5px solid #E88F9F;
+}
+.addressMainBox{
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+.billAddressSection{
+  margin-top: 50px;
+}
+.billAddress{
+
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+color: #222B45;
+}
+.billAddressBox{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+}
+.billAddressinputBox{
+  display: flex;
+  gap:17px;
+}
+.billAddressinputBoxText{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+color: #222B45;
+}
+.billAddressinputBox{
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.7em;
+  height: 1.7em;
+  border: 0.1em solid currentColor;
+  border-radius: 50%;
+  text-align: right;
+  &:checked{
+    color: #F3C7CF;
+      background-color: var(--color-secondary);
+      outline: max(2px, 0.18em) solid currentColor;
+      outline-offset: max(1px, 0.15em);
+      border: none;
+      &:before{
+        font-size: 16px;
+        cursor: pointer;
+     }
+}
+}
+}
+@media (max-width:1300px) {
+  .cart-items{
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 58%;
+    height: auto;
+    border-radius: 16px;
+  }
+  .cart-price{
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 35%;
+    height: auto;
+  }
+  .billAddressinputBoxText{
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #222B45;
+  }
+  .containerHiddenImg{
+    width: 28px;
+  }
+  .containerHiddenText{
+  font-size: 18px;
+  }
+}
+@media (max-width:1024px) {
+  .cart-items{
+    margin-top: 30px;
+    margin-left: 35px;
+    width: 60%;
+    height: auto;
+    border-radius: 16px;
+  }
+  .cart-price{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 30%;
+    height: auto;
+  }
+  .billAddressinputBoxText{
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #222B45;
+  }
+  .containerHiddenImg{
+    width: 24px;
+  }
+  .containerHiddenText{
+    font-size: 16px;
+    }
+}
+@media (max-width:992px) {
+  .show {
+    display: block;
+  }
+}
 @media only screen and (max-width: 600px){
     .container{
         margin: 10px;
@@ -72,4 +372,107 @@ button{
         padding: 5px 10px;
         margin-bottom: 15px;
     }
+    .payment-types{
+      display: block!important;
+    }
+      .cart-main{
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+          margin-top: 0;
+      }
+      .proceed-btn{
+          display: none;
+      }
+      .cart-items{
+          margin: 0px;
+          width: 100%;
+          background-color: #FFF5FB;
+          box-shadow: none;
+          border: none;
+      }
+      .cart-items h1{
+          font-size: var(--small);
+          font-family: var(--font-one);
+      }
+      .cart-price{
+          display: none;
+      }
+      .mobile-view{
+          display: block;
+          width: 100%;
+          margin: 15px;
+          .mobile-bill{
+              background-color: #fff;
+              margin-top: 5px;
+              padding: 15px;
+              box-shadow: var(--normal-shadow);
+              border: 2px solid var(--color-dark-primary);
+              border-radius: 10px;
+              .uk-flex{
+                  justify-content: space-between;
+              }
+              .heading{
+                  p:nth-child(1){
+                      font-size: var(--msmall);
+                      font-weight: 500;
+                  }
+              }
+              .bill-info{
+                  margin-top: 15px;
+                  .uk-flex{
+                      p:nth-child(1){
+                          font-size: var(--xsmall);
+                          font-weight: 450;
+                      }
+                      #mart{
+                          margin-top: 15px;
+                      }
+                  }
+              }
+          }
+          .place{
+              width: 95%;
+              background-color: var(--color-dark-primary);
+              border: none;
+              border-radius: 5px;
+              padding: 5px;
+              display: block;
+              margin: auto;
+              color: #fff;
+              margin-top: 15px;
+              cursor: pointer;
+              transition: .3s;
+              &:hover{
+                  transform: scale(1.1);
+              }
+          }
+      }
 }
+// @media (max-width:1024px){
+//   .parent-container{
+//     display: grid;
+//       grid-template-columns: 0.5fr 0.5fr;
+//       grid-gap: 24px;
+//       width: 100%;
+//   }
+//   #heading{
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 28px;
+//     line-height: 33px;
+//     color: #5C5E62;
+//     margin-left: 25px;
+//       margin-top: 30px;
+//       margin-bottom: 20px;
+//     }
+//     .cart-items h1{
+//       margin-left: 25px;
+//       margin-top: 30px;
+//       margin-bottom: 20px;
+//       font-size: 30px;
+//       font-weight: 500;
+//       // font-family: var(--font-one);
+//     }
+// }

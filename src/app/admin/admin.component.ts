@@ -1,8 +1,8 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { DatabaseService } from 'src/app/services/database.service';
 import { MaterialUpdateModalComponent } from './material-update-modal/material-update-modal.component';
-import { DatabaseService } from './services/database.service';
 
 @Component({
   selector: 'app-admin',

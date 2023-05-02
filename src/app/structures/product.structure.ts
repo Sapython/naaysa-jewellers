@@ -1,22 +1,30 @@
 import { Timestamp } from "@angular/fire/firestore";
 import { Material } from "../admin/materials/materials.component";
+import { NewVariant, SelectableMaterial } from "../admin/products/add-product/add-product.component";
 
-export type Product = {
-    id?: string;
-    name: string;
-    description: string;
-    images: string[];
-    category: Category;
-    averageRating: number;
-    createdAt: Timestamp;
-    updatedAt: Timestamp;
-    materials: Material[];
-    variants: Variant[];
+export interface Product {
+    id?:string;
+    averageRating:number;
+    category:{id:string,name:string};
+    date:Timestamp;
+    description:string;
+    images:string[];
+    materials:SelectableMaterial[];
+    name:string;
+    price?:number;
+    publishDate?:Date;
+    published:boolean;
+    variants:Combination[];
+  }
+export interface Combination{
+  combination:NewVariant[],
+  quantity:number,
+  rate:number,
+  total:number
 }
 export type Variant = {
     id?: string,
     name: string,
-    unit: string,
     rate: number,
     ratio: number,
   }
