@@ -3,7 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductPageComponent } from './product-page.component';
 
 
+// const routes: Routes = [{ path: '', component: ProductPageComponent }];
+
+
 const routes: Routes = [{ path: '', component: ProductPageComponent }];
+
 
 
 @NgModule({
