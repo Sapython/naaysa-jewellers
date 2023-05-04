@@ -351,3 +351,40 @@ a{
         }
     }
 }
+
+
+#popup{
+  display: block;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top: 45%;
+    border: 1px solid #8080804f;
+    left: 36%;
+    line-height: 1;
+    width: 445px;
+    border-radius: 15px;
+    padding: 22px 40px;
+    background-color: #fff;
+  img{
+    padding: 20px;
+  }
+
+  p{
+    font-family: 'Poppins';
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .buttonn{
+    padding: 16px 10px;
+    margin: 10px;
+    border: 1px solid #ce7989;
+    width: 170px;
+    font-size: 19px;
+    box-shadow: black;
+    color: white;
+    background: #E88F9F;
+    border-radius: 7px
+  }
+}
