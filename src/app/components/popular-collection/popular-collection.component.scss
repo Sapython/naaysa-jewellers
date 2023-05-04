@@ -10,40 +10,40 @@
  }
 .card{
   border: none;
-  padding: 20px;
+  padding: 15px;
 }
 .lable{
-  width: 83px;
+  width: 100px;
   background-color: #E88F9F;
   border-radius: 0px 40px 0px 0px;
   position: relative;
   color: white;
-  padding: 6px 16px;
+  padding: 10px 16px;
   text-align: center;
-  top: 55%;
+  top: 61%;
 }
-.carousel-control-next, .carousel-control-prev {
-  top: 40%;
-  width: 35px;
-    height: 35px;
+.uk-position-center-right-out, .uk-position-center-left-out {
+  top: 50%;
+  width: 30px;
+    height: 30px;
     background-color: 
     #E88F9F;
     color:  white;
     border: 1px solid #E88F9F;
     border-radius: 50%;
-    // padding: 10px;
+    padding: 7px 10px;
     text-align: center;
     margin: 16px;
 }
 .cardp{
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 35px 35px;
   border: 1px solid    #E88F9F;
    width: 100%;
-   height: 85px;
+   height: 105px;
    text-align: center;
    font-family: 'Quando';
-   font-size: 16px;
-   padding-top: 12px;
+   font-size: 22px;
+   padding-top: 18px;
     border-top:none
 }
 
@@ -52,7 +52,7 @@
 }
 .cardp1{
   color: #E88F9F ;
-  font-size: 17px;
+  font-size: 22px;
 }
 .hr{
   
@@ -61,7 +61,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 @media only screen and (max-width: 1005px){
   .lable{
@@ -76,49 +76,49 @@
   }
 
   .cardp{
-    border-radius: 0px 0px 17px 17px;
+    border-radius: 0px 0px 30px 30px;
     border: 1px solid    #E88F9F;
      width: 100%;
-     height: 64px;
+     height: 80px;
      text-align: center;
      font-family: 'Quando';
-     font-size: 10px;
-     padding-top: 6px;
+     font-size: 13px;
+     padding-top: 7px;
       border-top:none
   }
  
 .cardp1{
   color: #E88F9F ;
-  font-size: 11px;
+  font-size: 15px;
 }
 .cardp p{
   font-family: 'Quando';
-  margin-bottom: 4px;
+  margin-bottom: 9px;
 }
 }
 @media only screen and (max-width: 1005px){
   .cardp{
-    border-radius: 0px 0px 13px 13px;
+    border-radius: 0px 0px 30px 30px;
     border: 1px solid    #E88F9F;
      width: 100%;
-     height: 49px;
+     height: 80px;
      text-align: center;
      font-family: 'Quando';
-     font-size: 9px;
-     padding-top: 2px;
+     font-size: 13px;
+     padding-top: 7px;
       border-top:none
   }
   .cardp p{
     font-family: 'Quando';
-    margin-bottom: 0px;
+    margin-bottom: 9px;
   }
   .hr{
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
   .lable{
-    width: 53px;
-  
-    top: 51%;
+    width: 76px;
+  padding:  5px;
+    top: 59%;
   }
 }
 
@@ -164,3 +164,44 @@
   }
 }
 
+
+
+
+#shop-by-metals {
+  padding: 0px 7em;
+  width: 100%;
+  box-sizing: border-box;
+  // min-height: 80vh;
+  height: fit-content;
+
+  .shop-head {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    // margin-bottom :40px ;
+
+    h3 {
+      font-size: var(--medium);
+      text-align: center;
+      font-size: var(--xlarge);
+      font-family: 'Andada Pro';
+      color: var(--color-tertiary);
+      // margin: 3rem auto;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+
+    img {
+      height: 8px;
+      margin: auto 0;
+    }
+  }
+
+  #metals {
+    display: flex;
+    justify-content: center;
+  // grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    height: fit-content;
+  }
+}
