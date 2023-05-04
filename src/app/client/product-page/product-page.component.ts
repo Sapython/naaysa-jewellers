@@ -34,6 +34,7 @@ export class ProductPageComponent implements OnInit {
 
 
 
+
   hiddenPrice: boolean = false;
 
   product: any = {
@@ -224,9 +225,7 @@ export class ProductPageComponent implements OnInit {
     }
 
   }
-  showPrice() {
-    this.hiddenPrice = !this.hiddenPrice;
-  }
+
   // hidePrice(){
   //   this.Price=!this.Price;
   // }
