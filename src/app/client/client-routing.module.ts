@@ -19,10 +19,17 @@ const routes: Routes = [
       import('./signup/signup.module').then((m) => m.SignupModule),
   },
   {
-    path: 'product',
+    path: 'product-page',
     loadChildren: () =>
       import('./product-page/product-page.module').then(
         (m) => m.ProductPageModule
+      ),
+  },
+  {
+    path: 'product-review',
+    loadChildren: () =>
+      import('./product-review/product-review.module').then(
+        (m) => m.ProductReviewModule
       ),
   },
   {
@@ -85,7 +92,7 @@ const routes: Routes = [
         (m) => m.OrderHistoryModule
       ),
   },
-  
+
   {
     path: 'profile',
     loadChildren: () =>
@@ -119,4 +126,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ClientRoutingModule {}
+export class ClientRoutingModule { }

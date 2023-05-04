@@ -10,8 +10,11 @@ import { StarComponent } from './star/star.component';
 import { SwiperModule } from 'swiper/angular';
 import { PopularCollectionComponent } from './popular-collection/popular-collection.component';
 
+import { CustomerReviewComponent } from './customer-review/customer-review.component';
+import { BasedOnHistoryComponent } from './based-on-history/based-on-history.component';
+
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent],
+  declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, CustomerReviewComponent, BasedOnHistoryComponent],
   imports: [CommonModule, RouterModule, MatIconModule, SwiperModule],
   exports: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent],
 })
