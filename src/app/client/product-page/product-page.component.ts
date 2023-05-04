@@ -41,8 +41,8 @@ export class ProductPageComponent implements OnInit {
 
     name: 'Royal Pink Diamond Ring',
     price: 14325,
-    description: 'Diamond Ring In 18Kt Gold (5.68 gram) with Diamonds (0.4130 Ct)',
-    metalPurityTypes: [
+    description:'Lorem ipsum dolor sit amet consectetur',
+    metalPurityTypes:[
       {
         purity: '18K',
       },
@@ -53,7 +53,24 @@ export class ProductPageComponent implements OnInit {
         purity: '24K',
       },
     ],
-    diamondTypes: [
+    metalTypes:[
+      {
+        type: '18KT White Gold' ,
+      },
+      {
+        type:  '18KT Yellow Gold',
+      },
+      {
+        type:  '18KT Rose Gold',
+      },
+      {
+        type:  '15KT Rose Gold',
+      },
+      {
+        type:  '14KT Rose Gold',
+      }
+    ],
+    diamondTypes:[
       {
         name: '22 C',
       },

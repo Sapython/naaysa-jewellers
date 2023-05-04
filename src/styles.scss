@@ -101,6 +101,7 @@ $my-theme: mat.define-light-theme((
 @import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@500;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 :root {
   --ref-color: #ffe4e1;
   --color-primary: #ffe4e1;
@@ -124,6 +125,8 @@ $my-theme: mat.define-light-theme((
   --color-rating: #E88F9F;
   --color-button: #fae4e8;
   --color-delPrice: #666666;
+  --color-light-secondary: #FFF5F5;
+  --color-coupon:  #1CAE56;
 
   --font-six: "Andada Pro", sans-serif;
   --font-one: "Poppins", sans-serif;
@@ -134,6 +137,8 @@ $my-theme: mat.define-light-theme((
   --font-seven: "Quando", sans-serif;
   --font-eight:"Poppins", sans-serif;
   --font-nine: 'Roboto', 'sans serif';
+  --font-nine: 'Philosopher', 'sans serif';
+
 
   --xxlarge: 36px;
   --xlarge: 32px;
