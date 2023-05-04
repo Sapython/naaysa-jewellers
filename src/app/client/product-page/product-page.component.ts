@@ -31,7 +31,7 @@ export class ProductPageComponent implements OnInit {
   @Input() review_Disc: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
   currentImageIndex: number = 0;
   quantity: number = 1;
-  hiddenPrice:boolean=false;
+  
 
   product:any = {
     name: 'Royal Pink Diamond Ring',
@@ -220,9 +220,7 @@ export class ProductPageComponent implements OnInit {
     }
 
   }
-  showPrice(){
-    this.hiddenPrice=!this.hiddenPrice;
-  }
+
   // hidePrice(){
   //   this.Price=!this.Price;
   // }
