@@ -31,6 +31,8 @@ export class ProductPageComponent implements OnInit {
   @Input() review_Disc: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
   currentImageIndex: number = 0;
   quantity: number = 1;
+  hiddenPrice:boolean=false;
+
   product:any = {
     name: 'Royal Pink Diamond Ring',
     price: 14325,
@@ -170,7 +172,7 @@ export class ProductPageComponent implements OnInit {
     //   reviewer_Name: 'John Doe',
     //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     // },
-    
+
   ]
   specificatons = [
     {
@@ -216,9 +218,16 @@ export class ProductPageComponent implements OnInit {
       cart.push(this.product);
       localStorage.setItem('cart',JSON.stringify(cart));
     }
-    
+
   }
+  showPrice(){
+    this.hiddenPrice=!this.hiddenPrice;
+  }
+  // hidePrice(){
+  //   this.Price=!this.Price;
+  // }
   ngOnInit(): void {
+
     AOS.init();
   }
 
