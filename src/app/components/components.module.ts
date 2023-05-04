@@ -16,6 +16,6 @@ import { BasedOnHistoryComponent } from './based-on-history/based-on-history.com
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, CustomerReviewComponent, BasedOnHistoryComponent],
   imports: [CommonModule, RouterModule, MatIconModule, SwiperModule],
-  exports: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent],
+  exports: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, BasedOnHistoryComponent],
 })
 export class ComponentsModule { }

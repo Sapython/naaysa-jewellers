@@ -31,62 +31,62 @@ export class ProductPageComponent implements OnInit {
   @Input() review_Disc: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
   currentImageIndex: number = 0;
   quantity: number = 1;
-  product:any = {
+  product: any = {
     name: 'Royal Pink Diamond Ring',
     price: 14325,
-    description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-    metalPurityTypes:[
+    description: 'Diamond Ring In 18Kt Gold (5.68 gram) with Diamonds (0.4130 Ct)',
+    metalPurityTypes: [
       {
-        purity:'18K',
+        purity: '18K',
       },
       {
-        purity:'22K',
+        purity: '22K',
       },
       {
-        purity:'24K',
-      },
-    ],
-    diamondTypes:[
-      {
-        name:'22 C',
-      },
-      {
-        name:'24 C',
-      },
-      {
-        name:'26 C',
+        purity: '24K',
       },
     ],
-    sizeTypes:[
+    diamondTypes: [
       {
-        size:'18',
+        name: '22 C',
       },
       {
-        size:'20',
+        name: '24 C',
       },
       {
-        size:'22',
+        name: '26 C',
       },
     ],
-    images:[
+    sizeTypes: [
+      {
+        size: '18',
+      },
+      {
+        size: '20',
+      },
+      {
+        size: '22',
+      },
+    ],
+    images: [
       'assets/topBarImages/earings/ear (1).png',
       'assets/topBarImages/earings/ear (6).png',
       'assets/topBarImages/earings/ear (3).png',
       'assets/topBarImages/earings/ear (4).png',
       'assets/topBarImages/earings/ear (5).png',
     ],
-    certifications:[
+    certifications: [
       {
-        name:'bis',
-        image:'assets/badges/badge (1).png'
+        name: 'bis',
+        image: 'assets/badges/badge (1).png'
       },
       {
-        name:'bis',
-        image:'assets/badges/badge (2).png'
+        name: 'bis',
+        image: 'assets/badges/badge (2).png'
       },
       {
-        name:'bis',
-        image:'assets/badges/badge (3).png'
+        name: 'bis',
+        image: 'assets/badges/badge (3).png'
       },
     ]
   };
@@ -136,17 +136,17 @@ export class ProductPageComponent implements OnInit {
   ]
   reviews = [
     {
-      jewel_name:'Royal Pink Diamond Ring',
+      jewel_name: 'Royal Pink Diamond Ring',
       reviewer_Name: 'John Doe',
       review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     },
     {
-      jewel_name:'Royal Pink Diamond Ring',
+      jewel_name: 'Royal Pink Diamond Ring',
       reviewer_Name: 'John Doe',
       review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     },
     {
-      jewel_name:'Royal Pink Diamond Ring',
+      jewel_name: 'Royal Pink Diamond Ring',
       reviewer_Name: 'John Doe',
       review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     },
@@ -170,28 +170,28 @@ export class ProductPageComponent implements OnInit {
     //   reviewer_Name: 'John Doe',
     //   review_Disc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat alias officia in consequatur laborum dolore, blanditiis, officiis hic iure molestiae aspernatur non cumque at perspiciatis vel.'
     // },
-    
+
   ]
   specificatons = [
     {
-      details_Src:'assets/gold.png',
-      material:'18kt Royal Pink Gold',
-      text:'Gold weight (Approx) 2.14 Gram'
+      details_Src: 'assets/gold.png',
+      material: '18kt Royal Pink Gold',
+      text: 'Gold weight (Approx) 2.14 Gram'
     },
     {
-      details_Src:'assets/diamond.png',
-      material:'11 SIIJ Diamonds',
-      text:'Diamond weight (Approx) 0.072 Ct'
+      details_Src: 'assets/diamond.png',
+      material: '11 SIIJ Diamonds',
+      text: 'Diamond weight (Approx) 0.072 Ct'
     },
     {
-      details_Src:'assets/dimension.png',
-      material:'Product Dimension',
-      text:'20.12mm X 9.4mm (Height x width)'
+      details_Src: 'assets/dimension.png',
+      material: 'Product Dimension',
+      text: '20.12mm X 9.4mm (Height x width)'
     },
     {
-      details_Src:'assets/measure.png',
-      material:'Product Weight (Approx)',
-      text:'2.15 Gram'
+      details_Src: 'assets/measure.png',
+      material: 'Product Weight (Approx)',
+      text: '2.15 Gram'
     },
   ]
   constructor() { }
@@ -199,24 +199,24 @@ export class ProductPageComponent implements OnInit {
     alert('Successfully added to cart')
   }
 
-  addToCart(){
+  addToCart() {
     Notify.success(
       'Product added to cart.',
       {
-        zindex:99999
+        zindex: 99999
       }
     );
     let currentCart = localStorage.getItem('cart');
-    if(currentCart){
+    if (currentCart) {
       let cart = JSON.parse(currentCart);
       cart.push(this.product);
-      localStorage.setItem('cart',JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
     } else {
       let cart = [];
       cart.push(this.product);
-      localStorage.setItem('cart',JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
     }
-    
+
   }
   ngOnInit(): void {
     AOS.init();
