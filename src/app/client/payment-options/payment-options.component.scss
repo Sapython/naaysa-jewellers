@@ -1,5 +1,6 @@
 .cart-main{
     display: flex;
+    column-gap: 30px;
 }
 .mobile-view{
   display: none;
@@ -66,8 +67,7 @@ hr{
 }
 .cart-price{
     margin-top: 30px;
-    margin-left: 50px;
-    width: 29%;
+    width: 32%;
     height: auto;
 
 }
@@ -81,18 +81,9 @@ hr{
     width: 32px;
 height: 32px;
   }
-  .walletText{
-    background: #E88F9F;
-  border-radius: 10px 10px 0px 0px;
-  height: 60px;
-    padding: 15px;
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 26px;
-line-height: 30px;
-color: #FFFFFF;
-  }
+
+}
+
 .availableBalanceText{
   font-family: 'Roboto';
 font-style: normal;
@@ -101,7 +92,6 @@ font-size: 24px;
 line-height: 28px;
 text-align: center;
 color: #5C5E62;
-
 }
 .availableBalanceAmount{
   font-family: 'Roboto';
@@ -111,7 +101,6 @@ font-size: 24px;
 line-height: 28px;
 text-align: center;
 color: #62AA88;
-}
 }
 .availableBalance{
   display: flex;
@@ -132,7 +121,7 @@ color: #62AA88;
     font-weight: 500;
 }
 .bill{
-  width: 90%;
+  width: 100%;
   padding: 25px;
   .uk-flex{
       // margin-top: 10px;
@@ -269,7 +258,43 @@ a{
     text-decoration: none;
     font-size: 15px;
 }
+.walletText{
+  background: #E88F9F;
+border-radius: 10px 10px 0px 0px;
+height: 60px;
+  padding: 15px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 30px;
+color: #FFFFFF;
+}
+@media (max-width:1300px) {
+  .walletText,.availableBalanceText,.availableBalanceAmount{
+font-size: 20px;
+  }
+  #heading,.billItems,.totalBillAmount{
+    font-size: 20px;
+  }
 
+
+}
+@media (max-width:1025px) {
+  .walletText{
+    font-size: 18px;
+      }
+
+.availableBalanceText{
+font-size: 18px;
+}
+.availableBalanceAmount{
+font-size: 18px;
+}
+#heading,.billItems,.totalBillAmount{
+  font-size: 18px;
+}
+}
 
 
 

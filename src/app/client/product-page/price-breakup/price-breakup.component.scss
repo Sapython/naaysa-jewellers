@@ -1,9 +1,12 @@
 // Pric breakup and Description section code
 .itemDescriptionBox1{
   width: 100%;
+  height: 550px;
+    overflow: hidden;
   padding-right: 0px !important;
     padding: 25px;
 }
+
 .itemDescription{
   width: 95vw;
   margin: 0 auto;
@@ -119,7 +122,6 @@ font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 23px;
-// letter-spacing: 0.03em;
 color: #5C5E62;
 }
 .uk-tab{
@@ -162,7 +164,7 @@ color: #66323C;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 32px;
   color: #E88F9F;
 }
 .subText{
@@ -216,12 +218,57 @@ height: 218px;
 }
 .imageGroup2{
   width: 260px;
-    height: max-content;
+    height: 400px;
 }
 .detailImg{
   width: 50px;
 }
-
+.detailBox{
+  height: 400px;
+   overflow:auto;
+}
+.detailBox::-webkit-scrollbar {
+  display: none;
+}
+.diamondGermsBox{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 20px;
+  h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E88F9F;
+  }
+}
+.diamondImg{
+  width: 60px;
+}
+.diamondSection{
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid #c9c9c9;
+  padding: 24px;
+    padding-right: 0px;
+}
+.tableHeading{
+  font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #5C5E62;
+}
+.tableSubText{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #5C5E62;
+}
 @media (max-width:1300px) {
   .itemDescriptionGrid{
     grid-gap: 20px;
@@ -237,6 +284,12 @@ height: 218px;
   .productDetail> div{
     h3{font-size: 20px;}
     h5{font-size:18px;}
+  }
+  .tableHeading{
+      font-size: 18px;
+  }
+  .tableSubText{
+    font-size: 16px;
   }
 }
 @media (max-width:1024px) {
@@ -254,4 +307,10 @@ height: 218px;
       h3{font-size: 18px}
       h5{font-size:16px;}
     }
+    .tableHeading{
+      font-size: 16px;
+  }
+  .tableSubText{
+    font-size: 14px;
+  }
 }
