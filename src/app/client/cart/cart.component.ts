@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { MatLegacyDialog as MatDialog, MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { PincodeComponent } from './pincode/pincode.component';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -19,7 +20,7 @@ export class CartComponent implements OnInit {
   @Input() total:string = '₹ 1,34,507'
   @Input() saved:string = '₹ 500'
   cartItems:any[] = []
-  constructor() { }
+  constructor(private dialogModule: MatDialog) { }
 
   ngOnInit(): void {
     let cart = localStorage.getItem('cart')
@@ -55,5 +56,7 @@ export class CartComponent implements OnInit {
   }]
   console.log(this.cartItems)
   }
-
+  openPincode(){
+    this.dialogModule.open(PincodeComponent)
+  }
 }

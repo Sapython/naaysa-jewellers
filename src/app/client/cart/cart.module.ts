@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { MatLegacyDialog as MatDialog, MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './cart.component';
 import { ComponentsModule } from '../../components/components.module';
@@ -18,7 +18,8 @@ import { PincodeComponent } from './pincode/pincode.component';
     CommonModule,
     CartRoutingModule,
     ComponentsModule,
-    WidgetsModule
+    WidgetsModule,
+    MatDialogModule
   ]
 })
 export class CartModule { }
