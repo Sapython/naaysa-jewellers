@@ -225,7 +225,16 @@
     <img src="assets/right.png">
   </div>
 
-  <div class="container-fluid d-flex ">
+
+  <ul class="products">
+    <li *ngFor="let product of products">
+      <app-product-widget [product_name]="product.name" [category]="product.category" [liked]="product.category" [src]="product.src" [price]="product.price" [purity]="product.purity" [discount]="product.discount" [liked]="product.liked" [tag]="product.tag"></app-product-widget>
+    </li>
+  </ul>
+
+
+
+  <!-- <div class="container-fluid d-flex ">
     <div class="b-img" class="card m-2 " style="border: 0px;" *ngFor=" let cards of card">
       <img [src]="cards.image" style="position: relative;">
       <div style="position: absolute;bottom: 0px;
@@ -237,15 +246,8 @@
         </div>
         <a (click)="cards.read_more=!cards.read_more">Read {{cards.read_more==true?"less":"more"}}</a>
       </div>
-
-      <!-- <h1 class="text-white">{{cards.h1}}</h1>
-     <div ><button  class="sbutton"  >{{cards.button}}</button> 
-      <p>{{cards.read_more==false?cards.p.slice(0, 50)+"...":cards.p}}</p>
-      </div>
-     <a (click)="cards.read_more=!cards.read_more">Read {{cards.read_more==true?"less":"more"}}</a> -->
     </div>
-        
-    </div>
+    </div> -->
    
 </section>
 
