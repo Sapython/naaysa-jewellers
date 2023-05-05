@@ -137,7 +137,7 @@ $my-theme: mat.define-light-theme((
   --font-seven: "Quando", sans-serif;
   --font-eight:"Poppins", sans-serif;
   --font-nine: 'Roboto', 'sans serif';
-  --font-nine: 'Philosopher', 'sans serif';
+  --font-ten: 'Philosopher', 'sans serif';
 
 
   --xxlarge: 36px;
@@ -276,4 +276,7 @@ mat-form-field .mat-mdc-form-field-subscript-wrapper{
 }
 #NotiflixNotifyWrap{
   z-index: 999999;
+}
+.mat-dialog-container {
+  border-radius: 45px !important;
 }

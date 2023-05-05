@@ -561,8 +561,9 @@ section.productDetails {
 mat-label{
     color: #66323C !important;
 }
-mat-mdc-text-field-wrapper{
-  border: 1px solid #E88F9F !important;
-    border-radius: 12px !important;
-    outline: none !important;
+::ng-deep mat-form-feild{
+  .mat-mdc-form-field{
+    border: 1px solid #E88F9F !important;
+      border-radius: 12px !important;
+  } 
 }
