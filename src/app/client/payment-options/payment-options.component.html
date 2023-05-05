@@ -58,7 +58,7 @@
                 <p class="totalBillAmount">Total</p>
                 <p class="totalBillAmount">{{total}}</p>
             </div>
-            <button class="primary-button" class="payNowBtn" routerLink="">
+            <button class="primary-button" class="payNowBtn"  (click)="onclicked()">
               Pay now
             </button>
         </div>
@@ -116,3 +116,27 @@
         </button>
     </div>
 </div>
+
+
+<div *ngIf="pop" style="width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.4);position: fixed;top:0px" >
+<div  id="popup">
+    <img src="../../../assets/CART/Vector.svg">
+    <p>Waiting for confirmation</p>
+    <div style="display: flex;justify-content: center;text-align: center;" >
+        <button class="buttonn" (click)="home()">Back to Home</button>
+        <button class="buttonn" routerLink="../cart">My Orders</button>
+    </div>
+</div>
+</div>
+
+
+<div *ngIf="popp" style="width: 100%; height: 100%;background-color: rgba(0, 0, 0, 0.4);position: fixed;top:0px" >
+    <div  id="popup">
+        <img src="../../../assets/CART/Group 10208.svg">
+        <p>Your Order has been placed successfully!</p>
+        <div style="display: flex;justify-content: center;text-align: center;" >
+            <button class="buttonn" (click)="home()">Back to Home</button>
+            <button class="buttonn" routerLink="../cart">My Orders</button>
+        </div>
+    </div>
+    </div>
