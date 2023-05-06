@@ -155,6 +155,22 @@
 
         }
 
+        .uk-dropdown-nav>li>a {
+            color: #BB6878;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .uk-tab .uk-dropdown {
+            width: 100px;
+        }
+
+        #uk-dropdown-hr {
+            color: #BB6878;
+            height: 2px;
+        }
+
         .container-1 {
             .cust-review-1 {
                 border: 1px solid #E88F9F;

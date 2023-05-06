@@ -13,7 +13,7 @@ import { TenPlusOneModule } from '../../ten-plus-one/ten-plus-one.module';
   imports: [
     CommonModule,
     ChoosePlanRoutingModule,
-    TenPlusOneModule
+    // TenPlusOneModule
   ]
 })
 export class ChoosePlanModule { }
