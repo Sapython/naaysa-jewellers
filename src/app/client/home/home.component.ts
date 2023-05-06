@@ -12,9 +12,9 @@ Swiper.use([Navigation, Pagination]);
 })
 
 export class HomeComponent implements OnInit {
-  liked: boolean = false
+  // liked: boolean = false
   panelOpenState = false;
-
+  isLoaded: boolean = false;
 
   t1 = false
   card = [
@@ -50,38 +50,56 @@ export class HomeComponent implements OnInit {
       lable: "New In",
       image: "../../../assets/home/511056FCDAA00.jpg.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_-nKCbZlOHek.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_fVeujn3i5ZE.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267 ",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/511056FCDAA00.jpg.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
 
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_fVeujn3i5ZE.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_-nKCbZlOHek.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
 
 
@@ -93,65 +111,151 @@ export class HomeComponent implements OnInit {
     {
       name: 'Royal Pink Diamond Ring',
       price: 14325,
+      src: "../..",
       category: 'ring',
       liked: true,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
       tag: 'New In',
-      metalPurityTypes: [
-        {
-          purity: '18K',
-        },
-        {
-          purity: '22K',
-        },
-        {
-          purity: '24K',
-        },
-      ],
-      diamondTypes: [
-        {
-          name: '22 C',
-        },
-        {
-          name: '24 C',
-        },
-        {
-          name: '26 C',
-        },
-      ],
-      sizeTypes: [
-        {
-          size: '18',
-        },
-        {
-          size: '20',
-        },
-        {
-          size: '22',
-        },
-      ],
-      images: [
-        'assets/topBarImages/earings/ear (1).png',
-        'assets/topBarImages/earings/ear (6).png',
-        'assets/topBarImages/earings/ear (3).png',
-        'assets/topBarImages/earings/ear (4).png',
-        'assets/topBarImages/earings/ear (5).png',
-      ],
-      certifications: [
-        {
-          name: 'bis',
-          image: 'assets/badges/badge (1).png'
-        },
-        {
-          name: 'bis',
-          image: 'assets/badges/badge (2).png'
-        },
-        {
-          name: 'bis',
-          image: 'assets/badges/badge (3).png'
-        },
-      ]
-    }
+      // metalPurityTypes: [
+      //   {
+      //     purity: '18K',
+      //   },
+      //   {
+      //     purity: '22K',
+      //   },
+      //   {
+      //     purity: '24K',
+      //   },
+      // ],
+      // diamondTypes: [
+      //   {
+      //     name: '22 C',
+      //   },
+      //   {
+      //     name: '24 C',
+      //   },
+      //   {
+      //     name: '26 C',
+      //   },
+      // ],
+      // sizeTypes: [
+      //   {
+      //     size: '18',
+      //   },
+      //   {
+      //     size: '20',
+      //   },
+      //   {
+      //     size: '22',
+      //   },
+      // ],
+      // images: [
+      //   'assets/topBarImages/earings/ear (1).png',
+      //   'assets/topBarImages/earings/ear (6).png',
+      //   'assets/topBarImages/earings/ear (3).png',
+      //   'assets/topBarImages/earings/ear (4).png',
+      //   'assets/topBarImages/earings/ear (5).png',
+      // ],
+      // certifications: [
+      //   {
+      //     name: 'bis',
+      //     image: 'assets/badges/badge (1).png'
+      //   },
+      //   {
+      //     name: 'bis',
+      //     image: 'assets/badges/badge (2).png'
+      //   },
+      //   {
+      //     name: 'bis',
+      //     image: 'assets/badges/badge (3).png'
+      //   },
+      // ]
+    },
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
+    {
+      name: 'Royal Pink Diamond Ring',
+      price: 14325,
+      category: 'ring',
+      liked: true,
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
+      tag: 'New In',
+    },
   ]
 
 
