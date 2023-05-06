@@ -101,160 +101,26 @@ export class HomeComponent implements OnInit {
       dislike: "../../../assets/home/unlikedWishlist.svg",
       liked: false,
     },
-
-
-
-
   ]
 
-  products: any[] = [
+  blog = [
     {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      src: "../..",
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-      // metalPurityTypes: [
-      //   {
-      //     purity: '18K',
-      //   },
-      //   {
-      //     purity: '22K',
-      //   },
-      //   {
-      //     purity: '24K',
-      //   },
-      // ],
-      // diamondTypes: [
-      //   {
-      //     name: '22 C',
-      //   },
-      //   {
-      //     name: '24 C',
-      //   },
-      //   {
-      //     name: '26 C',
-      //   },
-      // ],
-      // sizeTypes: [
-      //   {
-      //     size: '18',
-      //   },
-      //   {
-      //     size: '20',
-      //   },
-      //   {
-      //     size: '22',
-      //   },
-      // ],
-      // images: [
-      //   'assets/topBarImages/earings/ear (1).png',
-      //   'assets/topBarImages/earings/ear (6).png',
-      //   'assets/topBarImages/earings/ear (3).png',
-      //   'assets/topBarImages/earings/ear (4).png',
-      //   'assets/topBarImages/earings/ear (5).png',
-      // ],
-      // certifications: [
-      //   {
-      //     name: 'bis',
-      //     image: 'assets/badges/badge (1).png'
-      //   },
-      //   {
-      //     name: 'bis',
-      //     image: 'assets/badges/badge (2).png'
-      //   },
-      //   {
-      //     name: 'bis',
-      //     image: 'assets/badges/badge (3).png'
-      //   },
-      // ]
+      image: "../../../assets/home/Rectangle 928.png",
+      h1: "Excellent Product",
+      name: "Amrita Sing",
+      Comment: " “I got this necklace as my wedding gift and instantly loved it. It is literally the only accessory I wore on my entire honeymoon. I love how delicate and beautiful it is.”",
     },
     {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
+      image: "../../../assets/home/Rectangle 928.png",
+      h1: "Excellent Product",
+      name: "Amrita Sing",
+      Comment: " “I got this necklace as my wedding gift and instantly loved it. It is literally the only accessory I wore on my entire honeymoon. I love how delicate and beautiful it is.”",
     },
     {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
-    },
-    {
-      name: 'Royal Pink Diamond Ring',
-      price: 14325,
-      category: 'ring',
-      liked: true,
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, laboriosam rem eum tenetur quidem quaerat',
-      tag: 'New In',
+      image: "../../../assets/home/Rectangle 928.png",
+      h1: "Excellent Product",
+      name: "Amrita Sing",
+      Comment: " “I got this necklace as my wedding gift and instantly loved it. It is literally the only accessory I wore on my entire honeymoon. I love how delicate and beautiful it is.”",
     },
   ]
 

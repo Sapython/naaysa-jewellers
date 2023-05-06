@@ -41,14 +41,6 @@
       <span class="carousel-control-next-icon"></span>
     </button>
   </div>
-
-  <!-- <div id="first-text">
-    <h2>We Make Jewellery to Fit Every Budget, Occasion, and Taste.</h2>
-    <p>Find your sparkle in every moment, today.</p>
-    <button class="primary-button" routerLink="../all-product">
-      Explore Collection
-    </button>
-  </div> -->
 </section>
 
 <section id="items-section">
@@ -92,18 +84,20 @@
   </div>
 
   <div class="images">
-    <div class="image mod">
+    <div class="image">
       <img   src="../../../assets/home/Rectangle 5305.png" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
       <p uk-scrollspy="cls: uk-animation-slide-left; repeat: true">Modern Mangalsutra</p>
     </div>
 
-    <div class="image mode">
+    <div class="image ">
+      
       <img src="../../../assets/home/Rectangle 5303.png" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true" style="    transform: translateY(-100px);">
       <p uk-scrollspy="cls: uk-animation-slide-top; repeat: true" style="bottom: 8rem;">Modern
         Engagement Rings</p>
+        <div class="tre_tag" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true" style="    transform: translateY(-100px);">Just Arrived</div>
     </div>
 
-    <div class="image mod">
+    <div class="image ">
       <img src="../../../assets/home/Rectangle 5305.png" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
       <p uk-scrollspy="cls: uk-animation-slide-right; repeat: true">Modern
         DROP EARRINGS</p>
@@ -183,18 +177,22 @@
 </section>
 
 
-
+<div class="image2">
+  <img src="../../../assets/home/banner.png" alt="">
+</div>
 <!-- </section> -->
 
-<section id="blog">
- <div>
-  <img src="../../../assets/home/Rectangle 928.png">
-  <p>Amrita Sing</p>
-  <h3>Excellent Product</h3>
-  <p>“I got this necklace as my wedding gift and instantly loved it. It is literally the only accessory I wore on my
-    entire honeymoon. I love how delicate and beautiful it is.”</p>
- </div>
-  
+<section  >
+  <div id="blog">
+ <div class="content" *ngFor="let blogs of blog ">
+  <div class="tag">“</div>
+  <img [src]="blogs.image">
+  <p class="name">{{blogs.name}}</p>
+  <h1>{{blogs.h1}}</h1>
+  <p>{{blogs.Comment}}</div>
+  </div>
+   <div style="display: flex; justify-content: center;"> <button class="blog_btn" >Read More</button></div>
+
 </section>
 
 <section id="similar-blog">
