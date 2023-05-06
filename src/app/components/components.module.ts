@@ -12,9 +12,10 @@ import { PopularCollectionComponent } from './popular-collection/popular-collect
 
 import { CustomerReviewComponent } from './customer-review/customer-review.component';
 import { BasedOnHistoryComponent } from './based-on-history/based-on-history.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, CustomerReviewComponent, BasedOnHistoryComponent],
+  declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, CustomerReviewComponent, BasedOnHistoryComponent, HistoryComponent],
   imports: [CommonModule, RouterModule, MatIconModule, SwiperModule],
   exports: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, BasedOnHistoryComponent, CustomerReviewComponent],
 })
