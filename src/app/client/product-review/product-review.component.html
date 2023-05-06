@@ -10,18 +10,23 @@
         </div>
 
         <div class="avarage">
+            <div class="common-review">
+                <app-star></app-star>
+                <h4> Avarage 2.5/5</h4>
+            </div>
+           
             <p>Based on 18 Reviews & Ratings </p>
         </div>
         <div class="features">
             <p class="fea-title">By Features</p>
             <div class="common-div">
-                <p>style :</p>
+                <p>style :<app-star></app-star></p>
             </div>
             <div class="common-div">
-                <p>weight :</p>
+                <p>weight :<app-star></app-star></p>
             </div>
             <div class="common-div">
-                <p>comfort :</p>
+                <p>comfort :<app-star></app-star></p>
             </div>
 
 
@@ -89,8 +94,10 @@
                 <div class="cust-icon">
                     <div class="left">
                         <img [src]="reviews.userImage" alt="">
-                        <p>{{reviews.name}}</p>
+                        <p>{{reviews.name}} <br>   <app-star></app-star></p>
+                        
                     </div>
+                  
                     <div class="right">
                         <button>{{reviews.description}}</button>
                     </div>

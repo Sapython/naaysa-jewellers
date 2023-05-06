@@ -15,8 +15,27 @@ import { BasedOnHistoryComponent } from './based-on-history/based-on-history.com
 import { HistoryComponent } from './history/history.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, CustomerReviewComponent, BasedOnHistoryComponent, HistoryComponent],
+  declarations: [HeaderComponent,
+     FooterComponent,
+      AdminHeaderComponent, 
+      PopularCollectionComponent,
+       CustomerReviewComponent, 
+       BasedOnHistoryComponent, 
+       HistoryComponent,
+       StarComponent
+      
+      
+      ],
   imports: [CommonModule, RouterModule, MatIconModule, SwiperModule],
-  exports: [HeaderComponent, FooterComponent, AdminHeaderComponent, PopularCollectionComponent, BasedOnHistoryComponent, CustomerReviewComponent],
+  exports: [HeaderComponent, 
+    FooterComponent, 
+    AdminHeaderComponent, 
+    PopularCollectionComponent, 
+    BasedOnHistoryComponent, 
+    CustomerReviewComponent,
+    StarComponent
+  
+  
+  ],
 })
 export class ComponentsModule { }

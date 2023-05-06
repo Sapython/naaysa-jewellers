@@ -1,6 +1,13 @@
+body{
+  margin-top: 20px;
+}
 .rating-list {
     display: inline-block;
     list-style: none;
+    li{
+      margin-top: 20px;
+    }
+  
   }
   .rating-list li {
     font-size: 16px;
