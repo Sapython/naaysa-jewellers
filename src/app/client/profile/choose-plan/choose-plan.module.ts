@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ChoosePlanRoutingModule } from './choose-plan-routing.module';
 import { ChoosePlanComponent } from './choose-plan.component';
-import { TenPlusOneModule } from '../../ten-plus-one/ten-plus-one.module';
+// import { TenPlusOneModule } from '../../ten-plus-one/ten-plus-one.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { TenPlusOneModule } from '../../ten-plus-one/ten-plus-one.module';
   imports: [
     CommonModule,
     ChoosePlanRoutingModule,
-    TenPlusOneModule
+    // TenPlusOneModule
   ]
 })
 export class ChoosePlanModule { }
