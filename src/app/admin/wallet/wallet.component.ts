@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
- import { MatLegacyDialog as MatDialog, MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
  import { ViewHistoryComponent } from './view-history/view-history.component';
 
 @Component({

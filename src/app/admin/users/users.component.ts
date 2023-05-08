@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog, MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddUsersComponent } from './add-users/add-users.component';
 
 @Component({

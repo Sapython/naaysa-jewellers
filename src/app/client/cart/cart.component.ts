@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog, MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ApplyCouponComponent } from '../apply-coupon/apply-coupon.component';
 import { PincodeComponent } from './pincode/pincode.component';
 
