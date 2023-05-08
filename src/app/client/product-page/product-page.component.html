@@ -1,19 +1,16 @@
 <div class="container-fluid">
-  <!-- <section class="productDescription">
+  <section class="productDescription">
     <div class="imagesContainer">
       <div class="list">
+        <button id="scrollButton" [disabled]="currentImageIndex == 0" (click)="currentImageIndex = currentImageIndex - 1">
+          <i class="ri-arrow-up-s-line"></i>
+        </button>
         <div class="images">
           <img [src]="image" *ngFor="let image of product.images; let i = index" (click)="currentImageIndex = i" />
         </div>
-        <div class="carets">
-          <button [disabled]="currentImageIndex == 0" (click)="currentImageIndex = currentImageIndex - 1">
-            <i class="ri-arrow-left-s-fill"></i>
-          </button>
-          <button [disabled]="currentImageIndex == product.images.length - 1"
-            (click)="currentImageIndex = currentImageIndex + 1">
-            <i class="ri-arrow-right-s-fill"></i>
-          </button>
-        </div>
+        <button id="scrollButton" [disabled]="currentImageIndex == product.images.length - 1" (click)="currentImageIndex = currentImageIndex + 1">
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
       </div>
       <div class="main">
         <img [src]="product.images[currentImageIndex]" />
@@ -23,110 +20,107 @@
       <div class="head">
         <h1>{{ product.name }}</h1>
         <div class="heart">
-          <i [class]="{
-              'fa-heart': true,
-              'fa-regular': !liked,
-              'fa-solid': liked
-            }" (click)="liked = !liked"></i>
+          <div (click)="liked = !liked" id="heartImg">
+            <img *ngIf="!liked" src="assets\HEAART.svg" alt="">
+            <img *ngIf="liked" src="assets\Filled heart.svg" alt="">
+          </div>
+          <div id="shareImg"><img src="assets\material-symbols_share-outline.svg" alt=""></div>
         </div>
       </div>
-      <p id="item-name-desc">{{ product.description }}</p>
-      <hr />
-      <div class="options">
-        <mat-form-field appearance="outline">
-          <mat-label>Type</mat-label>
-          <mat-select placeholder="Metal Purity" name="metal">
-            <mat-option *ngFor="let metal of product.metalPurityTypes" [value]="metal">
-              {{ metal.purity }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Diamond</mat-label>
-          <mat-select placeholder="Metal Purity" name="metal">
-            <mat-option *ngFor="let metal of product.diamondTypes" [value]="metal">
-              {{ metal.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Size</mat-label>
-          <mat-select placeholder="Metal Purity" name="metal">
-            <mat-option *ngFor="let metal of product.sizeTypes" [value]="metal">
-              {{ metal.size }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label>Pincode</mat-label>
-          <input matInput #pincode />
-          <span matTextPrefix><i class="ri-map-pin-fill"></i></span>
-        </mat-form-field>
-        <div class="quantity">
-          <p>Quantity : </p>
-          <button [disabled]="quantity == 1" (click)="quantity = quantity - 1">
-            <i class="ri-subtract-fill"></i>
-          </button>
-          <input type="number" [(ngModel)]="quantity" [ngModelOptions]="{ standalone: true }" type="text" />
-          <button (click)="quantity = quantity + 1">
-            <i class="ri-add-fill"></i>
-          </button>
+      <p>{{ product.description }}</p>
+      <div class="priceInfo">
+        <div class="pricing">
+          <div>
+            <h2>
+              {{
+              (product.configuredPrice
+              ? product.configuredPrice
+              : product.price) * quantity | currency : "INR" : "symbol-narrow"
+              }} <del> &#8377;{{ price + 10000 }}</del>
+            </h2>
+          </div>
+          <div><p id="subText">(MRP Incl. of all taxes)</p></div>
         </div>
-
+        <div class="couponInfo">
+          <div id="coupon"><img src="assets\ticket-discount.svg" alt="coupon"></div>
+          <div id="couponText"><p>20% Off on Making Charge</p></div>
+        </div>
       </div>
-      <hr />
-      <section class="pricing">
-        <div class="left-pricing">
-          <h2>
-            {{
-            (product.configuredPrice
-            ? product.configuredPrice
-            : product.price) * quantity | currency : "INR" : "symbol-narrow"
-            }}
-          </h2>
-          <p id="item-name-mrp">(MRP Incl of all taxes)</p>
+      <div class="options"> 
+        <div class="dropdownCtn">
+          <div class="upperSec">
+            <div> 
+            <mat-form-field appearance="outline">
+              <mat-label>Size</mat-label>
+              <mat-select placeholder="Size" name="metal">
+                <mat-option *ngFor="let metal of product.sizeTypes" [value]="metal">
+                  {{ metal.size }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field appearance="outline">
+                <mat-label>Metal</mat-label>
+                <mat-select placeholder="Metal" name="metal">
+                  <mat-option *ngFor="let metal of product.metalTypes" [value]="metal">
+                    {{metal.type}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="lowerSec">
+            <div>
+              <mat-form-field appearance="outline">
+                  <mat-label>Diamond</mat-label>
+                  <mat-select placeholder="Metal Purity" name="metal">
+                    <mat-option *ngFor="let metal of product.diamondTypes" [value]="metal">
+                      {{ metal.name }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="pincode">
+              <mat-form-field appearance="outline">
+                <mat-label class="label">
+                  <span>Pincode</span>
+                  <img src="assets\pincode.svg">
+                </mat-label>
+                <input matInput #pincode />
+              </mat-form-field>
+              <span>
+                Delivery By Today Evening <mark class="pink">{{date}}</mark> for Pincode
+                <mark class="pink">{{ pincode.value ? pincode.value : "211019" }}</mark>
+              </span>
+            </div>
+          </div>
+          <div class="quantity">
+            <p id="label">Quanity</p>
+            <div class="input">
+              <button [disabled]="quantity == 1" (click)="quantity = quantity - 1">
+                <i class="ri-subtract-fill"></i>
+              </button>
+              <input type="number" [(ngModel)]="quantity" [ngModelOptions]="{ standalone: true }" type="text" />
+              <button (click)="quantity = quantity + 1">
+                <i class="ri-add-fill"></i>
+              </button>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="addToCart" routerLink="../cart">Add To Cart</button>
+            <button id="buyNow" routerLink="../choose-delivery-address">Buy Now</button>
+          </div>
         </div>
-        <div class="rigth-pricing">
-          <p id="item-name-green">20% off on making charge</p>
-          <p id="item-name-pin">
-            Delivery By Today Evening <span> 14th Jul</span> for Pincode
-            {{ pincode.value ? pincode.value : "211019" }}
-          </p>
-        </div>
-      </section>
-      <hr />
-      <div class="actions">
-        <button id="cart-but" routerLink="../cart">Add To Cart</button>
-        <button id="buy-btn" routerLink="../choose-delivery-address">Buy Now</button>
       </div>
-
-    </div>
-  </section> -->
-  <!-- <section class="othorization">
-    <div class="sub-oth-content">
-      <img src="../../../assets/badge-1.png" alt="">
-      <h4 id="sub-oth-content-desc">BIS 100% Hallmarked Jewellery</h4>
-    </div>
-    <div class="sub-oth-content">
-      <img src="../../../assets/badge-2.png" alt="" id="img-igi">
-      <h4 id="sub-oth-content-desc">Certified By IGI</h4>
-    </div>
-    <div class="sub-oth-content">
-      <img src="../../../assets/badge-3.png" alt="" id="img-sgl">
-      <h4 id="sub-oth-content-desc">Certified By SGL</h4>
-    </div>
-
-  </section>-->
-
-
-
-  <!-- Price breakup table -->
-  <section>
-  <app-price-breakup></app-price-breakup>
-
+      </div>
   </section>
-  <!-- <section class="productDetails">
+  <section class="certification">
+    <div class="certificationImg">
+      <img [src]="certificate.image" [alt]="certificate.name" *ngFor="let certificate of product.certifications" />
+    </div>
+  </section>
+<app-price-breakup></app-price-breakup>
   <section class="productDetails">
     <div class="head">
       <h2>Product Details</h2>
@@ -163,7 +157,7 @@
         <li>Total : <strong> Rs. 74,187/-</strong></li>
       </ol>
     </main>
-  </section> -->
+  </section>
   <app-customer-review></app-customer-review>
   <img src="assets/banner.png" alt="Banner" />
   <!-- Reviews -->
