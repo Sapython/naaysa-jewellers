@@ -17,13 +17,13 @@ export class PopularCollectionComponent {
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_-nKCbZlOHek.png",
-      h1: "ENGAGEMENT RING",
+      h1: "BANGLES",
       p: "See the Collection",
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_fVeujn3i5ZE.png",
-      h1: "ENGAGEMENT RING",
+      h1: "EARING ",
       p: "See the Collection",
     },
     {
@@ -33,9 +33,31 @@ export class PopularCollectionComponent {
       p: "See the Collection",
 
     },
+    {
+      lable: "New In",
+      image: "../../../assets/home/511056FCDAA00.jpg.png",
+      h1: "ENGAGEMENT RING",
+      p: "See the Collection",
+    },
+    {
+      lable: "New In",
+      image: "../../../assets/home/unsplash_-nKCbZlOHek.png",
+      h1: "BANGLES",
+      p: "See the Collection",
+    },
+    {
+      lable: "New In",
+      image: "../../../assets/home/unsplash_fVeujn3i5ZE.png",
+      h1: "EARING ",
+      p: "See the Collection",
+    },
+    {
+      lable: "New In",
+      image: "../../../assets/home/511056FCDAA00.jpg.png",
+      h1: "ENGAGEMENT RING",
+      p: "See the Collection",
 
-
-
+    },
 
   ]
 

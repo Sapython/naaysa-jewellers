@@ -12,9 +12,9 @@ Swiper.use([Navigation, Pagination]);
 })
 
 export class HomeComponent implements OnInit {
-  liked: boolean = false
+  // liked: boolean = false
   panelOpenState = false;
-
+  isLoaded: boolean = false;
 
   t1 = false
   card = [
@@ -50,45 +50,79 @@ export class HomeComponent implements OnInit {
       lable: "New In",
       image: "../../../assets/home/511056FCDAA00.jpg.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_-nKCbZlOHek.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_fVeujn3i5ZE.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267 ",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/511056FCDAA00.jpg.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
 
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_fVeujn3i5ZE.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
     {
       lable: "New In",
       image: "../../../assets/home/unsplash_-nKCbZlOHek.png",
       h1: "Sublimed By Flora gold Rings",
-      p: "₹12,267",
+      p: 12267,
+      like: "../../../assets/home/likedWishlist.svg",
+      dislike: "../../../assets/home/unlikedWishlist.svg",
+      liked: false,
     },
-
-
-
-
   ]
 
+  blog = [
+    {
+      image: "../../../assets/home/Rectangle 928.png",
+      h1: "Excellent Product",
+      name: "Amrita Sing",
+      Comment: " “I got this necklace as my wedding gift and instantly loved it. It is literally the only accessory I wore on my entire honeymoon. I love how delicate and beautiful it is.”",
+    },
+    {
+      image: "../../../assets/home/Rectangle 928.png",
+      h1: "Excellent Product",
+      name: "Amrita Sing",
+      Comment: " “I got this necklace as my wedding gift and instantly loved it. It is literally the only accessory I wore on my entire honeymoon. I love how delicate and beautiful it is.”",
+    },
+    {
+      image: "../../../assets/home/Rectangle 928.png",
+      h1: "Excellent Product",
+      name: "Amrita Sing",
+      Comment: " “I got this necklace as my wedding gift and instantly loved it. It is literally the only accessory I wore on my entire honeymoon. I love how delicate and beautiful it is.”",
+    },
+  ]
 
 
 

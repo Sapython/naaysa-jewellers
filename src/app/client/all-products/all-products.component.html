@@ -86,7 +86,11 @@
   <section>
     <ul class="products">
       <li *ngFor="let product of products">
-        <app-product-widget [product_name]="product.name" [category]="product.category" [liked]="product.category" [src]="product.src" [price]="product.price" [purity]="product.purity" [discount]="product.discount" [liked]="product.liked" [tag]="product.tag"></app-product-widget>
+        <app-product-widget [product_name]="product.name"
+         [category]="product.category" [liked]="product.category" 
+         [src]="product.src" [price]="product.price" [purity]="product.purity"
+          [discount]="product.discount" [liked]="product.liked" 
+          [tag]="product.tag"></app-product-widget>
       </li>
     </ul>
   </section>
